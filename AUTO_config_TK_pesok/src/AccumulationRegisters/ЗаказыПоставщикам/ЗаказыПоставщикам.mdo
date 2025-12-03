@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="40368539-e4b0-4e93-b423-7405dd2c6e3c">
+  <producedTypes>
+    <selectionType typeId="567a51b8-8630-4c6a-838f-6985d76c62bb" valueTypeId="588d854b-2902-44e7-bdef-e06953496561"/>
+    <listType typeId="e9ef00f4-fcda-47ea-a8b9-d19569896246" valueTypeId="e025c4d0-62f6-447c-97d7-a17d5b10c51b"/>
+    <managerType typeId="9536f824-9ae7-4927-9598-5bce6daa2885" valueTypeId="04e10220-2e03-46d3-8c68-adfac1b0268a"/>
+    <recordSetType typeId="e291d5df-e910-4ad4-84f3-6638f3447c64" valueTypeId="62f1695b-c673-4f77-9bdd-e4abdd0e41b0"/>
+    <recordKeyType typeId="cd787f40-b75e-430f-b53c-6720f48a1459" valueTypeId="482c7958-6359-4e1d-a6df-e81753832533"/>
+    <recordType typeId="818acba7-d1d5-4fb3-bfd3-e514c25b2a5e" valueTypeId="e0b50130-a2c5-49f7-870e-b048ab5c150a"/>
+  </producedTypes>
+  <name>ЗаказыПоставщикам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заказы поставщикам</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Замовлення постачальникам</value>
+  </synonym>
+  <comment>Заказы поставщикам</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="2eddcd95-6e4c-45da-bb99-c63e931d604a">
+    <name>Заказано</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказано</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Заказано</value>
+    </synonym>
+    <comment>Количество номенклатуры по заказу</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="17f5b270-5625-4483-8fc5-9832435719dc">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <comment>Хозяйственная операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="1a73257e-3086-495e-8b8d-bf00efdb90fa">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9a104eba-400c-404b-b0b5-f85832b993ff">
+    <name>ЗаказПоставщику</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ поставщику</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Замовлення постачальнику</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПоставщику</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="b0a50b44-57d1-4ad4-bbee-56aa80a162e7">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <comment>Номенклатура заказа</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="05ec15a7-9683-4836-9e32-50a4feeb0344">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

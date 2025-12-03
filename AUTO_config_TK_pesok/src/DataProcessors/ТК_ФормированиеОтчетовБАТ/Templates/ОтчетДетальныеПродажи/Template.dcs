@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СкладКомпании</dataPath>
+			<field>СкладКомпании</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеКомпании</dataPath>
+			<field>ПодразделениеКомпании</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТорговаяПлощадка</dataPath>
+			<field>ТорговаяПлощадка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Покупатель</dataPath>
+			<field>Покупатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CodeOutlet</dataPath>
+			<field>CodeOutlet</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Code outlet</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>BranchID</dataPath>
+			<field>BranchID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Branch ID</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Date</dataPath>
+			<field>Date</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Date</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>BATCodeSKU</dataPath>
+			<field>BATCodeSKU</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>BATCode SKU</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ClientNameSKU</dataPath>
+			<field>ClientNameSKU</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Client name SKU</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>SALES_PACKS</dataPath>
+			<field>SALES_PACKS</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>SALES PACKS</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТорговаяПлощадкаПолучатель</dataPath>
+			<field>ТорговаяПлощадкаПолучатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Артикул</dataPath>
+			<field>Артикул</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Артикул</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	НАЧАЛОПЕРИОДА(ПродажиОбороты.Период, ДЕНЬ) КАК Период,
+	ВЫБОР
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.РеализацияТоваров
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.РеализацияТоваров).ТочкаДоставки.Global_ID
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.ВозвратОтПокупателя
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.ВозвратОтПокупателя).ТочкаДоставки.Global_ID
+		ИНАЧЕ ""
+	КОНЕЦ КАК CodeOutlet,
+	ПродажиОбороты.ТорговаяПлощадка.Код КАК BranchID,
+	ПродажиОбороты.Номенклатура КАК Номенклатура,
+	СУММА(ПродажиОбороты.КоличествоОборот) КАК КоличествоОборот,
+	ПродажиОбороты.Номенклатура.ТоварнаяМарка.Родитель = &amp;ТМ_БАТ КАК ТоварБАТ
+ПОМЕСТИТЬ втПродажи
+ИЗ
+	РегистрНакопления.Продажи.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, {(ПодразделениеКомпании).* КАК ПодразделениеКомпании, (ТорговаяПлощадка).* КАК ТорговаяПлощадка, (СкладКомпании).* КАК СкладКомпании, (Номенклатура).* КАК Номенклатура, (Покупатель).* КАК Покупатель}) КАК ПродажиОбороты
+ГДЕ
+	(ПродажиОбороты.Регистратор ССЫЛКА Документ.РеализацияТоваров
+			ИЛИ ПродажиОбороты.Регистратор ССЫЛКА Документ.ВозвратОтПокупателя)
+	И ВЫРАЗИТЬ(ПродажиОбороты.Покупатель КАК Справочник.Контрагенты).КодПоЕДРПОУ &lt;&gt; "38397793"
+
+СГРУППИРОВАТЬ ПО
+	ПродажиОбороты.ТорговаяПлощадка.Код,
+	ПродажиОбороты.Номенклатура,
+	НАЧАЛОПЕРИОДА(ПродажиОбороты.Период, ДЕНЬ),
+	ПродажиОбороты.Номенклатура.ТоварнаяМарка.Родитель = &amp;ТМ_БАТ,
+	ВЫБОР
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.РеализацияТоваров
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.РеализацияТоваров).ТочкаДоставки.Global_ID
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.ВозвратОтПокупателя
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.ВозвратОтПокупателя).ТочкаДоставки.Global_ID
+		ИНАЧЕ ""
+	КОНЕЦ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НАЧАЛОПЕРИОДА(ПеремещениеТоваровТовары.Ссылка.Дата, ДЕНЬ),
+	ПеремещениеТоваровТовары.Ссылка.СкладКомпанииПолучатель.ТочкаДоставки.Global_ID,
+	ПеремещениеТоваровТовары.Ссылка.ТорговаяПлощадка.Код,
+	ПеремещениеТоваровТовары.Номенклатура,
+	СУММА(ПеремещениеТоваровТовары.КоличествоБазовое),
+	ПеремещениеТоваровТовары.Номенклатура.ТоварнаяМарка.Родитель = &amp;ТМ_БАТ
+ИЗ
+	Документ.ПеремещениеТоваров.Товары КАК ПеремещениеТоваровТовары
+ГДЕ
+	ПеремещениеТоваровТовары.Ссылка.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ПеремещениеТоваровТовары.Ссылка.Проведен
+	И ПеремещениеТоваровТовары.Ссылка.ХозОперация = ЗНАЧЕНИЕ(Справочник.ХозОперации.ПеремещениеТоваровВФилиал)
+{ГДЕ
+	ПеремещениеТоваровТовары.Ссылка.ПодразделениеКомпании.* КАК ПодразделениеКомпании,
+	ПеремещениеТоваровТовары.Ссылка.ТорговаяПлощадка.* КАК ТорговаяПлощадка,
+	ПеремещениеТоваровТовары.Ссылка.СкладКомпании.* КАК СкладКомпании,
+	ПеремещениеТоваровТовары.Номенклатура.*,
+	ПеремещениеТоваровТовары.Ссылка.СкладКомпанииПолучатель.ТочкаДоставки.Владелец.* КАК Покупатель,
+	ПеремещениеТоваровТовары.Ссылка.ТорговаяПлощадкаПолучатель.* КАК ТорговаяПлощадкаПолучатель}
+
+СГРУППИРОВАТЬ ПО
+	НАЧАЛОПЕРИОДА(ПеремещениеТоваровТовары.Ссылка.Дата, ДЕНЬ),
+	ПеремещениеТоваровТовары.Ссылка.ТорговаяПлощадка.Код,
+	ПеремещениеТоваровТовары.Номенклатура,
+	ПеремещениеТоваровТовары.Номенклатура.ТоварнаяМарка.Родитель = &amp;ТМ_БАТ,
+	ПеремещениеТоваровТовары.Ссылка.СкладКомпанииПолучатель.ТочкаДоставки.Global_ID
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втПродажи.Период КАК Период,
+	втПродажи.CodeOutlet КАК CodeOutlet,
+	втПродажи.BranchID КАК BranchID,
+	втПродажи.Номенклатура КАК Номенклатура,
+	втПродажи.КоличествоОборот КАК КоличествоОборот,
+	втПродажи.ТоварБАТ КАК ТоварБАТ,
+	ЕСТЬNULL(ДополнительныеСведения.Значение, "") КАК BATCodeSKU,
+	ВЫРАЗИТЬ(втПродажи.Номенклатура КАК Справочник.Номенклатура).Артикул КАК Артикул
+ПОМЕСТИТЬ втПродажиКодБАТ
+ИЗ
+	втПродажи КАК втПродажи
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДополнительныеСведения КАК ДополнительныеСведения
+		ПО втПродажи.Номенклатура = ДополнительныеСведения.Объект
+			И (ДополнительныеСведения.Объект ССЫЛКА Справочник.Номенклатура)
+			И (ДополнительныеСведения.Свойство.Имя = "КодБАТ")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втПродажиКодБАТ.Период КАК Date,
+	втПродажиКодБАТ.CodeOutlet КАК CodeOutlet,
+	ВЫБОР
+		КОГДА втПродажиКодБАТ.BranchID = "ХGL000295"
+			ТОГДА "GL000160"
+		ИНАЧЕ втПродажиКодБАТ.BranchID
+	КОНЕЦ КАК BranchID,
+	втПродажиКодБАТ.BATCodeSKU КАК BATCodeSKU,
+	втПродажиКодБАТ.Номенклатура КАК ClientNameSKU,
+	втПродажиКодБАТ.КоличествоОборот КАК SALES_PACKS,
+	втПродажиКодБАТ.Артикул КАК Артикул
+{ВЫБРАТЬ
+	Date,
+	CodeOutlet,
+	BranchID,
+	BATCodeSKU.*,
+	ClientNameSKU.*,
+	SALES_PACKS,
+	Артикул}
+ИЗ
+	втПродажиКодБАТ КАК втПродажиКодБАТ
+ГДЕ
+	втПродажиКодБАТ.ТоварБАТ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	втПродажиКодБАТ.Период,
+	втПродажиКодБАТ.CodeOutlet,
+	ВЫБОР
+		КОГДА втПродажиКодБАТ.BranchID = "ХGL000295"
+			ТОГДА "GL000160"
+		ИНАЧЕ втПродажиКодБАТ.BranchID
+	КОНЕЦ,
+	втПродажиКодБАТ.BATCodeSKU,
+	втПродажиКодБАТ.BATCodeSKU,
+	СУММА(ВЫБОР
+			КОГДА НЕ ДополнительныеСведения.Значение ЕСТЬ NULL
+					И ДополнительныеСведения.Значение &gt; 0
+				ТОГДА втПродажиКодБАТ.КоличествоОборот * (ВЫРАЗИТЬ(ДополнительныеСведения.Значение КАК ЧИСЛО(5, 0))) / 20
+			ИНАЧЕ втПродажиКодБАТ.КоличествоОборот
+		КОНЕЦ),
+	NULL
+ИЗ
+	втПродажиКодБАТ КАК втПродажиКодБАТ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДополнительныеСведения КАК ДополнительныеСведения
+		ПО втПродажиКодБАТ.Номенклатура = ДополнительныеСведения.Объект
+			И (ДополнительныеСведения.Объект ССЫЛКА Справочник.Номенклатура)
+			И (ДополнительныеСведения.Свойство.Имя = "КоличествоСигарет_ОснЕдиницы")
+ГДЕ
+	НЕ втПродажиКодБАТ.ТоварБАТ
+
+СГРУППИРОВАТЬ ПО
+	втПродажиКодБАТ.Период,
+	втПродажиКодБАТ.CodeOutlet,
+	втПродажиКодБАТ.BATCodeSKU,
+	ВЫБОР
+		КОГДА втПродажиКодБАТ.BranchID = "ХGL000295"
+			ТОГДА "GL000160"
+		ИНАЧЕ втПродажиКодБАТ.BranchID
+	КОНЕЦ,
+	втПродажиКодБАТ.BATCodeSKU</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<totalField>
+		<dataPath>SALES_PACKS</dataPath>
+		<expression>Сумма(SALES_PACKS)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>ТМ_БАТ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ТоварнаяМаркаБАТ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>ТоварнаМаркаБАТ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ТоварныеМарки</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>SALES_PACKS</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СкладКомпании</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПодразделениеКомпании</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТорговаяПлощадка</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Покупатель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТорговаяПлощадкаПолучатель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТМ_БАТ</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Date</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>CodeOutlet</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>BranchID</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>BATCodeSKU</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ClientNameSKU</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="94f0ee2c-269d-444f-8287-54a05d679923">
+  <producedTypes>
+    <selectionType typeId="a715238a-98a5-40f0-90a5-d804e6c0b907" valueTypeId="cfe63fca-21f0-4d67-9e0e-ceceb8b19822"/>
+    <listType typeId="4e223b16-59b5-41a7-a62d-bc2b5902de0d" valueTypeId="d1c844e5-092d-49cb-9663-a73cc13f3ad0"/>
+    <managerType typeId="6c97b541-4148-463c-95a9-343f0834e389" valueTypeId="c7d23963-d3b5-4b6f-8162-dc5331be1cc8"/>
+    <recordSetType typeId="b311baeb-4cd5-401a-944f-71c44e5bbb11" valueTypeId="38731201-8d10-4a6e-9964-410a7d72a37c"/>
+    <recordKeyType typeId="1253ee29-f69c-47b5-a95a-8b1cbf9c637e" valueTypeId="209b4da1-b508-4c27-8a6b-e90b9699f120"/>
+    <recordType typeId="4d035cee-4b17-4a55-a32c-3fa39c9dad1f" valueTypeId="82bcae0d-e439-44ee-a462-b1630613d312"/>
+    <recordManagerType typeId="9b4d71d0-142d-4689-9f86-2c2c94b94d0e" valueTypeId="26a4cac2-cbc6-49ea-838b-edc68b804d83"/>
+  </producedTypes>
+  <name>РегистрацияНН</name>
+  <synonym>
+    <key>ru</key>
+    <value>Регистрация НН</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.РегистрацияНН.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="d121dea1-0f28-4b88-afdb-7050ff96f217">
+    <name>СтатусРегистрации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус регистрации</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыНН</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5f0b1e0d-e55a-43c1-a8e6-d84c7d31f820">
+    <name>СтатусУведомления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус уведомления</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="d89c831c-1224-40b5-bdd8-ad5a62f90859">
+    <name>НалоговаяНакладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговая накладная</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ТК_НалоговаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="cc4f4370-f830-4e1c-9720-0b2477da4362">
+    <name>ДокументОснование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ основание</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ТК_ЗаказПокупателяКазначейсвто</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="00ce29e5-d4c8-460f-8e32-ab4075ed2d4b">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

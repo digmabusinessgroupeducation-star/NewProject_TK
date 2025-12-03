@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2beca129-2bc0-479a-a4e1-75eabd577730">
+  <producedTypes>
+    <refType typeId="cdbe70a4-18ec-4f67-8748-f735ebd8a941" valueTypeId="f2db1a68-e53c-4fea-be86-189960d0d8d3"/>
+    <listType typeId="27382e00-f85b-4441-bfb3-239067f9899b" valueTypeId="81d99dd2-2cf4-476c-a267-79589765266b"/>
+    <objectType typeId="81d678c7-28d7-417f-8f68-aa6688e39868" valueTypeId="be1bd9c1-8916-48c0-9a16-cf5953955187"/>
+    <managerType typeId="7313ba4d-3d02-4e31-93a7-ff0279beb260" valueTypeId="86dfc8e8-3f20-405e-b4ee-868034eca1b4"/>
+    <recordManagerType typeId="8c07433c-c8ed-481c-b33e-50e485d435c9" valueTypeId="f50ba06b-ad79-4771-877b-980a1ec03bb2"/>
+    <recordSetType typeId="a01581c2-108e-404d-afb2-7ce0c8dbd50d" valueTypeId="c41f5c3c-88cd-4b9d-b462-21bf88ea55f8"/>
+    <recordType typeId="d5f3e0af-8523-44e0-bdaa-28a32c876222" valueTypeId="e4ab2588-f20e-494c-aa71-9db6ffb1da02"/>
+    <recordKeyType typeId="e77ac87c-e93a-4ad1-b073-fac5aa211e30" valueTypeId="2b3ca095-145a-4682-b0b1-96a4f401bef1"/>
+  </producedTypes>
+  <name>Группы_Товаров</name>
+  <parentDataSource>ExternalDataSource.OpenStore</parentDataSource>
+  <nameInDataSource>dbo.GRP</nameInDataSource>
+  <keyFields>ExternalDataSource.OpenStore.Table.Группы_Товаров.Field.Артикул</keyFields>
+  <unfilledParentValue xsi:type="core:UndefinedValue"/>
+  <inputByString>ExternalDataSource.OpenStore.Table.Группы_Товаров.Field.Артикул</inputByString>
+  <editType>InDialog</editType>
+  <tableFields uuid="874feca5-3be0-46f5-a9c9-3ad01dfc15b5">
+    <name>GUID</name>
+    <type>
+      <types>BinaryData</types>
+      <binaryQualifiers>
+        <length>16</length>
+        <fixed>true</fixed>
+      </binaryQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>GUID</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="026ffc41-4eb4-4526-99ab-e74c06d06647">
+    <name>Артикул</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>GRPID</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="a3a9d461-c94d-4e76-96ef-ecbd9dce2609">
+    <name>Артикул_Родитель</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>PARENTGRPID</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="c5bc4642-81bd-4f50-9174-e1d206d05e07">
+    <name>Наименование</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>GRPNAME</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="529c6b98-bf26-439c-afc0-9289a0c06352">
+    <name>Картинка</name>
+    <type>
+      <types>BinaryData</types>
+      <binaryQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>GRPPICTURE</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="f5b429c7-8c7e-4281-8f6c-226340a2ac12">
+    <name>Удален</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>DELFLAG</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="07b5ec77-2660-4261-a002-e9530066539d">
+    <name>Номер_Версии</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>UPDATENUM</nameInDataSource>
+  </tableFields>
+</mdclass:Table>

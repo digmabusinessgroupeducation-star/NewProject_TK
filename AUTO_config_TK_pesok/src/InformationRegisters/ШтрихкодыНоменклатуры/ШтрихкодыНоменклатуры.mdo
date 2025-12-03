@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9a95eb07-b664-49bf-8f59-8b5213ac455c">
+  <producedTypes>
+    <selectionType typeId="515d1c67-8bca-47bb-bb78-c592432ab62f" valueTypeId="7168a757-decc-4340-9928-30f8b8b8eb3e"/>
+    <listType typeId="55e96e6d-4a6f-4724-947c-aad44e34197e" valueTypeId="9664599d-8fe6-4a7d-9200-fcbbf2c95497"/>
+    <managerType typeId="2426d14d-91ca-4304-8d09-44ae09d8852b" valueTypeId="c801d1a8-90e2-4173-85b1-3b6c6ac25f97"/>
+    <recordSetType typeId="8c843dbe-8391-4bee-a874-d4e498e7ba68" valueTypeId="92ad9e70-a2c2-4d81-85a4-3284f7156620"/>
+    <recordKeyType typeId="dfc80bc9-e243-4127-bc6c-9454cc2fb75f" valueTypeId="b32e3071-985d-4486-baa1-e568c2c31338"/>
+    <recordType typeId="f791841a-21bb-4cc9-a6db-7a2ad0af7f13" valueTypeId="13198a58-0292-4e9a-997b-6e75ae6ba75c"/>
+    <recordManagerType typeId="c27ff5b3-cd79-4df8-b870-7a970757476d" valueTypeId="2d845429-9206-411d-b2ad-afd2cccff00c"/>
+  </producedTypes>
+  <name>ШтрихкодыНоменклатуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Штрихкоды номенклатуры</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Штрихкоди номенклатури</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ШтрихкодыНоменклатуры.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ШтрихкодыНоменклатуры.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <resources uuid="889761d6-a564-4f17-92e7-04b5852922bc">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Номенклатура для которой задается штрихкод</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Номенклатура для якої задається штрихкод</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>190a7469-3325-4d33-b5ec-28a63ac83b06.00000000-0000-0000-0000-000000000000</value>
+    </fillValue>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="28e965fa-e21a-42ca-856d-89463aac62d6">
+    <name>Характеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Характеристика</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Если у выбранной номенклатуры используются характеристики, то необходимо выбрать характеристику номенклатуры.</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Якщо у обраної номенклатури використовуються характеристики, то необхідно вибрати характеристику номенклатури.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <changeMode>DontChange</changeMode>
+      <field>InformationRegister.ШтрихкодыНоменклатуры.Resource.Номенклатура</field>
+    </choiceParameterLinks>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>89c162bd-68ef-4693-a4a8-19238fa23c62.00000000-0000-0000-0000-000000000000</value>
+    </fillValue>
+  </resources>
+  <resources uuid="5ac3e4c7-ed18-4ee0-823a-050d9b560318">
+    <name>Упаковка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упаковка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Упаковка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЕдиницыИзмерения</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Если у выбранной номенклатуры используются упаковки, то можно выбрать упаковку номенклатуры.</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Якщо у обраної номенклатури використовуються упаковки, то можна вибрати упаковку номенклатури.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <changeMode>DontChange</changeMode>
+      <field>InformationRegister.ШтрихкодыНоменклатуры.Resource.Номенклатура</field>
+    </choiceParameterLinks>
+    <choiceParameters>
+      <name>ДобавлятьПустуюУпаковку</name>
+      <value xsi:type="core:BooleanValue"/>
+    </choiceParameters>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="93d27fb7-cc51-4e4d-b08d-233aebb5cf14">
+    <name>Штрихкод</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрихкод</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Штрихкод</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Штрихкод номенклатуры.</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Штрихкод номенклатури.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="e6e9e17f-ed44-40e6-9a62-9d83e5199a8d">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма запису</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="54367b7f-df01-4c02-a829-a3d3cfcf047c">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

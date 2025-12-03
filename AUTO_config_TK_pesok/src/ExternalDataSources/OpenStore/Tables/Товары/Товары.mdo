@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bb80d964-bf18-422a-a363-44d0b23d60f5">
+  <producedTypes>
+    <refType typeId="cec232ea-84cd-412e-9eef-089f8a1f3d2a" valueTypeId="a79451c6-9d03-4288-b7ad-3749792a6496"/>
+    <listType typeId="395f5b39-b927-4436-be1e-3c2844482b1c" valueTypeId="03d338d7-61b9-4ce0-94b5-18d670970b82"/>
+    <objectType typeId="304e4bb2-0939-4e76-9260-b085e61de994" valueTypeId="9da5c9fe-d2ad-476b-b93e-36b6a0139955"/>
+    <managerType typeId="6916ddaf-e5c5-4b86-8f38-eaf56c05e221" valueTypeId="46b48520-08ce-43aa-a6d9-50a08f388d7a"/>
+    <recordManagerType typeId="5a0ca987-27b6-4189-8233-9a8baac3028a" valueTypeId="4e516bfc-cf79-427d-b9e2-1c80798128c6"/>
+    <recordSetType typeId="1b551951-6d0a-4027-9c88-cf38bd9bded6" valueTypeId="7b9d42f7-a250-4fc6-a093-11e1e767d607"/>
+    <recordType typeId="bb95c219-739d-48e6-82fc-e1b751bc5251" valueTypeId="3e3f33a3-304a-40da-af34-79abe8aa1aea"/>
+    <recordKeyType typeId="77c7877e-eb2f-43ba-b5e1-edd9ab859947" valueTypeId="0659e3b9-74d3-4095-8d4e-7196b38175ea"/>
+  </producedTypes>
+  <name>Товары</name>
+  <synonym>
+    <key>ru</key>
+    <value>Товары</value>
+  </synonym>
+  <parentDataSource>ExternalDataSource.OpenStore</parentDataSource>
+  <nameInDataSource>dbo.ART</nameInDataSource>
+  <keyFields>ExternalDataSource.OpenStore.Table.Товары.Field.Артикул</keyFields>
+  <unfilledParentValue xsi:type="core:UndefinedValue"/>
+  <inputByString>ExternalDataSource.OpenStore.Table.Товары.Field.Артикул</inputByString>
+  <editType>InDialog</editType>
+  <tableFields uuid="b1c80235-9195-4cf8-a69c-a19a1eb584a3">
+    <name>GUID</name>
+    <type>
+      <types>BinaryData</types>
+      <binaryQualifiers>
+        <length>16</length>
+        <fixed>true</fixed>
+      </binaryQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>GUID</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="4f38da58-f44c-4719-b909-ebc471f927b6">
+    <name>Артикул</name>
+    <synonym>
+      <key>ru</key>
+      <value>Артикул</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>ARTID</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="aab643c2-f1e7-4431-9ca6-f25aca5952ef">
+    <name>Артикул_Группы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Артикул группы</value>
+    </synonym>
+    <type>
+      <types>ExternalDataSourceTableRef.OpenStore.Группы_Товаров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>GRPID</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="48a6b31c-47bb-4738-a8d7-e3e70ddcf188">
+    <name>Артикул_Еденица_По_Умолчанию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Артикул еденица по умолчанию</value>
+    </synonym>
+    <type>
+      <types>ExternalDataSourceTableRef.OpenStore.Классификатор_Единиц</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>DEFAULTUNITID</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="b447adfa-b7ce-406e-b411-f32bad151bfb">
+    <name>Код_Товара</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код товара</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>ARTCODE</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="0ccf8309-b639-4470-b7f6-214e5e6a35cd">
+    <name>Тип_Товара</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип товара</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>ARTTYPE</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="a29dc253-cfca-4f42-aa5f-1e03a4b6afe4">
+    <name>Наименование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>ARTNAME</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="040bc0e1-e417-4175-bb63-252f8601c49d">
+    <name>Наименование_Краткое</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование краткое</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>ARTSNAME</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="a8824dd2-49f3-47cd-8ef2-acff5cb6cbba">
+    <name>Удален</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удален</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>DELFLAG</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="b02dbde2-1706-4842-8e38-be21f582e3db">
+    <name>Номер_Версии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер версии</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>UPDATENUM</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="9b5ca6c5-49e1-4a9e-9728-8d617e35fde4">
+    <name>UKEZEDCODE</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1024</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>UKEZEDCODE</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="4fb0cf63-2288-4b54-a6c1-2b9ec1a755cd">
+    <name>Артикул_СтавкаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Артикул ставка НДС</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>TAXGRPID</nameInDataSource>
+  </tableFields>
+</mdclass:Table>

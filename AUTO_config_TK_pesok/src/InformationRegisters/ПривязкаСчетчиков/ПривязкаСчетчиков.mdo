@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9bba4207-7cdf-48fe-9674-c6dc88706ee3">
+  <producedTypes>
+    <selectionType typeId="47fe7e5e-b44d-4a31-a015-313d683346ce" valueTypeId="33ad0df3-cd2c-4033-aed8-3333f9821e2b"/>
+    <listType typeId="0c722544-3a20-489e-950a-700795d0d5f2" valueTypeId="47b43dad-b528-4936-8d5d-aa01711a84ad"/>
+    <managerType typeId="4a3c4b31-91ee-4e8d-85f3-69b54b00eddf" valueTypeId="37f00cdf-1e66-4572-b2c2-fe67e726cfd2"/>
+    <recordSetType typeId="8d8dbf6a-158d-4b59-9513-cfa1be66978e" valueTypeId="f78b5b7e-f35b-4429-937f-b86ebee68c2a"/>
+    <recordKeyType typeId="d6a724bc-de44-4580-a1e1-9bbc63e8a2d2" valueTypeId="0d8ddabf-8628-4e81-a6da-35b8bcef9568"/>
+    <recordType typeId="367f64f3-1749-4889-8a77-28e7baaa893e" valueTypeId="9d636cf5-0cb1-4f81-815f-550838b224f5"/>
+    <recordManagerType typeId="b7f31709-f647-4a00-9e5f-a48f40620392" valueTypeId="ec9c64cc-8033-4da8-8a7f-c0d8b7ec6928"/>
+  </producedTypes>
+  <name>ПривязкаСчетчиков</name>
+  <synonym>
+    <key>ru</key>
+    <value>Привязка счетчиков</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ПривязкаСчетчиков.Form.ФормаЗаписи</defaultRecordForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="3dae5733-0e88-43a7-8e8c-5136dcd6587f">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="d59b9a64-d892-434b-a63c-5437dfd99c44">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="7db78c9d-cb37-4a26-aeef-93eddf9e8222">
+    <name>Счетчик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счетчик</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Счетчики</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="6c2a142d-45b5-4aea-9bb1-323a0d0dc30f">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

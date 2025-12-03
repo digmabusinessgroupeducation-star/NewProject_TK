@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bbe145fb-0480-4982-8c7e-92c14d324077">
+  <name>Обмен_OS_ПриЗаписиОбъектаСправочника</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен o s при записи объекта справочника</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ТипыНоменклатуры</types>
+    <types>CatalogObject.ТорговыеПлощадки</types>
+    <types>CatalogObject.НоменклатураПоставщиков</types>
+    <types>CatalogObject.ПрофилиКассиров</types>
+    <types>CatalogObject.СкладыКомпании</types>
+    <types>CatalogObject.СтатьиВозврата</types>
+    <types>CatalogObject.ФизическиеЛица</types>
+    <types>CatalogObject.ХарактеристикиНоменклатуры</types>
+    <types>CatalogObject.ТипыЦен</types>
+    <types>DocumentObject.ТК_НазначениеСкидок</types>
+    <types>CatalogObject.ЕдиницыИзмерения</types>
+    <types>CatalogObject.Номенклатура</types>
+    <types>CatalogObject.Отделы</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ОбменФронтСобытия.Обмен_OS_ПриЗаписиОбъектаСправочникаПриЗаписи</handler>
+</mdclass:EventSubscription>

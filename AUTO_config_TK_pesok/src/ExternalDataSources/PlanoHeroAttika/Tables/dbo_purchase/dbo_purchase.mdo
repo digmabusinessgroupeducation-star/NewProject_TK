@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c6e2978d-88b8-405b-91f9-d726da97f8ec">
+  <producedTypes>
+    <refType typeId="0b9b2cf1-cd89-4129-b68f-f74d8b2f7000" valueTypeId="74ce2765-859b-4bee-a840-92094f3f43ba"/>
+    <listType typeId="d51e8b83-05a3-409e-9eb3-fe0ec3389226" valueTypeId="d324b7a5-cb0c-4275-9fb0-058613f0692b"/>
+    <objectType typeId="08a8ee60-c410-4827-8f2a-559a7a6cb49f" valueTypeId="42df7a49-bf48-4048-8b49-9e8bb75372b1"/>
+    <managerType typeId="7b92451e-879c-4ba2-a410-ba03914eb1d0" valueTypeId="c555311f-52a9-4a6f-aea8-4939e6a6ad5b"/>
+    <recordManagerType typeId="68c422ba-6221-40c2-a495-722e95bea7a9" valueTypeId="75a6d91a-faa9-46eb-ab6f-7172b55b0878"/>
+    <recordSetType typeId="d9953544-15e6-4910-b5d0-766e7737c3d1" valueTypeId="ce14fd77-8ed6-407b-b766-e0a097246ee2"/>
+    <recordType typeId="d80ed4ad-f1c1-4bbe-98dd-6b3a05579a05" valueTypeId="fb5bfa31-f6f3-469d-b5a5-c76feac3bd36"/>
+    <recordKeyType typeId="cccbc2fb-f12a-4d7e-a41e-d616a2161478" valueTypeId="9ae73ddf-e463-4884-97e0-dc28cfbb1ff2"/>
+  </producedTypes>
+  <name>dbo_purchase</name>
+  <parentDataSource>ExternalDataSource.PlanoHeroAttika</parentDataSource>
+  <nameInDataSource>dbo.purchase</nameInDataSource>
+  <keyFields>ExternalDataSource.PlanoHeroAttika.Table.dbo_purchase.Field.id</keyFields>
+  <presentationField>ExternalDataSource.PlanoHeroAttika.Table.dbo_purchase.Field.code</presentationField>
+  <unfilledParentValue xsi:type="core:UndefinedValue"/>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ExternalDataSource.PlanoHeroAttika.Table.dbo_purchase.Field.id</inputByString>
+  <inputByString>ExternalDataSource.PlanoHeroAttika.Table.dbo_purchase.Field.code</inputByString>
+  <editType>InDialog</editType>
+  <tableFields uuid="a88ee50f-7b27-40de-bd12-b65062630ef7">
+    <name>id</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="c3978043-48f5-41e7-ba43-bcde355a61f4">
+    <name>code</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>code</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="b01d3b88-9ed9-48a3-8d94-5a3a70658b6c">
+    <name>created_at</name>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <nameInDataSource>created_at</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="1c61c37c-16c0-4dc0-95a7-1fc74b39fdca">
+    <name>shop_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_shop</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>shop_id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="c13a9106-a389-4713-bb35-84f7eee8f56d">
+    <name>supplier_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_supplier</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>supplier_id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="fe4d995d-f1df-4a98-a8c8-d2bfdaeb2e1b">
+    <name>staff_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_staff</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>staff_id</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="ba21b35e-7de8-46fc-920d-4d9afe5db9bf">
+    <name>doc_id</name>
+    <synonym>
+      <key>ru</key>
+      <value>Doc id</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>doc_id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="0179a8d8-76ac-4ec7-947b-03a0d2e0b935">
+    <name>posted</name>
+    <synonym>
+      <key>ru</key>
+      <value>Posted</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>posted</nameInDataSource>
+  </tableFields>
+</mdclass:Table>

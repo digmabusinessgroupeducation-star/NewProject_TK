@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8fe4728b-c6d9-4a7f-880a-02a2a13da7a7">
+  <producedTypes>
+    <selectionType typeId="f0817cb6-0d48-4447-8495-95e30f6eddba" valueTypeId="e1af4882-8da9-4a6b-8909-a4a3e15ec099"/>
+    <listType typeId="f1531b72-cf29-43c0-9857-326f7429f472" valueTypeId="7b739a51-2fa6-435f-8ebc-97a7b5dbf0d7"/>
+    <managerType typeId="5225eae2-c698-4d2f-8a01-6c070ac89339" valueTypeId="de6cea34-165b-4dba-9c5f-f4bd4a724f98"/>
+    <recordSetType typeId="c800674e-b2c9-460c-a622-2b1a1666a4b5" valueTypeId="7f7271ca-676e-45f5-8ff9-858930d8f466"/>
+    <recordKeyType typeId="8cf3a6fe-cd0d-46b3-801a-83bde1252540" valueTypeId="24908535-148a-484f-ad5c-3141700188f6"/>
+    <recordType typeId="611cb2d8-64d5-4157-a68a-72f0368c5647" valueTypeId="50e4de81-6074-4a94-b5e7-62ec2b4e3ef1"/>
+    <recordManagerType typeId="c1bfb3e5-93d7-462e-8849-c40f1c3447df" valueTypeId="49fd1f65-4a1b-4d71-8d4c-553cd6994100"/>
+  </producedTypes>
+  <name>ТелеграмКонтекстСеансов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контекст сеансов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Контекст сеанса</value>
+  </recordPresentation>
+  <resources uuid="1df65c27-5bf7-4b0d-a886-ecb3b6ec4058">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ТелеграмПараметрыКонтекста</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <linkByType>
+      <field>InformationRegister.ТелеграмКонтекстСеансов.Dimension.Параметр</field>
+    </linkByType>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="3e7aae32-2e63-4608-a1e9-9ad8a5f6b081">
+    <name>ИдентификаторЧата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор чата</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="edc1276d-b4dc-43de-a95c-c290d56c4dea">
+    <name>Параметр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметр</value>
+    </synonym>
+    <type>
+      <types>ChartOfCharacteristicTypesRef.ТелеграмПараметрыКонтекста</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

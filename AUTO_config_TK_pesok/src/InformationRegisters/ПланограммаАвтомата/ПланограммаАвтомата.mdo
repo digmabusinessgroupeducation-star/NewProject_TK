@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="723f61aa-2a2a-415a-ac7e-4d8c7206cde4">
+  <producedTypes>
+    <selectionType typeId="e2bb989d-7a95-43b1-8c57-7f9cd327cdfd" valueTypeId="766f6662-be98-4aca-921c-bb2aeaabfc69"/>
+    <listType typeId="43d3f8f0-ecc3-4d18-a34b-1cae94c72190" valueTypeId="f14231aa-7422-49c0-b0a4-fb07f1148956"/>
+    <managerType typeId="36887cd5-0afa-4127-9e8f-36ed2b8ff416" valueTypeId="3b36bbb5-7431-44eb-b61c-cd46c2d6f227"/>
+    <recordSetType typeId="34fc5081-83e4-4dae-9083-d13166cf6dfc" valueTypeId="8faca7c2-3d10-4085-9f8e-533a837b6ff5"/>
+    <recordKeyType typeId="216b5e86-890d-4403-b944-aa0d7d74f8b4" valueTypeId="6c0c313a-0305-4243-a337-fcdf6c1ad550"/>
+    <recordType typeId="d5ddc09b-ace8-4ce2-9b55-77c4fb7775c6" valueTypeId="1e1a57a3-d150-4aa9-8e9f-f01b7dc166ee"/>
+    <recordManagerType typeId="83832617-1e65-4e47-a1a6-c302e9e19e10" valueTypeId="e2cbf749-4384-4bc8-93ed-813039d54291"/>
+  </producedTypes>
+  <name>ПланограммаАвтомата</name>
+  <synonym>
+    <key>ru</key>
+    <value>Планограмма автомата</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="f727cdb2-6678-4e63-b321-87c5ae1ee55c">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="be4e1518-0096-4e12-b2dd-4ddfb4f2e6b4">
+    <name>Характеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.ПланограммаАвтомата.Resource.Номенклатура</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="6bf5044b-2b67-4718-b9a6-318fe80ce36f">
+    <name>Ячейка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c96ecc34-0234-4003-a0d5-d63cb171c91b">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СкладыКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

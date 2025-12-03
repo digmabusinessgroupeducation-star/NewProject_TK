@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ffb4a76c-dcc9-4c0f-b9c0-5a80d825e36f">
+  <name>ОбменДаннымиОбменКонсолидацияЗарегистрироватьИзменениеДокумента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными обмен консолидация зарегистрировать изменение документа</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ЗакрытиеСмены</types>
+    <types>DocumentObject.СписаниеТоваров</types>
+    <types>DocumentObject.Инвентаризация</types>
+    <types>DocumentObject.РасходныйКассовыйОрдер</types>
+    <types>DocumentObject.ТК_ОприходованиеТоваров</types>
+    <types>DocumentObject.ПоступлениеТоваров</types>
+    <types>DocumentObject.ПриходныйКассовыйОрдер</types>
+    <types>DocumentObject.ТК_КорректировкаДолга</types>
+    <types>DocumentObject.РеализацияТоваров</types>
+    <types>DocumentObject.ВозвратОтПокупателя</types>
+    <types>DocumentObject.ВыпускПродукции</types>
+    <types>DocumentObject.ТК_ЗакрытиеСменыЗКС</types>
+    <types>DocumentObject.ПеремещениеТоваров</types>
+    <types>DocumentObject.ВозвратПоставщику</types>
+    <types>DocumentObject.ТК_Взаимозачет</types>
+    <types>DocumentObject.ТК_Переработка</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ТК_ОбменCentrСобытия.ОбменДаннымиКонсолидацияПередЗаписьюДокумента</handler>
+</mdclass:EventSubscription>

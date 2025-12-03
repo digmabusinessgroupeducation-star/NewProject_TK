@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bda6aeca-9459-438f-9a81-8f7ccb7514ed">
+  <producedTypes>
+    <objectType typeId="ad382f24-0290-43e0-9173-10bb441b959a" valueTypeId="fed4a32e-0edc-4b8f-a0d3-800913c12061"/>
+    <refType typeId="0287da7c-00b7-468a-a16d-3036036f3618" valueTypeId="f775e229-1c06-4ea8-a3d5-dc85f24ef499"/>
+    <selectionType typeId="5af6db1e-0702-4fda-a43c-20858cc0f820" valueTypeId="1d807848-0b67-41a5-b0d7-b4be3da10ff3"/>
+    <listType typeId="1b3c3ed0-c438-4bfb-b44a-aa8e95b01d20" valueTypeId="8cd4c096-f506-42f7-a7db-0d87f68b9470"/>
+    <managerType typeId="be27af2d-9269-4272-9938-aa3f6c795efc" valueTypeId="704441f3-52a1-4981-856e-a804ebf1bf6a"/>
+  </producedTypes>
+  <name>КорректировкаПартийТоваров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Корректировка партий товаров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.КорректировкаПартийТоваров.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dataHistory>Use</dataHistory>
+  <numberType>String</numberType>
+  <numberLength>12</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.КорректировкаПартийТоваров.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.КорректировкаПартийТоваров.Form.ФормаСписка</defaultListForm>
+  <sequenceFilling>AutoFillOff</sequenceFilling>
+  <registerRecords>AccumulationRegister.ПартииТоваровКомпании</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="75bb39ad-c48b-43d1-acc6-0c03ff125418">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Автор</value>
+    </synonym>
+    <comment>Автор документа - пользователь, создавший документ.</comment>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d5a7c8ef-ceba-46c6-902e-6f078fcaee81">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хоз операция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Хоз операція</value>
+    </synonym>
+    <comment>Выполняемая документом операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9d9d4ed4-3d3f-4b67-9dbd-d77533569827">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <comment>Произвольный комментарий к документу</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a529acb9-908b-46d4-bd89-56affe4aaca6">
+    <name>СкладКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад компании</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СкладыКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d8cf77c6-7797-4547-a925-f973d7d5af71">
+    <name>ПодразделениеКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение компании</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="4f052b78-08be-4bf7-8843-36adfb013ec4">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c3848194-c07d-4d19-86c4-0d10ca91caeb">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="cade7a44-04f2-4a2b-a694-e054642dba89">
+    <producedTypes>
+      <objectType typeId="3426cdb9-6d8e-47df-9f7a-732a1f8f0105" valueTypeId="b2035acf-2f10-4c75-ae5b-fe29bb9f6864"/>
+      <rowType typeId="14a328b3-31b4-469a-8ccc-d993614e2559" valueTypeId="bec9dce4-afaf-4df7-acbc-6d0dd79a4754"/>
+    </producedTypes>
+    <name>ПартииТоваровКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Партии товаров компании</value>
+    </synonym>
+    <comment>Блок учета партий товаров компании собственных и принятых на комиссию</comment>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="9bc49a3a-8c6f-4005-a0b2-1215c824e68b">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <comment>Номенклатура</comment>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a423f8a7-c863-4fe5-9f1a-74193f58c354">
+      <name>ХарактеристикаНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика номенклатуры</value>
+      </synonym>
+      <comment>Характеристика номенклатуры</comment>
+      <type>
+        <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

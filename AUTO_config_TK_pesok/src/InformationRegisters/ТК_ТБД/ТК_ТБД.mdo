@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="023cca95-3d72-4e84-9949-314b91973cab">
+  <producedTypes>
+    <selectionType typeId="f3cb4b77-1f0b-4cf9-ba4a-4a4c8fe99956" valueTypeId="893d100b-33b9-4746-9ba1-c2e3cdeedf33"/>
+    <listType typeId="49ff702c-0587-46b0-a23c-69fc164df216" valueTypeId="37782922-bec2-4cf8-b7e7-18f0148ca268"/>
+    <managerType typeId="700246ee-76a5-4f4c-8a44-37bd2e3768ac" valueTypeId="b45591e0-dfd2-4951-8c3a-ee253d4b67c3"/>
+    <recordSetType typeId="7b40cc3d-ca85-447e-a4c5-1d401462b736" valueTypeId="586c648b-a213-4eba-be71-ed5cc9581ca3"/>
+    <recordKeyType typeId="ef094fec-b02e-4084-917f-e5b0380266aa" valueTypeId="b5c471a9-cd59-42df-9a77-f6ae63b09b86"/>
+    <recordType typeId="dbbf0fbe-c9c6-4808-bd3a-65846d312ab0" valueTypeId="c351ec0c-b9e2-4f51-980e-1753f88bebb3"/>
+    <recordManagerType typeId="49e3de46-7a26-41a1-b97a-0a09f6d74e04" valueTypeId="a969e823-adab-4686-9ca7-77dce46bafb9"/>
+  </producedTypes>
+  <name>ТК_ТБД</name>
+  <synonym>
+    <key>ru</key>
+    <value>ТБД</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="80353519-99ef-48c4-926a-09b04e5a63b7">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="57ed7529-211e-4441-ab57-9a4c211f9d2d">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="95491b9c-8db3-480b-95af-1b87741d8fad">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="42bc4d10-b708-4f16-8527-3a2abe0fb6a4">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="93a2171d-6803-4ca8-ae02-7a84de85df80">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+</mdclass:InformationRegister>

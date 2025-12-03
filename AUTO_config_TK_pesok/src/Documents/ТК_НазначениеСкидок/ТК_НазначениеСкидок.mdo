@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cd9e0ec3-57d3-48c2-92d6-7b814d7bec80">
+  <producedTypes>
+    <objectType typeId="8bdd6e8a-796a-4b15-81a6-439633ba3192" valueTypeId="ac65ec8a-5ad7-472b-b041-6a259919054e"/>
+    <refType typeId="dd4d8335-6aab-4547-8d77-17729b67677f" valueTypeId="87b5d485-be91-4d49-9eba-32e1dfd8a6f7"/>
+    <selectionType typeId="5bf3283d-7145-49ba-ae3e-4cc82519a14c" valueTypeId="a381b332-15c3-4027-86d1-9c2ce05ec1d0"/>
+    <listType typeId="c06684b4-e281-4290-ae56-2dd0219fa10c" valueTypeId="d488cf56-1906-43b6-9dfb-6586556bf328"/>
+    <managerType typeId="04e08cf7-c745-45a3-8ddd-82f34e13fc44" valueTypeId="8a6952ac-9e6f-4583-873f-43c264feec87"/>
+  </producedTypes>
+  <name>ТК_НазначениеСкидок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Назначение скидок</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ТК_НазначениеСкидок.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dataHistory>Use</dataHistory>
+  <numberType>String</numberType>
+  <numberLength>12</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ТК_НазначениеСкидок.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ТК_НазначениеСкидок.Form.ФормаСписка</defaultListForm>
+  <registerRecords>InformationRegister.ТК_Скидки</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="6d68a716-92ff-4859-b66f-cebecfa112a6">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Автор</value>
+    </synonym>
+    <comment>Автор документа - пользователь, создавший документ.</comment>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fb6fcdf9-cedf-4670-ab13-077ee7686c89">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Господарська операція</value>
+    </synonym>
+    <comment>Выполняемая документом операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ХозОперации.УстановкаСкидки</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1dfc4b28-923b-49d8-a471-4f11b95bd78d">
+    <name>ПодразделениеКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ</value>
+    </synonym>
+    <comment>Подразделение компании в котором был выписан документ</comment>
+    <type>
+      <types>CatalogRef.ПодразделенияКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="366676fd-6810-440b-8cbd-cfd783346c95">
+    <name>КлассификаторПродажи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Классификатор продажи</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлассификаторПродаж</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c544914c-d562-428c-b1cb-aae59db7fe96">
+    <name>ТипСкидки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип скидки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТК_ТипыСкидок</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ТК_ТипыСкидок.СпециальнаяЦена</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="67c184ea-ff7f-4cb3-bdcd-93617a5768d3">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <comment>Произвольный комментарий к документу</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="2acbad6e-1b5d-4cfd-b04d-9381760efa57">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d32bf284-1fce-4014-aaed-f89564582f64">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="b1e7d55a-6d70-441f-beb8-ceeaf4379240">
+    <producedTypes>
+      <objectType typeId="447b3de6-90f7-4901-a475-bc601eb926fa" valueTypeId="461ecc29-959e-4909-917b-1354aa7d96ae"/>
+      <rowType typeId="e80227db-f918-404f-87b0-5a2baa8fbf3c" valueTypeId="30926737-fa81-43d8-8db0-242353815dc1"/>
+    </producedTypes>
+    <name>Скидки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Скидки</value>
+    </synonym>
+    <attributes uuid="60ae1efe-2953-4c16-ad77-697d71d672fb">
+      <name>ФлагВытеснения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Флаг вытеснения</value>
+      </synonym>
+      <comment>Истина - скидка вытесняющая, Ложь - скидка может использоваться соместно</comment>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="215e149c-bd66-4017-954d-31c0e8ec29ea">
+      <name>ЗначениеСкидки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение скидки</value>
+      </synonym>
+      <comment>Процент от суммы документа или сумма для абсолютных скидок</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="137726ab-a9c7-4194-98b0-81f9eef3569a">
+      <name>СпособВычисления</name>
+      <synonym>
+        <key>ru</key>
+        <value>Способ вычисления</value>
+      </synonym>
+      <comment>Способ вычисления скидки, абсолютный или отностиельный.</comment>
+      <type>
+        <types>EnumRef.СкидкиСпособВычисления</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9d3506f8-771e-4c91-a766-f36e615ae15d">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <comment>Товар или группа на которую действует скидка</comment>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5c206b8a-fe65-4af2-b693-551770c479e4">
+      <name>Договор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Договор</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ДоговорыКонтрагентов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9d1436ec-8907-4241-b3d0-b17c241e86db">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <comment>Количество, начиная с которого предоставляется скидка</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество, начиная с которого предоставляется скидка</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="878a9f2f-ae02-4a8e-af48-2f7826608584">
+      <name>Правило</name>
+      <synonym>
+        <key>ru</key>
+        <value>Правило</value>
+      </synonym>
+      <comment>Правило расчета скидки по количеству</comment>
+      <type>
+        <types>EnumRef.ПравилаРасчетаСкидкиПоКоличеству</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8d89d493-0929-408c-a675-e94a57ed0b77">
+      <name>СуммаЧека</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма чека</value>
+      </synonym>
+      <comment>Сумма, начиная с которой скидка имеет действие</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="aecb4dd5-a4ba-49dd-8015-eadd07fa2605">
+      <name>СуммаСтроки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма строки</value>
+      </synonym>
+      <comment>Сумма, начиная с которой скидка имеет действие</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="21813285-9b45-4bcc-8491-c7a571a4f534">
+      <name>ДисконтнаяКарта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дисконтная карта</value>
+      </synonym>
+      <comment>Карта, на которую назначается скидка</comment>
+      <type>
+        <types>CatalogRef.Карточки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="31ada1d0-81f0-4f92-9c1f-1cc69ae0a91c">
+      <name>СуммаНакопления</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма накопления</value>
+      </synonym>
+      <comment>Сумма накопительная, применяется совместно с дисконтной картой</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a81ffa54-0c0e-4749-b4fa-c289585caf81">
+      <name>НачалоДействия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата и время начала</value>
+      </synonym>
+      <comment>Дата и время начала действия скидки</comment>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="04b763be-67fb-4ef2-98af-1b3083e5799c">
+      <name>КонецДействия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата и время окончания</value>
+      </synonym>
+      <comment>Дата и время окончания действия скидки</comment>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b8179062-d793-4289-9585-a953ad18f2c9">
+      <name>ДниНедели</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дни недели</value>
+      </synonym>
+      <comment>Маска дней недели 0/1 для определения действия скидки</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>7</length>
+          <fixed>true</fixed>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7b949b43-c679-49ee-afc9-73af3a7930a9">
+      <name>МаксимальнаяСуммаПодарка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Максимальная сумма подарка</value>
+      </synonym>
+      <comment>Максимальная сумма подарка</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e83bcf90-61e6-4ede-b88c-080b3f4b6626">
+      <name>КоэффициентНабора</name>
+      <synonym>
+        <key>ru</key>
+        <value>Коэффициент набора</value>
+      </synonym>
+      <comment>Количество товара, на который будет назначаться скидка </comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="bff35aa1-40ba-459b-bdba-5461f763b4be">
+    <producedTypes>
+      <objectType typeId="ba295ece-e43c-45ab-a858-3d55dc91f29a" valueTypeId="f7e0aec1-322f-434f-99e7-279749e7dc0e"/>
+      <rowType typeId="da1a978d-e019-4fb1-a338-79b1ef4dca8e" valueTypeId="6384886c-9c4e-4930-b971-6c39ca716ebe"/>
+    </producedTypes>
+    <name>ТорговыеПлощадки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговые площадки</value>
+    </synonym>
+    <comment>Площадки, для которых устанавливается скидка</comment>
+    <fillChecking>ShowError</fillChecking>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="dceefef3-982d-41db-8817-e00a1d3bdf59">
+      <name>ТорговаяПлощадка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Торговая площадка</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ТорговыеПлощадки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="fcb0aef9-2c8b-48e0-a2ea-589696c55fa2">
+    <name>ЗагрузкаИзФайла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузка из файла</value>
+    </synonym>
+  </templates>
+</mdclass:Document>

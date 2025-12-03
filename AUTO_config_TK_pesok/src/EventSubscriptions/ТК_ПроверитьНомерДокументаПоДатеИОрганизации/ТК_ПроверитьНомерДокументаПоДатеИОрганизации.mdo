@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b2468c77-3005-471b-bca8-b6bf14c0839b">
+  <name>ТК_ПроверитьНомерДокументаПоДатеИОрганизации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверить номер документа по дате и организации</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ПересортицаТоваров</types>
+    <types>DocumentObject.ЗакрытиеСмены</types>
+    <types>DocumentObject.ТК_ЗаказПокупателяКазначейсвто</types>
+    <types>DocumentObject.СписаниеБезналичныхДенежныхСредств</types>
+    <types>DocumentObject.КонсолидированныеОстаткиОрганизации</types>
+    <types>DocumentObject.СписаниеТоваров</types>
+    <types>DocumentObject.ТК_АктСверкиВзаиморасчетов</types>
+    <types>DocumentObject.ЗаказПокупателя</types>
+    <types>DocumentObject.Инвентаризация</types>
+    <types>DocumentObject.ИзменениеЦен</types>
+    <types>DocumentObject.РасходныйКассовыйОрдер</types>
+    <types>DocumentObject.ТК_ОприходованиеТоваров</types>
+    <types>DocumentObject.ПоступлениеТоваров</types>
+    <types>DocumentObject.ЗаказПоставщику</types>
+    <types>DocumentObject.ПриходныйКассовыйОрдер</types>
+    <types>DocumentObject.ТК_ТТН</types>
+    <types>DocumentObject.ТК_НалоговаяНакладная</types>
+    <types>DocumentObject.ТК_КорректировкаДолга</types>
+    <types>DocumentObject.ТК_УстановкаКвотНаОтгрузку</types>
+    <types>DocumentObject.ТК_Приложение2КНалоговойНакладной</types>
+    <types>DocumentObject.ТК_Планирование</types>
+    <types>DocumentObject.ПоступлениеБезналичныхДенежныхСредств</types>
+    <types>DocumentObject.РеализацияТоваров</types>
+    <types>DocumentObject.ВозвратОтПокупателя</types>
+    <types>DocumentObject.ВыпускПродукции</types>
+    <types>DocumentObject.ПеремещениеТоваров</types>
+    <types>DocumentObject.ВозвратПоставщику</types>
+    <types>DocumentObject.ПротоколСогласованияЦен</types>
+    <types>DocumentObject.КорректировкаЗаказаПокупателя</types>
+    <types>DocumentObject.ТК_Взаимозачет</types>
+    <types>DocumentObject.ТК_Переработка</types>
+    <types>DocumentObject.РезервированиеЗаказовПокупателя</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ПрефиксацияОбъектовСобытия.ПроверитьНомерДокументаПоДатеИОрганизации</handler>
+</mdclass:EventSubscription>

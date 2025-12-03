@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<HTTPService uuid="c53e62ec-a159-496e-95dd-004f47049e29">
+		<Properties>
+			<Name>TK_Api</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>tk api</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>tkApi</RootURL>
+			<ReuseSessions>AutoUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="8eee2da4-ff33-4470-87e5-0cdd8ef8304d">
+				<Properties>
+					<Name>tk_api</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>tk api</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/{Метод}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="f8fd8f3a-9ac7-4e00-8f81-fc519ccc2de0">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>tk_apiGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="ef427874-0a52-4b01-a973-fd5faefc3aeb">
+				<Properties>
+					<Name>Scubis_sales</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Scubis sales</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/sales/{date1}/{date2}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="aa1e52e1-89d8-4ea0-a9bc-c4961194139d">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>Scubis_sales_GET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="6c8a2129-c585-41f7-9c55-64265be7c31c">
+				<Properties>
+					<Name>Scubis_charts_OUT</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Scubis charts OUT</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/chartsOUT</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="74e4d50a-49a2-4828-95de-dd34cfd3f6ea">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>Scubis_Charts_OUT_GET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="56624782-2304-4135-93ed-18e2b21b2ce6">
+				<Properties>
+					<Name>Scubis_charts_IN</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Scubis charts IN</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/chartsIN</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="5507b026-d98c-4ed8-a22c-2e696dbc0faf">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>Scubis_Charts_IN_POST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="cc554157-6547-442a-87b1-b35e7fd93484">
+				<Properties>
+					<Name>Scubis_routes</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Scubis routes</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/routes</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="e24bf228-7665-45ff-8150-98dfce271d9d">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>Scubis_routes_POST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="4f5872c0-885a-4e29-8378-41f883777f64">
+				<Properties>
+					<Name>PowerBi_DailyReportFC</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Daily report FC</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/DailyReportFC</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="fd9ebb93-6585-47ed-ad84-a51f82f13f51">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>PowerBi_DailyReportFCGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="0c860bae-7c7d-440b-a4ee-59cfe58769ed">
+				<Properties>
+					<Name>PowerBi_Reports</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Power Bi reports</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/reports/{NameReport}/{Param}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="dc20f87d-2bc9-420e-8de8-46e994ea79b9">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>PowerBi_ReportsGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>

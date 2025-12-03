@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9a69332c-6077-471e-8ca5-b39685c459d0">
+  <producedTypes>
+    <selectionType typeId="d0ad3866-8cc0-45db-9ed0-81311108390b" valueTypeId="30017486-0ca1-406e-a289-f3ec3c01ef98"/>
+    <listType typeId="66399d34-d4ad-4770-934d-823836efb76a" valueTypeId="a8df0355-15e1-4219-91f7-3c8059166388"/>
+    <managerType typeId="ac86811b-efb9-4f11-8e04-2b73c469de51" valueTypeId="9055ad60-a6b6-4475-bdab-21685711e10c"/>
+    <recordSetType typeId="61ee63df-aab8-4d08-b4fd-875d337c8f3c" valueTypeId="40b71a3c-bdae-4c1e-8368-23cfa94d8805"/>
+    <recordKeyType typeId="a9a87fb4-4e8f-4341-83e8-ed5f9f22ae39" valueTypeId="7d4aadbf-08ea-4882-8cce-0ed835ea8775"/>
+    <recordType typeId="719fed2a-6486-48cc-9054-0bf4d4714f03" valueTypeId="70c4281a-86c7-4230-8881-fe91b2e8cd6d"/>
+    <recordManagerType typeId="1e2ac0d3-d62b-41f0-a8cd-c5b78f7aa23e" valueTypeId="fc96636f-e7a5-47d3-b490-b3c6d5e63d20"/>
+  </producedTypes>
+  <name>ТК_ГрафикиИнвентаризаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Графики инвентаризаций</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="88da269a-762a-436f-938b-66d5191bd670">
+    <name>ХранилищеОтборов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хранилище отборов</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="8cc6d4f6-509e-4788-95c3-103970efb9bc">
+    <name>ДатаИнвентаризации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата инвентаризации</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d121b48e-ef46-4ca6-bf57-6bef28e11922">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.ПодразделениеКомпании</name>
+      <field>0:97e664a3-2119-4991-9c56-54e2e48e69bb</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

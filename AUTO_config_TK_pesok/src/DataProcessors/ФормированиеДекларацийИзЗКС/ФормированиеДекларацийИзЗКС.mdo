@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c0f9cbb1-732b-44f1-841e-56964d193c80">
+  <producedTypes>
+    <objectType typeId="e8345fdf-2f68-4d8c-9e53-83a7c0353a82" valueTypeId="547a6ea3-47d4-4e04-a470-f18db6d2e839"/>
+    <managerType typeId="bd946b59-71f7-4dc0-a7fc-ebd26bf58c05" valueTypeId="edbe9c92-323c-40f1-b9e2-8b52fbd14e17"/>
+  </producedTypes>
+  <name>ФормированиеДекларацийИзЗКС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Формирование деклараций из ЗКС </value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ФормированиеДекларацийИзЗКС.Form.Форма</defaultForm>
+  <tabularSections uuid="1b2239a1-630f-4a42-bfe8-9971e099104e">
+    <producedTypes>
+      <objectType typeId="e75508b9-4c0c-49d2-9e90-dacdd994313b" valueTypeId="833e18a7-90c6-4e28-9b22-8bb6194401ec"/>
+      <rowType typeId="05bd959a-f7f5-4867-9196-3b362a48bb52" valueTypeId="94f2101f-8ed0-40f0-a622-28f49dc68b83"/>
+    </producedTypes>
+    <name>ПринадлежностьКГруппамАкциза</name>
+    <synonym>
+      <key>ru</key>
+      <value>Принадлежность к группам акциза</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="25907562-f256-40fc-a4bc-6cce3f5173b6">
+      <name>ГруппаТовара</name>
+      <synonym>
+        <key>ru</key>
+        <value>Группа товара</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceFoldersAndItems>Folders</choiceFoldersAndItems>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="85b447d6-b089-43c8-9908-7d6993b86d7b">
+      <name>ГруппаАкциза</name>
+      <synonym>
+        <key>ru</key>
+        <value>Группа акциза</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="ecfb9203-c554-4e22-8783-45614843ad23">
+    <producedTypes>
+      <objectType typeId="95ea6add-8d14-4601-9105-c706f502a1b0" valueTypeId="41c55bcb-aa50-4f34-8cc7-13b2ee992631"/>
+      <rowType typeId="9153d3f0-3974-4a4a-bf0a-a8bd6342657b" valueTypeId="ce1226a9-7248-46b6-9640-232815e2ef6a"/>
+    </producedTypes>
+    <name>ТаблицаНалоговых</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица налоговых</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="88d1da80-d783-402a-872b-9368a6899148">
+      <name>ГНИ</name>
+      <synonym>
+        <key>ru</key>
+        <value>ГНИ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9eeedaae-66c6-4a7f-b8ba-d2678b167d33">
+      <name>ИмяНалоговой</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя налоговой</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="bd7f63e5-da3c-412a-87c2-b65ffe529841">
+      <name>Район</name>
+      <synonym>
+        <key>ru</key>
+        <value>Район</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+  </tabularSections>
+  <forms uuid="2bda5e68-6939-45e0-b373-8f9695d2e51e">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="3a9beb1f-52da-4927-b825-629d0982ae69">
+    <name>Разница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Разница</value>
+    </synonym>
+  </templates>
+  <templates uuid="581ebb40-5292-4d7c-bd09-e0be6fdc94b8">
+    <name>ОтчетПоГруппаАкциза</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет по группа акциза</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:DataProcessor>

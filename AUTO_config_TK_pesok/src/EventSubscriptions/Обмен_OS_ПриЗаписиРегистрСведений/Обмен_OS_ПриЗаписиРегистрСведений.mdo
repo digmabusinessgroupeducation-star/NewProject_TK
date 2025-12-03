@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e7f394f5-d77f-44de-8904-6f90ff608b7c">
+  <name>Обмен_OS_ПриЗаписиРегистрСведений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен o s при записи регистр сведений</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.ТК_УчетнаяПолитикаТорговыхПлощадок</types>
+    <types>InformationRegisterRecordSet.ШтрихкодыНоменклатуры</types>
+    <types>InformationRegisterRecordSet.НоменклатураОтделов</types>
+    <types>InformationRegisterRecordSet.Цены</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ОбменФронтСобытия.Обмен_OS_ПриЗаписиРегистрСведенийПриЗаписи</handler>
+</mdclass:EventSubscription>

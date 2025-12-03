@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4e8fc63c-74ac-4f08-8bba-63633adf3829">
+  <producedTypes>
+    <selectionType typeId="40c98759-f858-4cf1-ab65-6a627d86ea1f" valueTypeId="c600fe90-6f58-4e1c-af65-d5e3597bf76f"/>
+    <listType typeId="676bed07-efbe-4bd9-8bf0-2319acd65538" valueTypeId="c634bcf7-cbc0-46aa-a0ab-c1e4496d3838"/>
+    <managerType typeId="2af322ba-47e3-420c-8682-29c6afa4d4e4" valueTypeId="4b66de30-46ca-4d71-9c4a-476515672bf5"/>
+    <recordSetType typeId="534963f1-cc45-49a2-97e9-4e23539ed1d8" valueTypeId="9969f932-4bbe-4910-be6b-a9ba03296072"/>
+    <recordKeyType typeId="3bdf6a1b-2f9a-4b98-810e-7ed9a110c173" valueTypeId="3e4a0441-e783-43a3-a576-203b0db22422"/>
+    <recordType typeId="037de49b-d86d-40e3-b99f-30a34931a10b" valueTypeId="580b1d42-f504-4fd9-aca2-77f37e40f3eb"/>
+    <recordManagerType typeId="e1b0384a-e47c-4a37-bf1a-ce6fa3ec861e" valueTypeId="6c4df4da-14f3-4264-8a3c-b9d66bbaacd4"/>
+  </producedTypes>
+  <name>ВитринаВендингАвтоматов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Витрина вендинг автоматов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="696159ae-e239-42dc-a213-3cea5101f70b">
+    <name>Витрина</name>
+    <synonym>
+      <key>ru</key>
+      <value>Витрина</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="0a0eefda-aeee-4ce3-b563-f4c4e0e052c4">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СкладыКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="776e104a-5816-4fef-8d24-f707d447c8ff">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="880ad9d4-4522-4ee5-a540-bda60e979785">
+    <name>Характеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.ВитринаВендингАвтоматов.Dimension.Номенклатура</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

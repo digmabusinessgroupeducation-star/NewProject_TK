@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e9308207-aae8-4c2e-8ee5-2f13ab3dffb8">
+  <producedTypes>
+    <selectionType typeId="f225dd00-810a-4198-8e40-b258e79df4eb" valueTypeId="6b7c9790-78c7-4327-aa25-ae46bcfa3dea"/>
+    <listType typeId="90d6bf8a-7f74-479f-bf0f-be0b840a99b5" valueTypeId="3af89d07-534c-47b7-8c8a-b0df30f3ac65"/>
+    <managerType typeId="2af67246-8677-4124-ae50-8e78f39fbfa6" valueTypeId="3ed32618-e6c2-4e49-a79c-51180fd68070"/>
+    <recordSetType typeId="d214b0bc-5e63-44a5-b741-7d63d6431b84" valueTypeId="0a0935d7-ecc2-416b-856a-a50ee47da3e3"/>
+    <recordKeyType typeId="9c40573b-d4a0-460e-9a5c-c5eddad89244" valueTypeId="caa1981d-4235-4e91-b24e-f24113f5587a"/>
+    <recordType typeId="439bcb01-a0cf-46fb-b0e9-8d9d55f9e8e7" valueTypeId="c3c1a886-5a60-4bb9-b47f-1af4d8bbeb96"/>
+  </producedTypes>
+  <name>ПотребностиОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Потребности организаций</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="502dc140-5eda-446b-b5aa-8c6783b5a519">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <comment>Количественный остаток товара на складе в разрезе партий</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="4cd2048a-e4c2-40fd-bf10-6741c0db5926">
+    <name>АналитикаУчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика учета</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТК_КлючиАналитикиУчетаНоменклатурыОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="60fa3413-ffa8-431f-96e7-73fded1f267e">
+  <name>CommunicationWithTSD</name>
+  <synonym>
+    <key>ru</key>
+    <value>Communication with TSD</value>
+  </synonym>
+  <namespace>http://www.digma.ua</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>09a6d869-5552-413f-8192-9091a7122ef7</value>
+  </xdtoPackages>
+  <descriptorFileName>TSD.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="b4a1479f-d4c9-49e1-93f9-ed8911855555">
+    <name>ReturnNomenclatureForTSD</name>
+    <synonym>
+      <key>ru</key>
+      <value>Return nomenclature for TSD</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>NomenclatureForTSD_List</name>
+      <nsUri>http://www.digma.ua</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ReturnNomenclatureForTSD</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="17d8802a-94b3-42f1-8956-420dada87bf2">
+      <name>PrefixDepartment</name>
+      <synonym>
+        <key>ru</key>
+        <value>Prefix department</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="92137e3e-82a8-408c-a965-838e7be2cb47">
+    <name>ReturnClientForTSD</name>
+    <synonym>
+      <key>ru</key>
+      <value>Return client for TSD</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ClientForTSD_List</name>
+      <nsUri>http://www.digma.ua</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ReturnClientForTSD</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+  <operations uuid="09dd30eb-4790-41fb-aa0f-854ae571f1fd">
+    <name>ReturnDocFor1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Return doc for1 С</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ReturnDownloadStatusFor1C_List</name>
+      <nsUri>http://www.digma.ua</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ReturnDocFor1С</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="acda0567-db86-4cc1-8a29-e61e6c9e4237">
+      <name>DocForTSD_List</name>
+      <synonym>
+        <key>ru</key>
+        <value>Doc for TSD list</value>
+      </synonym>
+      <xdtoValueType>
+        <name>DocForTSD_List</name>
+        <nsUri>http://www.digma.ua</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="606852b2-0b80-4475-9b9f-79f0ecd64360">
+      <name>PrefixDepartment</name>
+      <synonym>
+        <key>ru</key>
+        <value>Prefix department</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

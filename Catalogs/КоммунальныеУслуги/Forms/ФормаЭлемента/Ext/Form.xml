@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновные" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновныеРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Родитель" id="7">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Pages name="ГруппаСтраницы" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<Page name="ГруппаРеквизиты" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реквизиты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="23">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="24"/>
+							<ChildItems>
+								<InputField name="ВидКоммунальнойУслуги" id="10">
+									<DataPath>Объект.ВидКоммунальнойУслуги</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВидКоммунальнойУслугиКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ВидКоммунальнойУслугиРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<CheckBoxField name="АбонПлата" id="81">
+									<DataPath>Объект.Абонплата</DataPath>
+									<CheckBoxType>Switcher</CheckBoxType>
+									<ContextMenu name="АбонПлатаКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="АбонПлатаРасширеннаяПодсказка" id="83"/>
+									<Events>
+										<Event name="OnChange">АбонПлатаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Ответственный" id="84">
+							<DataPath>Объект.Ответственный</DataPath>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="86"/>
+						</InputField>
+						<InputField name="Контрагент" id="25">
+							<DataPath>Объект.Контрагент</DataPath>
+							<ContextMenu name="КонтрагентКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="27"/>
+						</InputField>
+						<InputField name="Договор" id="78">
+							<DataPath>Объект.Договор</DataPath>
+							<ContextMenu name="ДоговорКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="80"/>
+						</InputField>
+						<InputField name="Комментарий" id="28">
+							<DataPath>Объект.Комментарий</DataPath>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<UsualGroup name="Группа2" id="76">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="77"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаТариф" id="21">
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тариф</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:ВидДняПроизводственногоКалендаряПредпраздничныйЦвет</TitleTextColor>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа тариф</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаТарифРасширеннаяПодсказка" id="22"/>
+									<ChildItems>
+										<InputField name="ТарифыКоммунальныхУслугПериод" id="16">
+											<DataPath>ТарифыКоммунальныхУслуг.Period</DataPath>
+											<Width>12</Width>
+											<ContextMenu name="ТарифыКоммунальныхУслугПериодКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="ТарифыКоммунальныхУслугПериодРасширеннаяПодсказка" id="18"/>
+										</InputField>
+										<InputField name="ТарифыКоммунальныхУслугТариф" id="13">
+											<DataPath>ТарифыКоммунальныхУслуг.Тариф</DataPath>
+											<Width>12</Width>
+											<ContextMenu name="ТарифыКоммунальныхУслугТарифКонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="ТарифыКоммунальныхУслугТарифРасширеннаяПодсказка" id="15"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаАбонплата" id="74">
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Абонплата</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:ВидДняПроизводственногоКалендаряПредпраздничныйЦвет</TitleTextColor>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа абонплата</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаАбонплатаРасширеннаяПодсказка" id="75"/>
+									<ChildItems>
+										<InputField name="АбонплатыКоммунальныхУслугПериод" id="68">
+											<DataPath>АбонплатыКоммунальныхУслуг.Period</DataPath>
+											<Width>12</Width>
+											<ContextMenu name="АбонплатыКоммунальныхУслугПериодКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="АбонплатыКоммунальныхУслугПериодРасширеннаяПодсказка" id="70"/>
+										</InputField>
+										<InputField name="АбонплатыКоммунальныхУслугАбонплата" id="71">
+											<DataPath>АбонплатыКоммунальныхУслуг.Абонплата</DataPath>
+											<Width>10</Width>
+											<ContextMenu name="АбонплатыКоммунальныхУслугАбонплатаКонтекстноеМеню" id="72"/>
+											<ExtendedTooltip name="АбонплатыКоммунальныхУслугАбонплатаРасширеннаяПодсказка" id="73"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПотребители" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Потребители</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница потребители</v8:content>
+						</v8:item>
+					</ToolTip>
+					<TitleDataPath>Объект.Потребители.RowsCount</TitleDataPath>
+					<ExtendedTooltip name="СтраницаПотребителиРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<Table name="Потребители" id="37">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Потребители</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПотребителиКонтекстноеМеню" id="38"/>
+							<AutoCommandBar name="ПотребителиКоманднаяПанель" id="39"/>
+							<ExtendedTooltip name="ПотребителиРасширеннаяПодсказка" id="40"/>
+							<SearchStringAddition name="ПотребителиСтрокаПоиска" id="41">
+								<AdditionSource>
+									<Item>Потребители</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПотребителиСтрокаПоискаКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="ПотребителиСтрокаПоискаРасширеннаяПодсказка" id="43"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПотребителиСостояниеПросмотра" id="44">
+								<AdditionSource>
+									<Item>Потребители</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПотребителиСостояниеПросмотраКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="ПотребителиСостояниеПросмотраРасширеннаяПодсказка" id="46"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПотребителиУправлениеПоиском" id="47">
+								<AdditionSource>
+									<Item>Потребители</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПотребителиУправлениеПоискомКонтекстноеМеню" id="48"/>
+								<ExtendedTooltip name="ПотребителиУправлениеПоискомРасширеннаяПодсказка" id="49"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПотребителиНомерСтроки" id="50">
+									<DataPath>Объект.Потребители.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>2</MaxWidth>
+									<ContextMenu name="ПотребителиНомерСтрокиКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ПотребителиНомерСтрокиРасширеннаяПодсказка" id="52"/>
+								</LabelField>
+								<PictureField name="ПотребителиИндексКартинки" id="62">
+									<DataPath>Объект.Потребители.ИндексКартинки</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.КонтактнаяИнформация</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="ПотребителиИндексКартинкиКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ПотребителиИндексКартинкиРасширеннаяПодсказка" id="64"/>
+								</PictureField>
+								<InputField name="ПотребителиПотребитель" id="53">
+									<DataPath>Объект.Потребители.Потребитель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПотребителиПотребительКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ПотребителиПотребительРасширеннаяПодсказка" id="55"/>
+								</InputField>
+								<InputField name="ПотребителиКод" id="65">
+									<DataPath>Объект.Потребители.Код</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПотребителиКодКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ПотребителиКодРасширеннаяПодсказка" id="67"/>
+								</InputField>
+								<InputField name="ПотребителиКонтрагент" id="59">
+									<DataPath>Объект.Потребители.Контрагент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПотребителиКонтрагентКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ПотребителиКонтрагентРасширеннаяПодсказка" id="61"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЛимиты" id="87">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лимиты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лимиты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЛимитыРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<InputField name="Лимит" id="89">
+							<DataPath>Объект.Лимит</DataPath>
+							<ContextMenu name="ЛимитКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="ЛимитРасширеннаяПодсказка" id="91"/>
+						</InputField>
+						<InputField name="ТарифСверхЛимита" id="92">
+							<DataPath>Объект.ТарифСверхЛимита</DataPath>
+							<ContextMenu name="ТарифСверхЛимитаКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ТарифСверхЛимитаРасширеннаяПодсказка" id="94"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КоммунальныеУслуги</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.Потребители">
+					<Column name="Код" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Код</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>9</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Контрагент" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Контрагент</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ИндексКартинки" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Индекс картинки</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>2</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТарифыКоммунальныхУслуг" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тарифы коммунальных услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ТарифыКоммунальныхУслуг</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТарифыКоммунальныхУслугПрежняя" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тарифы коммунальных услуг прежняя</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТарифыКоммунальныхУслугНоваяЗапись" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тарифы коммунальных услуг новая запись</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АбонплатыКоммунальныхУслуг" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонплаты коммунальных услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.АбонплатыКоммунальныхУслуг</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АбонплатыКоммунальныхУслугНоваяЗапись" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонплаты коммунальных услуг новая запись</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АбонплатыКоммунальныхУслугПрежняя" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонплаты коммунальных услуг прежняя</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+</Form>

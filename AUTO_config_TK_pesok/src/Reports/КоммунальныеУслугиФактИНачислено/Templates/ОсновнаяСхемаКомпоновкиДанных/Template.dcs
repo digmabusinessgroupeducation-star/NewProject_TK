@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоммунальнаяУслуга</dataPath>
+			<field>КоммунальнаяУслуга</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТорговаяПлощадка</dataPath>
+			<field>ТорговаяПлощадка</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидКоммунальнойУслуги</dataPath>
+			<field>ВидКоммунальнойУслуги</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПотреблениеФакт</dataPath>
+			<field>ПотреблениеФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПотреблениеАкт</dataPath>
+			<field>ПотреблениеАкт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Потери</dataPath>
+			<field>Потери</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПотреблениеИтого</dataPath>
+			<field>ПотреблениеИтого</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчетныйМесяц</dataPath>
+			<field>ОтчетныйМесяц</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='MMMM yyyy'</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Потребление</dataPath>
+			<field>Потребление</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложенныйЗапросНачисление.ВидКоммунальнойУслуги КАК ВидКоммунальнойУслуги,
+	ВложенныйЗапросНачисление.ТорговаяПлощадка КАК ТорговаяПлощадка,
+	ВложенныйЗапросНачисление.ОтчетныйМесяц КАК ОтчетныйМесяц,
+	ЕСТЬNULL(ВложенныйЗапросПотребление.Потребление, 0) КАК ПотреблениеФакт,
+	ВложенныйЗапросНачисление.ПотреблениеАкт КАК ПотреблениеАкт,
+	ВложенныйЗапросНачисление.Потери КАК Потери,
+	ВложенныйЗапросНачисление.ПотреблениеИтого КАК ПотреблениеИтого
+ИЗ
+	(ВЫБРАТЬ
+		НачисленияКоммунальныхУслугОбороты.КоммунальнаяУслуга.ВидКоммунальнойУслуги КАК ВидКоммунальнойУслуги,
+		НачисленияКоммунальныхУслугОбороты.Регистратор КАК Регистратор,
+		НачисленияКоммунальныхУслугОбороты.ТорговаяПлощадка КАК ТорговаяПлощадка,
+		НачисленияКоммунальныхУслугОбороты.ОтчетныйМесяц КАК ОтчетныйМесяц,
+		МАКСИМУМ(НачисленияКоммунальныхУслугОбороты.ПотреблениеАктОборот) КАК ПотреблениеАкт,
+		МАКСИМУМ(НачисленияКоммунальныхУслугОбороты.ПотериОборот) КАК Потери,
+		МАКСИМУМ(НачисленияКоммунальныхУслугОбороты.ПотреблениеИтогоОборот) КАК ПотреблениеИтого
+	ИЗ
+		РегистрНакопления.НачисленияКоммунальныхУслуг.Обороты(, , Регистратор, ОтчетныйМесяц МЕЖДУ &amp;_НачалоПериода И &amp;_КонецПериода) КАК НачисленияКоммунальныхУслугОбороты
+	
+	СГРУППИРОВАТЬ ПО
+		НачисленияКоммунальныхУслугОбороты.КоммунальнаяУслуга.ВидКоммунальнойУслуги,
+		НачисленияКоммунальныхУслугОбороты.ТорговаяПлощадка,
+		НачисленияКоммунальныхУслугОбороты.ОтчетныйМесяц,
+		НачисленияКоммунальныхУслугОбороты.Регистратор) КАК ВложенныйЗапросНачисление
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			НачислениеКоммунальныхУслугПоказания.Счетчик.ВидКоммунальнойУслуги КАК ВидКоммунальнойУслуги,
+			НачислениеКоммунальныхУслугПоказания.Ссылка КАК Ссылка,
+			НачислениеКоммунальныхУслугПоказания.ТорговаяПлощадка КАК ТорговаяПлощадка,
+			СУММА(НачислениеКоммунальныхУслугПоказания.Потребление) КАК Потребление
+		ИЗ
+			Документ.НачислениеКоммунальныхУслуг.Показания КАК НачислениеКоммунальныхУслугПоказания
+		ГДЕ
+			НачислениеКоммунальныхУслугПоказания.Ссылка.ОтчетныйМесяц МЕЖДУ &amp;_НачалоПериода И &amp;_КонецПериода
+		
+		СГРУППИРОВАТЬ ПО
+			НачислениеКоммунальныхУслугПоказания.Ссылка,
+			НачислениеКоммунальныхУслугПоказания.ТорговаяПлощадка,
+			НачислениеКоммунальныхУслугПоказания.Счетчик.ВидКоммунальнойУслуги) КАК ВложенныйЗапросПотребление
+		ПО ВложенныйЗапросНачисление.ВидКоммунальнойУслуги = ВложенныйЗапросПотребление.ВидКоммунальнойУслуги
+			И ВложенныйЗапросНачисление.Регистратор = ВложенныйЗапросПотребление.Ссылка
+			И ВложенныйЗапросНачисление.ТорговаяПлощадка = ВложенныйЗапросПотребление.ТорговаяПлощадка</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Отклонение</dataPath>
+		<expression>ПотреблениеФакт - ПотреблениеИтого</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отклонение</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>Потери</dataPath>
+		<expression>Сумма(Потери)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПотреблениеАкт</dataPath>
+		<expression>Сумма(ПотреблениеАкт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПотреблениеИтого</dataPath>
+		<expression>Сумма(ПотреблениеИтого)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПотреблениеФакт</dataPath>
+		<expression>Сумма(ПотреблениеФакт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Отклонение</dataPath>
+		<expression>Сумма(Отклонение)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>_НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>_КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>КоммунальныеУслугиФактИНачислено</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расхождение фактических данных и начисленных</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Розбіжність фактичних даних та нарахованих</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтчетныйМесяц</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидКоммунальнойУслуги</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТорговаяПлощадка.Код</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТорговаяПлощадка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПотреблениеФакт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПотреблениеАкт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Потери</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПотреблениеИтого</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Отклонение</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВидКоммунальнойУслуги</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>057ec036-56c0-4287-9cc4-184350b71522</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">КоммунальнаяУслуга</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>16e9af8d-c294-4aa8-a8ef-d9ac923f76a4</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТорговаяПлощадка</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>a77e3a28-dca8-4b44-92e4-fcff830c628c</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Регистратор</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>f38938e0-2598-41f3-8188-93b7e15f2d1a</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>373537ac-2f95-46d7-b3c3-8762eb78774c</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

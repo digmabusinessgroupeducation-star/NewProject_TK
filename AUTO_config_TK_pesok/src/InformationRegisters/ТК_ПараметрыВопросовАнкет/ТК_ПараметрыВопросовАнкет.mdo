@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a1ad8d4d-f5eb-49e3-8f8c-f38041952b24">
+  <producedTypes>
+    <selectionType typeId="6ad775a3-d24f-4206-ad02-25bbe0dfd9be" valueTypeId="fae7e748-9c17-498c-894d-0bee4fc44e8d"/>
+    <listType typeId="8ece9256-643a-4279-8c9b-ac5561695659" valueTypeId="42e4fb3a-5cdd-4b2d-be27-0024ba62218a"/>
+    <managerType typeId="6a3a4b88-daad-49b6-bc6e-db8c0d17d8d0" valueTypeId="9f357813-4aab-499d-b2be-87ba94be44d3"/>
+    <recordSetType typeId="77b72734-cd8f-48b6-b2df-89d09d4bf193" valueTypeId="d8d17e62-865c-4063-bb20-4f3e47b8d797"/>
+    <recordKeyType typeId="0877bfb7-b155-4373-aaf4-767ef6674f0a" valueTypeId="2f13c52e-51f4-4ca2-9cca-763ccebcb500"/>
+    <recordType typeId="358e8e1b-1ca1-4778-a79e-e52d5b8d58af" valueTypeId="a13dec81-60c2-429d-8c22-d3f8da109c72"/>
+    <recordManagerType typeId="6de729f6-6aa1-465f-9416-723bfb86742f" valueTypeId="d47f26a6-cf56-4235-8f5c-5da1c34243a2"/>
+  </producedTypes>
+  <name>ТК_ПараметрыВопросовАнкет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Параметры вопросов анкет</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Параметри питань анкет</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="9a38e4fb-e196-48da-828c-14318f70d43f">
+    <name>Коэффициент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коефіцієнт</value>
+    </synonym>
+    <comment>Коэффициент пересчета</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:NumberValue">
+      <value>1</value>
+    </fillValue>
+  </resources>
+  <resources uuid="fd476162-4a55-4c75-9134-de2523f7be14">
+    <name>Штраф</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штраф</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="9e6e4392-d318-422f-aee9-1be62053e8c8">
+    <name>ЭлементарныйВопрос</name>
+    <synonym>
+      <key>ru</key>
+      <value>Элементарный вопрос</value>
+    </synonym>
+    <type>
+      <types>ChartOfCharacteristicTypesRef.ВопросыДляАнкетирования</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Элементарный вопрос на который дан ответ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9d9d3d21-0381-456e-8779-67ec199804de">
+    <name>ПодразделениеКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ</value>
+    </synonym>
+    <comment>Подразделение компании в котором был выписан документ</comment>
+    <type>
+      <types>CatalogRef.ПодразделенияКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+</mdclass:InformationRegister>

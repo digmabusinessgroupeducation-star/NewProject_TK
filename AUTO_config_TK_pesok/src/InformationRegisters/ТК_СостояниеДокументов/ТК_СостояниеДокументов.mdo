@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="345fe7ce-2937-4352-a8f0-cdbc5103003e">
+  <producedTypes>
+    <selectionType typeId="32628669-efe4-4839-9281-e24bb2abcfe7" valueTypeId="9efc0011-3da7-4dd3-a7d6-8b1f37753234"/>
+    <listType typeId="8c3e543d-77b3-4915-b4fb-4bd1e781c275" valueTypeId="8220dbc7-4c47-4485-a0e9-9dc49014b363"/>
+    <managerType typeId="9f699f89-7193-40e1-b1f1-e59aed87cd12" valueTypeId="f8b3925c-cdb0-4213-a235-a42c724c3dc4"/>
+    <recordSetType typeId="557c5a56-de7c-4371-99d7-d82bbedb501d" valueTypeId="50a65c3c-b432-4ded-8392-4aa1b16203a9"/>
+    <recordKeyType typeId="0d8e88e7-7520-463c-b24d-43e31f41ffb4" valueTypeId="dd7bcfe4-9cf1-47a2-a0e9-3e6551b78f7d"/>
+    <recordType typeId="8f23fa79-b381-4c02-a74d-3c7811f63b43" valueTypeId="a3f38d73-6ccc-406b-8de5-fd156909b918"/>
+    <recordManagerType typeId="543c3ecc-754c-4626-9958-2d38482012f7" valueTypeId="46890981-227d-41bb-bd95-0329a30e12b8"/>
+  </producedTypes>
+  <name>ТК_СостояниеДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние документов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <listPresentation>
+    <key>ru</key>
+    <value>Состояние документа</value>
+  </listPresentation>
+  <resources uuid="5c010091-53fb-49c2-b83c-10801186e56f">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыСборкиРезервов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="21bf45e7-f8bd-4215-9518-4ef56c40c3db">
+    <name>ДатаПоследнегоИзменения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата последнего изменения</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата изменения текущего состояния </value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="9ae5e171-9e25-433e-bd07-c240c1be213b">
+    <name>АвторИзменения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор изменения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Ответственный за смену текущего состояния оригинала</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="990f2fa0-b683-49a8-be53-262c74e855c0">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="eba3da9a-c410-4acf-a3bb-777785ad873d">
+    <name>СсылкаНаОбъект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка на объект</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ОбъектыСоСтатусами</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

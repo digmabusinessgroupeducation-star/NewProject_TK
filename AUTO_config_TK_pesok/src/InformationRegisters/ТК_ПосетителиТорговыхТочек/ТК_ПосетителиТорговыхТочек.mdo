@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0e7919fb-43bd-42fe-80f5-470f27b40e02">
+  <producedTypes>
+    <selectionType typeId="676d81c3-b9f3-45d8-a086-6b98fbb8e5cc" valueTypeId="f3e436e0-7207-44d2-9486-cdb5a8c72a6e"/>
+    <listType typeId="8467e5ec-4635-4929-8dc7-a78e0c293419" valueTypeId="e4dfb954-cfa3-4d79-8e07-49e83fdbde09"/>
+    <managerType typeId="ac729441-da95-4f59-b9a1-56cd7e541b72" valueTypeId="e9f26e1c-de07-4b09-a7aa-4df7fd73e8b5"/>
+    <recordSetType typeId="ea0c14e1-1300-4aa9-aa87-a2cf2272bf21" valueTypeId="90e05f15-66f4-4d83-9f09-727b839f5fa4"/>
+    <recordKeyType typeId="761d35f5-471a-4ef6-b09c-616ba09df053" valueTypeId="8eb04862-0a83-49b4-9fd8-c619b92b5c5b"/>
+    <recordType typeId="08cb71bd-3408-4171-9edb-fc0a1e45d9d5" valueTypeId="e4293ad0-16f8-4c47-aa1e-cd552979723c"/>
+    <recordManagerType typeId="f55ec34e-f36a-4e39-8378-0eeb57e7aac5" valueTypeId="94372d0a-9d4d-4ad6-b79c-ffd126493d7e"/>
+  </producedTypes>
+  <name>ТК_ПосетителиТорговыхТочек</name>
+  <synonym>
+    <key>ru</key>
+    <value>Посетители торговых точек</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="c8b4ed3c-50b8-46d2-b30f-2b7839ff4b29">
+    <name>ОтметкаВремени</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отметка времени</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d10aa20b-cd1a-4d4b-bbff-4a5d695b6fdc">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="035cbf7e-8bbc-4597-809d-c3c3c26496eb">
+    <name>ФизическоеЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физическое лицо</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична особа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Посетители</types>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ce3c890f-e521-4d6c-9bec-ca019586067b">
+    <name>ПриходУход</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приход уход</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

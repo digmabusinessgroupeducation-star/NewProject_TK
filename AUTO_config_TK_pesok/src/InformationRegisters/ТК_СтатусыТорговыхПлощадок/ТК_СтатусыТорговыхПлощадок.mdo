@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="61e55fb7-acc4-4903-a5d1-bf2329c8be56">
+  <producedTypes>
+    <selectionType typeId="65a11620-4480-4acf-8ea9-884bebf74fb6" valueTypeId="aebfd721-3e1c-4fd3-997b-4ac48f2f1772"/>
+    <listType typeId="430c8479-ee32-4c1c-9542-bcba6e9050b7" valueTypeId="eeadfb27-15ed-46cf-8f66-b19047a20429"/>
+    <managerType typeId="ff817e82-60b2-4df4-8852-fa804287e229" valueTypeId="16940fce-28a9-4e8f-96fa-80f3a014631e"/>
+    <recordSetType typeId="45daaf83-d248-431d-a1a5-d6aaf36a7594" valueTypeId="9be4dede-6e2b-4a0a-80f3-8bf1d4e515ec"/>
+    <recordKeyType typeId="13f6f779-d2f9-4afa-949a-0e8e617948c2" valueTypeId="41847f10-e7d6-4119-947d-35ed5c19f3e9"/>
+    <recordType typeId="be44b008-cddd-485d-9a49-eff6c5607d30" valueTypeId="3e0589ff-be7a-445c-b296-a0b1e64918d2"/>
+    <recordManagerType typeId="0ae64480-75d8-4ea3-a798-079b5b5644e7" valueTypeId="a92b9f94-4eb9-47f4-a08f-0360b985d9ee"/>
+  </producedTypes>
+  <name>ТК_СтатусыТорговыхПлощадок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы торговых площадок</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="cd8efaae-d7d7-4b79-aee3-389054b25cec">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыТорговыхПлощадок</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="d7834c21-5a2b-4bb8-b67b-ae8cd6724292">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

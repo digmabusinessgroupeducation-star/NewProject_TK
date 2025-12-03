@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ba79a74c-1e55-49ba-bb59-4c7e0b8e88f0">
+  <name>ExchangeUO</name>
+  <synonym>
+    <key>ru</key>
+    <value>Exchange UO</value>
+  </synonym>
+  <namespace>http://www.digma.ua/xml-exchenge</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage.ExchangeUO</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/core</value>
+  </xdtoPackages>
+  <descriptorFileName>xml-exchenge.1cws</descriptorFileName>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="1d264e6b-6f4e-4a1f-bec6-b3a826a6ee59">
+    <name>Download</name>
+    <synonym>
+      <key>ru</key>
+      <value>Download</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>MessageExchange</name>
+      <nsUri>http://www.digma.ua/xml-exchenge</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ВыполнитьЗагрузку</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="55f99a18-59c5-4334-ae59-db36f4a3a0e7">
+      <name>Data</name>
+      <synonym>
+        <key>ru</key>
+        <value>Data</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="20206b7a-7021-4673-958d-62e21b0daa27">
+      <name>Key</name>
+      <synonym>
+        <key>ru</key>
+        <value>Key</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="fa7977a2-e8fe-4f88-ad37-b7c551653ca6">
+    <name>SendData</name>
+    <synonym>
+      <key>ru</key>
+      <value>Send data</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>SendData</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="fef31452-4d29-4069-a846-3a30395f995c">
+      <name>PravilaKD</name>
+      <synonym>
+        <key>ru</key>
+        <value>Pravila KD</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="26adb8f0-1c6d-40c4-9479-ced3cfcd40d6">
+      <name>Parametry</name>
+      <synonym>
+        <key>ru</key>
+        <value>Parametry</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="beb93a5c-8273-4793-926e-ac3acf03c7dd">
+      <name>ContinueOb</name>
+      <synonym>
+        <key>ru</key>
+        <value>Continue ob</value>
+      </synonym>
+      <xdtoValueType>
+        <name>boolean</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+      <transferDirection>InOut</transferDirection>
+    </parameters>
+    <parameters uuid="23f4dad0-fde0-4e8c-ac72-642d9ba0d8cc">
+      <name>Status</name>
+      <synonym>
+        <key>ru</key>
+        <value>Status</value>
+      </synonym>
+      <xdtoValueType>
+        <name>boolean</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+      <transferDirection>InOut</transferDirection>
+    </parameters>
+  </operations>
+  <operations uuid="b77bb1ad-e68f-4d4b-b558-000dc575a37d">
+    <name>RegDoc</name>
+    <synonym>
+      <key>ru</key>
+      <value>Reg doc</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>boolean</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>RegDoc</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+  <operations uuid="a679a527-c7fa-439f-b100-cd5e924bad06">
+    <name>DelRegDoc</name>
+    <synonym>
+      <key>ru</key>
+      <value>Del reg doc</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>boolean</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>DelRegDoc</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+</mdclass:WebService>

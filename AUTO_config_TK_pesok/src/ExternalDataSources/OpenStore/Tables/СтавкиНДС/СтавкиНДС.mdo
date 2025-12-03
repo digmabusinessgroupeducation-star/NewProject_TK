@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="04da9dc6-8c85-423a-ba5b-85e764005c1f">
+  <producedTypes>
+    <refType typeId="3bb3865b-e39e-45aa-b62e-9a4778104912" valueTypeId="e5853fe2-1b80-4cb4-9fe7-38e2af2a0c72"/>
+    <listType typeId="2fdf3130-65e8-4575-a503-6bd56e7a4571" valueTypeId="01f3eec6-1f69-488d-80bc-a708cc131ec7"/>
+    <objectType typeId="9d1ebb65-bb0d-40a4-8d85-d4f7857a2ad5" valueTypeId="766a0295-eb7e-407c-8d5f-1021d833281a"/>
+    <managerType typeId="d43b2b12-762b-44e1-9d31-7093a2d6b789" valueTypeId="a57adfb9-4577-4d86-b66b-08e6059a46ac"/>
+    <recordManagerType typeId="6c548032-b00e-4344-bc62-7132df428003" valueTypeId="25d6ab7e-5769-44e9-9209-aa8687e23518"/>
+    <recordSetType typeId="7abb444b-d641-438e-8dc5-a5117a4acaeb" valueTypeId="e4af830b-0ecb-4bd7-99df-9ad4249eac5b"/>
+    <recordType typeId="824ec4a4-50e4-4ab4-b891-ac5fb217dd17" valueTypeId="10c6a51f-a20e-4c13-aee9-44f5b13c1574"/>
+    <recordKeyType typeId="649e1a2d-5b8b-4940-bfbc-b681d149ac2f" valueTypeId="ef86cd12-45bf-433f-8dac-d8a55067741a"/>
+  </producedTypes>
+  <name>СтавкиНДС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ставки НДС</value>
+  </synonym>
+  <parentDataSource>ExternalDataSource.OpenStore</parentDataSource>
+  <nameInDataSource>dbo.TAXGRP</nameInDataSource>
+  <keyFields>ExternalDataSource.OpenStore.Table.СтавкиНДС.Field.Артикул</keyFields>
+  <unfilledParentValue xsi:type="core:UndefinedValue"/>
+  <inputByString>ExternalDataSource.OpenStore.Table.СтавкиНДС.Field.Артикул</inputByString>
+  <editType>InDialog</editType>
+  <tableFields uuid="5709e684-85b7-4fbe-89fd-8b370c776585">
+    <name>GUID</name>
+    <type>
+      <types>BinaryData</types>
+      <binaryQualifiers>
+        <length>16</length>
+        <fixed>true</fixed>
+      </binaryQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>GUID</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="a63984fa-3825-4e2b-9e3e-0e5bb689fed5">
+    <name>Артикул</name>
+    <synonym>
+      <key>ru</key>
+      <value>Артикул</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>TAXGRPID</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="01701840-2a0f-4963-a0bc-d012665aaf96">
+    <name>Наименование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>TAXGRPNAME</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="3e19ac3b-20df-4ce2-bf4c-241d57ef0a34">
+    <name>Тип_Ставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ставки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>TAXGRPTYPE</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="829a3373-7dab-4a70-9722-1e255d1f6836">
+    <name>Ставка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>TAXGRPRATE</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="3197f893-b8d2-4f45-a7b8-b13f6e122c42">
+    <name>Удален</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удален</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>DELFLAG</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="27559f9b-6951-4ea3-b3f1-43dc8f003f9f">
+    <name>Номер_Версии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер версии</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>UPDATENUM</nameInDataSource>
+  </tableFields>
+</mdclass:Table>

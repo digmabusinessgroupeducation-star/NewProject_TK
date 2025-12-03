@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="94709d26-7119-4f4c-8eb8-f040669f7e52">
+  <name>OrdersFMU</name>
+  <synonym>
+    <key>ru</key>
+    <value>Orders FMU</value>
+  </synonym>
+  <rootURL>orders</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="8e4096be-51d7-4337-a893-d42f9624a06f">
+    <name>ЗапросV1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Запрос v1</value>
+    </synonym>
+    <template>/v1/*</template>
+    <methods uuid="2106a836-c7fc-4f64-b4ea-3ebc89120376">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <comment>заказы</comment>
+      <httpMethod>POST</httpMethod>
+      <handler>ЗапросPOST</handler>
+    </methods>
+    <methods uuid="ff53ca14-a120-47d4-90f2-a183f3647568">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <comment>пинг</comment>
+      <handler>ЗапросGET</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9a006317-fa52-486f-9226-bd06862fc175">
+  <name>TSD</name>
+  <synonym>
+    <key>ru</key>
+    <value>TSD</value>
+  </synonym>
+  <rootURL>TSD</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="383e5792-f614-441f-8c63-2af466dfb4fd">
+    <name>ping</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ping</value>
+    </synonym>
+    <template>/ping</template>
+    <methods uuid="79834c75-7f2b-44ed-b031-a07d5ccbba47">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>pingGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="4ad23c65-48cc-4275-a27b-0ee721bb3491">
+    <name>TaskInfo</name>
+    <synonym>
+      <key>ru</key>
+      <value>Task info</value>
+    </synonym>
+    <template>/MarketTaskInfo/{Market}/Param/{Param}</template>
+    <methods uuid="ea20e8c5-035b-4a50-9899-d65a60555386">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>MarketTaskInfo</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="b3a212dc-9caf-4213-a2fb-b869d2fa1d1d">
+    <name>PrefixMarketInfo</name>
+    <synonym>
+      <key>ru</key>
+      <value>Prefix market info</value>
+    </synonym>
+    <template>/PrefixMarketInfo/{Prefix}</template>
+    <methods uuid="6de4a607-b5b7-47cd-ae2f-85c1ac7a1cb1">
+      <name>PrefixMarketInfo</name>
+      <synonym>
+        <key>ru</key>
+        <value>Prefix market info</value>
+      </synonym>
+      <handler>PrefixMarketInfo</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="470926b4-08c4-45f2-a335-9962cfd87eae">
+    <name>ClientInfo</name>
+    <synonym>
+      <key>ru</key>
+      <value>Client info</value>
+    </synonym>
+    <template>/EDRPO/{EDRPO}</template>
+    <methods uuid="de79dec4-dc4e-4c11-af3f-d4a86d3eea61">
+      <name>ClientInfo</name>
+      <synonym>
+        <key>ru</key>
+        <value>Client info</value>
+      </synonym>
+      <handler>ClientInfo</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="154d4f69-3fda-499d-8708-da403ed23bd9">
+    <name>MarketSkladInfo</name>
+    <synonym>
+      <key>ru</key>
+      <value>Market sklad info</value>
+    </synonym>
+    <template>/MarketSkladInfo/{Market}</template>
+    <methods uuid="d3a86f3a-8c03-4906-8928-2a9887039847">
+      <name>MarketSkladInfo</name>
+      <synonym>
+        <key>ru</key>
+        <value>Market sklad info</value>
+      </synonym>
+      <handler>MarketSkladInfo</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="b99e876e-04fd-4b94-9e6a-2c356a8a8731">
+    <name>IDTCSInfo</name>
+    <synonym>
+      <key>ru</key>
+      <value>IDTCSInfo</value>
+    </synonym>
+    <comment>ИНН сотрудника</comment>
+    <template>/TKSInfo/{TKS}</template>
+    <methods uuid="71db9e5f-431d-4c15-9944-406fffa16c61">
+      <name>IDTCSInfo</name>
+      <synonym>
+        <key>ru</key>
+        <value>IDTCSInfo</value>
+      </synonym>
+      <handler>IDTCSInfo</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="a407da92-703d-4da8-a976-a9e9c96115e6">
+    <name>NomenclatureBarCodInfo</name>
+    <synonym>
+      <key>ru</key>
+      <value>Nomenclature bar cod info</value>
+    </synonym>
+    <template>/Market/{Market}/BarCode/{BarCode}/Min/{Min}</template>
+    <methods uuid="881c87d5-3716-4200-a5d8-a323fdc7843d">
+      <name>NomenclatureBarCodInfo</name>
+      <synonym>
+        <key>ru</key>
+        <value>NomenclatureBarCodInfo</value>
+      </synonym>
+      <handler>NomenclatureBarCodInfo</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="14168618-323f-400b-bd55-4596467244fc">
+    <name>NomenclatureBarCodInfoV2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Nomenclature bar cod info v2</value>
+    </synonym>
+    <template>/Market/{Market}/BarCode/{BarCode}/Param/{Param}</template>
+    <methods uuid="66ac38fd-af09-49ad-a7e1-0e8a092ae5de">
+      <name>NomenclatureBarCodInfoV2</name>
+      <synonym>
+        <key>ru</key>
+        <value>NomenclatureBarCodInfo</value>
+      </synonym>
+      <handler>NomenclatureBarCodInfoV2</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="ebd05161-3db3-467b-82ca-ea1e13e48580">
+    <name>NomenclatureBarCodInfoV3</name>
+    <synonym>
+      <key>ru</key>
+      <value>Nomenclature bar cod info v3</value>
+    </synonym>
+    <template>/Market/{Market}/Sklad/{Sklad}/BarCode/{BarCode}/Param/{Param}</template>
+    <methods uuid="c3a1da84-f72f-4e74-9b20-4c59f6b16395">
+      <name>NomenclatureBarCodInfoV3</name>
+      <synonym>
+        <key>ru</key>
+        <value>NomenclatureBarCodInfo</value>
+      </synonym>
+      <handler>NomenclatureBarCodInfoV3</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="7413e4a6-f291-4af5-aff6-c04a4fc59b50">
+    <name>NomenclatureVozvrat</name>
+    <synonym>
+      <key>ru</key>
+      <value>Nomenclature vozvrat</value>
+    </synonym>
+    <template>/Market/{Market}/Sklad/{Sklad}/BarCode/{BarCode}/Contract/{Contract}</template>
+    <methods uuid="0a726411-5a1d-4dee-8793-f614eaa5d30b">
+      <name>NomenclatureVozvratGET</name>
+      <synonym>
+        <key>ru</key>
+        <value>Nomenclature vozvrat GET</value>
+      </synonym>
+      <handler>NomenclatureVozvratGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="a23fe1dc-587c-4a9e-a012-91e3407dc6a9">
+    <name>ManagerTZ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Manager TZ</value>
+    </synonym>
+    <template>/ManagerTZ/Market/{Market}/BarCode/{BarCode}</template>
+    <methods uuid="9f0abf67-b356-4748-b8c8-cad8b969b3ac">
+      <name>ManagerTZ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Manager TZ</value>
+      </synonym>
+      <handler>ManagerTZManagerTZ</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="71a859bd-fc12-4f27-bb09-5aab8a3ff8f7">
+    <name>VerifikatsiyaTsen</name>
+    <synonym>
+      <key>ru</key>
+      <value>Verifikatsiya tsen</value>
+    </synonym>
+    <template>/Market/{Market}/InfoTtovara/{InfoTtovara}</template>
+    <methods uuid="9ce7e547-4011-4aec-aea8-ea04ddb80c18">
+      <name>VerifikatsiyaTsen</name>
+      <synonym>
+        <key>ru</key>
+        <value>VerifikatsiyaTsen</value>
+      </synonym>
+      <handler>VerifikatsiyaTsen</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="7409d2b4-e520-490a-a4e1-de945a9dfa39">
+    <name>VerifikatsiyaTsenV2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Verifikatsiya tsen v2</value>
+    </synonym>
+    <template>/Market/{Market}/InfoTtovara/{InfoTtovara}/id/{id}</template>
+    <methods uuid="1a30004e-8073-4904-9f85-d9cb66b4150a">
+      <name>VerifikatsiyaTsenv2</name>
+      <synonym>
+        <key>ru</key>
+        <value>VerifikatsiyaTsen</value>
+      </synonym>
+      <handler>VerifikatsiyaTsenv2</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="bb3830f8-5c94-40d2-b681-97d1834af7e8">
+    <name>ListDoc</name>
+    <synonym>
+      <key>ru</key>
+      <value>List doc</value>
+    </synonym>
+    <template>/MarketDok/{MarketDok}/Doc/{Doc}/Data/{Data}/Client/{Client}</template>
+    <methods uuid="9a23031f-fe79-47e1-b590-6e8485eb248b">
+      <name>ListDoc</name>
+      <synonym>
+        <key>ru</key>
+        <value>List doc</value>
+      </synonym>
+      <handler>ListDoc</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="2539efe0-855e-41e0-813a-772301b95a7c">
+    <name>TablDoc</name>
+    <synonym>
+      <key>ru</key>
+      <value>Tabl doc</value>
+    </synonym>
+    <template>/MarketDok/{MarketDok}/Doc/{Doc}/DocUUID/{DocUUID}</template>
+    <methods uuid="65130420-724e-4a04-8595-442bc0bf425b">
+      <name>TablDoc</name>
+      <synonym>
+        <key>ru</key>
+        <value>Tabl doc</value>
+      </synonym>
+      <handler>TablDoc</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="47695a75-4a3c-4da4-a68d-7c4c0462cd2d">
+    <name>InfoOrders</name>
+    <synonym>
+      <key>ru</key>
+      <value>Info orders</value>
+    </synonym>
+    <template>/Market/{Market}/InfOrder/{InfOrder}/zk/{zk}</template>
+    <methods uuid="aeb9e65b-a75d-44df-95b9-7d34b8824b40">
+      <name>InfoOrders</name>
+      <synonym>
+        <key>ru</key>
+        <value>Info orders</value>
+      </synonym>
+      <handler>InfoOrders</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="1618dc53-6beb-4f21-b7f3-62d02b1aa083">
+    <name>InfoPrinDoc</name>
+    <synonym>
+      <key>ru</key>
+      <value>Info prin doc</value>
+    </synonym>
+    <template>/Market/{Market}/TypeDoc/{TypeDoc}</template>
+    <methods uuid="2f1ce00e-38e6-4f14-bc5d-83b7fd17b6a0">
+      <name>InfoPrinDoc</name>
+      <synonym>
+        <key>ru</key>
+        <value>Info prin doc</value>
+      </synonym>
+      <handler>InfoPrinDoc</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="d0dbf086-e34a-4bdc-bac6-1f82c6cff571">
+    <name>PrinDoc</name>
+    <synonym>
+      <key>ru</key>
+      <value>Prin doc</value>
+    </synonym>
+    <template>/Market/{Market}/Type/{Type}/Copy/{Copy}</template>
+    <methods uuid="874baf19-5c1a-4267-be93-b5414e2b50a8">
+      <name>Post</name>
+      <synonym>
+        <key>ru</key>
+        <value>Post</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>PrinDocPost</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="856c0974-1d7a-435e-8842-db3f4a10ce7d">
+    <name>PriceMarket</name>
+    <synonym>
+      <key>ru</key>
+      <value>Price market</value>
+    </synonym>
+    <template>/PriceMarket/{Market}</template>
+    <methods uuid="2bb3b1a3-d055-43e9-b2a6-7ab1d5bd3f33">
+      <name>PriceMarket</name>
+      <synonym>
+        <key>ru</key>
+        <value>Price market</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>PriceMarket</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="d578ed64-ef06-4c68-aca9-a7634b137200">
+    <name>PriceChangeMarket</name>
+    <synonym>
+      <key>ru</key>
+      <value>Переоценки на дату</value>
+    </synonym>
+    <template>/PriceMarket/{Market}/Data/{Data}</template>
+    <methods uuid="daf397fe-6723-43aa-986a-19497285fd3c">
+      <name>PriceChangeGET</name>
+      <synonym>
+        <key>ru</key>
+        <value>Price change GET</value>
+      </synonym>
+      <handler>PriceChangeGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="3e7e508d-3f99-4f6a-8a7f-60caab44c3bd">
+    <name>PriceMarketPrint</name>
+    <synonym>
+      <key>ru</key>
+      <value>Price market print</value>
+    </synonym>
+    <template>/PriceMarketPrint/{Market}</template>
+    <methods uuid="d596b310-bb55-44c8-91b1-a6b0c0e802ee">
+      <name>PriceMarketPrint</name>
+      <synonym>
+        <key>ru</key>
+        <value>Price market print</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>PriceMarketPrint</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="18b69baf-e2c5-4289-bbd7-1bad1fc7b772">
+    <name>AcceptDoc</name>
+    <synonym>
+      <key>ru</key>
+      <value>Accept doc</value>
+    </synonym>
+    <template>/Market/{Market}/Doc/{Doc}</template>
+    <methods uuid="90018633-6376-4d5b-98f0-99f6cd8d2eb0">
+      <name>AcceptDoc</name>
+      <synonym>
+        <key>ru</key>
+        <value>Accept doc</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>AcceptDoc</handler>
+    </methods>
+    <methods uuid="2d61265d-c02f-41d4-9b77-4f0525b77c5e">
+      <name>InfDocGET</name>
+      <synonym>
+        <key>ru</key>
+        <value>Inf doc GET</value>
+      </synonym>
+      <handler>AcceptDocInfDocGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="b6576385-bf21-4264-89b8-8e7dbc120dc9">
+    <name>AcceptDocV2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Accept doc v2</value>
+    </synonym>
+    <template>/Market/{Market}/DocV2/{DocV2}</template>
+    <methods uuid="d3f1828e-8470-48e2-90b8-d7ea07933d7c">
+      <name>AcceptDoc</name>
+      <synonym>
+        <key>ru</key>
+        <value>Accept doc</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>AcceptDocV2</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="fbdc557a-4bf7-4c80-9872-7d9dbe6353f4">
+    <name>ОстатокТовара</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остаток товара</value>
+    </synonym>
+    <template>/Market/{Market}/Sklad/{Sklad}/Art/{Art}/Mrc/{Mrc}</template>
+    <methods uuid="ab3e47c7-d988-4ab3-a23e-975431a58453">
+      <name>ВернутьОтаток</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вернуть отаток</value>
+      </synonym>
+      <handler>ВернутьОтаток</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="2218dd19-480d-4e2c-968d-6b10345fd930">
+    <name>MRC</name>
+    <synonym>
+      <key>ru</key>
+      <value>MRC</value>
+    </synonym>
+    <template>/Art/{Art}/Mrc/{Mrc}</template>
+    <methods uuid="01bd1986-5681-4efa-8b7d-0c00b8c8961f">
+      <name>ПроверитьМРЦ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проверить МРЦ</value>
+      </synonym>
+      <handler>MRCПроверить</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="81ff34e2-8e9a-4268-b13e-e0ddb3bdd64c">
+    <name>НакладнаяРН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная РН</value>
+    </synonym>
+    <template>/rn/{uuid}/{param}</template>
+    <methods uuid="a6866242-7ac8-4eb5-9069-05deedbc202e">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>НакладнаяРН</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="6b0a944e-4bfb-42ac-8601-877263787bc4">
+    <name>СканированиеТабак</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сканирование табак</value>
+    </synonym>
+    <template>/Cod/{uuid}/{cv}</template>
+    <methods uuid="bbf60149-1a94-4d0a-9b76-799b6bd45ac2">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>СканированиеТабакPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="6926c668-1dc3-4274-9d26-0fb6a4569eb9">
+    <name>PrintForm</name>
+    <synonym>
+      <key>ru</key>
+      <value>Print form</value>
+    </synonym>
+    <template>/PrintForm/{Market}</template>
+    <methods uuid="0987d895-46c6-4d92-9cc9-6595819d2e95">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>PrintFormPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="2265e4a1-2f52-4377-be62-5d92d5115ea3">
+    <name>ListInf</name>
+    <synonym>
+      <key>ru</key>
+      <value>List inf</value>
+    </synonym>
+    <template>/ListInfo/{Par}</template>
+    <methods uuid="2523aa7b-9c51-4452-a270-a78eca69c093">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ListInfGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="23f9508c-e99e-4f48-b782-ff03f99ff69d">
+    <name>StatusInf</name>
+    <synonym>
+      <key>ru</key>
+      <value>Status inf</value>
+    </synonym>
+    <template>/StatusChek/{ID}</template>
+    <methods uuid="522770e9-9cd4-4d66-a58a-d19ef3a43d42">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>StatusInf</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="f48ab463-42f3-46b2-a21b-cbc1a75675ee">
+    <name>Complect</name>
+    <synonym>
+      <key>ru</key>
+      <value>Complect</value>
+    </synonym>
+    <template>/Complect/{Market}/{param}</template>
+    <methods uuid="00d08a2d-443c-4e62-90f8-d21ea0e93aa5">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ComplectGET</handler>
+    </methods>
+    <methods uuid="f89f564b-6ada-48e1-bb69-8dbc73cb6af9">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>ComplectPOST</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

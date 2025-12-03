@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="108b481f-3afa-43f1-b305-10354fd57e9a">
+  <producedTypes>
+    <selectionType typeId="f0f28bdf-e2d3-47c8-a485-fea6fbdc201b" valueTypeId="d0692c83-8a09-44a3-b522-e33a1532e3e1"/>
+    <listType typeId="3a6287c0-b5ec-4a58-a516-ec2125d54253" valueTypeId="ef8dd976-3c71-4f7c-9c2d-21647150db4c"/>
+    <managerType typeId="335663be-45bd-4d95-8d6f-51d73bc5d11d" valueTypeId="38ea7eaa-a3ab-4dbf-90c3-d03ca27b864e"/>
+    <recordSetType typeId="d446ac66-f351-4eef-a12a-de4da1151f22" valueTypeId="d76fe20b-89b1-4611-8d68-79bbb9527ef0"/>
+    <recordKeyType typeId="8407fd57-6991-49a8-8c57-28c9ba631b5b" valueTypeId="25eb19ad-44ce-4053-af9c-9d9bcdd41586"/>
+    <recordType typeId="3ada0607-3a6f-4ff7-aa8b-16ac7b5c7c66" valueTypeId="e31de113-8d97-4f68-8184-8d441a7a8418"/>
+    <recordManagerType typeId="73461b45-cb57-42fe-b7a5-17e0afe2ea6b" valueTypeId="7796cabf-2e63-45d0-8783-b444e4c22f59"/>
+  </producedTypes>
+  <name>ТК_КвотыНаОтгрузку</name>
+  <synonym>
+    <key>ru</key>
+    <value>Квоты на отгрузку</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Квоти на відвантаження</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="575957f4-460f-4311-be40-75588b6667bd">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Стан</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="331e3305-ac8c-41fb-898d-241989d2711b">
+    <name>Порог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порог</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Поріг</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2eb81c99-ac6b-4636-8512-b1a752a55338">
+    <name>Процент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відсоток</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="457fb7cc-5511-4cfa-8d60-62a189080cef">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <comment>Номенклатура на которую устанавливается квота</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c9fff2d7-da78-49de-bce9-174ae9e97e26">
+    <name>Область</name>
+    <synonym>
+      <key>ru</key>
+      <value>Область</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Область</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТК_Области</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="65d7b82f-34b6-47f0-8d13-3dd1d06ce7fe">
+    <name>ВидКвоты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид квоты</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид квоти</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТК_ВидыКвот</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

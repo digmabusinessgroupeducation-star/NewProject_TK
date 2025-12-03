@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="97b2bc7d-ce6b-47b4-828e-2b2d2ef0df37">
+  <producedTypes>
+    <selectionType typeId="9bc456af-cd31-4331-ae4c-593b3ae8310b" valueTypeId="61623f1c-8cbe-4717-bf82-af099de9989a"/>
+    <listType typeId="229e7e45-237d-487d-8843-478bbb8a5b34" valueTypeId="de68d198-f8f4-444c-9078-ca4c61b58b1d"/>
+    <managerType typeId="8d4f37a7-584c-4694-b4c1-abb92f7343c7" valueTypeId="39302b7d-5da0-4f39-9f3d-fa300d1c3940"/>
+    <recordSetType typeId="3e067fe3-8cce-4dfa-bcdb-6948206220c1" valueTypeId="93e4009a-8350-4cc8-aee3-64652d991d78"/>
+    <recordKeyType typeId="74811aa2-8039-4568-8e2a-c2967b34021d" valueTypeId="335a1b6b-ec03-460a-b8e9-736c49e9548e"/>
+    <recordType typeId="ab82468f-8dcd-4d31-81ca-64914e86c2b5" valueTypeId="d808d589-48db-4c5a-b5b4-bf60441009f8"/>
+    <recordManagerType typeId="406914a9-f35e-4a23-893e-ea5bc787fb9c" valueTypeId="9026db88-db83-4a22-bf54-2bfba1ac4f1d"/>
+  </producedTypes>
+  <name>ТК_СчетаЭкваринга</name>
+  <synonym>
+    <key>ru</key>
+    <value>Счета экваринга</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ТК_СчетаЭкваринга.Form.ФормаЗаписи</defaultRecordForm>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Счет эквайринга</value>
+  </recordPresentation>
+  <resources uuid="89acb284-8552-4be4-a2e5-765d543598b6">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>ua</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="941a9e45-0431-4531-9832-411b8b00fdd9">
+    <name>БанковскийСчет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Банковский счет</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.БанковскиеСчетаОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Контрагент</name>
+      <field>InformationRegister.ТК_СчетаЭкваринга.Resource.Контрагент</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="6bf86ef2-7774-4691-b6b6-1cc72edda212">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="19511b52-9a90-4856-9de7-04ce2d6c0903">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b6f817b8-e7d4-4a60-a09c-00c4bddb3fbe">
+  <name>MobileAgents</name>
+  <synonym>
+    <key>ru</key>
+    <value>Mobile agents</value>
+  </synonym>
+  <rootURL>mobile</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="d4d6841a-5082-4a99-8ec8-a22d9a151d42">
+    <name>Любой</name>
+    <synonym>
+      <key>ru</key>
+      <value>Любой</value>
+    </synonym>
+    <template>/{Predstavitel}/Metod/{Metod}</template>
+    <methods uuid="a2b7b470-24e2-48a7-bcb8-e12d70143129">
+      <name>Get</name>
+      <synonym>
+        <key>ru</key>
+        <value>Get</value>
+      </synonym>
+      <handler>ЛюбойGet</handler>
+    </methods>
+    <methods uuid="0a319691-95f3-4a80-ae20-59410b5bc29c">
+      <name>Post</name>
+      <synonym>
+        <key>ru</key>
+        <value>Post</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>ЛюбойPost</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

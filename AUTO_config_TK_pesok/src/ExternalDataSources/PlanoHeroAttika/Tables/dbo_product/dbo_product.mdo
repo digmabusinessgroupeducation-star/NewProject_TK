@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="acc2e418-aced-4010-ba81-ca765e1bc67c">
+  <producedTypes>
+    <refType typeId="c61c6d4b-2968-43c0-a077-19200c7190be" valueTypeId="b18837c2-fd36-43b2-a699-6f041b525aa0"/>
+    <listType typeId="87853154-b26a-4014-a560-2a8e61805393" valueTypeId="badbfdd4-7fe4-45b9-99b6-b4a50383a911"/>
+    <objectType typeId="2cb5dcaf-1303-452d-bde0-5a67dce0ca34" valueTypeId="f7c705a7-4e16-4cb6-97e3-66ead5a20aac"/>
+    <managerType typeId="5068b495-9a95-4e7b-8d4a-d396e806b0fc" valueTypeId="6c93ba5b-879e-47d9-958c-b1acaf2bbae7"/>
+    <recordManagerType typeId="ba2d40fb-d155-4ca8-9ac0-cf3f68d43de2" valueTypeId="24ee8a22-12ca-4a74-b857-16c24ac9481a"/>
+    <recordSetType typeId="f8b145b5-6c97-41dd-8435-ed729184e3ee" valueTypeId="0b0ed977-ce14-445b-b0bb-3e7f16e8485b"/>
+    <recordType typeId="f12c6a07-bc3c-4768-97d7-73ef96d53cea" valueTypeId="68686038-10b6-487a-b5ba-91706b0b5043"/>
+    <recordKeyType typeId="91b0f112-8fc9-4053-a7bf-faa5a7143424" valueTypeId="3ee0c32b-c310-4925-be00-0a31550806e5"/>
+  </producedTypes>
+  <name>dbo_product</name>
+  <parentDataSource>ExternalDataSource.PlanoHeroAttika</parentDataSource>
+  <nameInDataSource>dbo.product</nameInDataSource>
+  <keyFields>ExternalDataSource.PlanoHeroAttika.Table.dbo_product.Field.id</keyFields>
+  <presentationField>ExternalDataSource.PlanoHeroAttika.Table.dbo_product.Field.name</presentationField>
+  <unfilledParentValue xsi:type="core:UndefinedValue"/>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ExternalDataSource.PlanoHeroAttika.Table.dbo_product.Field.id</inputByString>
+  <inputByString>ExternalDataSource.PlanoHeroAttika.Table.dbo_product.Field.name</inputByString>
+  <editType>InDialog</editType>
+  <tableFields uuid="56fa5b27-89ae-46d4-82ea-53521685a7a9">
+    <name>id</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="8fab0ef1-7252-4d6b-aa81-e1d1e31bbb1f">
+    <name>name</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>name</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="38b69db6-404c-42c0-a9e8-cc51029fed0d">
+    <name>article</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>article</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="fc36ac63-22ad-49a9-a38a-1c4f96f15a72">
+    <name>barcode</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>barcode</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="ecdf7ae4-a242-4426-a15d-39459e439038">
+    <name>category_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_category</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>category_id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="ecd3e77e-26d5-4047-8818-13fd317c64f5">
+    <name>brand_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_brand</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>brand_id</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="3806615c-351c-4668-993c-de0050057557">
+    <name>producer_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_producer</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>producer_id</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="f273a925-f27e-4936-8043-f31e16504684">
+    <name>deleted</name>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <nameInDataSource>deleted</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="540dafba-c2b3-4be7-9fac-960e4ac7734c">
+    <name>width</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>width</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="75b28834-c6b7-49e8-bfbf-93c2aac43e7e">
+    <name>height</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>height</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="88dd987f-942e-4919-8e7e-7c0d09c8ab5b">
+    <name>depth</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>depth</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="26a8be5b-1ac6-4bf7-afcf-bdd70048c106">
+    <name>weight</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>weight</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="662ddbbc-8077-4d10-be62-6ee084d6c0fa">
+    <name>height_compression_coef</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>height_compression_coef</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="ecab753a-7482-4d79-be65-438ca9c48a35">
+    <name>width_compression_coef</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>width_compression_coef</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="0cb2aac4-af68-4e78-9580-7c6bad31f7b9">
+    <name>depth_compression_coef</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>depth_compression_coef</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="dbe0f9cf-accc-4f83-b249-69e846132470">
+    <name>is_loose</name>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <nameInDataSource>is_loose</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="322a43f1-e498-4950-881c-00692d49e417">
+    <name>image</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>image</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+</mdclass:Table>

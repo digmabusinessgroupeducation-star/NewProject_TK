@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="71319792-fbd8-4927-8651-9c8d745ea311">
+  <producedTypes>
+    <objectType typeId="eefbb642-b848-4f2f-8664-001e6672ab81" valueTypeId="2dd6d8ed-9090-4e81-8d85-c5c483876633"/>
+    <refType typeId="80190cb2-70f5-4e9e-89f9-fdc43c10116f" valueTypeId="86b0cfc5-a48c-4bb3-ba6d-5436a80de1d1"/>
+    <selectionType typeId="9c268025-bc75-459a-a6d5-5c9db31fbb9e" valueTypeId="7e985310-13a2-4b80-9277-543701e272b3"/>
+    <listType typeId="50721a81-e4c2-44ec-add8-9bf428333127" valueTypeId="7d09e3cf-3d0d-43aa-a52f-65e95eec7b78"/>
+    <managerType typeId="b2d92045-197f-421f-8ac3-ae7228b77a48" valueTypeId="5926dc7c-39f0-458d-a46b-9814a31814f2"/>
+  </producedTypes>
+  <name>Рецептура</name>
+  <synonym>
+    <key>ru</key>
+    <value>Рецептура</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Рецептура</value>
+  </synonym>
+  <comment>Рецептура (технологическая карта)</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.Рецептура.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dataHistory>Use</dataHistory>
+  <numberType>String</numberType>
+  <numberLength>12</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.Рецептура.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.Рецептура.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.Рецептура.Form.ФормаВыбора</defaultChoiceForm>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="863148c5-b000-4c6f-b218-7743c998b864">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Автор</value>
+    </synonym>
+    <comment>Автор документа - пользователь, создавший документ.</comment>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="dd156bbe-71ef-455e-8fe8-9600767fa2ef">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Господарська операція</value>
+    </synonym>
+    <comment>Выполняемая документом операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ХозОперации.Рецептура</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="bc01cfbc-9d8c-410d-b0ab-3f39044a8eba">
+    <name>ПодразделениеКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ</value>
+    </synonym>
+    <comment>Подразделение компании в котором был выписан документ</comment>
+    <type>
+      <types>CatalogRef.ПодразделенияКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="61df3b63-91b2-4004-ad99-1d063644f826">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <comment>Произвольный комментарий к документу</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ea51cc0e-4ab4-4704-a2d0-afe5b98cec91">
+    <name>Продукция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Продукція</value>
+    </synonym>
+    <comment>Продукция, для которой собираем ингредиенты</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>IndexWithAdditionalOrder</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="dc0013c1-aaa0-47fe-b2f7-0649cef16f0a">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кількість</value>
+    </synonym>
+    <comment>Количество продукции, которое может быть выпущено с указанными ингредиентами</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a20baf92-8ef1-47e0-9d07-b2c639cd4695">
+    <name>ЕдиницаИзмерения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Единица измерения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Одиниця виміру</value>
+    </synonym>
+    <comment>Единица измерения номенклатурной позиции</comment>
+    <type>
+      <types>CatalogRef.ЕдиницыИзмерения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Document.Рецептура.Attribute.Продукция</field>
+    </choiceParameterLinks>
+    <choiceParameters>
+      <name>Отбор.ПометкаУдаления</name>
+      <value xsi:type="core:BooleanValue"/>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d051dc57-6160-4b2d-96bd-5733a3ef0260">
+    <name>ОсновнаяРецептура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная рецептура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Основна рецептура</value>
+    </synonym>
+    <comment>Признак основной рецептуры данной продукции. Основная рецептура может быть только одна</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c0a790fe-d095-401c-a664-96a00da54a1e">
+    <name>ТехнологияПроизводства</name>
+    <synonym>
+      <key>ru</key>
+      <value>Технология производства</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Технологія виробництва</value>
+    </synonym>
+    <comment>Технология производства</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="70824ed8-1f63-4de2-b52d-aa3d8f8d0506">
+    <name>ОценкаКачества</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оценка качества</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Оцінка якості</value>
+    </synonym>
+    <comment>Оценка качества</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6f741b5b-2f34-4ff5-bebd-801128105056">
+    <name>Вкус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вкус</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Смак</value>
+    </synonym>
+    <comment>Вкус</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="974d09d2-2e78-44b1-b4b0-5d524a817811">
+    <name>Консистенция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Консистенция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Консистенція</value>
+    </synonym>
+    <comment>Консистенция</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2706bb52-88ab-46e5-b859-cb08981ba242">
+    <name>Коэффициент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коефіцієнт</value>
+    </synonym>
+    <comment>Коэффициент пересчета по отношению к базовой единице номенклатуры</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f60582c6-bfc7-425a-9d48-218e5fd661d8">
+    <name>Актуальная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Актуальная</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Актуальна</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:BooleanValue">
+      <value>true</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c7f2edc6-14e9-42e6-b5d4-1aeec5b650c4">
+    <name>ФормироватьВыпускПриЗагрузке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формировать выпуск при загрузке</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Формувати випуск при завантаженні</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="f4a4276e-df8e-4c25-abfa-3588cab9a810">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a4a611fe-3afb-41e8-8f1c-c9d32fa14f33">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3e90eea9-22be-430b-803a-a5902f2f9ca3">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="739141ce-b50d-403a-9a52-78912b9524c5">
+    <producedTypes>
+      <objectType typeId="6318b0e4-a650-4507-9138-74738d3b8528" valueTypeId="ce362288-173b-460d-abb8-f5ebdd2706c9"/>
+      <rowType typeId="61b4ebcb-8335-46e8-a4f5-ec0bedb7494b" valueTypeId="8a2f3fbd-6b6e-4426-b7ad-0a614591e6b2"/>
+    </producedTypes>
+    <name>Товары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товары</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Товари</value>
+    </synonym>
+    <comment>Таблица товаров и услуг</comment>
+    <fillChecking>ShowError</fillChecking>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="c6b69fcc-7bd1-422e-8b8a-3feee879ab90">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <comment>Номенклатура (товар, услуга и т.п.)</comment>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6f8274e6-5cc2-4cc7-b577-41c7d1d73006">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество брутто</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Кількість брутто</value>
+      </synonym>
+      <comment>Количество брутто единиц измерения номенклатуры</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="16842791-fd44-4a62-9751-6e885e733e14">
+      <name>КоличествоНетто</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество нетто</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Кількість брутто</value>
+      </synonym>
+      <comment>Количество нетто единиц измерения номенклатуры</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b852e677-f134-49b7-8b5a-d6ba41b35ec8">
+      <name>ЕдиницаИзмерения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Единица измерения</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Одиниця виміру</value>
+      </synonym>
+      <comment>Единица измерения номенклатурной позиции</comment>
+      <type>
+        <types>CatalogRef.ЕдиницыИзмерения</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.Рецептура.TabularSection.Товары.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <choiceParameters>
+        <name>Отбор.ПометкаУдаления</name>
+        <value xsi:type="core:BooleanValue"/>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a67c3e22-cd52-4d59-83c9-87b6d0825156">
+      <name>Коэффициент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Коэффициент</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Коефіцієнт</value>
+      </synonym>
+      <comment>Коэффициент пересчета по отношению к базовой единице номенклатуры</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ffa3ddbe-56a3-44ba-9608-b04435b8fb31">
+      <name>КоэффициентСебестоимости</name>
+      <synonym>
+        <key>ru</key>
+        <value>Коэффициент себестоимости</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Коефіцієнт собівартості</value>
+      </synonym>
+      <comment>Коэффициент себестоимости</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>6</precision>
+          <scale>4</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cb67c182-6953-480c-9d15-b95e8799f14e">
+      <name>Рецептура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Рецептура</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Рецептура</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.Рецептура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Продукция</name>
+        <field>Document.Рецептура.TabularSection.Товары.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <choiceParameters>
+        <name>Отбор.Проведен</name>
+        <value xsi:type="core:BooleanValue">
+          <value>true</value>
+        </value>
+      </choiceParameters>
+      <choiceParameters>
+        <name>Отбор.Актуальная</name>
+        <value xsi:type="core:BooleanValue">
+          <value>true</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="11ff6523-bf85-478d-8cb4-21c2a0125ccd">
+      <name>ЗапретитьАвтовыборРецептуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Запретить автовыбор рецептуры</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Автовибір рецептури</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="9a5c3c3d-a983-486c-bf11-c10d916fafc9">
+    <producedTypes>
+      <objectType typeId="bfca9a3f-7051-4c70-ad02-a0f67a40949c" valueTypeId="c48b5ec2-722c-43d3-bdc5-f1db4b819688"/>
+      <rowType typeId="adee9ae5-fb94-4c77-9b4a-f924ee982809" valueTypeId="2633a65f-55e5-4638-bb3b-8cad51f98b91"/>
+    </producedTypes>
+    <name>ТорговыеПлощадки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговые площадки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Торгівельні майданчики</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="1072eb39-a73e-4327-bff0-5de9174756eb">
+      <name>ТорговаяПлощадка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Торговая площадка</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Торговий майданчик</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ТорговыеПлощадки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

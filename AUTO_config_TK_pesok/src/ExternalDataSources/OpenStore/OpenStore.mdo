@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataSource xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="88e594f2-6ca5-4124-a49f-e0999b519410">
+  <producedTypes>
+    <managerType typeId="abdf3457-b0f2-41fa-8aa4-94d56a32e773" valueTypeId="0dd8a9f4-b8af-4ebf-bed5-0cbfb23345cf"/>
+    <tablesManagerType typeId="085c3c10-ab91-4dac-bf18-781496dca76c" valueTypeId="94144cde-e180-4d56-9bba-d45695371f1c"/>
+    <cubesManagerType typeId="4d5504c1-35b2-4dbd-a957-7b11cbd4c062" valueTypeId="8de1f939-136a-42c0-a3b0-cb283c82e30b"/>
+  </producedTypes>
+  <name>OpenStore</name>
+  <synonym>
+    <key>ru</key>
+    <value>Open store</value>
+  </synonym>
+  <tables>ExternalDataSource.OpenStore.Table.СтавкиНДС</tables>
+  <tables>ExternalDataSource.OpenStore.Table.Склады</tables>
+  <tables>ExternalDataSource.OpenStore.Table.Группы_Товаров</tables>
+  <tables>ExternalDataSource.OpenStore.Table.Товары</tables>
+  <tables>ExternalDataSource.OpenStore.Table.Классификатор_Единиц</tables>
+  <tables>ExternalDataSource.OpenStore.Table.ШтрихКода</tables>
+  <tables>ExternalDataSource.OpenStore.Table.МаскиШтрихКодов</tables>
+  <tables>ExternalDataSource.OpenStore.Table.Упаковки</tables>
+  <tables>ExternalDataSource.OpenStore.Table.ПрофильРабочегоМеста</tables>
+  <tables>ExternalDataSource.OpenStore.Table.ВыгруженныеДокументы</tables>
+  <tables>ExternalDataSource.OpenStore.Table.ЗагруженныеДокументы</tables>
+  <tables>ExternalDataSource.OpenStore.Table.ЗагруженныеДокументыТовары</tables>
+  <tables>ExternalDataSource.OpenStore.Table.V_ЗагруженныеДокументы</tables>
+  <tables>ExternalDataSource.OpenStore.Table.V_ЗагруженныеДокументыТовары</tables>
+  <tables>ExternalDataSource.OpenStore.Table.V_ЗетОтчеты</tables>
+  <tables>ExternalDataSource.OpenStore.Table.V_ЗетОтчеты_xml</tables>
+  <tables>ExternalDataSource.OpenStore.Table.V_Продажи</tables>
+  <tables>ExternalDataSource.OpenStore.Table.V_ОплатыТерминал</tables>
+  <tables>ExternalDataSource.OpenStore.Table.V_ТКС</tables>
+  <tables>ExternalDataSource.OpenStore.Table.V_ТКС_Товары</tables>
+  <tables>ExternalDataSource.OpenStore.Table.V_Инвентаризации</tables>
+  <tables>ExternalDataSource.OpenStore.Table.V_ИнвентаризацииДвижения</tables>
+  <tables>ExternalDataSource.OpenStore.Table.dbo_PACKPRC</tables>
+  <tables>ExternalDataSource.OpenStore.Table.dbo_PACKPRCHISTORY</tables>
+  <tables>ExternalDataSource.OpenStore.Table.dbo_PRCLEVEL</tables>
+  <tables>ExternalDataSource.OpenStore.Table.dbo_vSALES_PLASTIK</tables>
+  <tables>ExternalDataSource.OpenStore.Table.dbo_vRCPTS</tables>
+  <functions uuid="3cf577ed-bc33-4a04-84df-42c3a80981be">
+    <name>dbo_UPSERT_GRP</name>
+    <comment>&amp;1 - Гуид группы; &amp;2 - Артикул группы; &amp;3 - Гуид родитель; &amp;4 - Артикул родитель; &amp;5 - </comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <expressionInDataSource>dbo.UPSERT_GRP(&amp;1, &amp;2, &amp;3, &amp;4, &amp;5, &amp;6, &amp;7)</expressionInDataSource>
+  </functions>
+  <functions uuid="3a3db62b-2dc1-420a-81ff-28f0e3cafe0a">
+    <name>dbo_UPSERT_TAXGRP</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <expressionInDataSource>dbo.UPSERT_TAXGRP(&amp;1, &amp;2, &amp;3, &amp;4, &amp;5)</expressionInDataSource>
+  </functions>
+  <functions uuid="d1481c19-010b-4a53-8c46-b8d407079a9c">
+    <name>dbo_spTKS_SETLOADED</name>
+    <comment>SAREAID, SYSTEMID, SESSID, SRECNUM</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <expressionInDataSource>dbo.spTKS_SETLOADED(&amp;1, &amp;2, &amp;3, &amp;4)</expressionInDataSource>
+  </functions>
+  <functions uuid="88cb5e53-852e-4e72-a15a-2feaa1476518">
+    <name>dbo_spTKSLINES</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <expressionInDataSource>dbo.spTKSLINES(&amp;1, &amp;2, &amp;3, &amp;4)</expressionInDataSource>
+  </functions>
+</mdclass:ExternalDataSource>

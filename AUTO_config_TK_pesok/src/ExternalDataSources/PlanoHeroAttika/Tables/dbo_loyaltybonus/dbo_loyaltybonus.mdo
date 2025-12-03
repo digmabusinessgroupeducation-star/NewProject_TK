@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fc978532-d4ed-4584-a2e0-65c8c217b59a">
+  <producedTypes>
+    <refType typeId="e30c49e4-3dc7-4063-a7db-53771eb68ce5" valueTypeId="97d3a4c4-153b-441e-9bbb-ade6dd5727ef"/>
+    <listType typeId="a302156a-7683-4e22-a89a-5310d7c8325e" valueTypeId="0f7d0742-67a9-44a7-b587-c3eb9ab3615d"/>
+    <objectType typeId="eb081394-de86-4aa7-90e6-ceda075548bb" valueTypeId="6593d4aa-8b13-4f3c-8889-adb7e345de50"/>
+    <managerType typeId="ee2cc48d-def1-4084-aa9e-a982582300e7" valueTypeId="9a4495a7-295d-420c-8d5f-2d67422c6c1d"/>
+    <recordManagerType typeId="dd765a98-e3c7-4a39-903b-2d42fc29ddd7" valueTypeId="b9950fa2-a099-475d-8554-30ad1808045d"/>
+    <recordSetType typeId="292f35f6-cfaf-4a5a-a9b5-3db4b511848a" valueTypeId="edd6cafc-55a6-4e11-b778-a03915fa62d0"/>
+    <recordType typeId="d430458a-4d94-40c6-8279-fd0110793bcb" valueTypeId="32911b7c-cc74-43d4-8000-af991435ad0b"/>
+    <recordKeyType typeId="90c1357d-f2a6-472c-b5b8-17c30e7d3bab" valueTypeId="b6becccd-47cf-4432-869a-e5b19d10d1c3"/>
+  </producedTypes>
+  <name>dbo_loyaltybonus</name>
+  <parentDataSource>ExternalDataSource.PlanoHeroAttika</parentDataSource>
+  <nameInDataSource>dbo.loyaltybonus</nameInDataSource>
+  <keyFields>ExternalDataSource.PlanoHeroAttika.Table.dbo_loyaltybonus.Field.id</keyFields>
+  <unfilledParentValue xsi:type="core:UndefinedValue"/>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ExternalDataSource.PlanoHeroAttika.Table.dbo_loyaltybonus.Field.id</inputByString>
+  <editType>InDialog</editType>
+  <tableFields uuid="fbff626a-c179-4c0b-8262-dc5961d888a2">
+    <name>id</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="57db44ec-f8d8-4360-9713-fae27240beec">
+    <name>record_type</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>record_type</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="df5d0ef4-4901-4f28-985d-347f07995c1a">
+    <name>loyalty_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_loyalty</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>loyalty_id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="73c54419-d2d3-41a2-9f34-0321b2dd0528">
+    <name>receipt_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_receipt</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>receipt_id</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="60e9415a-88f2-44ef-82a6-469770b79f29">
+    <name>product_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_product</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>product_id</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="a2e8053b-932b-486b-9a9e-d84459801ed8">
+    <name>created_at</name>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <nameInDataSource>created_at</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="623b8843-9aed-48da-9c2b-8a8d4cd43d20">
+    <name>bonus</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>bonus</nameInDataSource>
+  </tableFields>
+</mdclass:Table>

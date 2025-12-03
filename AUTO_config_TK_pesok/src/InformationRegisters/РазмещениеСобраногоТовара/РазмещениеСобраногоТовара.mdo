@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9fa6d65f-42aa-41da-8619-e7f6a1fa86e0">
+  <producedTypes>
+    <selectionType typeId="a6edddd9-5936-467b-92bd-a77197f6294c" valueTypeId="b74a8fce-95ac-4bb3-9c88-e7db6071f7d1"/>
+    <listType typeId="7f2340c8-1858-4cd0-8b4b-57f292defef6" valueTypeId="9c17db97-6028-4c6d-9d68-7c12f6aa4cb1"/>
+    <managerType typeId="0f16dd0a-1183-466e-a7ca-8c5c49fb74d8" valueTypeId="e4ad4e34-4067-445a-aab2-fa272886a8e7"/>
+    <recordSetType typeId="de65e880-12ed-45f3-8099-5a053fdef17d" valueTypeId="bba735ee-cfed-40aa-8a8c-ac9b867d30ae"/>
+    <recordKeyType typeId="582b0f05-8a1a-4443-81e7-acadd03851a6" valueTypeId="5da2fbc9-177e-427d-a93a-97d984116476"/>
+    <recordType typeId="e6654672-eb94-4d32-9738-d45fdd6ab777" valueTypeId="a02cb058-485a-4ee3-8164-2bf04c8c1959"/>
+    <recordManagerType typeId="83b47803-4539-42cf-b14f-7a7e258a1814" valueTypeId="1ab39bc4-2023-4738-b7f3-771c7aec0aa0"/>
+  </producedTypes>
+  <name>РазмещениеСобраногоТовара</name>
+  <synonym>
+    <key>ru</key>
+    <value>Размещение собраного товара</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="66d593a2-2574-47a8-8003-6a64ce2f3e92">
+    <name>МестоРазмещения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Место размещения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТК_МестаРазмещения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="052c7d18-ee57-469d-8f08-49b326520335">
+    <name>КоличествоМест</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество мест</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f57948f4-1ccb-4526-83e4-5c406ae4bf58">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РеализацияТоваров</types>
+      <types>DocumentRef.ПеремещениеТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

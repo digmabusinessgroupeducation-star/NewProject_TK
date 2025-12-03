@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b3cbc1d5-3546-4d01-9c93-bf294bf965bb">
+  <producedTypes>
+    <selectionType typeId="41786db6-ef24-4949-9ab7-9013affad9fc" valueTypeId="6567e6ac-46eb-432d-b14a-a242d7d59f4a"/>
+    <listType typeId="bf5eccb5-7530-4d69-9371-388bc3529ca7" valueTypeId="a7d2ee2d-de23-4c88-9277-984b00d396a3"/>
+    <managerType typeId="34f4ce77-f25a-4326-b6aa-457c2f3057c7" valueTypeId="eccbb691-b3ff-4af4-8bab-df3e66a7d23e"/>
+    <recordSetType typeId="e513e22f-2654-4a76-927e-263d3c0ed528" valueTypeId="ed066e9b-c7ae-4925-9c6e-17a9d200b84b"/>
+    <recordKeyType typeId="903bc036-2e9c-44ce-88d7-7990309b26db" valueTypeId="691bfc71-ea1e-45be-834c-02c4c171c8c5"/>
+    <recordType typeId="d45ebf05-1ea8-4061-b58d-5379a6871a8c" valueTypeId="b8029603-6d5a-4c04-a0dc-4619efeb14be"/>
+    <recordManagerType typeId="c53017ea-f41a-4145-86c4-758043952e37" valueTypeId="c4484b42-8c23-4b59-a7f5-3c7fb7489f90"/>
+  </producedTypes>
+  <name>ТК_ВходящиеНалоговыеПоставщика</name>
+  <synonym>
+    <key>ru</key>
+    <value>Входящие налоговые поставщика</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ТК_ВходящиеНалоговыеПоставщика.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ТК_ВходящиеНалоговыеПоставщика.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="05daa884-0066-41aa-bc3a-d909ecb02f04">
+    <name>ДатаНН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата НН</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7fe3b7be-642c-4082-80ca-5448f0939d4f">
+    <name>НомерНН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер НН</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="4a0094e5-bc2b-465c-a8de-ecf57084cf34">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПоступлениеТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="26ef58a1-007d-4e1c-9a0e-6bf24afd9759">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b07e61d3-c413-42d1-b2dd-77422bf679f4">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

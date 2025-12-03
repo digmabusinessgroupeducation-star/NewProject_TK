@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c4d869d9-3fc0-4feb-bc3b-c4e6bff162af">
+  <name>ТК_НазначитьНовуюВерсиюПриЗаписиВладельцаEDI</name>
+  <synonym>
+    <key>ru</key>
+    <value>Назначить новую версию при записи владельца EDI</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ПоступлениеТоваров</types>
+    <types>DocumentObject.РеализацияТоваров</types>
+    <types>DocumentObject.ВыпускПродукции</types>
+    <types>DocumentObject.РезервированиеЗаказовПокупателя</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ТК_ОбменEDI.ОбменEDIВладелецПриЗаписи</handler>
+</mdclass:EventSubscription>

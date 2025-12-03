@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<ShowTitle>false</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<Pages name="Страницы" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<Page name="сЗагрузка" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица для загрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>С загрузка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="сЗагрузкаРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="78">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="79"/>
+							<ChildItems>
+								<Button name="ФормаЗагрузить" id="22">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<MaxWidth>20</MaxWidth>
+									<CommandName>Form.Command.Загрузить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> Загрузить изменения</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ФормаЗагрузитьРасширеннаяПодсказка" id="23"/>
+								</Button>
+								<InputField name="ТипЦен" id="33">
+									<DataPath>Объект.ТипЦен</DataPath>
+									<ContextMenu name="ТипЦенКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ТипЦенРасширеннаяПодсказка" id="35"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Загрузка" id="45">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Загрузка</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗагрузкаКонтекстноеМеню" id="46"/>
+							<AutoCommandBar name="ЗагрузкаКоманднаяПанель" id="47">
+								<ChildItems>
+									<Popup name="ЗагрузкаКомандаЗаполнить" id="72">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Загрузка команда заполнить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ЗагрузкаКомандаЗаполнитьРасширеннаяПодсказка" id="73"/>
+										<ChildItems>
+											<Button name="ЗагрузкаЗагрузитьИзФайла" id="74">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
+												<ExtendedTooltip name="ЗагрузкаЗагрузитьИзФайлаРасширеннаяПодсказка" id="75"/>
+											</Button>
+											<Button name="ЗагрузкаОчиститьТаблицу" id="76">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОчиститьТаблицу</CommandName>
+												<ExtendedTooltip name="ЗагрузкаОчиститьТаблицуРасширеннаяПодсказка" id="77"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЗагрузкаРасширеннаяПодсказка" id="48"/>
+							<SearchStringAddition name="ЗагрузкаСтрокаПоиска" id="49">
+								<AdditionSource>
+									<Item>Загрузка</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗагрузкаСтрокаПоискаКонтекстноеМеню" id="50"/>
+								<ExtendedTooltip name="ЗагрузкаСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗагрузкаСостояниеПросмотра" id="52">
+								<AdditionSource>
+									<Item>Загрузка</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗагрузкаСостояниеПросмотраКонтекстноеМеню" id="53"/>
+								<ExtendedTooltip name="ЗагрузкаСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗагрузкаУправлениеПоиском" id="55">
+								<AdditionSource>
+									<Item>Загрузка</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗагрузкаУправлениеПоискомКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="ЗагрузкаУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЗагрузкаНомерСтроки" id="58">
+									<DataPath>Объект.Загрузка.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>2</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЗагрузкаНомерСтрокиКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ЗагрузкаНомерСтрокиРасширеннаяПодсказка" id="60"/>
+								</LabelField>
+								<InputField name="ЗагрузкаАртикул" id="67">
+									<DataPath>Объект.Загрузка.Артикул</DataPath>
+									<Enabled>false</Enabled>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЗагрузкаАртикулКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ЗагрузкаАртикулРасширеннаяПодсказка" id="69"/>
+								</InputField>
+								<InputField name="ЗагрузкаНоменклатура" id="61">
+									<DataPath>Объект.Загрузка.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗагрузкаНоменклатураКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ЗагрузкаНоменклатураРасширеннаяПодсказка" id="63"/>
+								</InputField>
+								<InputField name="ЗагрузкаПроцентНаценки" id="64">
+									<DataPath>Объект.Загрузка.ПроцентНаценки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>10</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЗагрузкаПроцентНаценкиКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ЗагрузкаПроцентНаценкиРасширеннаяПодсказка" id="66"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ЗагрузкаСЭкселя" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бланк загрузки с Эекселя</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка с экселя</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЗагрузкаСЭкселяРасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="82">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="83"/>
+							<ChildItems>
+								<Button name="ЗагрузитьВТаблицу" id="70">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗагрузитьВТаблицу</CommandName>
+									<ExtendedTooltip name="ЗагрузитьВТаблицуРасширеннаяПодсказка" id="71"/>
+								</Button>
+								<Button name="ОтменаЗагрузки" id="80">
+									<Type>UsualButton</Type>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<CommandName>Form.Command.ОтменаЗагрузки</CommandName>
+									<ExtendedTooltip name="ОтменаЗагрузкиРасширеннаяПодсказка" id="81"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<SpreadSheetDocumentField name="ТабДок" id="24">
+							<DataPath>ТабДок</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ShowGrid>true</ShowGrid>
+							<ShowHeaders>true</ShowHeaders>
+							<Edit>true</Edit>
+							<ContextMenu name="ТабДокКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ТабДокРасширеннаяПодсказка" id="26"/>
+						</SpreadSheetDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УстановкаНаценки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.Загрузка">
+					<Column name="Артикул" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Артикул</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТабДок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таб док</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+			<Settings xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xsi:type="mxl:SpreadsheetDocument">
+				<mxl:languageSettings>
+					<mxl:currentLanguage>ru</mxl:currentLanguage>
+					<mxl:defaultLanguage>ru</mxl:defaultLanguage>
+					<mxl:languageInfo>
+						<mxl:id>ru</mxl:id>
+						<mxl:code>Русский</mxl:code>
+						<mxl:description>Русский</mxl:description>
+					</mxl:languageInfo>
+					<mxl:languageInfo>
+						<mxl:id>uk</mxl:id>
+						<mxl:code>Украинский</mxl:code>
+						<mxl:description>Украинский</mxl:description>
+					</mxl:languageInfo>
+				</mxl:languageSettings>
+				<mxl:columns>
+					<mxl:size>3</mxl:size>
+					<mxl:columnsItem>
+						<mxl:index>0</mxl:index>
+						<mxl:column>
+							<mxl:formatIndex>1</mxl:formatIndex>
+						</mxl:column>
+					</mxl:columnsItem>
+					<mxl:columnsItem>
+						<mxl:index>1</mxl:index>
+						<mxl:column>
+							<mxl:formatIndex>2</mxl:formatIndex>
+						</mxl:column>
+					</mxl:columnsItem>
+					<mxl:columnsItem>
+						<mxl:index>2</mxl:index>
+						<mxl:column>
+							<mxl:formatIndex>3</mxl:formatIndex>
+						</mxl:column>
+					</mxl:columnsItem>
+				</mxl:columns>
+				<mxl:rowsItem>
+					<mxl:index>0</mxl:index>
+					<mxl:row>
+						<mxl:c>
+							<mxl:c>
+								<mxl:f>4</mxl:f>
+								<mxl:tl>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Артикул</v8:content>
+									</v8:item>
+								</mxl:tl>
+							</mxl:c>
+						</mxl:c>
+						<mxl:c>
+							<mxl:c>
+								<mxl:f>5</mxl:f>
+								<mxl:tl>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Штрих-код</v8:content>
+									</v8:item>
+								</mxl:tl>
+							</mxl:c>
+						</mxl:c>
+						<mxl:c>
+							<mxl:c>
+								<mxl:f>5</mxl:f>
+								<mxl:tl>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Процент наценки</v8:content>
+									</v8:item>
+								</mxl:tl>
+							</mxl:c>
+						</mxl:c>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:defaultFormatIndex>6</mxl:defaultFormatIndex>
+				<mxl:height>1</mxl:height>
+				<mxl:vgRows>1</mxl:vgRows>
+				<mxl:line width="2" gap="false">
+					<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+				</mxl:line>
+				<mxl:line width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+				</mxl:line>
+				<mxl:font faceName="Arial" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+				<mxl:format>
+					<mxl:width>79</mxl:width>
+				</mxl:format>
+				<mxl:format>
+					<mxl:width>219</mxl:width>
+				</mxl:format>
+				<mxl:format>
+					<mxl:width>129</mxl:width>
+				</mxl:format>
+				<mxl:format>
+					<mxl:font>0</mxl:font>
+					<mxl:leftBorder>0</mxl:leftBorder>
+					<mxl:topBorder>0</mxl:topBorder>
+					<mxl:rightBorder>1</mxl:rightBorder>
+					<mxl:bottomBorder>0</mxl:bottomBorder>
+					<mxl:height>57</mxl:height>
+					<mxl:width>104</mxl:width>
+					<mxl:horizontalAlignment>Center</mxl:horizontalAlignment>
+					<mxl:textColor>style:FormTextColor</mxl:textColor>
+					<mxl:backColor>#F2ED09</mxl:backColor>
+				</mxl:format>
+				<mxl:format>
+					<mxl:font>0</mxl:font>
+					<mxl:border>0</mxl:border>
+					<mxl:height>57</mxl:height>
+					<mxl:width>202</mxl:width>
+					<mxl:horizontalAlignment>Center</mxl:horizontalAlignment>
+					<mxl:textColor>style:FormTextColor</mxl:textColor>
+					<mxl:backColor>#F2ED09</mxl:backColor>
+				</mxl:format>
+				<mxl:format>
+					<mxl:width>72</mxl:width>
+				</mxl:format>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Загрузить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Загрузить</Action>
+		</Command>
+		<Command name="ЗагрузитьВТаблицу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить в таблицу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить в таблицу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьВТаблицу</Action>
+		</Command>
+		<Command name="ЗагрузитьИзФайла" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзФайла</Action>
+		</Command>
+		<Command name="ОчиститьТаблицу" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить таблицу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить таблицу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьТаблицу</Action>
+		</Command>
+		<Command name="ОтменаЗагрузки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt; Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена загрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменаЗагрузки</Action>
+		</Command>
+	</Commands>
+</Form>

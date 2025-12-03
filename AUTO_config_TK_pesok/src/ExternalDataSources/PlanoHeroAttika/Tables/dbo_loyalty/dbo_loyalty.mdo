@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b41acdc5-3ec5-4a9e-8567-bcae576f90d2">
+  <producedTypes>
+    <refType typeId="5ecce0d0-d73c-4c60-be54-076d4b8090b7" valueTypeId="2140cdbe-51ed-46fd-abca-d5b3b7519e9f"/>
+    <listType typeId="98e1cbeb-0248-4bc8-9868-fcd38446d0c8" valueTypeId="3bf73142-bbaf-4031-8c3f-89682401e73e"/>
+    <objectType typeId="526cb2e2-b72b-4bb9-bdfd-0995c831b483" valueTypeId="a4bdc55c-ef7e-48c8-b680-41509e02b2b4"/>
+    <managerType typeId="921aae17-79f4-4203-b900-9e6dabf7405e" valueTypeId="8e9997e0-6b56-4dc8-a1bf-a3492a0a3d31"/>
+    <recordManagerType typeId="e564b2b3-e6fa-4cbd-a9cf-845e41bf09da" valueTypeId="7719d912-a606-4cde-9f56-7f4edaea9fee"/>
+    <recordSetType typeId="2501e7a4-3fdf-4e02-8798-92b41e6588b2" valueTypeId="7b027f7f-d4a7-4ed5-8c40-2220e4247138"/>
+    <recordType typeId="f71c6d9c-0dd7-43ff-ae47-cf9e7f706bdc" valueTypeId="cf74e287-66d7-4b2d-a018-b0c4019831e9"/>
+    <recordKeyType typeId="450f6e29-ea73-4aa2-b5ff-6992efd3ddcf" valueTypeId="350fa747-752a-4a82-9de0-e30116377401"/>
+  </producedTypes>
+  <name>dbo_loyalty</name>
+  <parentDataSource>ExternalDataSource.PlanoHeroAttika</parentDataSource>
+  <nameInDataSource>dbo.loyalty</nameInDataSource>
+  <keyFields>ExternalDataSource.PlanoHeroAttika.Table.dbo_loyalty.Field.id</keyFields>
+  <unfilledParentValue xsi:type="core:UndefinedValue"/>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ExternalDataSource.PlanoHeroAttika.Table.dbo_loyalty.Field.id</inputByString>
+  <editType>InDialog</editType>
+  <tableFields uuid="ee185313-ccb6-4532-b999-ca5732eaeb62">
+    <name>id</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="98afeafe-bc47-4cb2-8730-93f7935ad2f2">
+    <name>group_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_loyaltygroup</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>group_id</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="e5e0b430-a880-4909-8f03-1436e0c7768a">
+    <name>cardno</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>cardno</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="198b6535-f160-4754-afc7-70ca9a44ee58">
+    <name>birthday</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>birthday</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="bead725f-f700-46a9-aba1-8d57ed9d2224">
+    <name>is_male</name>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <nameInDataSource>is_male</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="6ce59293-7efa-413b-9412-4436abd4092f">
+    <name>discount</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>discount</nameInDataSource>
+  </tableFields>
+</mdclass:Table>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2bf8aa46-6956-4bd5-9ea4-50c235c91632">
+  <producedTypes>
+    <selectionType typeId="8167f4b2-d56d-4061-bbe4-ce20875a140d" valueTypeId="c8159e10-fdd1-4526-ac37-457b26ef2a0d"/>
+    <listType typeId="b6e367fc-c501-4bdf-8862-c70fe072719f" valueTypeId="360f01a9-9f8d-4966-9b5b-90ff9bb90f13"/>
+    <managerType typeId="faae8af0-088c-4694-8efd-f0c7d372e79d" valueTypeId="dd471fdb-9794-411e-b860-4768cd7a1a1c"/>
+    <recordSetType typeId="a2cf1713-fdf2-452b-b22e-a819c3f5d8b1" valueTypeId="b595393e-aee1-450b-a7dc-ef25fa4c246e"/>
+    <recordKeyType typeId="70f5fbbd-0ab4-4a5d-9965-9705defd2c24" valueTypeId="58efcf1e-66e4-499d-b0d2-01cb83f19e3e"/>
+    <recordType typeId="c63336e8-ef7b-47a1-abbf-d8a140581112" valueTypeId="617d0c0d-37aa-451b-ac16-513cf876a5c3"/>
+    <recordManagerType typeId="a94d2333-39bd-42b0-adc5-64e3c9371a95" valueTypeId="3d132a41-5130-4400-bc82-260c61630b6c"/>
+  </producedTypes>
+  <name>ТК_УчетнаяПолитикаКонтрагенты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учет плательщика НДС</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Облік характеристик на складах</value>
+  </synonym>
+  <dataHistory>Use</dataHistory>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ТК_УчетнаяПолитикаКонтрагенты.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ТК_УчетнаяПолитикаКонтрагенты.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <updateDataHistoryImmediatelyAfterWrite>true</updateDataHistoryImmediatelyAfterWrite>
+  <resources uuid="58768ff4-55f9-47df-9b7a-6a5ed3c03d5e">
+    <name>СхемаНалогообложения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Схема налогообложения</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СхемыНалогообложения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="15dd88e1-df87-48d2-84be-f8273590d32c">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="45711234-08fd-4a89-8170-deae907e3f38">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a5e8aca6-669a-4b96-9525-9b912c3041a4">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1b85b9b4-e679-42b6-b8df-9d8d06ca5543">
+    <name>РедактированиеИстории</name>
+    <synonym>
+      <key>ru</key>
+      <value>Редактирование истории</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Редагування історії</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

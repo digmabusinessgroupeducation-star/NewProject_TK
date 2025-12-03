@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4ac215e2-2ee2-4906-ae32-810e095d1806">
+  <producedTypes>
+    <selectionType typeId="a2b2235f-969a-488b-975f-17489bd912aa" valueTypeId="6aa01c44-889d-449b-b9bb-08cc6a5c37a2"/>
+    <listType typeId="868e9566-49d0-4af7-9637-62c081d94921" valueTypeId="cd15e80e-e437-451c-b1ea-f71e0272bd50"/>
+    <managerType typeId="d5b3a4d0-3446-4c7a-b09a-a766adf1bbe4" valueTypeId="ab776dd7-b7af-43bd-9731-6de2f1a12b32"/>
+    <recordSetType typeId="66704b60-2d72-453e-91a9-a7a2c86ec34d" valueTypeId="59d1c6c4-6098-4175-97a1-cdd2321102d7"/>
+    <recordKeyType typeId="10531eba-32b5-4540-b33c-5bb928f7c4a5" valueTypeId="23cf7b8f-fb99-444c-b4b5-37339ff3c695"/>
+    <recordType typeId="f70ff7fd-41c1-4b9e-993a-342bdc83734f" valueTypeId="f5424a45-a881-4f08-8c24-27c317802de8"/>
+    <recordManagerType typeId="83c4e2bd-f920-45df-ade8-9834a935afcb" valueTypeId="40a7297a-42c1-4328-91c4-5ea643a8702d"/>
+  </producedTypes>
+  <name>ТК_СтавкиНДС_Номенклатуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ставки НДС номенклатуры</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ТК_СтавкиНДС_Номенклатуры.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ТК_СтавкиНДС_Номенклатуры.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="c9166a79-8c78-4d5a-a7b0-a491c14d9a33">
+    <name>СтавкаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка НДС</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтавкиНДС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="45461eb0-eb5e-40a9-b874-c99609568f7a">
+    <name>СтавкаНДСВходящегоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка НДС входящего документа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтавкиНДС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="d6e2bcf5-9f62-42bd-92bf-407b35aec3eb">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="88258fed-60a1-4b7a-b29d-469a39f9ae04">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="5a2fbdd3-68a9-45bd-9b5d-a7a9bc1a93c9">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="1236da5a-b1d3-4a10-bc86-1428e78bbaf0">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="563d4409-d9df-4502-9909-db72df75fd3d">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

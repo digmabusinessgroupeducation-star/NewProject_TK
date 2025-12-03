@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c53e62ec-a159-496e-95dd-004f47049e29">
+  <name>TK_Api</name>
+  <synonym>
+    <key>ru</key>
+    <value>tk api</value>
+  </synonym>
+  <rootURL>tkApi</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="8eee2da4-ff33-4470-87e5-0cdd8ef8304d">
+    <name>tk_api</name>
+    <synonym>
+      <key>ru</key>
+      <value>tk api</value>
+    </synonym>
+    <template>/v1/{Метод}</template>
+    <methods uuid="f8fd8f3a-9ac7-4e00-8f81-fc519ccc2de0">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>tk_apiGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="ef427874-0a52-4b01-a973-fd5faefc3aeb">
+    <name>Scubis_sales</name>
+    <synonym>
+      <key>ru</key>
+      <value>Scubis sales</value>
+    </synonym>
+    <template>/sales/{date1}/{date2}</template>
+    <methods uuid="aa1e52e1-89d8-4ea0-a9bc-c4961194139d">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>Scubis_sales_GET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="6c8a2129-c585-41f7-9c55-64265be7c31c">
+    <name>Scubis_charts_OUT</name>
+    <synonym>
+      <key>ru</key>
+      <value>Scubis charts OUT</value>
+    </synonym>
+    <template>/chartsOUT</template>
+    <methods uuid="74e4d50a-49a2-4828-95de-dd34cfd3f6ea">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>Scubis_Charts_OUT_GET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="56624782-2304-4135-93ed-18e2b21b2ce6">
+    <name>Scubis_charts_IN</name>
+    <synonym>
+      <key>ru</key>
+      <value>Scubis charts IN</value>
+    </synonym>
+    <template>/chartsIN</template>
+    <methods uuid="5507b026-d98c-4ed8-a22c-2e696dbc0faf">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>Scubis_Charts_IN_POST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="cc554157-6547-442a-87b1-b35e7fd93484">
+    <name>Scubis_routes</name>
+    <synonym>
+      <key>ru</key>
+      <value>Scubis routes</value>
+    </synonym>
+    <template>/routes</template>
+    <methods uuid="e24bf228-7665-45ff-8150-98dfce271d9d">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>Scubis_routes_POST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="4f5872c0-885a-4e29-8378-41f883777f64">
+    <name>PowerBi_DailyReportFC</name>
+    <synonym>
+      <key>ru</key>
+      <value>Daily report FC</value>
+    </synonym>
+    <template>/DailyReportFC</template>
+    <methods uuid="fd9ebb93-6585-47ed-ad84-a51f82f13f51">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>PowerBi_DailyReportFCGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="0c860bae-7c7d-440b-a4ee-59cfe58769ed">
+    <name>PowerBi_Reports</name>
+    <synonym>
+      <key>ru</key>
+      <value>Power Bi reports</value>
+    </synonym>
+    <template>/reports/{NameReport}/{Param}</template>
+    <methods uuid="dc20f87d-2bc9-420e-8de8-46e994ea79b9">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>PowerBi_ReportsGET</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

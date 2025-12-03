@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="07bd5f91-0f56-42ac-96f1-ed40486c9f3a">
+  <producedTypes>
+    <selectionType typeId="cbc3c5e6-35e7-4ba3-ae08-4146342cef68" valueTypeId="df71d604-6919-4de3-b8af-b63b45339e04"/>
+    <listType typeId="773df521-b120-4335-acef-2bbbe0597da8" valueTypeId="b6a6d950-abec-46b4-879d-4044c319d958"/>
+    <managerType typeId="b1f7ec44-eb94-4369-a958-d40f3d516803" valueTypeId="ffffc0c9-23f9-4db6-8096-ad21f50b1690"/>
+    <recordSetType typeId="75b6de9c-2924-4b6b-a015-0634e01654f2" valueTypeId="4c695a1a-bfc8-4169-a74f-eecf9c07478d"/>
+    <recordKeyType typeId="0aa4fa55-6710-4eb7-a940-ffbe5197d98d" valueTypeId="9c7598cf-1815-47aa-afee-80ca04c4c579"/>
+    <recordType typeId="afebcbde-290e-4f1c-9a53-f756e4e34d78" valueTypeId="9bf381b3-b21e-4081-805b-e7778f43c4bf"/>
+    <recordManagerType typeId="ca21e9ba-32e1-4da7-bcce-9ef07128284d" valueTypeId="e6719d7a-7c60-48de-b2d3-25e7c9ac38f7"/>
+  </producedTypes>
+  <name>ТК_КассоваяЛента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Кассовая лента</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="d255873f-4ef6-4a33-a688-151bdc75e8aa">
+    <name>ДлинаЧека</name>
+    <synonym>
+      <key>ru</key>
+      <value>Длина чека</value>
+    </synonym>
+    <comment>Длина чека в метрах</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Длина чека в метрах</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="82f00b89-4038-46a9-bf1f-10038f0efd88">
+    <name>ДлинаОтчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Длина отчетов</value>
+    </synonym>
+    <comment>Длина отчетов за день в метрах</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Длина отчетов за день в метрах</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="4dce6b46-d3a5-43e3-aa93-665e7a143645">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

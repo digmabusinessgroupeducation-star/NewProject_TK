@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="23f016b8-eecf-4db9-ab65-a96584c0a4b2">
+  <producedTypes>
+    <objectType typeId="4b6b8f03-b1fa-4a8f-848d-16f869152eab" valueTypeId="caeafd5d-3965-482d-9d64-946db6b4dc63"/>
+    <refType typeId="28a6f5a1-1ca7-4054-880f-2ad7ec145854" valueTypeId="bd62297e-fe20-4b7d-9eee-5ef4475062b5"/>
+    <selectionType typeId="bfc498e6-8a68-4ca4-83fb-eb8a3b565fac" valueTypeId="aa2c4592-3dfc-41f8-b420-7ab397a93ef3"/>
+    <listType typeId="f70adbef-dd73-4594-8ebc-a8fe4d9a1d0c" valueTypeId="e3aaa24a-2a0e-4910-bd15-eb17341f5565"/>
+    <managerType typeId="30c2001f-661c-4647-893c-bd779009ebfb" valueTypeId="33f63bf2-b99d-498c-a96e-a7c9bb3e33e7"/>
+  </producedTypes>
+  <name>ТК_ПрофильНастройкиТСД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Профиль настройки ТСД</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ТК_ПрофильНастройкиТСД.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Настройка ТСД</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ТК_ПрофильНастройкиТСД.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="009b7486-09ef-4b5e-be31-57f5216a3162">
+    <name>ИспользоватьЗаказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать заказ</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3b32a5b1-23d6-4788-a834-a1988ee0d5d7">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="08497c91-a488-40c3-9ebb-c7fb4ae9db14">
+    <producedTypes>
+      <objectType typeId="ce88b434-f13b-4d32-b549-04ea96500442" valueTypeId="16b005f7-bed2-4ee1-b83d-84db7cf1cbd4"/>
+      <rowType typeId="2040e35a-2b87-4826-b2f2-1ce81ee0def6" valueTypeId="a301891b-9b7e-43c9-a1be-190689d0f7ef"/>
+    </producedTypes>
+    <name>ТорговыеОбъекты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговые объекты</value>
+    </synonym>
+    <attributes uuid="7ddc653f-a519-4eaf-8dd3-52bb66593e72">
+      <name>ТорговаяПлощдка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Торговая площдка</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ТорговыеПлощадки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="405eeaea-78b8-4c4d-80d1-d588687df656">
+      <name>ВключаяНижестоящие</name>
+      <synonym>
+        <key>ru</key>
+        <value>Включая нижестоящие</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="fb023e5a-b6cf-4e2c-8349-fc5da10cf9e7">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

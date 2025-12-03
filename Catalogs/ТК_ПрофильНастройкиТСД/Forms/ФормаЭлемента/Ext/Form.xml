@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>1/-2</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ТорговаяПлощадка" id="54">
+			<DataPath>Объект.ТорговаяПлощадка</DataPath>
+			<ContextMenu name="ТорговаяПлощадкаКонтекстноеМеню" id="55"/>
+			<ExtendedTooltip name="ТорговаяПлощадкаРасширеннаяПодсказка" id="56"/>
+		</InputField>
+		<Table name="ТорговыеОбъекты" id="7">
+			<Representation>List</Representation>
+			<Visible>false</Visible>
+			<HeightControlVariant>UseContentHeight</HeightControlVariant>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ТорговыеОбъекты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТорговыеОбъектыКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ТорговыеОбъектыКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ТорговыеОбъектыРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ТорговыеОбъектыСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ТорговыеОбъекты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТорговыеОбъектыСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТорговыеОбъектыСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТорговыеОбъектыСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ТорговыеОбъекты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТорговыеОбъектыСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ТорговыеОбъектыСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТорговыеОбъектыУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ТорговыеОбъекты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТорговыеОбъектыУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ТорговыеОбъектыУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТорговыеОбъектыНомерСтроки" id="20">
+					<DataPath>Объект.ТорговыеОбъекты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>3</Width>
+					<ContextMenu name="ТорговыеОбъектыНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ТорговыеОбъектыНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="ТорговыеОбъектыТорговаяПлощдка" id="23">
+					<DataPath>Объект.ТорговыеОбъекты.ТорговаяПлощдка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТорговыеОбъектыТорговаяПлощдкаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ТорговыеОбъектыТорговаяПлощдкаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<CheckBoxField name="ТорговыеОбъектыВключаяНижестоящие" id="26">
+					<DataPath>Объект.ТорговыеОбъекты.ВключаяНижестоящие</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включая нижестоящие (с иерархией)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.ИерархическийСписок</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТорговыеОбъектыВключаяНижестоящиеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТорговыеОбъектыВключаяНижестоящиеРасширеннаяПодсказка" id="28"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<CheckBoxField name="ИспользоватьЗаказ" id="29">
+			<DataPath>Объект.ИспользоватьЗаказ</DataPath>
+			<Visible>false</Visible>
+			<CheckBoxType>Switcher</CheckBoxType>
+			<ContextMenu name="ИспользоватьЗаказКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ИспользоватьЗаказРасширеннаяПодсказка" id="31"/>
+		</CheckBoxField>
+		<Table name="КонтрагентыЗаказа" id="32">
+			<HeightControlVariant>UseContentHeight</HeightControlVariant>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>1/0:dcf08f34-9f58-435e-b72a-aac3abf9553e</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КонтрагентыЗаказаКонтекстноеМеню" id="33"/>
+			<AutoCommandBar name="КонтрагентыЗаказаКоманднаяПанель" id="34"/>
+			<ExtendedTooltip name="КонтрагентыЗаказаРасширеннаяПодсказка" id="35"/>
+			<SearchStringAddition name="КонтрагентыЗаказаСтрокаПоиска" id="36">
+				<AdditionSource>
+					<Item>КонтрагентыЗаказа</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыЗаказаСтрокаПоискаКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="КонтрагентыЗаказаСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КонтрагентыЗаказаСостояниеПросмотра" id="39">
+				<AdditionSource>
+					<Item>КонтрагентыЗаказа</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыЗаказаСостояниеПросмотраКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="КонтрагентыЗаказаСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КонтрагентыЗаказаУправлениеПоиском" id="42">
+				<AdditionSource>
+					<Item>КонтрагентыЗаказа</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыЗаказаУправлениеПоискомКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="КонтрагентыЗаказаУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="КонтрагентыЗаказаНомерСтроки" id="45">
+					<DataPath>1/0:dcf08f34-9f58-435e-b72a-aac3abf9553e/-2</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтрагентыЗаказаНомерСтрокиКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="КонтрагентыЗаказаНомерСтрокиРасширеннаяПодсказка" id="47"/>
+				</LabelField>
+				<InputField name="КонтрагентыЗаказаДоговорКонтрагента" id="48">
+					<DataPath>1/0:dcf08f34-9f58-435e-b72a-aac3abf9553e/0:09a62919-43b4-446e-aa5d-afb5a2672fd8</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтрагентыЗаказаДоговорКонтрагентаКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="КонтрагентыЗаказаДоговорКонтрагентаРасширеннаяПодсказка" id="50"/>
+				</InputField>
+				<LabelField name="КонтрагентыЗаказаКонтрагент" id="51">
+					<DataPath>1/0:dcf08f34-9f58-435e-b72a-aac3abf9553e/1:5bdad865-f2c5-434b-8041-ba4aad3b6687</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтрагентыЗаказаКонтрагентКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="КонтрагентыЗаказаКонтрагентРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТК_ПрофильНастройкиТСД</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

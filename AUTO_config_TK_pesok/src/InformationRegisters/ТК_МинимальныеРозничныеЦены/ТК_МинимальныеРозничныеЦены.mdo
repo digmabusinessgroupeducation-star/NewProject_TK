@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2b1e15db-47b9-4aee-aca1-6b2749e7ba74">
+  <producedTypes>
+    <selectionType typeId="54f76e39-0ed7-4d01-bb99-164e6741840d" valueTypeId="6e978936-5b69-4dbb-9bf7-4f2a90a3aaea"/>
+    <listType typeId="cc64e23b-d48f-4188-9c0d-9cf2bcbd08a1" valueTypeId="e195f1b8-388a-4eae-9907-c1c6dd4c215a"/>
+    <managerType typeId="03cb3d84-18d3-4421-88b9-ee0bd0242ef7" valueTypeId="b903ee3a-4eb8-4d4f-bba4-dc71c44ff4fb"/>
+    <recordSetType typeId="7055e9ba-be83-467a-83b5-718da2f90b30" valueTypeId="21accc5e-f3b3-4a5a-b0b3-1444caf2b24b"/>
+    <recordKeyType typeId="22f1a3c5-ca26-47aa-a831-c66cecee1593" valueTypeId="a474db51-79c2-4dcc-92e9-8b6d68dcda45"/>
+    <recordType typeId="48387c45-7143-4953-983f-ab18ab4f7983" valueTypeId="3092114a-11c2-49af-92cb-89244bb0440b"/>
+    <recordManagerType typeId="38897019-45c5-4329-8043-084da941cb13" valueTypeId="736f1f80-d7b4-4db7-bcbb-2b6ffcc90998"/>
+  </producedTypes>
+  <name>ТК_МинимальныеРозничныеЦены</name>
+  <synonym>
+    <key>ru</key>
+    <value>Минимальные розничные цены</value>
+  </synonym>
+  <comment>Индикатив</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="255371d7-dcb7-4838-aa68-60d501ea3463">
+    <name>ЦенаРозничная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Цена розничная</value>
+    </synonym>
+    <comment>Цена за литр</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>6</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ff97b5a2-3139-4177-ace7-e7e8ae27f13f">
+    <name>ТипИндикатива</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип индикатива</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТК_ТипыИндикатива</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a6175465-61d6-4cad-9134-6e764a747e5e">
+    <name>УчитыватьКрепость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учитывать крепость</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

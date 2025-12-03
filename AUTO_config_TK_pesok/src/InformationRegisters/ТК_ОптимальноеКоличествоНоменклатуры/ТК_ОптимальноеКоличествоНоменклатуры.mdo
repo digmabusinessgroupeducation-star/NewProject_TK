@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b006d947-d4e6-4578-bb8c-2310540eddd5">
+  <producedTypes>
+    <selectionType typeId="6be535cc-6c97-45ab-875c-4faaa6a4c8dc" valueTypeId="f631e710-8316-4cf0-9576-d682777e448e"/>
+    <listType typeId="64b20bcf-c63d-4dc6-9c9d-fef5a39ac43e" valueTypeId="2dad80ef-bded-4c68-a48a-4c0a75bad4c4"/>
+    <managerType typeId="ba955f99-a164-4fdf-88d7-a0a9f2f13c42" valueTypeId="8a291a5d-cc4f-44f0-81c8-3ec99e65dd67"/>
+    <recordSetType typeId="38a4895b-33d4-4c37-a20e-f6edcc29fec5" valueTypeId="2b4ac9cc-e810-49e7-8047-2e94dc2402cc"/>
+    <recordKeyType typeId="39aa8f32-3b1c-4439-be30-4cd9ee5e1323" valueTypeId="0bceb3c2-c82c-47d8-b803-9c811d4a0f6a"/>
+    <recordType typeId="40623a76-5225-4a1e-b2a2-e136f688ee25" valueTypeId="eb202e7c-0492-4d50-9b32-5cf132fb861d"/>
+    <recordManagerType typeId="0eb08f8d-e314-47e2-a697-b0643f7d9811" valueTypeId="c8c04a73-cf3a-4594-8e28-b639791e8701"/>
+  </producedTypes>
+  <name>ТК_ОптимальноеКоличествоНоменклатуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Оптимальное количество номенклатуры</value>
+  </synonym>
+  <comment>Хранит данные об оптимальных остатках номенклатуры на складах</comment>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <explanation>
+    <key>ru</key>
+    <value>Хранит данные об оптимальных остатках номенклатуры на складах</value>
+  </explanation>
+  <resources uuid="1c65c17f-69f5-4e5a-a04d-ca3865cf8638">
+    <name>МодельЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Модель заказа</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыКоличестваЗаказа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="bab68683-a616-4ce5-b45b-232d04678b26">
+    <name>ВариантОкругления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вариант округления</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВариантыОкругленияКоличества</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="32d930ce-d3c0-4ae0-ab55-808bd496c76e">
+    <name>МинимальныйОстаток</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мин. остаток</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5f6a3aab-6c5a-44b5-a732-c6ee6b1a2954">
+    <name>МаксимальныйЗапас</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макс. запас</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4bd5f395-4318-404a-a804-d2ce0848e3c3">
+    <name>ПоДоговоруОстаток</name>
+    <synonym>
+      <key>ru</key>
+      <value>По договору остаток Аттика</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7e87edf1-c987-4c33-903d-cfedd094af4c">
+    <name>ВитринаОстаток</name>
+    <synonym>
+      <key>ru</key>
+      <value>Витрина остаток Аттика</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0baef11b-d254-4bbd-8b6f-c08507bbe7ea">
+    <name>КвантПоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Квант поставки Аттика</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="6c78221d-0e1b-41c2-91b7-aba2d3e93344">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="739fc1a3-981a-4cc4-9f18-4113a68646e2">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <comment>Номенклатура (товар, услуга и т.п.)</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

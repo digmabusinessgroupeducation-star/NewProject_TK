@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9caa30e5-b67b-45a4-9a3b-6acc28f72fb9">
+  <producedTypes>
+    <selectionType typeId="d7545294-5ed2-41cb-bfb9-c1199524d6eb" valueTypeId="c1b81075-8ce6-4967-99a7-b38287575e6b"/>
+    <listType typeId="1a4320df-10f0-4b69-9384-175b47b56606" valueTypeId="e1784155-60db-42e1-8cff-160dd8c97a81"/>
+    <managerType typeId="a7d048ad-878c-40ad-a10f-c9dac3744656" valueTypeId="a6e2a436-a8dc-4230-aa60-56be3cb9b743"/>
+    <recordSetType typeId="3647413c-5a50-4bdb-b348-32fe5360263c" valueTypeId="95a61693-8d96-4dd5-a3bf-7c6a35977fed"/>
+    <recordKeyType typeId="15ae338e-c12c-4549-936c-9f190e604f49" valueTypeId="445b4120-9438-460b-8ed0-eaf370dd6ca1"/>
+    <recordType typeId="71d7c7eb-0490-4758-a841-8c52dcc8dd2d" valueTypeId="8e568431-5bd6-41b4-ad4d-426775ae58a3"/>
+  </producedTypes>
+  <name>РозничныеПродажиПодакцизныхТоваров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Розничные продажи подакцизных товаров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="34e2c0c7-dbad-4fd5-a651-4c9621037c35">
+    <name>СуммаАкцизногоНалога</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма акцизного налога</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="7d37d550-ebc2-451a-8aaa-ff49899cc08d">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <comment>Хозяйственная операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="d44b91b4-525e-4c76-9193-a45f0b1a9ee3">
+    <name>ПодразделениеКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение компании</value>
+    </synonym>
+    <comment>Подразделение компании в котором был зафиксирован факт продажи товара</comment>
+    <type>
+      <types>CatalogRef.ПодразделенияКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="5a28a388-7631-4a72-b97a-771f18d7fd30">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Торговий майданчик</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="40a169d5-9c36-4629-94ac-e1125e488678">
+    <name>СкладКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад компании</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Склад компанії</value>
+    </synonym>
+    <comment>Склад компании</comment>
+    <type>
+      <types>CatalogRef.СкладыКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7e98e6f6-6877-40ff-ba01-5b6603d7b184">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <comment>Проданный товар или оказанная услуга</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="936ad844-5181-4148-9a80-c0d024fef835">
+    <name>ХарактеристикаНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика номенклатуры</value>
+    </synonym>
+    <comment>Характеристика номенклатуры</comment>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

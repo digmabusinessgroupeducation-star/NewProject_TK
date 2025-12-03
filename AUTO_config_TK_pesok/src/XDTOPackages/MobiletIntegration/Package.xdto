@@ -1,0 +1,165 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.digma.ua/SB/MobileExchange">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<valueType name="TypeTotal" base="xs:decimal" variety="Atomic" totalDigits="18" fractionDigits="2"/>
+	<valueType name="TypeNomenclature" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Безалкоголь</enumeration>
+		<enumeration xsi:type="xs:string">Зажигалки</enumeration>
+		<enumeration xsi:type="xs:string">МобильноеПополнение</enumeration>
+		<enumeration xsi:type="xs:string">Продукты</enumeration>
+		<enumeration xsi:type="xs:string">Прочее</enumeration>
+		<enumeration xsi:type="xs:string">Сигареты</enumeration>
+		<enumeration xsi:type="xs:string">Сигары</enumeration>
+		<enumeration xsi:type="xs:string">Спиртное</enumeration>
+		<enumeration xsi:type="xs:string">СпиртноеИндикатив</enumeration>
+		<enumeration xsi:type="xs:string">Спички</enumeration>
+		<enumeration xsi:type="xs:string">Химия</enumeration>
+	</valueType>
+	<valueType name="TipUcheta" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">РегламентированныйУчет</enumeration>
+		<enumeration xsi:type="xs:string">НеРегламентированныйУчет</enumeration>
+		<enumeration xsi:type="xs:string">ОбщийУчет</enumeration>
+	</valueType>
+	<valueType name="TypeQuantity" base="xs:decimal" variety="Atomic" fractionDigits="4"/>
+	<valueType name="TypeDoc" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">ЗаказНаОтгрузку</enumeration>
+		<enumeration xsi:type="xs:string">ЗаказНаФизобмен</enumeration>
+		<enumeration xsi:type="xs:string">ЗаказНаМобильныйСклад</enumeration>
+		<enumeration xsi:type="xs:string">ПродажаМобильныйСклад</enumeration>
+	</valueType>
+	<objectType name="Permit">
+		<property name="ResultMessage" type="xs:string"/>
+		<property name="Success" type="xs:boolean"/>
+		<property name="DeleteAppData" type="xs:boolean"/>
+		<property name="NewExchange" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Data" type="d3p1:ValueStorage" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Objects">
+		<property xmlns:d3p1="http://www.digma.ua/SB/MobileExchange" name="objects" type="d3p1:Object" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Object">
+		<property name="name" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="id" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ReadOnly" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="NomItem" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="ThisIsGroup" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Group" type="d2p1:NomItem" lowerBound="0" nillable="true"/>
+		<property name="Article" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="TipNom" type="d2p1:TipNomItem" lowerBound="0" nillable="true"/>
+		<property name="BarCode" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="KvoOs" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+		<property name="KvoUp" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="HarItem" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="NomItem" type="d2p1:NomItem" lowerBound="0" nillable="true"/>
+		<property name="mrc" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="StocItem" base="d2p1:Object">
+		<property name="VidSklada" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="TypePriceItem" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="BuyerItem" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="ContractItem" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="BuyerItem" type="d2p1:BuyerItem" lowerBound="0" nillable="true"/>
+		<property name="PricesType_List" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="PricesType" lowerBound="0" upperBound="-1" nillable="true">
+					<typeDef xsi:type="ObjectType">
+						<property name="Date" type="xs:dateTime" lowerBound="0" nillable="true" fixed="false"/>
+						<property name="TipNom" type="d2p1:TipNomItem" lowerBound="0" nillable="true"/>
+						<property name="TypeUcheta" type="d2p1:TipUcheta" lowerBound="0" nillable="true"/>
+						<property name="Date1" type="xs:dateTime" lowerBound="0" nillable="true" fixed="false"/>
+						<property name="Date2" type="xs:dateTime" lowerBound="0" nillable="true" fixed="false"/>
+						<property name="Valid" type="xs:boolean" lowerBound="0" nillable="false"/>
+						<property name="TypePrice" type="d2p1:TypePriceItem" lowerBound="0" nillable="true"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="Prices" base="d2p1:Object">
+		<property name="Date" type="xs:dateTime"/>
+		<property name="TypePrice" type="d2p1:TypePriceItem" lowerBound="0" nillable="true"/>
+		<property name="Nomenclature" type="d2p1:NomItem" lowerBound="0" nillable="true"/>
+		<property name="Characteristic" type="d2p1:HarItem" lowerBound="0" nillable="true"/>
+		<property name="Price" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="Delivery" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="BuyerItem" type="d2p1:BuyerItem" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="Remains" base="d2p1:Object">
+		<property name="Item" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Nomenclature" type="d2p1:NomItem" lowerBound="0" nillable="true"/>
+				<property name="Quantity" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="Routes" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Item" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Buyer" type="d2p1:BuyerItem" lowerBound="0" nillable="true"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="Debt" base="d2p1:Object">
+		<property name="Item" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Buyer" type="d2p1:BuyerItem" lowerBound="0" nillable="true"/>
+				<property name="Contract" type="xs:string" lowerBound="0" nillable="true"/>
+				<property name="Regl" type="xs:boolean" lowerBound="0" nillable="true"/>
+				<property name="Summ" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="DocInvoice" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="TypeDoc" type="d2p1:TypeDoc" lowerBound="0" nillable="true"/>
+		<property name="Regl" type="xs:boolean" lowerBound="0" nillable="false"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="Number" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="BuyerUUID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ContracUUID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DeliveryUUID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="StocItemUUID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Total" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+		<property name="DatePos" type="xs:dateTime"/>
+		<property name="Comment" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Items" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Item" lowerBound="0" upperBound="-1" nillable="true">
+					<typeDef xsi:type="ObjectType">
+						<property name="NomUUID" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="Price" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+						<property name="Quantity" type="d2p1:TypeQuantity" lowerBound="0" nillable="true" fixed="false"/>
+						<property name="Total" type="d2p1:TypeTotal" lowerBound="0" nillable="true" fixed="false"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="result" base="d2p1:Object">
+		<property name="Comment" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="prov" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="TipNomItem" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.digma.ua/SB/MobileExchange" name="Roles" base="d2p1:Object">
+		<property name="role" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="name" type="xs:string" lowerBound="0" nillable="true"/>
+			</typeDef>
+		</property>
+	</objectType>
+</package>

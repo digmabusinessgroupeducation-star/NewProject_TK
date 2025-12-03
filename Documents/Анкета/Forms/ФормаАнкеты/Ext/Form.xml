@@ -1,0 +1,1115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПровестиИЗакрыть" id="27">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
+				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="28"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="29">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="30"/>
+			</Button>
+			<Button name="ФормаПровести" id="31">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Post</CommandName>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="32"/>
+			</Button>
+			<Button name="ФормаОтменаПроведения" id="33">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.UndoPosting</CommandName>
+				<ExtendedTooltip name="ФормаОтменаПроведенияРасширеннаяПодсказка" id="34"/>
+			</Button>
+			<ButtonGroup name="ФормаГруппаКнопокФормы" id="35">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа кнопок формы</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа кнопок формы</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="ФормаГруппаКнопокФормыРасширеннаяПодсказка" id="36"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновныеРеквизиты" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновныеРеквизитыРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаЛево" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаЛевоРасширеннаяПодсказка" id="7"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНомерДата" id="10">
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа номер дата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа номер дата</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="11"/>
+							<ChildItems>
+								<PictureField name="СостояниеДокумента" id="1">
+									<DataPath>СостояниеДокумента</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>2</Width>
+									<MaxWidth>2</MaxWidth>
+									<Height>1</Height>
+									<MaxHeight>1</MaxHeight>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.СтатусыДокумента</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</Border>
+									<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="2">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="3"/>
+								</PictureField>
+								<InputField name="Номер" id="12">
+									<DataPath>Объект.Number</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НомерКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="14"/>
+								</InputField>
+								<InputField name="Дата" id="15">
+									<DataPath>Объект.Date</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="17"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ПодразделениеКомпании" id="179">
+							<DataPath>Объект.ПодразделениеКомпании</DataPath>
+							<ContextMenu name="ПодразделениеКомпанииКонтекстноеМеню" id="180"/>
+							<ExtendedTooltip name="ПодразделениеКомпанииРасширеннаяПодсказка" id="181"/>
+						</InputField>
+						<InputField name="Интервьюер" id="176">
+							<DataPath>Объект.Интервьюер</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ИнтервьюерКонтекстноеМеню" id="177"/>
+							<ExtendedTooltip name="ИнтервьюерРасширеннаяПодсказка" id="178"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаЦентр" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка центр</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка центр</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаЦентрРасширеннаяПодсказка" id="9"/>
+					<ChildItems>
+						<InputField name="ДатаРедактирования" id="21">
+							<DataPath>Объект.ДатаРедактирования</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДатаРедактированияКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ДатаРедактированияРасширеннаяПодсказка" id="23"/>
+						</InputField>
+						<InputField name="Респондент" id="18">
+							<DataPath>Объект.Респондент</DataPath>
+							<ContextMenu name="РеспондентКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="РеспондентРасширеннаяПодсказка" id="20"/>
+						</InputField>
+						<InputField name="Реализатор" id="168">
+							<DataPath>Объект.Реализатор</DataPath>
+							<ContextMenu name="РеализаторКонтекстноеМеню" id="169"/>
+							<ExtendedTooltip name="РеализаторРасширеннаяПодсказка" id="170"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаПраво" id="174">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаПравоРасширеннаяПодсказка" id="175"/>
+					<ChildItems>
+						<InputField name="ШаблонАнкеты" id="24">
+							<DataPath>Объект.ШаблонАнкеты</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ШаблонАнкетыКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ШаблонАнкетыРасширеннаяПодсказка" id="26"/>
+						</InputField>
+						<InputField name="ПроцентВыполнения" id="171">
+							<DataPath>Объект.ПроцентВыполнения</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оценка %</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПроцентВыполненияКонтекстноеМеню" id="172"/>
+							<ExtendedTooltip name="ПроцентВыполненияРасширеннаяПодсказка" id="173"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтраницыОсновные" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы основные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы основные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыОсновныеРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<Page name="СтраницаВопросы" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вопросы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Запитання</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница вопросы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаВопросыРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВопросыАнкеты" id="37">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вопросы анкеты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вопросы анкеты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВопросыАнкетыРасширеннаяПодсказка" id="38"/>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКомментарий" id="163">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарии</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Коментар</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница комментарий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ScrollOnCompress>true</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаКомментарийРасширеннаяПодсказка" id="164"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="165">
+							<DataPath>Объект.Комментарий</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>10</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>10</MaxHeight>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="166"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="167"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДеревоАнкеты" id="43">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дерево анкеты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дерево анкеты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ScrollOnCompress>true</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаДеревоАнкетыРасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<Table name="ДеревоАнкеты" id="45">
+							<Representation>Tree</Representation>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДеревоАнкеты</DataPath>
+							<ContextMenu name="ДеревоАнкетыКонтекстноеМеню" id="46"/>
+							<AutoCommandBar name="ДеревоАнкетыКоманднаяПанель" id="47"/>
+							<ExtendedTooltip name="ДеревоАнкетыРасширеннаяПодсказка" id="48"/>
+							<SearchStringAddition name="ДеревоАнкетыСтрокаПоиска" id="49">
+								<AdditionSource>
+									<Item>ДеревоАнкеты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоАнкетыСтрокаПоискаКонтекстноеМеню" id="50"/>
+								<ExtendedTooltip name="ДеревоАнкетыСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоАнкетыСостояниеПросмотра" id="52">
+								<AdditionSource>
+									<Item>ДеревоАнкеты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоАнкетыСостояниеПросмотраКонтекстноеМеню" id="53"/>
+								<ExtendedTooltip name="ДеревоАнкетыСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоАнкетыУправлениеПоиском" id="55">
+								<AdditionSource>
+									<Item>ДеревоАнкеты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоАнкетыУправлениеПоискомКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="ДеревоАнкетыУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ДеревоАнкетыКодКартинки" id="58">
+									<DataPath>ДеревоАнкеты.КодКартинки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыКодКартинкиКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ДеревоАнкетыКодКартинкиРасширеннаяПодсказка" id="60"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыНаименование" id="61">
+									<DataPath>ДеревоАнкеты.Наименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыНаименованиеКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ДеревоАнкетыНаименованиеРасширеннаяПодсказка" id="63"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыТипСтроки" id="64">
+									<DataPath>ДеревоАнкеты.ТипСтроки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыТипСтрокиКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ДеревоАнкетыТипСтрокиРасширеннаяПодсказка" id="66"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыЭлементарныйВопрос" id="67">
+									<DataPath>ДеревоАнкеты.ЭлементарныйВопрос</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыЭлементарныйВопросКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ДеревоАнкетыЭлементарныйВопросРасширеннаяПодсказка" id="69"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыОбязательный" id="70">
+									<DataPath>ДеревоАнкеты.Обязательный</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыОбязательныйКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ДеревоАнкетыОбязательныйРасширеннаяПодсказка" id="72"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыТипВопроса" id="73">
+									<DataPath>ДеревоАнкеты.ТипВопроса</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыТипВопросаКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="ДеревоАнкетыТипВопросаРасширеннаяПодсказка" id="75"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыТипОтвета" id="76">
+									<DataPath>ДеревоАнкеты.ТипОтвета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыТипОтветаКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="ДеревоАнкетыТипОтветаРасширеннаяПодсказка" id="78"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыТипТабличногоВопроса" id="79">
+									<DataPath>ДеревоАнкеты.ТипТабличногоВопроса</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыТипТабличногоВопросаКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="ДеревоАнкетыТипТабличногоВопросаРасширеннаяПодсказка" id="81"/>
+								</InputField>
+								<LabelField name="ДеревоАнкетыКлючСтроки" id="82">
+									<DataPath>ДеревоАнкеты.КлючСтроки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыКлючСтрокиКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="ДеревоАнкетыКлючСтрокиРасширеннаяПодсказка" id="84"/>
+								</LabelField>
+								<InputField name="ДеревоАнкетыДлина" id="85">
+									<DataPath>ДеревоАнкеты.Длина</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыДлинаКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="ДеревоАнкетыДлинаРасширеннаяПодсказка" id="87"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыМинимальноеЗначение" id="88">
+									<DataPath>ДеревоАнкеты.МинимальноеЗначение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыМинимальноеЗначениеКонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="ДеревоАнкетыМинимальноеЗначениеРасширеннаяПодсказка" id="90"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыМаксимальноеЗначение" id="91">
+									<DataPath>ДеревоАнкеты.МаксимальноеЗначение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыМаксимальноеЗначениеКонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="ДеревоАнкетыМаксимальноеЗначениеРасширеннаяПодсказка" id="93"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыТипЗначения" id="94">
+									<DataPath>ДеревоАнкеты.ТипЗначения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыТипЗначенияКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ДеревоАнкетыТипЗначенияРасширеннаяПодсказка" id="96"/>
+								</InputField>
+								<CheckBoxField name="ДеревоАнкетыТребуетсяКомментарий" id="97">
+									<DataPath>ДеревоАнкеты.ТребуетсяКомментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоАнкетыТребуетсяКомментарийКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="ДеревоАнкетыТребуетсяКомментарийРасширеннаяПодсказка" id="99"/>
+								</CheckBoxField>
+								<InputField name="ДеревоАнкетыПояснениеКомментария" id="100">
+									<DataPath>ДеревоАнкеты.ПояснениеКомментария</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыПояснениеКомментарияКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="ДеревоАнкетыПояснениеКомментарияРасширеннаяПодсказка" id="102"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыВопросШаблона" id="103">
+									<DataPath>ДеревоАнкеты.ВопросШаблона</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыВопросШаблонаКонтекстноеМеню" id="104"/>
+									<ExtendedTooltip name="ДеревоАнкетыВопросШаблонаРасширеннаяПодсказка" id="105"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыПолныйКод" id="106">
+									<DataPath>ДеревоАнкеты.ПолныйКод</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыПолныйКодКонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="ДеревоАнкетыПолныйКодРасширеннаяПодсказка" id="108"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыФормулировка" id="109">
+									<DataPath>ДеревоАнкеты.Формулировка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыФормулировкаКонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="ДеревоАнкетыФормулировкаРасширеннаяПодсказка" id="111"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыТочность" id="112">
+									<DataPath>ДеревоАнкеты.Точность</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыТочностьКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="ДеревоАнкетыТочностьРасширеннаяПодсказка" id="114"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыЗаметки" id="115">
+									<DataPath>ДеревоАнкеты.Заметки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыЗаметкиКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="ДеревоАнкетыЗаметкиРасширеннаяПодсказка" id="117"/>
+								</InputField>
+								<CheckBoxField name="ДеревоАнкетыЕстьЗаметки" id="118">
+									<DataPath>ДеревоАнкеты.ЕстьЗаметки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоАнкетыЕстьЗаметкиКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="ДеревоАнкетыЕстьЗаметкиРасширеннаяПодсказка" id="120"/>
+								</CheckBoxField>
+								<CheckBoxField name="ДеревоАнкетыЭтоНоваяСтрока" id="121">
+									<DataPath>ДеревоАнкеты.ЭтоНоваяСтрока</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоАнкетыЭтоНоваяСтрокаКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="ДеревоАнкетыЭтоНоваяСтрокаРасширеннаяПодсказка" id="123"/>
+								</CheckBoxField>
+								<InputField name="ДеревоАнкетыПодсказка" id="124">
+									<DataPath>ДеревоАнкеты.Подсказка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыПодсказкаКонтекстноеМеню" id="125"/>
+									<ExtendedTooltip name="ДеревоАнкетыПодсказкаРасширеннаяПодсказка" id="126"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыСпособОтображенияПодсказки" id="127">
+									<DataPath>ДеревоАнкеты.СпособОтображенияПодсказки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыСпособОтображенияПодсказкиКонтекстноеМеню" id="128"/>
+									<ExtendedTooltip name="ДеревоАнкетыСпособОтображенияПодсказкиРасширеннаяПодсказка" id="129"/>
+								</InputField>
+								<InputField name="ДеревоАнкетыВидРасчетаИтогов" id="130">
+									<DataPath>ДеревоАнкеты.ВидРасчетаИтогов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоАнкетыВидРасчетаИтоговКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="ДеревоАнкетыВидРасчетаИтоговРасширеннаяПодсказка" id="132"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОтветыНаВопросы" id="133">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ответы на вопросы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ответы на вопросы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ScrollOnCompress>true</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаОтветыНаВопросыРасширеннаяПодсказка" id="134"/>
+					<ChildItems>
+						<Table name="ОтветыНаВопросы" id="135">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ОтветыНаВопросы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОтветыНаВопросыКонтекстноеМеню" id="136"/>
+							<AutoCommandBar name="ОтветыНаВопросыКоманднаяПанель" id="137"/>
+							<ExtendedTooltip name="ОтветыНаВопросыРасширеннаяПодсказка" id="138"/>
+							<SearchStringAddition name="ОтветыНаВопросыСтрокаПоиска" id="139">
+								<AdditionSource>
+									<Item>ОтветыНаВопросы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтветыНаВопросыСтрокаПоискаКонтекстноеМеню" id="140"/>
+								<ExtendedTooltip name="ОтветыНаВопросыСтрокаПоискаРасширеннаяПодсказка" id="141"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОтветыНаВопросыСостояниеПросмотра" id="142">
+								<AdditionSource>
+									<Item>ОтветыНаВопросы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтветыНаВопросыСостояниеПросмотраКонтекстноеМеню" id="143"/>
+								<ExtendedTooltip name="ОтветыНаВопросыСостояниеПросмотраРасширеннаяПодсказка" id="144"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОтветыНаВопросыУправлениеПоиском" id="145">
+								<AdditionSource>
+									<Item>ОтветыНаВопросы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтветыНаВопросыУправлениеПоискомКонтекстноеМеню" id="146"/>
+								<ExtendedTooltip name="ОтветыНаВопросыУправлениеПоискомРасширеннаяПодсказка" id="147"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОтветыНаВопросыКлючСтроки" id="148">
+									<DataPath>ОтветыНаВопросы.КлючСтроки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветыНаВопросыКлючСтрокиКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="ОтветыНаВопросыКлючСтрокиРасширеннаяПодсказка" id="150"/>
+								</LabelField>
+								<InputField name="ОтветыНаВопросыВопрос" id="151">
+									<DataPath>ОтветыНаВопросы.Вопрос</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветыНаВопросыВопросКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="ОтветыНаВопросыВопросРасширеннаяПодсказка" id="153"/>
+								</InputField>
+								<InputField name="ОтветыНаВопросыЭлементарныйВопрос" id="154">
+									<DataPath>ОтветыНаВопросы.ЭлементарныйВопрос</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветыНаВопросыЭлементарныйВопросКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="ОтветыНаВопросыЭлементарныйВопросРасширеннаяПодсказка" id="156"/>
+								</InputField>
+								<InputField name="ОтветыНаВопросыОтвет" id="157">
+									<DataPath>ОтветыНаВопросы.Ответ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветыНаВопросыОтветКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="ОтветыНаВопросыОтветРасширеннаяПодсказка" id="159"/>
+								</InputField>
+								<InputField name="ОтветыНаВопросыОткрытыйОтвет" id="160">
+									<DataPath>ОтветыНаВопросы.ОткрытыйОтвет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветыНаВопросыОткрытыйОтветКонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="ОтветыНаВопросыОткрытыйОтветРасширеннаяПодсказка" id="162"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Анкета</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="СостояниеДокумента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоАнкеты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево анкеты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КодКартинки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="2">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>300</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипСтроки" id="3">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭлементарныйВопрос" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.ВопросыДляАнкетирования</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Обязательный" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обязательный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипВопроса" id="7">
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыВопросовШаблонаАнкеты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипОтвета" id="8">
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыОтветовНаВопрос</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипТабличногоВопроса" id="4">
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыТабличныхВопросов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СоставТабличногоВопроса" id="9">
+					<Type>
+						<v8:Type>v8:ValueTable</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредопределенныеОтветы" id="10">
+					<Type>
+						<v8:Type>v8:ValueTable</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КлючСтроки" id="11">
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Длина" id="12">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="МинимальноеЗначение" id="13">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="МаксимальноеЗначение" id="14">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипЗначения" id="15">
+					<Type>
+						<v8:Type>v8:TypeDescription</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТребуетсяКомментарий" id="16">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПояснениеКомментария" id="17">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВопросШаблона" id="18">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВопросыШаблонаАнкеты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПолныйКод" id="19">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Формулировка" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формулировка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Точность" id="21">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Заметки" id="23">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЕстьЗаметки" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть заметки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЭтоНоваяСтрока" id="22">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СоставКомплексногоВопроса" id="25">
+					<Type>
+						<v8:Type>v8:ValueTable</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Подсказка" id="26">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СпособОтображенияПодсказки" id="27">
+					<Type>
+						<v8:Type>cfg:EnumRef.СпособыОтображенияПодсказок</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидРасчетаИтогов" id="1000001">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид расчета итогов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТК_ВидРасчетаИтогаГруппыАнкетирования</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидФлажка" id="28">
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыФлажкаВАнкетах</v8:Type>
+					</Type>
+				</Column>
+				<AdditionalColumns table="ДеревоАнкеты.СоставТабличногоВопроса">
+					<Column name="ЭлементарныйВопрос" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Элементарный вопрос</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:ChartOfCharacteristicTypesRef.ВопросыДляАнкетирования</v8:Type>
+						</Type>
+					</Column>
+					<Column name="НомерСтроки" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Номер строки</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="ДеревоАнкеты.ПредопределенныеОтветы">
+					<Column name="Ответ" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ответ</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:Characteristic.ВопросыДляАнкетирования</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="ЭлементарныйВопрос" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Элементарный вопрос</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:ChartOfCharacteristicTypesRef.ВопросыДляАнкетирования</v8:Type>
+						</Type>
+					</Column>
+					<Column name="НомерСтроки" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Номер строки</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="ДеревоАнкеты.СоставКомплексногоВопроса">
+					<Column name="ЭлементарныйВопрос" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Элементарный вопрос</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:ChartOfCharacteristicTypesRef.ВопросыДляАнкетирования</v8:Type>
+						</Type>
+					</Column>
+					<Column name="НомерСтроки" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Номер строки</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОтветыНаВопросы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответы на вопросы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КлючСтроки" id="1">
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Вопрос" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вопрос</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВопросыШаблонаАнкеты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЭлементарныйВопрос" id="3">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.ВопросыДляАнкетирования</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ответ" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.ВопросыДляАнкетирования</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ОткрытыйОтвет" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Коментар</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИсключитьВопрос" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исключить вопрос</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Виключити питання</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерЯчейки" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ячейки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокЭлементовИсключений" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список элементов исключений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

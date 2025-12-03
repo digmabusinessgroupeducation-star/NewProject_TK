@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="622e8705-cf72-46fe-81d6-64fc38fcc0ef">
+  <producedTypes>
+    <selectionType typeId="8b88d6b5-e4f7-44ef-9abc-e61d02bdf4e5" valueTypeId="bd71e74a-5796-4eef-8914-cdb479b4ae7c"/>
+    <listType typeId="06bcb43d-2e18-4f5e-a3d1-24a623e93f84" valueTypeId="857ef798-cfbb-4a93-8648-4ab8cd71039c"/>
+    <managerType typeId="90cc2d11-914c-4e05-86b8-c6a135a2ddac" valueTypeId="3bf46bf0-f294-4220-a808-5877c1538114"/>
+    <recordSetType typeId="26117eb1-9d9a-437b-98ff-7af09ea9c236" valueTypeId="73bbe315-a00f-416b-9f91-bb8f7344884c"/>
+    <recordKeyType typeId="ee62cc73-53a6-4756-afac-b4c72ec99553" valueTypeId="273adb9d-d5ab-4f16-9e63-8ee80e549037"/>
+    <recordType typeId="89bbe9c8-0435-451f-b3ab-d1d52769ccd3" valueTypeId="bc094d1c-d7b7-47e4-8e91-62e01980605e"/>
+    <recordManagerType typeId="8757e5dc-8020-4ceb-ac62-9c7b687c9b9d" valueTypeId="9b42838d-d619-4150-8220-0905bf0eec48"/>
+  </producedTypes>
+  <name>ТК_ЕдиницыИзмеренияЗаказов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Единицы измерения заказов</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Одиниці виміру замовлень</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="92654b8a-66dd-4586-8971-015e1094fa7b">
+    <name>ЕдиницаИзмерения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Единица измерения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Одиниця виміру</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЕдиницыИзмерения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.ТК_ЕдиницыИзмеренияЗаказов.Dimension.Номенклатура</field>
+    </choiceParameterLinks>
+    <choiceParameters>
+      <name>Отбор.ПометкаУдаления</name>
+      <value xsi:type="core:BooleanValue"/>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="534a7a25-d814-411c-99d6-76b504ada23e">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6f566082-8b40-4522-b468-26162770c1a7">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

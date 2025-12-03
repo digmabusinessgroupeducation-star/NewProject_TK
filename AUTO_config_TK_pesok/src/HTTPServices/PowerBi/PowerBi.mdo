@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d43d65ee-27f2-4e0c-86c3-993ac3790c45">
+  <name>PowerBi</name>
+  <synonym>
+    <key>ru</key>
+    <value>Power Bi</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Power Bi</value>
+  </synonym>
+  <rootURL>PowerBi</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="7591390b-2f7b-46d3-9211-9cdb087b020a">
+    <name>Report</name>
+    <synonym>
+      <key>ru</key>
+      <value>Report</value>
+    </synonym>
+    <template>/report/{Report}/Param/{Param}</template>
+    <methods uuid="339ef920-542d-44f9-93c0-b7830b82f3e4">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ReportGET</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

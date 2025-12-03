@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="52d80d38-6dbe-487b-a586-023533b91dde">
+  <producedTypes>
+    <selectionType typeId="047b4feb-87d9-4f8e-811f-f6f0712d5fbf" valueTypeId="7bdce359-7580-4c41-8a99-68c817a9a9f4"/>
+    <listType typeId="7047ec5c-b764-4b48-b6da-dc11f817d58d" valueTypeId="b2676f9b-94cf-4208-9b40-c6d73ce8e3ff"/>
+    <managerType typeId="099d9859-4727-4b4b-9414-822c3cb5310f" valueTypeId="721ed103-838c-4c89-9ead-6e87fb230cc4"/>
+    <recordSetType typeId="74b2370f-e8ed-4440-9438-135081b004a4" valueTypeId="6f0593cf-e0a9-4026-ad56-a36f9ff5484f"/>
+    <recordKeyType typeId="e26cc8c2-84f5-42ce-8fae-48e8ad45f49f" valueTypeId="8db1edc9-c774-4d3f-92dc-55fd61f03f02"/>
+    <recordType typeId="d25c7c07-f3db-4606-b97c-9ea0007a878a" valueTypeId="b3a3bea8-a16f-4741-85b8-d7477076019e"/>
+    <recordManagerType typeId="5eaa849d-70e8-441c-a183-1d5b4cfc3af7" valueTypeId="a0949c02-9535-4b3f-a4fb-facbc1f4d5c3"/>
+  </producedTypes>
+  <name>НастройкиЗаполненияТТН</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки заполнения ТТН</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="0dd1430f-004d-431c-926e-bcbb7fa26c8d">
+    <name>Перевозчик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Перевозчик</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+      <types>CatalogRef.Контрагенты</types>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="cccc9961-e16d-47dc-bd0c-6819f7009052">
+    <name>Автомобиль</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автомобиль</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Автотранспорт</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="26ab7192-2379-49e7-99ee-1798bb10b627">
+    <name>Водитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Водитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+</mdclass:InformationRegister>

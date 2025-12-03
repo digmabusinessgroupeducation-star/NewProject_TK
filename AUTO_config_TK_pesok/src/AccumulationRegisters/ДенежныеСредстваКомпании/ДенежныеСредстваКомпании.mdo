@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f3fd8823-ec94-40d9-ae33-a25f0493dca9">
+  <producedTypes>
+    <selectionType typeId="bd7deed2-7596-463c-b7fe-da32bcf3d84b" valueTypeId="63ebc1db-2437-44d5-b7d7-2a9e841c5ad9"/>
+    <listType typeId="a241d078-cd54-4418-80f8-6a0ca9c7fb0b" valueTypeId="c326b523-a37e-457c-8790-7891625c120a"/>
+    <managerType typeId="5b2e1497-799c-4714-ae3d-c5ad902469a4" valueTypeId="b987fccf-91c5-4eb7-94d9-31ee69bd549c"/>
+    <recordSetType typeId="329226cb-52ef-454d-80b5-c7c0b661ef66" valueTypeId="a0ec59f0-9cce-4c4c-b1f9-de543bdcdf6e"/>
+    <recordKeyType typeId="1fc370c1-ba3e-47a0-9259-2e1df6fc7bf1" valueTypeId="4f07a5a7-8958-4685-935a-0aa82e5ee840"/>
+    <recordType typeId="16a8cc82-9166-4118-add8-6be5e7886a61" valueTypeId="5c1b69d7-92ea-4032-8e13-91db39d64b3f"/>
+  </producedTypes>
+  <name>ДенежныеСредстваКомпании</name>
+  <synonym>
+    <key>ru</key>
+    <value>Денежные средства компании</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Грошові кошти компанії</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="4af9cbba-0cca-4dec-b09c-58b2b214b6cc">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сума</value>
+    </synonym>
+    <comment>Сумма в валюте банковского счета (кассы)</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="c81aac8b-0719-4257-a483-a688c30105c3">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Господарська операція</value>
+    </synonym>
+    <comment>Хозяйственная операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="c5dcf5cd-bc48-414f-a719-1a340439aaed">
+    <name>СтатьяДДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья ДДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Стаття РГК</value>
+    </synonym>
+    <comment>Статья движений денежных средств</comment>
+    <type>
+      <types>CatalogRef.СтатьиДДС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="6d35f86d-95b1-45b4-a3a9-c138e4dd1420">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Валюта</value>
+    </synonym>
+    <comment>Валюта хранения денежных средств</comment>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="be5b308c-25d8-477f-9058-44ecfc4bcc79">
+    <name>СтруктурнаяЕдиница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Структурная единица</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Структурна одиниця</value>
+    </synonym>
+    <comment>Структурная единица (расчетный счет, касса компании, касса ККМ, ценная бумага) - место хранения денежных средств.</comment>
+    <type>
+      <types>CatalogRef.КассыКомпании</types>
+      <types>CatalogRef.БанковскиеСчетаОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

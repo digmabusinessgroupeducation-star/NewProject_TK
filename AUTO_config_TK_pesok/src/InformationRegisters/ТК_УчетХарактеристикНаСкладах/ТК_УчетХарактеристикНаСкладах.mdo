@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d2ba5052-2194-4972-9bf3-51bbc04a6f3b">
+  <producedTypes>
+    <selectionType typeId="248a0a25-74e1-498f-980c-1a49e24b6a68" valueTypeId="c65db638-3bdb-48fd-948a-8976f09cca04"/>
+    <listType typeId="b4e347dc-3535-4990-9268-791110877797" valueTypeId="c045167f-53e8-4d72-ae6f-8b04696ced38"/>
+    <managerType typeId="8b458268-b821-4f77-bc96-1886b88c52c8" valueTypeId="68a2483f-3b76-452c-80ab-4477a1f69cf1"/>
+    <recordSetType typeId="7eebe8e7-7870-4b45-96a1-d85127d48670" valueTypeId="404065b5-da54-4f61-91cd-244a3b61f7c9"/>
+    <recordKeyType typeId="d5217f3f-019c-49a8-8cee-40be111ab291" valueTypeId="3bbf488a-d000-4fc6-a64a-bfad5126ee64"/>
+    <recordType typeId="5e6f00eb-5049-4695-a8c5-eab3d6a83f33" valueTypeId="475aff9f-3dbf-485a-a0ed-9af570c3f6cc"/>
+    <recordManagerType typeId="b444ec67-5238-4646-bc8a-9b7033b10062" valueTypeId="7e8b6bdb-4d8a-40a3-a7ed-0e99db17758d"/>
+  </producedTypes>
+  <name>ТК_УчетХарактеристикНаСкладах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учет характеристик на складах</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Облік характеристик на складах</value>
+  </synonym>
+  <dataHistory>Use</dataHistory>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ТК_УчетХарактеристикНаСкладах.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ТК_УчетХарактеристикНаСкладах.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <updateDataHistoryImmediatelyAfterWrite>true</updateDataHistoryImmediatelyAfterWrite>
+  <resources uuid="232f2e71-9daf-46ab-b5d5-d1c92ff4fecc">
+    <name>НеВестиУчетПоХарактеристикам</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не вести учет по характеристикам</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Не вести облік по характеристикам</value>
+    </synonym>
+    <comment>Не вести учет по характеристикам на данном складе</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="0beda137-988a-4acb-905b-2a0ff058ffe3">
+    <name>СкладКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад компании</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СкладыКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="5ab40628-292b-4516-a9c9-97c5fdaf4911">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="09c72a77-03cf-4d2d-b5e0-e214c8f05951">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1a9d7094-733b-426f-b57e-cff12afcc156">
+    <name>РедактированиеИстории</name>
+    <synonym>
+      <key>ru</key>
+      <value>Редактирование истории</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Редагування історії</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

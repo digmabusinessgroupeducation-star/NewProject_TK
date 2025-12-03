@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d2f68cb8-0b0a-4573-b472-5941cc4552b2">
+  <producedTypes>
+    <selectionType typeId="8b118aca-3632-4a42-b6f7-7c1c39981d6d" valueTypeId="6ee74c46-a1e6-4bb6-8f56-f4ab08db056a"/>
+    <listType typeId="b889cd1e-568a-4750-8105-b382c64a15fb" valueTypeId="1dee61a2-9cea-4767-998c-aec239c49fa3"/>
+    <managerType typeId="f4ab8824-a2a3-46ee-92a7-bcc3c00cfbe9" valueTypeId="7e4292e3-ea99-44ce-8921-c8b64f388c9f"/>
+    <recordSetType typeId="f85acf97-e753-41dc-81ef-d425c90ece84" valueTypeId="03bdd3ac-401e-4c3f-a7d8-fb2c0f8cf839"/>
+    <recordKeyType typeId="61bc799c-7275-4455-b9b7-8ce1b1907fbd" valueTypeId="95a744fd-c070-484f-ab3c-bb370ee61246"/>
+    <recordType typeId="2b4026c5-e5d5-499c-b081-0de06cef0a46" valueTypeId="2b99f8f7-5088-4236-bcbf-68843b5f406e"/>
+    <recordManagerType typeId="da5459fb-4d3c-4d90-8665-720f83e697c9" valueTypeId="3ec7ab85-02be-4d16-8ed2-1b8fe60b70bf"/>
+  </producedTypes>
+  <name>ТК_ОчередьЗаявок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очередь заявок</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="7ae3a185-5b38-466e-b1ac-7d2606251302">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <comment>0 - Создать задачу, 1 - удалить задучу</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="4fb6a27b-c843-44bd-aa83-1cd6c2eec519">
+    <name>Заявка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заявка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ТК_ЗаявкаНаВозвратПоставщику</types>
+      <types>DocumentRef.ТК_ЗаявкаНаПеремещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

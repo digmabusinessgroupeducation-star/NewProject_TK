@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5a82119b-f1f8-4159-9ffb-68c489d0acc3">
+  <name>ТК_ОтменаПроведенияПоследовательность</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отмена проведения последовательность</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ПересортицаТоваров</types>
+    <types>DocumentObject.ЗакрытиеСмены</types>
+    <types>DocumentObject.СписаниеТоваров</types>
+    <types>DocumentObject.Инвентаризация</types>
+    <types>DocumentObject.ПоступлениеТоваров</types>
+    <types>DocumentObject.ТК_НалоговаяНакладная</types>
+    <types>DocumentObject.ТК_Приложение2КНалоговойНакладной</types>
+    <types>DocumentObject.РеализацияТоваров</types>
+    <types>DocumentObject.ВозвратОтПокупателя</types>
+    <types>DocumentObject.ВыпускПродукции</types>
+    <types>DocumentObject.ТК_ЗакрытиеСменыЗКС</types>
+    <types>DocumentObject.ПеремещениеТоваров</types>
+    <types>DocumentObject.ВозвратПоставщику</types>
+  </source>
+  <event>UndoPosting</event>
+  <handler>CommonModule.УправлениеПоследовательностями.ОтменаПроведенияРегистрацияВПоследовательностиПартииТоваров</handler>
+</mdclass:EventSubscription>

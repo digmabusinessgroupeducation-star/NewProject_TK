@@ -1,0 +1,837 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаСохранить" id="59">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.КомандаСохранить</CommandName>
+				<ExtendedTooltip name="ФормаКомандаСохранитьРасширеннаяПодсказка" id="60"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="НаДату" id="46">
+			<DataPath>НаДату</DataPath>
+			<ContextMenu name="НаДатуКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="НаДатуРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<Pages name="ГруппаСтраницы" id="3">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<Page name="ГруппаТарифы" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тарифы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установка тарифа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаТарифыРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<UsualGroup name="Группа" id="52">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<CheckBoxField name="Тариф" id="49">
+									<DataPath>Тариф</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<CheckBoxType>Tumbler</CheckBoxType>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Абонплата; БИ=Тариф</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ТарифКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="51"/>
+									<Events>
+										<Event name="OnChange">ТарифПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="КоммунальнаяУслуга" id="11">
+									<DataPath>КоммунальнаяУслуга</DataPath>
+									<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+									<ContextMenu name="КоммунальнаяУслугаКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="КоммунальнаяУслугаРасширеннаяПодсказка" id="13"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="тзУслуги" id="14">
+							<Representation>List</Representation>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>тзУслуги</DataPath>
+							<RowPictureDataPath>тзУслуги.КоммунальнаяУслуга.DeletionMark</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.КоллекцияНапоминания</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</RowsPicture>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="тзУслугиКонтекстноеМеню" id="15"/>
+							<AutoCommandBar name="тзУслугиКоманднаяПанель" id="16">
+								<ChildItems>
+									<Button name="тзУслугиКомандаЗаполнитьУслуги" id="57">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаЗаполнитьУслуги</CommandName>
+										<ExtendedTooltip name="тзУслугиКомандаЗаполнитьУслугиРасширеннаяПодсказка" id="58"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="тзУслугиРасширеннаяПодсказка" id="17"/>
+							<SearchStringAddition name="тзУслугиСтрокаПоиска" id="18">
+								<AdditionSource>
+									<Item>тзУслуги</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тзУслугиСтрокаПоискаКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="тзУслугиСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="тзУслугиСостояниеПросмотра" id="21">
+								<AdditionSource>
+									<Item>тзУслуги</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тзУслугиСостояниеПросмотраКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="тзУслугиСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="тзУслугиУправлениеПоиском" id="24">
+								<AdditionSource>
+									<Item>тзУслуги</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="тзУслугиУправлениеПоискомКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="тзУслугиУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="AfterDeleteRow">тзУслугиПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="тзУслугиКоммунальнаяУслуга" id="27">
+									<DataPath>тзУслуги.КоммунальнаяУслуга</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тзУслугиКоммунальнаяУслугаКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="тзУслугиКоммунальнаяУслугаРасширеннаяПодсказка" id="29"/>
+								</InputField>
+								<InputField name="тзУслугиПериод" id="54">
+									<DataPath>тзУслуги.Период</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тзУслугиПериодКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="тзУслугиПериодРасширеннаяПодсказка" id="56"/>
+								</InputField>
+								<ColumnGroup name="тзУслугиГруппаТариф" id="42">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тз услуги группа тариф</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="тзУслугиГруппаТарифРасширеннаяПодсказка" id="43"/>
+									<ChildItems>
+										<InputField name="тзУслугиТариф" id="30">
+											<DataPath>тзУслуги.Тариф</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тзУслугиТарифКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="тзУслугиТарифРасширеннаяПодсказка" id="32"/>
+										</InputField>
+										<InputField name="тзУслугиНовыйТариф" id="36">
+											<DataPath>тзУслуги.НовыйТариф</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тзУслугиНовыйТарифКонтекстноеМеню" id="37"/>
+											<ExtendedTooltip name="тзУслугиНовыйТарифРасширеннаяПодсказка" id="38"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="тзУслугиГруппаАбонплата" id="44">
+									<Visible>false</Visible>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тз услуги группа абонплата</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="тзУслугиГруппаАбонплатаРасширеннаяПодсказка" id="45"/>
+									<ChildItems>
+										<InputField name="тзУслугиАбонплата" id="33">
+											<DataPath>тзУслуги.Абонплата</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тзУслугиАбонплатаКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="тзУслугиАбонплатаРасширеннаяПодсказка" id="35"/>
+										</InputField>
+										<InputField name="тзУслугиНоваяАбонплата" id="39">
+											<DataPath>тзУслуги.НоваяАбонплата</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тзУслугиНоваяАбонплатаКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="тзУслугиНоваяАбонплатаРасширеннаяПодсказка" id="41"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЗаменаСчетчика" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замена счетчика</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замена счетчика</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗаменаСчетчикаРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаТорговаяПлощадка" id="98">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Торговая площадка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа торговая площадка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТорговаяПлощадкаРасширеннаяПодсказка" id="99"/>
+							<ChildItems>
+								<InputField name="ТорговаяПлощадка" id="93">
+									<DataPath>ТорговаяПлощадка</DataPath>
+									<ContextMenu name="ТорговаяПлощадкаКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ТорговаяПлощадкаРасширеннаяПодсказка" id="95"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="тзСчетчики" id="61">
+							<Representation>List</Representation>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>тзСчетчики</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="тзСчетчикиКонтекстноеМеню" id="62"/>
+							<AutoCommandBar name="тзСчетчикиКоманднаяПанель" id="63">
+								<ChildItems>
+									<Button name="КомандаЗаполнитьСчетчики" id="96">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаЗаполнитьСчетчики</CommandName>
+										<ExtendedTooltip name="КомандаЗаполнитьСчетчикиРасширеннаяПодсказка" id="97"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="тзСчетчикиРасширеннаяПодсказка" id="64"/>
+							<SearchStringAddition name="тзСчетчикиСтрокаПоиска" id="65">
+								<AdditionSource>
+									<Item>тзСчетчики</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тзСчетчикиСтрокаПоискаКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="тзСчетчикиСтрокаПоискаРасширеннаяПодсказка" id="67"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="тзСчетчикиСостояниеПросмотра" id="68">
+								<AdditionSource>
+									<Item>тзСчетчики</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тзСчетчикиСостояниеПросмотраКонтекстноеМеню" id="69"/>
+								<ExtendedTooltip name="тзСчетчикиСостояниеПросмотраРасширеннаяПодсказка" id="70"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="тзСчетчикиУправлениеПоиском" id="71">
+								<AdditionSource>
+									<Item>тзСчетчики</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="тзСчетчикиУправлениеПоискомКонтекстноеМеню" id="72"/>
+								<ExtendedTooltip name="тзСчетчикиУправлениеПоискомРасширеннаяПодсказка" id="73"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="AfterDeleteRow">тзСчетчикиПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="тзСчетчикиТорговаяПлощадка" id="74">
+									<DataPath>тзСчетчики.ТорговаяПлощадка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<ContextMenu name="тзСчетчикиТорговаяПлощадкаКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="тзСчетчикиТорговаяПлощадкаРасширеннаяПодсказка" id="76"/>
+								</InputField>
+								<ColumnGroup name="тзСчетчикиГруппаЗаменяемыйСчетчик" id="89">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заменяемый счетчик</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заменяемый счетчик</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<TitleBackColor>style:ReportHeaderBackColor</TitleBackColor>
+									<ShowInHeader>true</ShowInHeader>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<ExtendedTooltip name="тзСчетчикиГруппаЗаменяемыйСчетчикРасширеннаяПодсказка" id="90"/>
+									<ChildItems>
+										<InputField name="тзСчетчикиСчетчик" id="77">
+											<DataPath>тзСчетчики.Счетчик</DataPath>
+											<TitleBackColor>style:ReportHeaderBackColor</TitleBackColor>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<ContextMenu name="тзСчетчикиСчетчикКонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="тзСчетчикиСчетчикРасширеннаяПодсказка" id="79"/>
+										</InputField>
+										<InputField name="тзСчетчикиПоказанияПредыдущие" id="100">
+											<DataPath>тзСчетчики.ПоказанияПредыдущие</DataPath>
+											<TitleBackColor>style:ReportHeaderBackColor</TitleBackColor>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тзСчетчикиПоказанияПредыдущиеКонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="тзСчетчикиПоказанияПредыдущиеРасширеннаяПодсказка" id="102"/>
+										</InputField>
+										<InputField name="тзСчетчикиПоказанияТекущие" id="80">
+											<DataPath>тзСчетчики.ПоказанияТекущие</DataPath>
+											<TitleBackColor>style:ReportHeaderBackColor</TitleBackColor>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<BackColor>style:ReportHeaderBackColor</BackColor>
+											<ContextMenu name="тзСчетчикиПоказанияТекущиеКонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="тзСчетчикиПоказанияТекущиеРасширеннаяПодсказка" id="82"/>
+											<Events>
+												<Event name="OnChange">тзСчетчикиПоказанияТекущиеПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="тзСчетчикиГруппаУстанавливаемыйСчетчик" id="91">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Устанавливаемый счетчик</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Устанавливаемый счетчик</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<TitleBackColor>style:ДобавленныйРеквизитФон</TitleBackColor>
+									<ShowInHeader>true</ShowInHeader>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<ExtendedTooltip name="тзСчетчикиГруппаУстанавливаемыйСчетчикРасширеннаяПодсказка" id="92"/>
+									<ChildItems>
+										<InputField name="тзСчетчикиСчетчикНовый" id="83">
+											<DataPath>тзСчетчики.СчетчикНовый</DataPath>
+											<TitleBackColor>style:ДобавленныйРеквизитФон</TitleBackColor>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<ContextMenu name="тзСчетчикиСчетчикНовыйКонтекстноеМеню" id="84"/>
+											<ExtendedTooltip name="тзСчетчикиСчетчикНовыйРасширеннаяПодсказка" id="85"/>
+										</InputField>
+										<InputField name="тзСчетчикиПоказанияНачальные" id="86">
+											<DataPath>тзСчетчики.ПоказанияНачальные</DataPath>
+											<TitleBackColor>style:ДобавленныйРеквизитФон</TitleBackColor>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<BackColor>style:ДобавленныйРеквизитФон</BackColor>
+											<ContextMenu name="тзСчетчикиПоказанияНачальныеКонтекстноеМеню" id="87"/>
+											<ExtendedTooltip name="тзСчетчикиПоказанияНачальныеРасширеннаяПодсказка" id="88"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаТабДок" id="103">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа таб док</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаТабДокРасширеннаяПодсказка" id="104"/>
+					<ChildItems>
+						<Button name="КомандаСохранитьИзТабДока" id="108">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаСохранитьИзТабДока</CommandName>
+							<ExtendedTooltip name="КомандаСохранитьИзТабДокаРасширеннаяПодсказка" id="109"/>
+						</Button>
+						<SpreadSheetDocumentField name="ТабДок" id="105">
+							<DataPath>ТабДок</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ShowGrid>true</ShowGrid>
+							<ShowHeaders>true</ShowHeaders>
+							<Edit>true</Edit>
+							<ContextMenu name="ТабДокКонтекстноеМеню" id="106"/>
+							<ExtendedTooltip name="ТабДокРасширеннаяПодсказка" id="107"/>
+						</SpreadSheetDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗаменаТарифовСчетчиков</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КоммунальнаяУслуга" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КоммунальныеУслуги</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="тзУслуги" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тз услуги</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КоммунальнаяУслуга" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Коммунальная услуга</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КоммунальныеУслуги</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Тариф" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тариф</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>6</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Абонплата" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Абонплата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НовыйТариф" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новый тариф</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>6</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НоваяАбонплата" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новая абонплата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Период" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НаДату" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На дату</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Тариф" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тариф</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="тзСчетчики" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тз счетчики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ТорговаяПлощадка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Торговая площадка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТорговыеПлощадки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Счетчик" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счетчик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Счетчики</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПоказанияТекущие" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показания текущие</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СчетчикНовый" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счетчик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Счетчики</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПоказанияНачальные" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показания начальные</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПоказанияПредыдущие" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показания предыдущие</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТорговаяПлощадка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Торговая площадка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ТорговыеПлощадки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТабДок" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таб док</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+			<Settings xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xsi:type="mxl:SpreadsheetDocument">
+				<mxl:languageSettings>
+					<mxl:currentLanguage>ru</mxl:currentLanguage>
+					<mxl:defaultLanguage>ru</mxl:defaultLanguage>
+					<mxl:languageInfo>
+						<mxl:id>ru</mxl:id>
+						<mxl:code>Русский</mxl:code>
+						<mxl:description>Русский</mxl:description>
+					</mxl:languageInfo>
+					<mxl:languageInfo>
+						<mxl:id>uk</mxl:id>
+						<mxl:code>Украинский</mxl:code>
+						<mxl:description>Украинский</mxl:description>
+					</mxl:languageInfo>
+				</mxl:languageSettings>
+				<mxl:columns>
+					<mxl:size>2</mxl:size>
+					<mxl:columnsItem>
+						<mxl:index>0</mxl:index>
+						<mxl:column>
+							<mxl:formatIndex>1</mxl:formatIndex>
+						</mxl:column>
+					</mxl:columnsItem>
+					<mxl:columnsItem>
+						<mxl:index>1</mxl:index>
+						<mxl:column>
+							<mxl:formatIndex>2</mxl:formatIndex>
+						</mxl:column>
+					</mxl:columnsItem>
+				</mxl:columns>
+				<mxl:rowsItem>
+					<mxl:index>0</mxl:index>
+					<mxl:row>
+						<mxl:c>
+							<mxl:c>
+								<mxl:f>3</mxl:f>
+								<mxl:tl>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>КоммунальнаяУслуга</v8:content>
+									</v8:item>
+								</mxl:tl>
+							</mxl:c>
+						</mxl:c>
+						<mxl:c>
+							<mxl:c>
+								<mxl:f>4</mxl:f>
+								<mxl:tl>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Тариф</v8:content>
+									</v8:item>
+								</mxl:tl>
+							</mxl:c>
+						</mxl:c>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:defaultFormatIndex>5</mxl:defaultFormatIndex>
+				<mxl:height>1</mxl:height>
+				<mxl:vgRows>1</mxl:vgRows>
+				<mxl:font faceName="Arial" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+				<mxl:format>
+					<mxl:width>280</mxl:width>
+				</mxl:format>
+				<mxl:format>
+					<mxl:width>88</mxl:width>
+				</mxl:format>
+				<mxl:format>
+					<mxl:font>0</mxl:font>
+					<mxl:horizontalAlignment>Center</mxl:horizontalAlignment>
+					<mxl:backColor>#CCFFCC</mxl:backColor>
+				</mxl:format>
+				<mxl:format>
+					<mxl:font>0</mxl:font>
+					<mxl:horizontalAlignment>Center</mxl:horizontalAlignment>
+					<mxl:backColor>#CCFFFF</mxl:backColor>
+				</mxl:format>
+				<mxl:format>
+					<mxl:width>72</mxl:width>
+				</mxl:format>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаСохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСохранить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КомандаЗаполнитьУслуги" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить услуги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить услуги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнитьУслуги</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КомандаЗаполнитьСчетчики" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить счетчики</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить счетчики</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнитьСчетчики</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КомандаСохранитьИзТабДока" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить из таб дока</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСохранитьИзТабДока</Action>
+		</Command>
+	</Commands>
+</Form>

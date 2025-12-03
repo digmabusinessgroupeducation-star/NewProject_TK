@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="022efd15-c743-4938-b90e-c62720c1993b">
+  <producedTypes>
+    <selectionType typeId="cd90acec-8ac7-439e-a48b-2d8c265a8ea7" valueTypeId="9a6fb92c-23d3-4dc7-bea4-3dbd1efb5c18"/>
+    <listType typeId="e148ba55-8bed-4d16-b27f-f3834ca432d3" valueTypeId="1e80e370-742b-44d9-a589-9157d6eb35b2"/>
+    <managerType typeId="81340e12-c706-4614-92d0-df5069e05059" valueTypeId="272d1f69-5472-4f30-b149-cb5ba9184a5f"/>
+    <recordSetType typeId="daf79b26-ae21-43bd-9082-93bb36ae6966" valueTypeId="6e117f83-9a7e-4655-b67d-fe0091ca4462"/>
+    <recordKeyType typeId="176f9afd-7a78-4b53-b1b3-5118f7c96511" valueTypeId="9f020d42-225f-4a85-8033-d09befc69c0c"/>
+    <recordType typeId="b505537b-5c8d-4074-9ad0-b79ae8688c1c" valueTypeId="5e9de788-bb3a-41e2-b466-1c8525eda657"/>
+    <recordManagerType typeId="b89d4f3e-260e-47f5-93c1-b099b3e951a5" valueTypeId="32a6b40a-4f33-4a30-8feb-a346fe521c52"/>
+  </producedTypes>
+  <name>ТК_Планирование</name>
+  <synonym>
+    <key>ru</key>
+    <value>Планирование</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Планування</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="e643d579-7014-4796-ab87-37fd7a2bfad4">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Значення</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="114521a2-f3c9-40b4-a299-b491931810c8">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Господарська операція</value>
+    </synonym>
+    <comment>Выполняемая документом операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ХозОперации.УстановкаПланирования</value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="37681fd2-6519-4d4f-86e6-4e5e9a77b027">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+  <dimensions uuid="1ee3ffb6-281e-46fe-855b-54e754f97cc0">
+    <name>НоменклатураПланирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура планирования</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ТК_ТипыПланирования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f41155b9-e12b-44b6-bd84-831cdbbec51a">
+    <name>Показатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показатель</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Показник</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТК_ПоказательПланирования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

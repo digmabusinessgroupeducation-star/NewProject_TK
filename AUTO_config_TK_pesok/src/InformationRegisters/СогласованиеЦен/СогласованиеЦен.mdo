@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="96d5cf8a-c0dc-4e10-abaa-26b67f0e23a9">
+  <producedTypes>
+    <selectionType typeId="190908f9-fe42-4bdc-a812-aab6dd35823e" valueTypeId="06839e60-c8be-41ea-87d5-0cd773fd6688"/>
+    <listType typeId="e5fc2932-4fe8-483d-82e1-43189b010f9c" valueTypeId="4bf2d819-5517-418c-be3f-397cff1d0972"/>
+    <managerType typeId="a13f1517-75f8-4f9a-9c87-1dca228076ba" valueTypeId="f08cf3d5-1a23-4c0d-a09a-eb99f617fcb0"/>
+    <recordSetType typeId="433da30f-9017-4322-baca-e97e03886d52" valueTypeId="7dc9cd17-7a77-47af-927a-c71b1881d270"/>
+    <recordKeyType typeId="7c1ab89c-a34c-4de5-b667-e805e2d3b4cd" valueTypeId="469a73f4-485e-4022-9214-3e79d306c7af"/>
+    <recordType typeId="2dc6e9f3-662a-4deb-8012-df2b597079a4" valueTypeId="f7de24c1-0961-4538-ad27-e7f2108a59a6"/>
+    <recordManagerType typeId="f1b98707-72f2-4534-8d1b-58e870537635" valueTypeId="c6924254-4d91-4eec-b1e8-5787c46dd4ed"/>
+  </producedTypes>
+  <name>СогласованиеЦен</name>
+  <synonym>
+    <key>ru</key>
+    <value>Согласование цен</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Узгодження цін</value>
+  </synonym>
+  <comment>Согласование цен с контрагентами</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2cd74e4e-20b7-44fb-abef-349794da214f">
+    <name>Цена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Цена</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Ціна</value>
+    </synonym>
+    <comment>Цена номенклатуры для контрагента</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>6</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e1fcac4b-5bca-4109-900f-ad5014bcbe16">
+    <name>ЦенаБезНалогов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Цена без налогов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Ціна без податків</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>6</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ac1bdb6e-3887-4de9-86bf-7429abaeb49b">
+    <name>СрокДействия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок действия</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Строк дії</value>
+    </synonym>
+    <comment>Срок действия цен</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="28d66b00-aac4-4125-a248-8c6d886e3e14">
+    <name>ПроцентОтклонения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент отклонения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відсоток відхилення</value>
+    </synonym>
+    <comment>Процент отклонения</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="8e6927b3-dd61-4cbe-be39-4cc1570da07f">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="012a6693-0b42-442d-b90d-2d92998a8e58">
+    <name>ДоговорВзаиморасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор взаиморасчетов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Договір взаєморозрахунків</value>
+    </synonym>
+    <comment>Договор взаиморасчетов контрагента</comment>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1b5bd232-d69f-45b9-b0e3-0508e56b8a89">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="18b81ad5-d274-4929-8e6c-19c0dde9a9ae">
+    <name>Характеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Характеристика</value>
+    </synonym>
+    <comment>(АСУ) Характеристика/серия номенклатуры</comment>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

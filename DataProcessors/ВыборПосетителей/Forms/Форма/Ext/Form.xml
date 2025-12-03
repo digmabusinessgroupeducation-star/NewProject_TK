@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыгрузить" id="45">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Выгрузить</CommandName>
+				<ExtendedTooltip name="ФормаВыгрузитьРасширеннаяПодсказка" id="46"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="ГруппаВнешние" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внешние</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа внешние</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВнешниеРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Table name="Внешние" id="7">
+							<Representation>List</Representation>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Внешние</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВнешниеКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="ВнешниеКоманднаяПанель" id="9"/>
+							<ExtendedTooltip name="ВнешниеРасширеннаяПодсказка" id="10"/>
+							<SearchStringAddition name="ВнешниеСтрокаПоиска" id="11">
+								<AdditionSource>
+									<Item>Внешние</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВнешниеСтрокаПоискаКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ВнешниеСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВнешниеСостояниеПросмотра" id="14">
+								<AdditionSource>
+									<Item>Внешние</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВнешниеСостояниеПросмотраКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="ВнешниеСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВнешниеУправлениеПоиском" id="17">
+								<AdditionSource>
+									<Item>Внешние</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВнешниеУправлениеПоискомКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ВнешниеУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ВнешниеПосетитель" id="20">
+									<DataPath>Внешние.Посетитель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВнешниеПосетительКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ВнешниеПосетительРасширеннаяПодсказка" id="22"/>
+									<Events>
+										<Event name="OnChange">ВнешниеПосетительПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ВнешниеДоступРазрешен" id="23">
+									<DataPath>Внешние.ДоступРазрешен</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВнешниеДоступРазрешенКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ВнешниеДоступРазрешенРасширеннаяПодсказка" id="25"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаВнутренние" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внутренние</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа внутренние</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВнутренниеРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Table name="Внутренние" id="26">
+							<Representation>List</Representation>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Внутренние</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВнутренниеКонтекстноеМеню" id="27"/>
+							<AutoCommandBar name="ВнутренниеКоманднаяПанель" id="28">
+								<ChildItems>
+									<Button name="ВнутренниеПолучитьКураторов" id="47">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПолучитьКураторов</CommandName>
+										<ExtendedTooltip name="ВнутренниеПолучитьКураторовРасширеннаяПодсказка" id="48"/>
+									</Button>
+									<Button name="ВнутренниеПроверитьСотрудников" id="61">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПроверитьСотрудников</CommandName>
+										<ExtendedTooltip name="ВнутренниеПроверитьСотрудниковРасширеннаяПодсказка" id="62"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВнутренниеРасширеннаяПодсказка" id="29"/>
+							<SearchStringAddition name="ВнутренниеСтрокаПоиска" id="30">
+								<AdditionSource>
+									<Item>Внутренние</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВнутренниеСтрокаПоискаКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="ВнутренниеСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВнутренниеСостояниеПросмотра" id="33">
+								<AdditionSource>
+									<Item>Внутренние</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВнутренниеСостояниеПросмотраКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="ВнутренниеСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВнутренниеУправлениеПоиском" id="36">
+								<AdditionSource>
+									<Item>Внутренние</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВнутренниеУправлениеПоискомКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="ВнутренниеУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ВнутренниеПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="ВнутренниеДоступРазрешен" id="63">
+									<DataPath>Внутренние.ДоступРазрешен</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВнутренниеДоступРазрешенКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ВнутренниеДоступРазрешенРасширеннаяПодсказка" id="65"/>
+								</CheckBoxField>
+								<InputField name="ВнутренниеПосетитель" id="39">
+									<DataPath>Внутренние.Посетитель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВнутренниеПосетительКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ВнутренниеПосетительРасширеннаяПодсказка" id="41"/>
+									<Events>
+										<Event name="OnChange">ВнутренниеПосетительПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ВнутренниеЭтоКуратор" id="66">
+									<DataPath>Внутренние.ЭтоКуратор</DataPath>
+									<Enabled>false</Enabled>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВнутренниеЭтоКураторКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ВнутренниеЭтоКураторРасширеннаяПодсказка" id="68"/>
+								</CheckBoxField>
+								<CheckBoxField name="ВнутренниеНетФото" id="52">
+									<DataPath>Внутренние.НетФото</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВнутренниеНетФотоКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ВнутренниеНетФотоРасширеннаяПодсказка" id="54"/>
+								</CheckBoxField>
+								<InputField name="ВнутренниеТелефон" id="42">
+									<DataPath>Внутренние.Телефон</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВнутренниеТелефонКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ВнутренниеТелефонРасширеннаяПодсказка" id="44"/>
+								</InputField>
+								<InputField name="ВнутренниеФото" id="55">
+									<DataPath>Внутренние.Фото</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВнутренниеФотоКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ВнутренниеФотоРасширеннаяПодсказка" id="57"/>
+								</InputField>
+								<InputField name="ВнутренниеОшибка" id="58">
+									<DataPath>Внутренние.Ошибка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВнутренниеОшибкаКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ВнутренниеОшибкаРасширеннаяПодсказка" id="60"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ВыборПосетителей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Внешние" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внешние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Посетитель" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Посетитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Посетители</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДоступРазрешен" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступ разрешен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Внутренние" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внутренние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Посетитель" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Посетитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Телефон" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Телефон</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>15</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НетФото" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нет фото</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДоступРазрешен" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Работает</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Фото" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фото</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ошибка" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоКуратор" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это куратор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выгрузить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выгрузить</Action>
+		</Command>
+		<Command name="ПолучитьКураторов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить кураторов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить кураторов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьКураторов</Action>
+		</Command>
+		<Command name="ПроверитьСотрудников" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить сотрудников</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьСотрудников</Action>
+		</Command>
+	</Commands>
+</Form>

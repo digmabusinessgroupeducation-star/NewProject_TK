@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="63048918-07e2-41f6-99ef-cc8d3b9bcbea">
+  <producedTypes>
+    <selectionType typeId="ab72c812-2230-4571-8a03-518891781045" valueTypeId="7d784c5e-c65d-4804-9bec-e3e76ccb1812"/>
+    <listType typeId="17ac6a11-7695-4efd-be5c-5503d860b3b3" valueTypeId="29289199-5ba6-4ed0-9857-c295a4e14f2c"/>
+    <managerType typeId="188ecd2a-966e-4373-8bb5-557e1852c252" valueTypeId="88b5bdd8-a36a-4ca8-8ef5-016c61d7bae7"/>
+    <recordSetType typeId="e9826c78-7bc9-4c93-9ea2-4e26e92efa9c" valueTypeId="f52afb6c-5268-42ab-a246-bc24b5c33c6f"/>
+    <recordKeyType typeId="7922fb76-8c88-40de-9eab-4c9d738eb636" valueTypeId="60b563c5-eba0-4da2-9b17-08a691a6de55"/>
+    <recordType typeId="d19bc4ea-8d57-4320-970e-f3da2b218503" valueTypeId="3cbc9024-025c-442f-a87c-7d74ac243899"/>
+    <recordManagerType typeId="1363db60-6957-4d1a-a3ca-803a3a4e99fd" valueTypeId="e4c536ca-c8eb-43f3-a283-7b6e8bb2dad8"/>
+  </producedTypes>
+  <name>ТК_ДокументыВОбработке</name>
+  <synonym>
+    <key>ru</key>
+    <value>Документы в обработке</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="4ef7a647-8e50-4edf-8fc8-a153b0c73d98">
+    <name>ДатаВремя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата время</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Період</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d0064b91-7b7d-48dc-b564-20778c3cd095">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Користувач</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ce89819d-f4f0-4259-bfb4-f2fa9ed3a457">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РезервированиеЗаказовПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

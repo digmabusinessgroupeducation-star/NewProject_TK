@@ -1,0 +1,13 @@
+﻿
+
+Функция ReturnNomenclatureForTSD(PrefixDepartment)
+	Возврат ТК_ТСД_РаботаWebСервиса.ВозвратНоменклатурыДляТСД_Инвентаризация(PrefixDepartment);
+КонецФункции
+
+Функция ReturnClientForTSD()
+	Возврат ТК_ТСД_РаботаWebСервиса.ВозвратКонтрагентовДляТСД_Инвентаризация();
+КонецФункции
+
+Функция ReturnDocFor1С(DocForTSD_List, PrefixDepartment)
+	Возврат ТК_ТСД_РаботаWebСервиса.СоздатьДокументыИзТСД(DocForTSD_List, PrefixDepartment);
+КонецФункции

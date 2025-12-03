@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b7b7c6f9-ba61-471e-b8dd-491294b3020c">
+  <producedTypes>
+    <selectionType typeId="d30de81d-0449-4f2b-93e3-84e87a43b954" valueTypeId="bca16da9-94c6-4c8d-a291-65a369e1a087"/>
+    <listType typeId="19af3d49-05c3-4355-ac9e-7645e5cadf02" valueTypeId="39b94237-593e-4020-8835-1c351ce884d0"/>
+    <managerType typeId="0e5b4fc5-4eaf-4de5-94c4-22ebc365ce51" valueTypeId="28a4f762-8686-41b7-a21a-c0336ccda06a"/>
+    <recordSetType typeId="aed4e74a-e9e5-415c-b367-8491e524a26d" valueTypeId="e07c766d-5260-4ec6-8950-b99462f6d366"/>
+    <recordKeyType typeId="210471c8-1f83-46e3-8c31-def4cf59d170" valueTypeId="1f89268e-8135-4956-a2bd-bff2866202b0"/>
+    <recordType typeId="85ea9654-0697-498c-9393-ed50305cf812" valueTypeId="db18d67e-8128-4805-bd00-9adc9a6bbf94"/>
+  </producedTypes>
+  <name>Производство</name>
+  <synonym>
+    <key>ru</key>
+    <value>Производство</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Виробництво</value>
+  </synonym>
+  <comment>Производство</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="ef415369-8bdc-46cb-8361-4c8dd6d0c291">
+    <name>КоличествоПродукции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество продукции</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кількість продукції</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="af9d405d-6fe8-47f8-a68a-f2f73a4ffbc3">
+    <name>КоличествоИнгридиента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество ингридиента</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кількість інгридієнту</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="32c835b3-bda0-430a-984f-0293dec27c65">
+    <name>КоличествоИнгридиентаНорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество ингридиента норма</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кількість інгридієнту норма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="adee763f-b685-4709-954e-a15ef1923b88">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Господарська операція</value>
+    </synonym>
+    <comment>Хозяйственная операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="dff44a90-7f06-42d7-8b9f-1424ac377d4d">
+    <name>Продукция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Продукція</value>
+    </synonym>
+    <comment>Продукция, для которой собираем ингредиенты</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="fbc1af64-a4c4-4023-9beb-2d58c0ccf5d9">
+    <name>Ингредиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ингредиент</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Інгредієнт</value>
+    </synonym>
+    <comment>Ингридиент</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f8592165-5535-4270-9174-d09d65dba2b4">
+    <name>СкладКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СкладыКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.ТорговаяПлощадка</name>
+      <field>0:f474edff-670a-475b-b244-8218b9ad011e</field>
+    </choiceParameterLinks>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="160a4c2a-a54f-4f09-b12a-5487e70be549">
+    <name>Рецептура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рецептура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Рецептура</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Рецептура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Продукция</name>
+      <field>0:739141ce-b50d-403a-9a52-78912b9524c5/0:c6b69fcc-7bd1-422e-8b8a-3feee879ab90</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

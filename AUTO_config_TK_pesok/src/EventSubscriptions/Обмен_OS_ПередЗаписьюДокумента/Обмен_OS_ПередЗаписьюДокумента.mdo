@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b643c8bd-afca-461f-a331-e3b11e762345">
+  <name>Обмен_OS_ПередЗаписьюДокумента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен o s перед записью документа</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ПересортицаТоваров</types>
+    <types>DocumentObject.ЗакрытиеСмены</types>
+    <types>DocumentObject.СписаниеТоваров</types>
+    <types>DocumentObject.Инвентаризация</types>
+    <types>DocumentObject.ПоступлениеТоваров</types>
+    <types>DocumentObject.РеализацияТоваров</types>
+    <types>DocumentObject.ПеремещениеТоваров</types>
+    <types>DocumentObject.ВозвратПоставщику</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбменФронтСобытия.Обмен_OS_ПередЗаписьюДокумента</handler>
+</mdclass:EventSubscription>

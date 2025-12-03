@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="394253da-6dfa-4a76-bce2-f9c0f7b65716">
+  <producedTypes>
+    <selectionType typeId="83496dde-a4e9-47ed-9560-1a776b16331b" valueTypeId="21781363-2a06-44e7-9dc2-83bdf39cbe10"/>
+    <listType typeId="64571579-2905-49aa-af55-772b738a4a61" valueTypeId="3fa1cebb-5ca0-4ef4-adcf-aa8abca3ab88"/>
+    <managerType typeId="f94adddf-7f3e-4d12-b09c-3cdf19e035fc" valueTypeId="cf0485db-9802-46db-8c7a-a15f801ad5e8"/>
+    <recordSetType typeId="a910809c-1150-484c-8659-76ca0f03fd9c" valueTypeId="32faa476-010b-46bd-a9a8-0e92ca853b88"/>
+    <recordKeyType typeId="5a91ad75-4db2-4519-a270-9ea28c153ea0" valueTypeId="63e6790c-1439-4644-b3b8-67cc2cb5e0e6"/>
+    <recordType typeId="73234c63-156d-4930-b74d-1fd98d431c95" valueTypeId="c9304885-2de4-4f68-92e4-e2a219e7d611"/>
+    <recordManagerType typeId="9cbc5a2c-5e1f-4400-9b00-d9220a97669b" valueTypeId="7ab22324-b612-4066-bef1-adceb3bbd9d7"/>
+  </producedTypes>
+  <name>ПланАктивности</name>
+  <synonym>
+    <key>ru</key>
+    <value>План активности</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="51c1e077-cc2f-4d05-8ff0-0917622719ae">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="7fde3e81-af14-45a8-876c-92fb65733b79">
+    <name>СкладКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СкладыКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="fb60f0ad-559c-4816-a994-a82b4cee14b4">
+    <name>ЦелеваяМарка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Целевая марка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+      <types>CatalogRef.ЦелевыеМарки</types>
+      <types>CatalogRef.ТоварныеМарки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="797da1c6-94dd-4193-a1c8-6bb317e03e36">
+    <name>ВидПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид периода</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыПериодаАктивности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d617484c-849e-4c51-bd11-c60f5dd41655">
+    <name>НачалоДействия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало действия</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="496f301d-43ad-412e-84ec-c7a80a054bb8">
+    <name>ОкончаниеДействия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Окончание действия</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

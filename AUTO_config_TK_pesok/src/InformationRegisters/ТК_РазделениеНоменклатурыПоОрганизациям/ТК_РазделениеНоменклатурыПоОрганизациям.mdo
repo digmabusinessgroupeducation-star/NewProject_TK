@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="10006c20-945b-473b-8ec8-ac22408e2eee">
+  <producedTypes>
+    <selectionType typeId="8b5493ba-47d6-4d9b-9dcb-37213f60846f" valueTypeId="907011ad-c1f5-4698-a8c4-d6ea2d27768b"/>
+    <listType typeId="79a12cac-32e7-4aea-a49c-13a0c09d78e1" valueTypeId="e53c1e8c-06dd-41f5-807e-ad0ffabbde3e"/>
+    <managerType typeId="bd8a003f-8c5d-40a8-934d-ad63029b4262" valueTypeId="af215f44-6bcc-4c73-a7c0-a4c4888dcff6"/>
+    <recordSetType typeId="0590cc8a-e337-40db-ac36-019a47251635" valueTypeId="c7309f20-5242-44ca-8fce-5efefd6c8d6b"/>
+    <recordKeyType typeId="8b14cf2a-4359-4509-a50d-50638c2f9ecd" valueTypeId="16ad0a6b-f10e-49f5-8c63-4d4130b3e1d2"/>
+    <recordType typeId="d17f9f50-1c85-4d28-a096-d5622708b9e1" valueTypeId="4814cb5c-9af9-4512-b2c4-6c5c7eb2ab63"/>
+    <recordManagerType typeId="7952f23f-7093-4b6b-bec6-411b07d89faa" valueTypeId="52a5af2d-e49f-4daf-bdff-5cd31b2f6c7a"/>
+  </producedTypes>
+  <name>ТК_РазделениеНоменклатурыПоОрганизациям</name>
+  <synonym>
+    <key>ru</key>
+    <value>Разделение номенклатуры по организациям</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="52b2f23f-ff48-49e5-bbaf-cbafa2724321">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="8d34c229-3558-4845-b8bd-a822c2597deb">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c086dc4d-8f92-4e61-a4d5-f5c67bdfa6ff">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

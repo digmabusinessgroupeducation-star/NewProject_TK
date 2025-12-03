@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataSource xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="92ec6951-5c1b-49c6-ae7a-5655464289ab">
+  <producedTypes>
+    <managerType typeId="8d0935b1-0c62-4856-a5fd-6f85d0151f7e" valueTypeId="ea79998d-fb51-4573-ae75-8c8fab3497b4"/>
+    <tablesManagerType typeId="0c10ee0f-5086-4e35-aee5-3117c39d818f" valueTypeId="6daad9d2-e0c8-4893-a416-300c3715e36f"/>
+    <cubesManagerType typeId="b65b85e9-6374-43cc-9423-dff61cc51d96" valueTypeId="fb27fc26-27dd-427b-b8fd-391cff9dbd37"/>
+  </producedTypes>
+  <name>OpenStore_Tranzit</name>
+  <synonym>
+    <key>ru</key>
+    <value>Open store tranzit</value>
+  </synonym>
+  <tables>ExternalDataSource.OpenStore_Tranzit.Table.V_ЗагруженныеДокументы</tables>
+  <tables>ExternalDataSource.OpenStore_Tranzit.Table.V_ЗагруженныеДокументыТовары</tables>
+  <functions uuid="6e28b7ba-57dd-446b-a6c3-4aca591cb401">
+    <name>dbo_UPSERT_GRP</name>
+    <comment>&amp;1 - Гуид группы; &amp;2 - Артикул группы; &amp;3 - Гуид родитель; &amp;4 - Артикул родитель; &amp;5 - </comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <expressionInDataSource>dbo.UPSERT_GRP(&amp;1, &amp;2, &amp;3, &amp;4, &amp;5, &amp;6, &amp;7)</expressionInDataSource>
+  </functions>
+  <functions uuid="a868528a-e8cd-4810-b158-9549c1e09e0d">
+    <name>dbo_UPSERT_TAXGRP</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <expressionInDataSource>dbo.UPSERT_TAXGRP(&amp;1, &amp;2, &amp;3, &amp;4, &amp;5)</expressionInDataSource>
+  </functions>
+  <functions uuid="21796ab9-ddf6-4e1c-ad95-b5f5b23854ee">
+    <name>dbo_spTKS_SETLOADED</name>
+    <comment>SAREAID, SYSTEMID, SESSID, SRECNUM</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <expressionInDataSource>dbo.spTKS_SETLOADED(&amp;1, &amp;2, &amp;3, &amp;4)</expressionInDataSource>
+  </functions>
+  <functions uuid="bfb40286-8b19-452e-9d7e-3307c34e3459">
+    <name>dbo_spTKSLINES</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <expressionInDataSource>dbo.spTKSLINES(&amp;1, &amp;2, &amp;3, &amp;4)</expressionInDataSource>
+  </functions>
+</mdclass:ExternalDataSource>

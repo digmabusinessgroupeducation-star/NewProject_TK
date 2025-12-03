@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d3ff5e55-a5bd-4629-9360-f7513c8ae684">
+  <producedTypes>
+    <selectionType typeId="d06150bb-0be7-4a28-8f9f-9b0adcbb0781" valueTypeId="730bd75a-e2a7-42ca-aebd-82a54de529c1"/>
+    <listType typeId="97d65c4f-d5da-4f0b-bb04-c1ad8828e775" valueTypeId="4ba16b54-5b0b-46b7-a462-96fe2dcc8195"/>
+    <managerType typeId="cb6d8d18-b70c-4962-a602-3f30eae05028" valueTypeId="73ffe8bf-78a7-425c-8695-ebd8afa1fa7f"/>
+    <recordSetType typeId="763f0aaa-1b90-4785-86c3-f0d5fd37c4ef" valueTypeId="5cd5e839-7c01-4e84-80f2-3ea19a879217"/>
+    <recordKeyType typeId="408e91e8-c9ac-4d44-9263-5e3813227491" valueTypeId="8f7c1cff-e9b2-458f-8807-22ef3387c50f"/>
+    <recordType typeId="7f6e836a-2010-46b1-8620-a3ad9c7b3aaf" valueTypeId="94c9c1be-ea64-4768-99b4-01acd5865f6c"/>
+    <recordManagerType typeId="4bc91732-c5fc-40af-9b08-6eb0bf4069b2" valueTypeId="0b08dee1-ad78-453a-aa2a-02114df70214"/>
+  </producedTypes>
+  <name>ТарифыКоммунальныхУслуг</name>
+  <synonym>
+    <key>ru</key>
+    <value>Тарифы коммунальных услуг</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b3d85f74-2657-4cec-8bcd-55283b250c3c">
+    <name>Тариф</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тариф</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>6</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="bcee1f1a-93d6-458c-8b4e-1dfb9ba90a0a">
+    <name>КоммунальнаяУслуга</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коммунальная услуга</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КоммунальныеУслуги</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dabda778-a04f-4512-bf13-cc73bc53ce88">
+  <producedTypes>
+    <objectType typeId="c98f33d1-7537-4816-879b-98f7cae7e9e3" valueTypeId="4ce4bd80-74d0-4606-92d8-ee0064247352"/>
+    <managerType typeId="f204b3e7-3da6-461d-8378-6537613430d7" valueTypeId="48ca00b8-7030-4550-8f43-100e33792b5c"/>
+  </producedTypes>
+  <name>ВыгрузкаPlanohero</name>
+  <synonym>
+    <key>ru</key>
+    <value>Выгрузка Planohero</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ВыгрузкаPlanohero.Form.Форма</defaultForm>
+  <attributes uuid="7a796e34-6362-4a67-8541-2c0de5267fd4">
+    <name>СоздаватьОбъекты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создавать объекты</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Создавать объекты или только обновлять</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="37570d9d-97ec-4821-949f-1abe15cb8cd1">
+    <name>Подразделения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделения</value>
+    </synonym>
+    <type>
+      <types>ValueList</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="08432804-1085-421d-9663-184e3ac799f0">
+    <name>СтруктураНачало</name>
+    <synonym>
+      <key>ru</key>
+      <value>Структура начало</value>
+    </synonym>
+    <type/>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="264e5a3c-c553-4fcc-9e96-1281e531657d">
+    <name>СтруктураДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Структура данных</value>
+    </synonym>
+    <type/>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="f351d73a-dc46-4dad-b447-28e2bb6ed388">
+    <producedTypes>
+      <objectType typeId="5ea9cce0-7b91-4bbf-9f9c-efb0a1939b4b" valueTypeId="2e93250f-8ab7-4559-a429-7ad749eab3f0"/>
+      <rowType typeId="159d098d-fa2e-4e98-96b6-d71fce48a44e" valueTypeId="45130515-e506-4c9a-8d62-3af618d5a0df"/>
+    </producedTypes>
+    <name>АктивныеСклады</name>
+    <synonym>
+      <key>ru</key>
+      <value>Активные склады</value>
+    </synonym>
+    <attributes uuid="04aa6640-0a40-4ba5-a0dd-f761596ae5ca">
+      <name>Shop</name>
+      <synonym>
+        <key>ru</key>
+        <value>Shop</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="2faa3ee1-e913-4911-9d59-47518e989b16">
+      <name>Склад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Склад</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СкладыКомпании</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="3d23c348-aaba-4357-ba73-a001facd954c">
+      <name>Активный</name>
+      <synonym>
+        <key>ru</key>
+        <value>Активный</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="2c7a813b-82f3-408a-827b-20bd033a134a">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="89cc4d93-7f3b-43a4-9d9c-6fa700d09e89">
+  <producedTypes>
+    <selectionType typeId="2e4c3568-560f-4cb3-b644-1b85359b367a" valueTypeId="9ea8dbed-844c-4827-b20f-a4a6109759fa"/>
+    <listType typeId="97ed1e08-8e8b-42a4-bb63-e2905b83f659" valueTypeId="7e980e22-83c2-420f-b4fe-770d85ff1c57"/>
+    <managerType typeId="b80d979d-f355-4689-b525-ac41587e4098" valueTypeId="5319c20b-f10d-4e89-9a9b-80f6bc0b6058"/>
+    <recordSetType typeId="10b57da9-afaf-4e66-9d03-115117c37111" valueTypeId="cb362d5f-9bc5-4bb8-95aa-7e900a4ea1d0"/>
+    <recordKeyType typeId="2fe42cf8-137d-4a38-b023-27e0a9bd4321" valueTypeId="384d452e-3af3-46ba-a652-edd3c423d76e"/>
+    <recordType typeId="a3d93f3e-c20d-4ab9-bbaa-5cddb946cc5b" valueTypeId="8c8ccf73-54a6-4b7f-b3ae-7a2933eaf981"/>
+    <recordManagerType typeId="e0241a0d-b96c-4523-98e1-edd05b436d5b" valueTypeId="1fc5b524-ca3c-41c5-bdc1-b3f5f06594f3"/>
+  </producedTypes>
+  <name>ТК_АктивныеЗапросыНаОтборРезерваТСД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Активные запросы на отбор резерва</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="834c385b-fb20-4016-91c2-716a79b37824">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9053976c-a359-406d-a0ab-9cf63a8cfbee">
+    <name>Резерв</name>
+    <synonym>
+      <key>ru</key>
+      <value>Резерв</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РезервированиеЗаказовПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="35eb7fe2-bc6d-4423-bd62-16765f7528bd">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="f146ab76-deb9-4f84-b311-b15d47f8365c">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ce904d31-dc3b-4285-a2e9-72d87dc1c77d">
+  <producedTypes>
+    <selectionType typeId="5fd1f6ab-903a-48cf-a233-099e9c00589b" valueTypeId="8b653df6-ea6f-41da-b983-fd40a5c05d2d"/>
+    <listType typeId="51411c69-7efa-4c3a-b6bb-09f6754c76d2" valueTypeId="8ace5b07-e210-4ded-b208-8b240a506dd8"/>
+    <managerType typeId="11e51784-785f-43bc-b4b1-e887a6fd40ac" valueTypeId="9dbe7326-77ba-4bcc-bdb5-b0cb59eb4dfc"/>
+  </producedTypes>
+  <name>ТК_СервисДеск</name>
+  <synonym>
+    <key>ru</key>
+    <value>Service Desk</value>
+  </synonym>
+  <defaultForm>DocumentJournal.ТК_СервисДеск.Form.ФормаСписка</defaultForm>
+  <useStandardCommands>true</useStandardCommands>
+  <registeredDocuments>Document.Задачи</registeredDocuments>
+  <columns uuid="4b8f44c8-9940-424f-bcd2-e7de89c83e76">
+    <name>Наименование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование</value>
+    </synonym>
+    <references>Document.Задачи.Attribute.Наименование</references>
+  </columns>
+  <columns uuid="da5d1b54-84fe-4bb4-8df9-8f00a78d36ae">
+    <name>Инициатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инициатор</value>
+    </synonym>
+    <indexing>Index</indexing>
+    <references>Document.Задачи.Attribute.Инициатор</references>
+  </columns>
+  <columns uuid="c88984be-2c8b-4574-bf2b-5310a8018628">
+    <name>ТекущийИсполнитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текущий исполнитель</value>
+    </synonym>
+    <indexing>Index</indexing>
+    <references>Document.Задачи.Attribute.ТекущийИсполнитель</references>
+  </columns>
+  <columns uuid="3955a769-c9fc-4f32-b703-7d5a85724424">
+    <name>КрайнийСрокУстранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Крайний срок устранения</value>
+    </synonym>
+    <references>Document.Задачи.Attribute.КрайнийСрокУстранения</references>
+  </columns>
+  <columns uuid="180915fb-0165-4769-8ecf-0c54439806d9">
+    <name>ДатаИВремяЗавершения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата и время завершения</value>
+    </synonym>
+    <references>Document.Задачи.Attribute.ДатаЗавершения</references>
+  </columns>
+  <columns uuid="97d1f2fc-a059-4a08-ab72-22ca5187e570">
+    <name>ДатаИВремяСоздания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата и время создания</value>
+    </synonym>
+    <references>Document.Задачи.Attribute.ДатаСоздания</references>
+  </columns>
+  <columns uuid="75cb8bd0-7bf6-470a-9d5d-2370d705d1db">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <references>Document.Задачи.Attribute.Статус</references>
+  </columns>
+  <columns uuid="368eb64d-8333-42f0-93bc-86403ec3e423">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <references>Document.Задачи.Attribute.Ответственный</references>
+  </columns>
+  <columns uuid="ce971c00-fe0c-4f02-8d73-80c2c70d859e">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <references>Document.Задачи.Attribute.Подразделение</references>
+  </columns>
+  <columns uuid="7e3b6266-6921-4eb6-af41-b1b8391c2800">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <references>Document.Задачи.Attribute.Объект</references>
+  </columns>
+  <forms uuid="e23bc015-fe6c-469e-86b6-01522beb6bc6">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="de2423e6-e70a-4da1-b2d4-0fcd4b260fa8">
+    <name>ПовторяющиесяЗадачи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Повторяющиеся задачи</value>
+    </synonym>
+    <group>CommandGroup.Отчеты</group>
+    <commandParameterType>
+      <types>DocumentRef.Задачи</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+  <commands uuid="1e7d0b47-4f5c-43b9-bee7-42b34528884b">
+    <name>РеестрЗадач</name>
+    <synonym>
+      <key>ru</key>
+      <value>Реестр задач</value>
+    </synonym>
+    <group>CommandGroup.Отчеты</group>
+    <commandParameterType>
+      <types>DocumentRef.Задачи</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DocumentJournal>

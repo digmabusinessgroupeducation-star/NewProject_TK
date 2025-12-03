@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="20540beb-fba9-41b4-b8f0-e96e6e8680e0">
+  <producedTypes>
+    <selectionType typeId="b7f99161-d45e-45e6-86d2-9b4ff67345b6" valueTypeId="501d1316-2d3e-4f9d-b3ed-7a70137c3b70"/>
+    <listType typeId="95c4b4c2-67e5-4d3a-9469-30ed8ae70e21" valueTypeId="c3a57268-ba0a-4392-b75c-58080cd166a3"/>
+    <managerType typeId="2a6cf067-e365-440a-afb7-cfd4771d055d" valueTypeId="3890b228-975b-4e0f-ba04-5540a5af2aaa"/>
+    <recordSetType typeId="6dd7f044-867a-4981-8b4e-f49ceaf7ea38" valueTypeId="d169395e-30bb-4bba-8cd1-5c95c991f42f"/>
+    <recordKeyType typeId="24babd83-4001-49e8-9455-df04a9dde32c" valueTypeId="023fa4e3-8e54-4890-97ff-5d39de70b77c"/>
+    <recordType typeId="3e81558a-ca29-42f2-aef8-c3845ef5332d" valueTypeId="f282676d-5f6a-4179-b97e-2d0ffca52503"/>
+  </producedTypes>
+  <name>НачислениеМаркетинга</name>
+  <synonym>
+    <key>ru</key>
+    <value>Начисление маркетинга</value>
+  </synonym>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="eef67264-81fd-4ef1-bef5-5bb48cce8ccd">
+    <name>СуммаРасчетная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма расчетная</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="03f065d7-fa89-4ba1-8704-a24e7c6a603a">
+    <name>СуммаСогласованная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма согласованная</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="ffa52902-296f-470c-aa48-62e14dbd4fc9">
+    <name>НачалоРасчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало расчета</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="df424f63-0fed-41e0-843a-3d9865b37543">
+    <name>КонецРасчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конец расчета</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="904054d5-b205-4a82-8ea7-38a63f71c2ef">
+    <name>Периодичность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Периодичность</value>
+    </synonym>
+    <comment>Периодичность начисления маркетинга</comment>
+    <type>
+      <types>EnumRef.Периодичность</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="d013ad34-1ac3-4690-8eb5-5486d3371fe2">
+    <name>АктОбОказанииУслуг</name>
+    <synonym>
+      <key>ru</key>
+      <value>Акт об оказании услуг</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РеализацияТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="1d15cbb2-01ed-447e-a54c-71759d093955">
+    <name>УстановкаМаркетинга</name>
+    <synonym>
+      <key>ru</key>
+      <value>Установка маркетинга</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ТК_УстановкаМаркетинга</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="0e8edbc4-5be5-4d9f-b2d8-fcced9f1c009">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="dc97bf12-909e-49b9-ad92-685cc90bcda0">
+    <name>ДоговорМаркетинга</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор маркетинга</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f4ca476f-1bc7-46f2-bdd9-960a79ad7d83">
+    <name>Менеджер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Менеджер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="72dfde87-be67-499d-aee0-aec140896a32">
+  <name>ПроверитьДатуЗапретаИзмененияПередЗаписьюДокумента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверить дату запрета изменения перед записью документа</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Перевірити дату заборони зміни перед записом</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ПересортицаТоваров</types>
+    <types>DocumentObject.ЗакрытиеСмены</types>
+    <types>DocumentObject.ТК_ГрафикЗаказов</types>
+    <types>DocumentObject.СписаниеБезналичныхДенежныхСредств</types>
+    <types>DocumentObject.СписаниеТоваров</types>
+    <types>DocumentObject.ТК_АктСверкиВзаиморасчетов</types>
+    <types>DocumentObject.ЗаказПокупателя</types>
+    <types>DocumentObject.Инвентаризация</types>
+    <types>DocumentObject.ИзменениеЦен</types>
+    <types>DocumentObject.РасходныйКассовыйОрдер</types>
+    <types>DocumentObject.ТК_ОприходованиеТоваров</types>
+    <types>DocumentObject.ЧекККМ</types>
+    <types>DocumentObject.ПоступлениеТоваров</types>
+    <types>DocumentObject.ЗаказПоставщику</types>
+    <types>DocumentObject.ПриходныйКассовыйОрдер</types>
+    <types>DocumentObject.ТК_ТТН</types>
+    <types>DocumentObject.ТК_НалоговаяНакладная</types>
+    <types>DocumentObject.ТК_КорректировкаДолга</types>
+    <types>DocumentObject.ТК_УстановкаКвотНаОтгрузку</types>
+    <types>DocumentObject.ТК_ОптимальноеКоличествоНоменклатуры</types>
+    <types>DocumentObject.ТК_Приложение2КНалоговойНакладной</types>
+    <types>DocumentObject.ТК_НазначениеСкидок</types>
+    <types>DocumentObject.ПоступлениеБезналичныхДенежныхСредств</types>
+    <types>DocumentObject.РеализацияТоваров</types>
+    <types>DocumentObject.ВозвратОтПокупателя</types>
+    <types>DocumentObject.ВыпускПродукции</types>
+    <types>DocumentObject.ИзменениеАссортимента</types>
+    <types>DocumentObject.ПеремещениеТоваров</types>
+    <types>DocumentObject.ВозвратПоставщику</types>
+    <types>DocumentObject.ПротоколСогласованияЦен</types>
+    <types>DocumentObject.КорректировкаЗаказаПокупателя</types>
+    <types>DocumentObject.ТК_Взаимозачет</types>
+    <types>DocumentObject.ТК_Переработка</types>
+    <types>DocumentObject.РезервированиеЗаказовПокупателя</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ДатыЗапретаИзменения.ПроверитьДатуЗапретаИзмененияПередЗаписьюДокумента</handler>
+</mdclass:EventSubscription>

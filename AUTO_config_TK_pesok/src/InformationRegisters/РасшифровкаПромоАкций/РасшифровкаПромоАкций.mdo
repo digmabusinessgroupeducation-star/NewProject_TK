@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c550901a-696d-4ec9-b30f-0a1ee90257fb">
+  <producedTypes>
+    <selectionType typeId="839e9d21-5dfa-4231-bd64-ae07e4de7a88" valueTypeId="10f2bf3c-76e9-496c-90e6-7cb365bc5728"/>
+    <listType typeId="4a06c1b0-1c5b-4e1c-9f3a-5bb09f2d0dc5" valueTypeId="826187f0-b8ae-413f-b592-b9a51a06e0f4"/>
+    <managerType typeId="5470ce71-d6fc-4584-a26f-79a7636f766f" valueTypeId="b3e664fe-fada-4f0c-aa3e-6dc5e1639417"/>
+    <recordSetType typeId="a516386c-10c9-42da-ab95-ffbcb53ab022" valueTypeId="bae3b953-e703-4e22-8b02-0482f88e040c"/>
+    <recordKeyType typeId="8ef9662b-0acd-4bf5-84b5-4a4196207074" valueTypeId="b3590801-3383-438d-bf17-b68f5057d419"/>
+    <recordType typeId="beab3cbc-1793-4c0e-a7ff-475bc6e8c9ee" valueTypeId="c48a7ab0-7307-457e-85ab-30a2db631e90"/>
+    <recordManagerType typeId="e44432d1-2b8a-4ab5-8466-84758bd8ec7e" valueTypeId="d3680955-bf2b-4fcf-b8b9-03e5386f9ef9"/>
+  </producedTypes>
+  <name>РасшифровкаПромоАкций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расшифровка промо акций</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="5d9220af-7c9c-4eb6-aade-d487a2ec5a6c">
+    <name>АкционныйОбьем</name>
+    <synonym>
+      <key>ru</key>
+      <value>Акционный обьем</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e7afdf23-e40e-4f9d-adac-a828294706f2">
+    <name>ОбьемЗаПредПериод</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обьем за пред период</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="e8fd4e1b-1b28-4742-92a6-364747ce2eaa">
+    <name>Промоакция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Промоакция</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Промоакции</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d2a8c055-5e7d-4a8e-a305-84b6584f4578">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="dabc3cf1-de82-4bdc-984a-555d99fc5442">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

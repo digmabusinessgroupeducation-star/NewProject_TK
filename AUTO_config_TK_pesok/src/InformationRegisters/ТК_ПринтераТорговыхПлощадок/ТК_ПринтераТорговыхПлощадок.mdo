@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="896a070a-e163-4d59-ad46-694859c0ab42">
+  <producedTypes>
+    <selectionType typeId="c9c198e6-2591-45d2-9c1e-da616db22814" valueTypeId="d818bb4c-a922-4349-a4f7-cbf4b5a62897"/>
+    <listType typeId="851d7fd6-2bad-44af-9939-6d47e73e72ca" valueTypeId="0409e72a-c3f2-40eb-844c-0121e1bb86e6"/>
+    <managerType typeId="ddb2fd8c-223d-414b-986a-42ca0554f766" valueTypeId="2c7fecc3-83aa-4d31-b352-d67368548b66"/>
+    <recordSetType typeId="b1a569dc-e486-4580-ade9-aca46312e713" valueTypeId="ecef64c1-8c33-422b-963f-0183417fee6d"/>
+    <recordKeyType typeId="284c5497-0b09-46c3-a424-f88becb6b673" valueTypeId="ebbb5b94-fcef-4c32-9c27-2e0ca064365e"/>
+    <recordType typeId="7a1ef63b-9876-4f47-bfe0-54cdc737a48e" valueTypeId="e863b3d5-e1bc-406c-9085-4c8305fd9184"/>
+    <recordManagerType typeId="7728343c-6976-4a88-a469-f02b35545bcd" valueTypeId="05a67894-1a01-4c5b-94dc-2679c17db61e"/>
+  </producedTypes>
+  <name>ТК_ПринтераТорговыхПлощадок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Принтера объектов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e23dca63-bb87-4cd8-b9bd-91de297968e2">
+    <name>Принтер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Принтер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>256</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="b8679fec-4d25-42a7-abe5-db7ad02585ba">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b861c300-0218-48cd-bd12-d049e6fb74a6">
+    <name>СкладКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад компании</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СкладыКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.ТорговаяПлощадка</name>
+      <field>InformationRegister.ТК_ПринтераТорговыхПлощадок.Dimension.ТорговаяПлощадка</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <commands uuid="bfff84e5-3d70-4bf0-a8c4-0bab56f2cec6">
+    <name>ПринтераТорговыхПлощадок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Принтера торговых площадок</value>
+    </synonym>
+    <group>ActionsPanelTools</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

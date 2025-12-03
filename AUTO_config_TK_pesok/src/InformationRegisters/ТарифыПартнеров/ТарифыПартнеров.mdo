@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6e90713a-41d9-4ffe-87a3-9056ef44d70d">
+  <producedTypes>
+    <selectionType typeId="942871b2-998a-432c-99e2-d4b4871ff2df" valueTypeId="3a805e44-1178-45cd-ba6d-0c4a1ff5d282"/>
+    <listType typeId="7bfc3855-73cf-4718-8979-5c5042579588" valueTypeId="7b9d06e6-b94b-447a-8fce-79c756ae507a"/>
+    <managerType typeId="d9fd474c-48f5-428e-99d6-c0c182b35290" valueTypeId="27753a33-7313-4f69-808a-4af69ca29b64"/>
+    <recordSetType typeId="a0f185cf-8cf9-42da-8dc8-60ebc1b335e4" valueTypeId="d5cdfe2e-a490-43f4-bc68-a1d67d248ade"/>
+    <recordKeyType typeId="f0cef3b0-a2fa-48ec-a2e0-e961798bc4b4" valueTypeId="d86d2294-dbf7-44db-add8-b8cbe30760c2"/>
+    <recordType typeId="cf741c24-48ed-4122-a81c-28196d4aba11" valueTypeId="f5ff4180-cfef-4c0a-ae1c-9f3ac86110de"/>
+    <recordManagerType typeId="bb8e89bb-fad4-4401-b1a7-3b60a0695e9d" valueTypeId="c9dc0a2c-f0fa-493f-b853-4a21277fd148"/>
+  </producedTypes>
+  <name>ТарифыПартнеров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Тарифы партнеров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ТарифыПартнеров.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ТарифыПартнеров.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b13bda38-2add-45d3-a7cd-3dd15baf05c6">
+    <name>Процент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="9f2b9526-b8f5-4296-a2a5-8b2c3722e3da">
+    <name>Партнер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Партнер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПартнерыКазначейство</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b4b56402-08b9-4993-8245-9210ed4fbfea">
+    <name>Операция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Операция</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ОперацииЗаказаКазначейство</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c20f3f79-9511-4fdd-a40c-15b7ad4c1f7f">
+    <name>ТипТовараУслуги</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип товара услуги</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТипыПродаваемыхТоваровУслуг</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="0dcc5d78-f9ce-4188-8aac-374f0c55cb65">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cc8e8ba4-7709-4aa9-9fe9-6aaed40f3740">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

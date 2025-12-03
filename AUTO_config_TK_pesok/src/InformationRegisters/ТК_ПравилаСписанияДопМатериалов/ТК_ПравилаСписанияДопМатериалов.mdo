@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5b57473f-3176-4ecd-a93b-d3f3f79aac75">
+  <producedTypes>
+    <selectionType typeId="b4eee6cc-35e6-4f20-9ab8-43fbfbfa3561" valueTypeId="5ee5576c-d945-4d9b-96d3-ad85fccd7ead"/>
+    <listType typeId="0411a740-2dcf-4834-b543-2f7e3e1b37f6" valueTypeId="2e63a0d1-dbb3-492c-aef9-0ffa4358da56"/>
+    <managerType typeId="d334ca16-5c39-4f52-b504-4ca5acf7cca8" valueTypeId="d3115a83-b524-4703-84fb-3fabc2b6900f"/>
+    <recordSetType typeId="01a20470-195f-4ab2-bd58-267342a15954" valueTypeId="ee4d8905-c43a-413e-8536-c88c9558a526"/>
+    <recordKeyType typeId="573b107b-b041-4d98-be8a-c38108a31c6c" valueTypeId="dbcaed2a-bf03-44f6-9db5-c0ad6e58f98b"/>
+    <recordType typeId="e1b109aa-f84e-4310-b0fa-c52176884bac" valueTypeId="f75d9074-b1ca-494d-9437-6b1c5ee750cb"/>
+    <recordManagerType typeId="2e12b575-a6d7-4dcc-85b1-cfdddcf93790" valueTypeId="d2dfe814-f534-4420-9201-97ca1e742fe0"/>
+  </producedTypes>
+  <name>ТК_ПравилаСписанияДопМатериалов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Правила списания доп. материалов</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Правила списання дод. матеріалів</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="a080381e-3174-4d7a-b825-96a180bba30b">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кількість</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="21ee82e5-85c5-4692-a307-e8d3c54a4e79">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Статус</value>
+    </synonym>
+    <comment>1-Включено;0-Отключено</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2f3cca24-7ecf-41d5-baf6-e69d0f377dfe">
+    <name>СтатьяСписания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья списания</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Стаття списання ТМЦ</value>
+    </synonym>
+    <comment>Статья списания ТМЦ на расходы</comment>
+    <type>
+      <types>CatalogRef.СтатьиДоходовИРасходов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="21d9d9ff-f2b6-47ab-a117-854f9ddba8fc">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a6edf604-cf13-4cce-b3d1-a965a6634d84">
+    <name>ДопМатериал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доп материал</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Доп матеріал</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

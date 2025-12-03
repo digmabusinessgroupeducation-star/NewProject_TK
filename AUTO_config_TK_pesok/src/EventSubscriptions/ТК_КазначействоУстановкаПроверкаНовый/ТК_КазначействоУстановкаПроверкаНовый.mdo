@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e2867f7d-87d3-48d1-ac49-5fdb93be433f">
+  <name>ТК_КазначействоУстановкаПроверкаНовый</name>
+  <synonym>
+    <key>ru</key>
+    <value>Казначейство установка учереди обработки электронных писем</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ЭлектронноеПисьмоВходящее</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ТК_РаботаКазначейства.ТК_КазначействоУстановкаПроверкаНовыйПередЗаписью</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0fb6bbf6-b986-4ae3-b1ee-1ee92858b94a">
+  <producedTypes>
+    <selectionType typeId="816c5e08-e0f4-4867-8105-dc52b9713a4e" valueTypeId="24181aea-cb5d-42e5-b652-e62cf2389b1f"/>
+    <listType typeId="b40e0b23-d868-4dde-9b41-a70f8d8c3a7c" valueTypeId="0a1c3f4f-1b03-4ac6-bfa8-c2b9a3c39166"/>
+    <managerType typeId="c7b1a887-0923-4b69-b68f-281edcaf3083" valueTypeId="304fb726-d156-4ecf-ba07-4c110a228c00"/>
+    <recordSetType typeId="baf60b81-018a-4fcc-9ca0-44110293e936" valueTypeId="f1919ff8-475c-42ef-81d8-91b18f30f5b0"/>
+    <recordKeyType typeId="864ef3d4-2362-4fda-8526-c9cbb6245f52" valueTypeId="5bef1785-8b2a-404f-bba9-b1fa78dac825"/>
+    <recordType typeId="5856dfa8-d360-4c2e-bed0-3c1081007748" valueTypeId="b0b6f964-a7dc-4640-a0b4-8fc3ee3044bd"/>
+  </producedTypes>
+  <name>ОстаткиТоваровТМП</name>
+  <synonym>
+    <key>ru</key>
+    <value>Остатки товаров ТМП</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="017455fd-d0eb-4688-b173-065b47f2aa37">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кількість</value>
+    </synonym>
+    <comment>Количественный остаток номенклатуры на складе</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="115af418-a1e1-474e-99c5-c5eec4edd063">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <comment>Хозяйственная операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="f1d15779-e0f7-49fd-9eaa-50bef519af8e">
+    <name>АналитикаУчетаНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика учета номенклатуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТК_КлючиАналитикиОстаткиТНП</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

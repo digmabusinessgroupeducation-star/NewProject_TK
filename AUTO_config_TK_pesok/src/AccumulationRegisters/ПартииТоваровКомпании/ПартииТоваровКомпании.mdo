@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="46ebe5e7-a346-4942-b643-db2033de41be">
+  <producedTypes>
+    <selectionType typeId="6ede5630-b51b-458f-82e1-e3d35f512bc5" valueTypeId="0021af11-9df3-41c2-91d5-8e3245587dce"/>
+    <listType typeId="924ed99d-7af2-4638-ba5a-c78f579107b6" valueTypeId="fdf2994d-f23e-4215-a881-d60802c6933a"/>
+    <managerType typeId="4875ba06-6e55-4c28-915f-6b50e08dc753" valueTypeId="89be53c9-48dc-454d-9729-df3907946982"/>
+    <recordSetType typeId="1a0af19d-7385-449c-95e0-7d78a13369ef" valueTypeId="051c70be-8ded-4f5c-b604-d878cbfec946"/>
+    <recordKeyType typeId="18033634-6f87-45ee-b198-2f5ea18be32d" valueTypeId="6714ad69-54df-43e1-b38e-b28090ef6236"/>
+    <recordType typeId="953c118f-3d35-4de8-abe1-8426891ac517" valueTypeId="5cc9e79d-295c-4977-81b3-c4f04d434f79"/>
+  </producedTypes>
+  <name>ПартииТоваровКомпании</name>
+  <synonym>
+    <key>ru</key>
+    <value>Партии товаров компании</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Партії товарів компанії</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="fd9cdb55-1db6-440a-b8d5-3f5127c80e2b">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кількість</value>
+    </synonym>
+    <comment>Количественный остаток товара на складе в разрезе партий</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c5e31228-6c6f-4285-b814-1b2761ae7781">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сума</value>
+    </synonym>
+    <comment>Сумма без доп. расходов в валюте регламентированного учета с налогами</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2901584a-cc7d-4486-a813-4b6633f5934f">
+    <name>СуммаБаз</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма (баз.)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сума (баз.)</value>
+    </synonym>
+    <comment>Содержит сумму в базовой валюте</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="dba06b5d-6b4b-412c-ad66-d9c70aefa474">
+    <name>СуммаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма НДС</value>
+    </synonym>
+    <comment>Сумма НДС в валюте регламентированного учета</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="5366539a-f76c-44fd-a32d-005ce82829dd">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Господарська операція</value>
+    </synonym>
+    <comment>Хозяйственная операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="f6885f88-b32b-4a12-9c0f-5cec590b1045">
+    <name>СтавкаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка НДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Ставка ПДВ</value>
+    </synonym>
+    <comment>Ставка НДС</comment>
+    <type>
+      <types>CatalogRef.СтавкиНДС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="aa752819-8eee-4ce6-8af1-3cd1240338ef">
+    <name>СкладКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СкладыКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f188ddd2-9afd-444a-857d-af3fcecf7ae4">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <comment>Номенклатура (товар, услуга и т.п.)</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="90c68b52-6574-4435-9918-90019b2cc692">
+    <name>ХарактеристикаНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика номенклатуры</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Характеристика номенклатури</value>
+    </synonym>
+    <comment>Характеристика/серия номенклатуры</comment>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>0:2d660efb-40bd-4a94-bd7f-cabb99b2e92b/0:d37d486b-ca15-4ef4-b4eb-f79b5f2c1553</field>
+    </choiceParameterLinks>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="2244eb81-302b-4d81-9950-be6fd5c5384f">
+    <name>Партия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Партия</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Партія</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ТипыПартий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="72fd56d6-7fa7-42dc-811e-1936889aeafd">
+    <name>СтатусПартии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус партии</value>
+    </synonym>
+    <comment>Статус партии, определяющий, чей товар (купленный компанией или принятый на комиссию)</comment>
+    <type>
+      <types>EnumRef.СтатусыПартий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

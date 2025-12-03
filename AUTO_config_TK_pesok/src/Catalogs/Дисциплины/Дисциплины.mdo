@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="13778bb1-8595-4f9b-b789-0bb6dd4dbe76">
+  <producedTypes>
+    <objectType typeId="1f122636-f6e3-4bd1-8b1f-0d6e30637c11" valueTypeId="13098215-62a0-47ab-9215-9723162cab5d"/>
+    <refType typeId="dad6c4ae-e726-4b89-9621-7f59fad5e8c5" valueTypeId="4fd66cbe-e815-44dc-9fa9-7b69d369f13a"/>
+    <selectionType typeId="bc070a1c-4b02-4776-ac67-b246ee73c03b" valueTypeId="d311bc67-374c-4d3b-a0ad-7337f9b7c574"/>
+    <listType typeId="30195c18-36e5-4498-bda1-0a9b097d1331" valueTypeId="6e9d8a03-11ae-4632-899e-e8da6e9996d4"/>
+    <managerType typeId="38eaee41-107e-4f5b-a0cc-69e5db11f99e" valueTypeId="794c9fb9-4389-40c1-adc0-81ee0de2c9ff"/>
+  </producedTypes>
+  <name>Дисциплины</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дисциплины</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Дисциплины.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Дисциплины.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Дисциплина</value>
+  </objectPresentation>
+  <hierarchical>true</hierarchical>
+  <limitLevelCount>true</limitLevelCount>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="49548bcf-fb5c-410a-8153-798e4be27f3c">
+    <name>Порядок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порядок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="ef5cc656-28a4-4be5-9dbd-0c01e82c7063">
+    <producedTypes>
+      <objectType typeId="8ecb4593-f45d-4657-a137-fef801c502d1" valueTypeId="31c9596b-aa1c-4e32-a983-4510082e954a"/>
+      <rowType typeId="8210cd04-9ff6-4be3-a646-f8f91e999506" valueTypeId="18289e79-6145-48e4-b051-7a150f222e7d"/>
+    </producedTypes>
+    <name>Курсы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курсы</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <attributes uuid="5a7e5546-0363-4fab-a5f1-6b50ddbdd7f8">
+      <name>Курс</name>
+      <synonym>
+        <key>ru</key>
+        <value>Курс</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Курсы</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="0e1dbc51-3ecb-4541-a110-6db1e9dc6e8e">
+    <producedTypes>
+      <objectType typeId="ce0c2f81-3883-4171-88c3-78aec94d48ca" valueTypeId="cca48e8d-50e8-491c-a5b7-7f9528696948"/>
+      <rowType typeId="2a0feaa2-f6e6-4b38-9acb-f054ce66da06" valueTypeId="365fba60-575c-4089-a189-2cd537f93595"/>
+    </producedTypes>
+    <name>Подразделения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделения</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <attributes uuid="3db74475-cc07-472a-ba0f-b8c910f7d460">
+      <name>Подразделение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подразделение</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПодразделенияКомпании</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

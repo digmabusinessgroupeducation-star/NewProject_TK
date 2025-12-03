@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаНачатьАнкетирование" id="10">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.НачатьАнкетирование</CommandName>
+				<ExtendedTooltip name="ФормаНачатьАнкетированиеРасширеннаяПодсказка" id="11"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ПодразделениеКомпании" id="1">
+			<DataPath>ПодразделениеКомпании</DataPath>
+			<ContextMenu name="ПодразделениеКомпанииКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПодразделениеКомпанииРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Респондент" id="7">
+			<DataPath>Респондент</DataPath>
+			<ContextMenu name="РеспондентКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РеспондентРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">РеспондентПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ШаблонАнкеты" id="4">
+			<DataPath>ШаблонАнкеты</DataPath>
+			<ChoiceParameters>
+				<app:item name="Отбор.ПометкаУдаления">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:boolean">false</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="ШаблонАнкетыКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ШаблонАнкетыРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<CheckBoxField name="ИспользоватьДопАнкету" id="12">
+			<DataPath>ИспользоватьДопАнкету</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить чек-лист "Ационный товар"</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Switcher</CheckBoxType>
+			<ContextMenu name="ИспользоватьДопАнкетуКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="ИспользоватьДопАнкетуРасширеннаяПодсказка" id="14"/>
+			<Events>
+				<Event name="OnChange">ИспользоватьДопАнкетуПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<InputField name="ШаблонАнкетыДоп" id="15">
+			<DataPath>ШаблонАнкетыДоп</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон Акционный товар</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ШаблонАнкетыДопКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ШаблонАнкетыДопРасширеннаяПодсказка" id="17"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПодразделениеКомпании" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПодразделенияКомпании</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Респондент" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Респондент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.Респондент</v8:TypeSet>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ШаблонАнкеты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон анкеты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныАнкет</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Пользователь" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьДопАнкету" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать доп анкету</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ШаблонАнкетыДоп" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон анкеты (доп.)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныАнкет</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НачатьАнкетирование" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать анкетирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать анкетирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НачатьАнкетирование</Action>
+		</Command>
+	</Commands>
+</Form>

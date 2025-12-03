@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ec1c42ca-6019-43ca-bd64-018ca61af35d">
+  <producedTypes>
+    <selectionType typeId="081d3721-db2c-4588-a666-17db90b6cf61" valueTypeId="122fbe67-21ae-4003-a76e-bdcf5a392438"/>
+    <listType typeId="13466d99-26a6-4e93-955d-d66059923e81" valueTypeId="d7c78d7f-ea06-493d-915d-28737cd2af8e"/>
+    <managerType typeId="9e653120-059f-4d3b-b754-60c8cf6fd266" valueTypeId="4dcf5041-39e9-44a4-afe3-0bbc88fb667f"/>
+    <recordSetType typeId="652466d5-63c0-4b88-8052-8f9498bd73bd" valueTypeId="ff73e098-3ded-4c71-8997-7f072a2ab29f"/>
+    <recordKeyType typeId="51618f7b-c653-48c5-b7a6-e7704610a7f5" valueTypeId="224b74a9-ae82-4504-a8fe-dea35ea8b324"/>
+    <recordType typeId="7f4f92bc-58bc-4658-9918-fdc31b09b1b5" valueTypeId="e73db37e-f8ab-4189-aa8d-7ca9e6f6ead8"/>
+    <recordManagerType typeId="1f2bfbb5-88ca-4d09-a542-60cf5af613e3" valueTypeId="3ca9f5d5-96ec-402e-9034-c8702d198260"/>
+  </producedTypes>
+  <name>СрокиВозвратаТовара</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сроки возврата товара</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="cb9ac64e-a1da-47a7-8e18-d167eb8ec017">
+    <name>СрокПодачи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок подачи</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="90f15bc1-ea3c-4677-b9da-a92c839a9ff6">
+    <name>СрокВозврата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок возврата</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="e928bc73-33e2-4020-80ed-d8c3584a9b3a">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="eae8ffb5-34b4-4900-b40c-ab447fb4dc1e">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

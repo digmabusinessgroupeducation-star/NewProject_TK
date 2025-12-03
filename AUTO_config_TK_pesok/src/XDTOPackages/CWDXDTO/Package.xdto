@@ -1,0 +1,294 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.digma.ua">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<objectType name="GetHeader">
+		<property name="GuidCustom" type="xs:IDREF"/>
+		<property name="GuidTradePoint" type="xs:IDREF"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property xmlns:d3p1="http://www.digma.ua" name="TableList" type="d3p1:GetTable" lowerBound="0" upperBound="-1" nillable="true" form="Element"/>
+		<property name="NumberInvoice" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="GetTable">
+		<property name="LineNumber" type="xs:int"/>
+		<property name="GuidProduct" type="xs:IDREF"/>
+	</objectType>
+	<objectType name="ReturnTable">
+		<property xmlns:d3p1="http://www.digma.ua" name="TableList" type="d3p1:SetTable" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property name="Description" type="xs:string" nillable="true"/>
+		<property name="GuidDoc" type="xs:IDREF" nillable="true"/>
+		<property name="GuidDelivery" type="xs:IDREF" nillable="true"/>
+		<property name="CostDoc" type="xs:float" nillable="true"/>
+	</objectType>
+	<objectType name="SetTable">
+		<property name="LineNumber" type="xs:int"/>
+		<property name="GuidProduct" type="xs:IDREF"/>
+		<property name="GuidSpecification" type="xs:IDREF" nillable="true"/>
+		<property name="GuidUnit" type="xs:IDREF"/>
+		<property name="Coefficient" type="xs:float"/>
+		<property name="Quantity" type="xs:float"/>
+		<property name="Price" type="xs:float"/>
+		<property name="Cost" type="xs:float"/>
+		<property name="GuidVAT" type="xs:IDREF"/>
+		<property name="GuidPartia" type="xs:IDREF" nillable="true"/>
+		<property name="GuidProductSet" type="xs:IDREF"/>
+		<property name="GuidTradePoint" type="xs:IDREF" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="ReturnArrayDocumentsRT">
+		<property xmlns:d3p1="http://www.digma.ua" name="ArrayDocumentsRT" type="d3p1:ReturnDocumentRT" lowerBound="0" upperBound="-1"/>
+		<property name="Description" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="ReturnDocumentRT">
+		<property name="DateTimeDoc" type="xs:dateTime"/>
+		<property name="NumberDoc" type="xs:string"/>
+		<property name="GuidDoc" type="xs:IDREF"/>
+		<property name="GuidDelivery" type="xs:IDREF" nillable="true"/>
+		<property name="GuidTradePoint" type="xs:IDREF" nillable="true"/>
+		<property name="GuidSender" type="xs:IDREF" nillable="true"/>
+		<property name="Reglam" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.digma.ua" name="TableList" type="d3p1:SetTable" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property name="IDDocFoundation" type="xs:IDREF"/>
+		<property name="GuidDELIVERYPLACE" type="xs:IDREF" nillable="true"/>
+	</objectType>
+	<objectType name="ArrayRestGoods">
+		<property name="GuidProduct" type="xs:IDREF"/>
+		<property name="GuidSpecification" type="xs:IDREF" nillable="true"/>
+		<property name="Quantity" type="xs:float"/>
+	</objectType>
+	<objectType name="RestGoods">
+		<property xmlns:d3p1="http://www.digma.ua" name="ArrayRestGoods" type="d3p1:ArrayRestGoods" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="NomenclatureForTSD">
+		<property name="Code" type="xs:string"/>
+		<property name="Barcode" type="xs:string" nillable="true"/>
+		<property name="Name" type="xs:string"/>
+		<property name="Inpack" type="xs:double" nillable="true"/>
+	</objectType>
+	<objectType name="NomenclatureForTSD_List">
+		<property xmlns:d3p1="http://www.digma.ua" name="NomenclatureList" type="d3p1:NomenclatureForTSD" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="ClientForTSD">
+		<property name="Code" type="xs:string"/>
+		<property name="Name" type="xs:string"/>
+	</objectType>
+	<objectType name="ClientForTSD_List">
+		<property xmlns:d3p1="http://www.digma.ua" name="ClientList" type="d3p1:ClientForTSD" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="DocHeadForTSD">
+		<property name="DocNumber" type="xs:string"/>
+		<property name="DocDescription" type="xs:string" nillable="true"/>
+		<property name="DocParams" type="xs:long" nillable="true"/>
+		<property name="ClientCode" type="xs:string"/>
+		<property name="ClientName" type="xs:string"/>
+	</objectType>
+	<objectType name="DocTableForTSD">
+		<property name="DocNumber" type="xs:string"/>
+		<property name="NomenclatureCode" type="xs:string"/>
+		<property name="NomenclatureName" type="xs:string"/>
+		<property name="Num" type="xs:int"/>
+		<property name="Barcode" type="xs:string" nillable="true"/>
+		<property name="Inpack" type="xs:double" nillable="true"/>
+		<property name="Qty" type="xs:double" nillable="true"/>
+		<property name="Qtypredict" type="xs:double" nillable="true"/>
+	</objectType>
+	<objectType name="DocForTSD_List">
+		<property xmlns:d3p1="http://www.digma.ua" name="DocHeadForTSDList" type="d3p1:DocHeadForTSD" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://www.digma.ua" name="DocTableForTSDList" type="d3p1:DocTableForTSD" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="ReturnDownloadStatusFor1C">
+		<property name="DocNumber" type="xs:string"/>
+		<property name="StatusDownload" type="xs:boolean" nillable="true"/>
+		<property name="Description" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="ReturnDownloadStatusFor1C_List">
+		<property xmlns:d3p1="http://www.digma.ua" name="ReturnDownloadStatusFor1CList" type="d3p1:ReturnDownloadStatusFor1C" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="ReturnTotalIN">
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property name="AmountTotal_List" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="AmountTotal" lowerBound="0" upperBound="-1" nillable="true">
+					<typeDef xsi:type="ObjectType">
+						<property name="GuidDoc" type="xs:string"/>
+						<property name="Date" type="xs:date"/>
+						<property name="NumberDoc" type="xs:string"/>
+						<property name="Total" type="xs:float"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="ReturnTotalIN_v2">
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property name="BeginDate" type="xs:date" nillable="true"/>
+		<property name="EndDate" type="xs:date" nillable="true"/>
+		<property name="AmountTotal_List" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="AmountTotal" lowerBound="0" upperBound="-1" nillable="true">
+					<typeDef xsi:type="ObjectType">
+						<property name="GuidDoc" type="xs:string"/>
+						<property name="Date" type="xs:date"/>
+						<property name="NumberDoc" type="xs:string"/>
+						<property name="Revision" type="xs:boolean"/>
+						<property name="NoPenalty" type="xs:boolean"/>
+						<property name="Total" type="xs:float"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="ReturnSales">
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string" nillable="true"/>
+		<property name="Amount" type="xs:float"/>
+		<property name="quantity" type="xs:float"/>
+	</objectType>
+	<objectType name="ReturnTabInc">
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property name="List" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Дата" type="xs:dateTime"/>
+				<property name="ТорговаяПлощадка" type="xs:string" nillable="true"/>
+				<property name="Номер" type="xs:string" upperBound="1" nillable="true"/>
+				<property name="Кассир" type="xs:string" nillable="true"/>
+				<property name="Сумма" type="xs:string"/>
+				<property name="ИНН" type="xs:string"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="ReturnTabPK">
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property name="List" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Менеджер" type="xs:string" nillable="true"/>
+				<property name="Менеджер_ИД" type="xs:string" nillable="true"/>
+				<property name="Контрагент_ИД" type="xs:string" nillable="true"/>
+				<property name="Договор_ИД" type="xs:string" nillable="true"/>
+				<property name="ДнейОтсрочки" type="xs:string" nillable="true"/>
+				<property name="ТоварныйКредит" type="xs:string" nillable="true"/>
+				<property name="Задолженность" type="xs:string" nillable="true"/>
+				<property name="ЗадолженностьПоОтсрочке" type="xs:string" nillable="true"/>
+				<property name="ТоварныйЗапас" type="xs:string" nillable="true"/>
+				<property name="ДатаПоследнегоПлатежа" type="xs:dateTime"/>
+				<property name="СуммаОС" type="xs:string" nillable="true"/>
+				<property name="СуммаВнеМатрицы" type="xs:string" nillable="true"/>
+				<property name="ТБД" type="xs:string" nillable="true"/>
+			</typeDef>
+		</property>
+		<property name="ListBonus" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Менеджер" type="xs:string" nillable="true"/>
+				<property name="Менеджер_ИД" type="xs:string" nillable="true"/>
+				<property name="Контрагент_ИД" type="xs:string" nillable="true"/>
+				<property name="Задолженность" type="xs:string" nillable="true"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="String">
+		<property name="String" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType name="ReturnArrayDocumentsBUH">
+		<property name="DocumentsList" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="DateTime" type="xs:dateTime"/>
+				<property name="NumberDoc" type="xs:string"/>
+				<property name="GuidDoc" type="xs:string"/>
+				<property name="OrganizationName" type="xs:string"/>
+				<property name="PartnerName" type="xs:string"/>
+				<property name="DepartmentName" type="xs:string"/>
+			</typeDef>
+		</property>
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+	</objectType>
+	<objectType name="ReturnInnerContragents">
+		<property name="OKPO" type="xs:string" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="ReturnTabAR">
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property name="ListArenda" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="ТипОбьекта" type="xs:string" nillable="true"/>
+				<property name="НомерТТ" type="xs:string" nillable="true"/>
+				<property name="Контрагент_ИД" type="xs:string" nillable="true"/>
+				<property name="Договор_ИД" type="xs:string" nillable="true"/>
+				<property name="ТорговаяПлощадка" type="xs:string" nillable="true"/>
+				<property name="Район" type="xs:string" nillable="true"/>
+				<property name="ПравоСобственности" type="xs:string" nillable="true"/>
+				<property name="ИНН" type="xs:string" nillable="true"/>
+				<property name="Телефон" type="xs:string" nillable="true"/>
+				<property name="КонтактноеЛицо" type="xs:string" nillable="true"/>
+				<property name="Емайл" type="xs:string" nillable="true"/>
+				<property name="НомерДоговора" type="xs:string" nillable="true"/>
+				<property name="СрокДействияДоговора" type="xs:string" nillable="true"/>
+				<property name="Пролонгирование" type="xs:string" nillable="true"/>
+				<property name="ПунктОПролонгировании" type="xs:string" nillable="true"/>
+				<property name="ДатаНачалаСотрудничества" type="xs:date" nillable="true"/>
+				<property name="ТорговаяПлощадь" type="xs:string" nillable="true"/>
+				<property name="СтроимостьМ2" type="xs:string" nillable="true"/>
+				<property name="ГарантийныйПлатеж" type="xs:string" nillable="true"/>
+				<property name="СуммаФ1" type="xs:string" nillable="true"/>
+				<property name="СуммаФ2" type="xs:string" nillable="true"/>
+				<property name="ОбщаяСумма" type="xs:string" nillable="true"/>
+				<property name="КОплатеСуммаФ1" type="xs:string" nillable="true"/>
+				<property name="КОплатеСуммаФ2" type="xs:string" nillable="true"/>
+				<property name="ФОП" type="xs:boolean" nillable="true"/>
+				<property name="ВыдачаСКассы" type="xs:boolean" nillable="false"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="GetKuratorObjects">
+		<property name="Code" type="xs:string" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="KuratorObjectsList">
+		<property name="Status" type="xs:boolean"/>
+		<property name="CorrArray" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType" ordered="false">
+				<property name="ObjCode" type="xs:string" nillable="true"/>
+				<property name="KuratorGUID" type="xs:string" nillable="true"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="GetSchedule">
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property name="Schedule" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Code" type="xs:string" nillable="true"/>
+				<property name="Hours" type="xs:float" nillable="true"/>
+				<property name="HoursWeekend" type="xs:float" nillable="true"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="GetDetailedSchedule">
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property name="Schedule" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="Code" type="xs:string" nillable="true"/>
+				<property name="Start" type="xs:dateTime" nillable="true"/>
+				<property name="Stop" type="xs:dateTime" nillable="true"/>
+				<property name="StartWeekend" type="xs:dateTime" nillable="true"/>
+				<property name="StopWeekend" type="xs:dateTime" nillable="true"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="GetGoodsTree">
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ValStorage" type="d3p1:ValueStorage" nillable="true"/>
+	</objectType>
+	<objectType name="ReturnSalesGoodsFilter">
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ResTable" type="d3p1:ValueStorage" nillable="true"/>
+	</objectType>
+	<objectType name="ReturnScanKPI">
+		<property name="Status" type="xs:boolean"/>
+		<property name="Description" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ResTable" type="d3p1:ValueStorage" nillable="true"/>
+	</objectType>
+</package>

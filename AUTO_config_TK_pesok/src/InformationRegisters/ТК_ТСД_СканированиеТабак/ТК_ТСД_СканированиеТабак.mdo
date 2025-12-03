@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d01b0b5d-cd9f-42ab-a307-91e493b03dc8">
+  <producedTypes>
+    <selectionType typeId="2fd9f389-e877-4ce2-ac69-e9877e160d26" valueTypeId="39d57319-c767-438c-bab3-13eefa2e0c60"/>
+    <listType typeId="8d85b63d-5462-426c-99fa-3f29cee3be21" valueTypeId="c0421b86-6ccc-4e42-8d7f-a226a9255c9d"/>
+    <managerType typeId="8b7865b8-abab-443c-b029-2d18b687ca10" valueTypeId="64063330-0723-48bb-9d3a-b357878c3b58"/>
+    <recordSetType typeId="0678bf78-1e87-4e6b-bffe-443c756acd94" valueTypeId="6ba13104-8f95-428e-98b5-736c2331509c"/>
+    <recordKeyType typeId="90d91dde-37af-4ef0-90a6-02d5786e35b5" valueTypeId="93709ce8-d071-44d8-9e5e-49ba789364cd"/>
+    <recordType typeId="53f48bb3-df56-47ab-9085-1b252d4fde04" valueTypeId="3390b059-4f7e-444c-9e79-ac54f0e12179"/>
+    <recordManagerType typeId="65c222db-95ce-4183-93ed-a13b158abe49" valueTypeId="d572b6b8-4248-4c88-8bd3-8f8049e81099"/>
+  </producedTypes>
+  <name>ТК_ТСД_СканированиеТабак</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сканирование ТСД табак</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="6da978c3-b386-41c8-a2c0-792360d269bc">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7b9a5ae9-5816-4fd1-95dd-0cf9c4fa20ba">
+    <name>ДатаСканирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата сканирования</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="7ddf5a15-c4f9-41ab-bdc8-de86b84a6b1a">
+    <name>ДокументСканирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ сканирования</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РеализацияТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="5a0e4744-71fb-4453-8cd8-e05b4bfecf2e">
+    <name>Производитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Производитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТК_Производитель</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bfb3ea84-a630-49c1-8029-131215f70194">
+    <name>ДанныеСканировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные сканировки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f88a06cd-4823-4be1-99d0-4f36624dbabd">
+  <producedTypes>
+    <selectionType typeId="51c287d0-7f1b-4495-b0df-75b3dc316482" valueTypeId="8115ea23-8fd7-4b58-aee7-dbc6a63f91f4"/>
+    <listType typeId="5b07d4b6-21f4-4555-9ecf-681e32c82f5b" valueTypeId="58a3ff6c-f5e0-4f69-ad5a-27a1b02416b2"/>
+    <managerType typeId="9f310924-f097-451e-a047-f8cd9384f086" valueTypeId="02e15213-e6a0-401e-a8df-0f3d884086a8"/>
+    <recordSetType typeId="d0f2eb79-fd8a-420d-b6cf-e7601e2318ac" valueTypeId="09c882b9-56cd-4112-822a-bbc049a0875c"/>
+    <recordKeyType typeId="4772947d-0d2d-44cf-83fd-773d31f706b1" valueTypeId="e2e3982a-4e1d-4120-b485-3056afc37156"/>
+    <recordType typeId="8a43b691-8c9b-4ee7-be3d-66ed46df0990" valueTypeId="c8aef52f-c4ed-42ab-8f4d-a0b9932e04c8"/>
+    <recordManagerType typeId="3dadfa52-f31c-4de6-ac82-5252451fdb46" valueTypeId="e78e9f54-bdff-41be-9f58-c83c83838c83"/>
+  </producedTypes>
+  <name>ТК_ДанныеКлючейЦП</name>
+  <synonym>
+    <key>ru</key>
+    <value>Данные ключей цифровой подписи</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ТК_ДанныеКлючейЦП.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ТК_ДанныеКлючейЦП.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="9de05826-7098-43b5-bfd0-886209a212d1">
+    <name>Пароль</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пароль</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="009b02d4-2724-4aea-add1-83da4f47f6f4">
+    <name>ДействителенДо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Действителен до</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="031e8728-eccb-4869-ae3c-e490211f607c">
+    <name>ИмяФайлаЦП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла ЦП</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <attributes uuid="897bcd21-f53c-40f2-a3c1-c03d4e2617b3">
+    <name>ТелоКлюча</name>
+    <comment>Base64-строка, построенная на основании двоичных данных файла.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="b8b10caa-2c39-4a85-a82f-340bc711f14b">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9ef52b64-425c-4cdb-b6b3-c601928092e1">
+    <name>ВидКлюча</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид ключа</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТК_ВидыКлючейЦП</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="7f63a60d-72f0-4834-a627-8b39379cb2db">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="075c5d17-34fb-4224-af73-a12233104bdd">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

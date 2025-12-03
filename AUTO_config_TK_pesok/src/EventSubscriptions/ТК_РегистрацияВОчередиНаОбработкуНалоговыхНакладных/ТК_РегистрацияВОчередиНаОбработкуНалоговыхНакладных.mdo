@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3b16d26a-b5b2-4ed9-bfad-d01ec3a4e7de">
+  <name>ТК_РегистрацияВОчередиНаОбработкуНалоговыхНакладных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Регистрация в очереди на обработку налоговых накладных</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.РеализацияТоваров</types>
+    <types>DocumentObject.ВыпускПродукции</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ОбщегоНазначенияТК.РегистрацияВОчередиНаОбработкуНН</handler>
+</mdclass:EventSubscription>

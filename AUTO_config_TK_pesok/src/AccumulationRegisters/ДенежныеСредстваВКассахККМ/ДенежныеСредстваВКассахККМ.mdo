@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ab891ca9-5985-4877-aafc-ab8cd7cf1c1e">
+  <producedTypes>
+    <selectionType typeId="0f7b9518-b99d-427f-9cf1-0ad88e2d6a35" valueTypeId="1eb9bc4f-67ad-4a6b-af67-bec8268c111d"/>
+    <listType typeId="b0056998-e4f5-46e2-a70d-51589fb9dea5" valueTypeId="6035494a-02f0-43ed-a7fd-2922a6632653"/>
+    <managerType typeId="450b6ecd-304e-4f1e-877b-1b287b2247af" valueTypeId="df6ca272-0c72-4d7f-99c7-70e369d2ed84"/>
+    <recordSetType typeId="3020b174-be2d-45a4-9fed-4319f4693435" valueTypeId="6d140043-ea26-4e27-b872-21358763efef"/>
+    <recordKeyType typeId="784ab18c-282d-4990-9422-6801d389f64d" valueTypeId="cd6e7251-bce7-4a38-8373-181adf8f6158"/>
+    <recordType typeId="5c32cbb1-517b-45f0-9064-60437282a8be" valueTypeId="a8923f3a-f66c-49e4-a76a-27a55e237f2e"/>
+  </producedTypes>
+  <name>ДенежныеСредстваВКассахККМ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Денежные средства в кассах ККМ</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Грошові кошти в касах ККМ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="73ad22a3-136b-4a8c-8adb-5c7d331636c3">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сума</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="480d3d70-cde5-43e7-9aef-89bb3e943aa2">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Господарська операція</value>
+    </synonym>
+    <comment>Хозяйственная операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="92a1203a-7eef-407c-b011-963c8a90f3d6">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a19c5f1e-84c7-4cf3-aadf-af4c7860f3c4">
+    <name>КассаККМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Касса ККМ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Каса ККМ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КассыККМ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

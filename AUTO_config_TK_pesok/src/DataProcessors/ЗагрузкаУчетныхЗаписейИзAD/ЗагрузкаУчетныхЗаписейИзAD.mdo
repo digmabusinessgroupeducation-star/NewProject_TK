@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bd7ea46f-15c9-4d9d-a44f-4637b46038c2">
+  <producedTypes>
+    <objectType typeId="8189af99-387a-444e-88ca-502007709644" valueTypeId="8c4bcfef-fbbb-4f21-9121-267ae6b55fa9"/>
+    <managerType typeId="d4230c4d-4947-4f3d-80bb-92d1a209fe54" valueTypeId="3f1f99ef-3bac-4d13-bbf6-d9ed7d944ce8"/>
+  </producedTypes>
+  <name>ЗагрузкаУчетныхЗаписейИзAD</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка пользователей из Active Directory</value>
+  </synonym>
+  <comment>Позволяет пакетно загружать пользователей из определенного контейнера Active Directory</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ЗагрузкаУчетныхЗаписейИзAD.Form.ФормаУправляемая</defaultForm>
+  <auxiliaryForm>DataProcessor.ЗагрузкаУчетныхЗаписейИзAD.Form.ФормаУправляемая</auxiliaryForm>
+  <attributes uuid="e7da5b24-5b84-47f0-a9fc-b929614ff373">
+    <name>LDAP_HDR</name>
+    <synonym>
+      <key>ru</key>
+      <value>LDAP HDR</value>
+    </synonym>
+    <comment>стандартный заголовок LDAP запроса &quot;LDAP://&quot; (константа)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="251e11e7-5060-488f-ab07-f51804c3a867">
+    <name>GC_HDR</name>
+    <synonym>
+      <key>ru</key>
+      <value>GC HDR</value>
+    </synonym>
+    <comment>стандартный заголовок GC запроса &quot;GC://&quot; (константа)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="d0bedea9-45bf-4ab8-acc7-e75be4468a6e">
+    <name>ФормаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма управляемая</value>
+    </synonym>
+    <comment>by D@imon</comment>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="2c4e0743-dd9b-4b1f-9c0d-3e00b11ae0a9">
+    <name>ЗагрузкаПользователей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузка пользователей из AD</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Завантаження користувачів з AD</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

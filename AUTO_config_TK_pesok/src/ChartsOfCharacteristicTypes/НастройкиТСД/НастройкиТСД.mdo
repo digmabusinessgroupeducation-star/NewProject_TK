@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfCharacteristicTypes xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="26a97701-6302-4054-b7c6-f24dc4f2569f">
+  <producedTypes>
+    <objectType typeId="8190d05a-5529-47c0-93e1-64db27ecf81d" valueTypeId="db6e41e4-0f7a-4b87-b23c-2c58bb2641a6"/>
+    <refType typeId="d8208bc7-58a8-48e6-80f8-391e2a1c146e" valueTypeId="88400ef9-88fb-474d-9500-ca8b66feffe0"/>
+    <selectionType typeId="e24b360b-236f-432d-bacd-84e8a6c83c50" valueTypeId="117a22eb-2f51-4646-9251-287bb15ce929"/>
+    <listType typeId="e11ce224-b85a-4dd4-bff0-d8afda2f3bbf" valueTypeId="952a4676-62db-4d0f-b6a8-8a9159db678a"/>
+    <managerType typeId="c7cdd02a-979f-43ef-b8e2-c5a209ca0e61" valueTypeId="aa29a76c-2cb5-4c9e-8704-1ee2075cf61c"/>
+    <containerType typeId="b5d5c7e7-54be-4e7c-8cbd-914c706f6a0f" valueTypeId="1bd751c8-1d59-45ab-a761-6890a10330e0"/>
+  </producedTypes>
+  <name>НастройкиТСД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки ТСД</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ChartOfCharacteristicTypes.НастройкиТСД.StandardAttribute.Description</inputByString>
+  <inputByString>ChartOfCharacteristicTypes.НастройкиТСД.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <type>
+    <types>Boolean</types>
+    <types>CatalogRef.СкладыКомпании</types>
+    <types>String</types>
+    <types>Date</types>
+    <stringQualifiers>
+      <length>256</length>
+    </stringQualifiers>
+    <dateQualifiers>
+      <dateFractions>Date</dateFractions>
+    </dateQualifiers>
+  </type>
+  <hierarchical>true</hierarchical>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>5</codeLength>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <descriptionLength>100</descriptionLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="c7b84464-6058-4199-82c6-2aa27c8e2671">
+      <name>Обмен</name>
+      <description>Обмен</description>
+      <isFolder>true</isFolder>
+      <code>40000</code>
+      <type/>
+      <content id="b9037dff-639f-4a52-a4ce-c2de58b04266">
+        <name>ID_Подразделения</name>
+        <description>ID подразделения</description>
+        <code>40001</code>
+        <type>
+          <types>String</types>
+          <stringQualifiers>
+            <length>36</length>
+          </stringQualifiers>
+        </type>
+      </content>
+      <content id="e58ee88b-bc98-4bc7-ab09-a0127d9bf6a2">
+        <name>РегистрацияЗУП</name>
+        <description>Регистрация в базе ЗУП</description>
+        <code>30002</code>
+        <type>
+          <types>String</types>
+          <stringQualifiers>
+            <length>256</length>
+          </stringQualifiers>
+        </type>
+      </content>
+    </items>
+    <items id="a47bbca4-2ff3-4662-9e89-c2b185d8a911">
+      <name>Разрешения</name>
+      <description>Разрешения пользователя</description>
+      <isFolder>true</isFolder>
+      <code>30000</code>
+      <type/>
+      <content id="87f5d45e-c939-4948-87a1-a8fd79a3e72d">
+        <name>ВыбиратьСкладПриемТоваров</name>
+        <description>Включить возможность выбора склада в приходовании товара</description>
+        <code>30001</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="68196c83-0052-478e-b952-315971a6ff06">
+        <name>ЗапретНаВыборТорговойПлощадки</name>
+        <description>Запрет на выбор торговой площадки</description>
+        <code>30003</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+    </items>
+    <items id="121e4af1-dc51-44d5-8d97-8c6a965ad203">
+      <name>РеквизитыПоУмолчанию</name>
+      <description>Реквизиты по умолчанию</description>
+      <isFolder>true</isFolder>
+      <code>00002</code>
+      <type/>
+      <content id="d13b3608-59e5-4f6d-8437-8a499f21ef00">
+        <name>ОсновнойСкладПеремещения</name>
+        <description>Основной склад перемещения из филиала</description>
+        <code>00001</code>
+        <type>
+          <types>CatalogRef.СкладыКомпании</types>
+        </type>
+      </content>
+      <content id="3dd78359-9f58-4bb3-aea8-a18ac52529c8">
+        <name>ПечатнаяФормаДвойнаяПеремещениеТоваров</name>
+        <description>Печатная форма двойная перемещение товаров</description>
+        <code>00003</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:ChartOfCharacteristicTypes>

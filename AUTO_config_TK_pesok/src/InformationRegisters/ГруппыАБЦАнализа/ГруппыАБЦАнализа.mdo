@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a85b48c3-3eae-4e8c-97ca-c7d0b2a1a768">
+  <producedTypes>
+    <selectionType typeId="b37f9731-1bd2-4670-a037-eb7ef9d2b841" valueTypeId="0babd237-0fe1-440e-ac56-96e4f938df48"/>
+    <listType typeId="e330daa2-ac2e-431b-9e58-cbb9e788b2fa" valueTypeId="bc2ab8d7-8490-4797-bea9-b50309977e72"/>
+    <managerType typeId="3b1d65d6-c9d0-4c81-b2f7-313fefd664c2" valueTypeId="6748d947-3180-42ad-a76f-4829f2cc9034"/>
+    <recordSetType typeId="4e74a8be-4233-46f3-9df3-bef346cdb469" valueTypeId="39601a66-0851-4553-a86c-67785fa6dd4a"/>
+    <recordKeyType typeId="40396480-5781-4d60-a3ec-873e8a9aa4fa" valueTypeId="5dba2778-f6e5-408d-81c2-868ed76d9d79"/>
+    <recordType typeId="8f2f8f36-96aa-4060-b4ca-6761451838cc" valueTypeId="ef569c16-128f-44d5-bfe3-12b5b47777fe"/>
+    <recordManagerType typeId="6afd2cb3-834f-4eb7-8bd3-8cd12788c589" valueTypeId="8b5510a9-c98a-4073-9463-3a7189b11b33"/>
+  </producedTypes>
+  <name>ГруппыАБЦАнализа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Группы АБЦ анализа</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="eebacc6d-adae-4c4d-9d3a-24fe871d33d4">
+    <name>ГруппаАБЦ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа АБЦ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="e1ecc125-ed94-4184-9ac8-28af4415dbea">
+    <name>Показатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показатель</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4ba5726f-2400-436a-9ee7-79936e4b14b6">
+    <name>ВремяРасчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время расчета</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="797dc05f-4251-43a6-8f81-f24f7796948c">
+    <name>Группа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="7a042c83-93d4-4d24-84ca-f5afbbff30fa">
+    <name>База</name>
+    <synonym>
+      <key>ru</key>
+      <value>База</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="64c06c57-6a62-4653-9bfd-d41ac600b7cb">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="15b1f3dc-ee58-4913-8238-461af16c380f">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

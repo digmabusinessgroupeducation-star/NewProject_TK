@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6523f5f8-1cc9-44ef-b9c3-3552e121e9df">
+  <producedTypes>
+    <selectionType typeId="ecb76a1c-bf86-466b-b432-a6546067568c" valueTypeId="5c4fe95d-20b2-4145-8e00-912fdd94c5f5"/>
+    <listType typeId="00d69027-b29b-4b7c-bbe2-1e74c10d6df6" valueTypeId="89ac42c2-9051-497c-b6fa-5cad55ea77cc"/>
+    <managerType typeId="b0759e85-7df2-426c-a43a-589832ac0955" valueTypeId="25ea4a5a-86c3-438e-966f-a9b2e7ad3c1e"/>
+    <recordSetType typeId="15fc9056-2ce1-42de-bfc1-ae9f23afa996" valueTypeId="adbd29f0-d99e-40e7-b5f3-044eca0488a5"/>
+    <recordKeyType typeId="23b7dd8d-42e3-4d95-94be-1babd1debe38" valueTypeId="a35c241f-e1d5-46af-acde-f7e3d165e01d"/>
+    <recordType typeId="5e23a433-e7be-426e-afac-203f8b31fe5c" valueTypeId="4123131d-6204-4d2c-8b35-81edcc2132c8"/>
+    <recordManagerType typeId="ccfc3b25-bcc0-471c-9859-1275ef5ca4ee" valueTypeId="4ebf4e55-f1db-456b-ba2b-19d4377f4eb3"/>
+  </producedTypes>
+  <name>НастройкиПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки пользователей</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Налаштування користувачів</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.НастройкиПользователей.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.НастройкиПользователей.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="a0819121-7728-489c-9048-ae119621dc6e">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Значення</value>
+    </synonym>
+    <type>
+      <types>Characteristic.НастройкиПользователей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <linkByType>
+      <field>InformationRegister.НастройкиПользователей.Dimension.Настройка</field>
+    </linkByType>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="72223abf-69a6-43d7-b2c7-fa14253ffa5a">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Користувач</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6fb13a9f-cf61-40de-837c-ddd59ad2b697">
+    <name>Настройка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Налаштування</value>
+    </synonym>
+    <type>
+      <types>ChartOfCharacteristicTypesRef.НастройкиПользователей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="debaef2e-8fe8-4f86-8cf0-bede1bdab798">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bb43936d-1a0a-44ba-9c5c-f2a4e97089c5">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма запису</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="68ea30ba-e36c-4857-93ab-4839aa901641">
+    <name>ФормаНастройкиПользователя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настройки пользователя</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="ddbd4e28-8afa-47b3-8a6c-35b3837f5084">
+    <name>ОткрытьНастройкиПользователя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки пользователя</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Налаштування користувача</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.Пользователи</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

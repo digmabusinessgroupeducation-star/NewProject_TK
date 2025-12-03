@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a30b719c-9d83-4082-970b-8deee12f91a4">
+  <name>Mobile</name>
+  <synonym>
+    <key>ru</key>
+    <value>Mobile</value>
+  </synonym>
+  <namespace>http://www.digma.ua/SB/MobileExchange</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage.MobiletIntegration</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/core</value>
+  </xdtoPackages>
+  <descriptorFileName>mobile.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="eeb135c2-872e-4d83-a912-b64b6397469e">
+    <name>StartExchange</name>
+    <synonym>
+      <key>ru</key>
+      <value>Start exchange</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>Permit</name>
+      <nsUri>http://www.digma.ua/SB/MobileExchange</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>StartExchange</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="484e517f-1e01-43b7-8139-6aa6d8fb26d5">
+      <name>MobileDeviceID</name>
+      <synonym>
+        <key>ru</key>
+        <value>Mobile device ID</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="f744b4e0-b1d0-4457-9f8a-c4624a89cb54">
+      <name>MobileApplicationVersion</name>
+      <synonym>
+        <key>ru</key>
+        <value>Mobile application version</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="90ea805f-27a1-463f-91d8-090dc8959108">
+      <name>НомерОтправленного</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер отправленного</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="d52555ed-dfb1-4082-a0dc-3049ebb902fc">
+      <name>НомерПринятого</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер принятого</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="e7a6b605-01d8-4b2a-941f-9f1faa3f1a56">
+    <name>ПринятьПакетОбмена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Принять пакет обмена</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ПринятьПакетОбмена</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="9e0a9f3b-27de-4fd7-aed2-38b5993b510f">
+      <name>ДанныеМобильногоПриложения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные мобильного приложения</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="424d539b-17e2-44db-b3e5-708fb114cd2a">
+      <name>КодМобильногоКомпьютера</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код мобильного компьютера</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="6e537532-8ca3-41c5-a94d-b5ce522a2d37">
+      <name>НаименованиеМобильногоКомпьютера</name>
+      <synonym>
+        <key>ru</key>
+        <value>Наименование мобильного компьютера</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="77a7fe2c-5f2d-4bfb-90aa-5cc67b0c81dd">
+      <name>НомерОтправленного</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер отправленного</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="e3a82698-08c0-4644-a610-2e7cf2f8caa2">
+      <name>НомерПринятого</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер принятого</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="4a32e611-03cc-4793-868c-3abca6fdf267">
+    <name>ПолучитьПакетОбмена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить пакет обмена</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьПакетОбмена</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="8e975513-cc38-4947-9f96-1be637a98ab6">
+      <name>КодМобильногоКомпьютера</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код мобильного компьютера</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="a736af0b-57bd-4d86-a186-af879436a82f">
+      <name>НомерСообщенияОбмена</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер сообщения обмена</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="2ad7d50a-1e08-43d5-949c-371e95a0a281">
+      <name>ИдентификаторЗадания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор задания</value>
+      </synonym>
+      <xdtoValueType>
+        <name>UUID</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

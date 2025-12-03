@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8f371eb6-08a7-4933-a3f6-071ca7802d0e">
+  <producedTypes>
+    <selectionType typeId="a6cb89db-589b-4bb3-a65e-5c3bfe4249d3" valueTypeId="7a27c21a-21ba-4bd9-8491-78e0528afee1"/>
+    <listType typeId="10eb4ea3-b6f6-4ca4-8c8a-6a4563585ba6" valueTypeId="fdf5236d-67ae-4976-b33f-10c7b1ba6bfe"/>
+    <managerType typeId="6ea9aca3-5a67-4d40-8557-43e9d0d3cc3c" valueTypeId="ee83e952-76b5-4e2c-8027-97959596a476"/>
+    <recordSetType typeId="5ef74a5a-cd68-4766-bc9a-be0632b54b39" valueTypeId="1d159b6b-2402-4a6a-885f-c132f2b4103f"/>
+    <recordKeyType typeId="ee6c3224-e040-4911-b6e6-29894359bfc5" valueTypeId="f08c2ca2-fac1-4f81-8eb7-771b9586f146"/>
+    <recordType typeId="f678f7da-a027-486e-9fde-fe83dce78743" valueTypeId="46747761-729d-473d-a777-5079b308ec71"/>
+    <recordManagerType typeId="e8324592-3e8a-48bc-8801-5b177e2bf885" valueTypeId="0daeda20-9eed-484e-a02f-dfde1617f60a"/>
+  </producedTypes>
+  <name>ТК_АналитикаУчетаНоменклатурыОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Аналитика учета номенклатуры организаций</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="67fd08d8-4d23-4114-8862-55da2cdef9fd">
+    <name>КлючАналитики</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ключ аналитики</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТК_КлючиАналитикиУчетаНоменклатурыОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="70403573-a489-4066-844a-807803295dea">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e7ff002a-e8d4-4c63-9b61-b66102d57168">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6c6a5adc-2f4c-413f-96ec-c7c8c91444c9">
+    <name>ХарактеристикаНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика номенклатуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

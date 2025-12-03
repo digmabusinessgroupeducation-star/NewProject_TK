@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="48b46e26-257f-4a2e-9736-0efd252e9fcd">
+  <producedTypes>
+    <selectionType typeId="fe4d1d41-e323-4246-a3df-2efcfc1cfaf7" valueTypeId="014f3b0b-0046-468d-ac01-4be86fa6c4de"/>
+    <listType typeId="2ac51035-7d87-42ad-b9fe-284a169f3c6e" valueTypeId="22bd4209-90fb-488d-8ddd-c06062baee28"/>
+    <managerType typeId="44cf319d-4533-419c-a594-1568c0b39d06" valueTypeId="999fa552-342d-46d4-8522-6777300f59ca"/>
+    <recordSetType typeId="f14248ab-5763-4904-986f-7523a5f5660c" valueTypeId="aef54705-f495-4af4-b089-affdebbb945e"/>
+    <recordKeyType typeId="44e6107d-efb7-44f2-a9b9-64d9fb18b4c5" valueTypeId="e6e1e9da-f756-4916-bd58-5941149f66b7"/>
+    <recordType typeId="9e1c44f9-6df3-4568-aa80-6c1ffbcf6bbb" valueTypeId="f6e38483-5293-4a85-99b2-6381f7bf284f"/>
+  </producedTypes>
+  <name>ПриходованиеТоваров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Приходование товаров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="95ec84ab-ac53-46eb-beb7-38befd779dfa">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кількість</value>
+    </synonym>
+    <comment>Количественный остаток номенклатуры на складе</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="5131bd67-75a1-44a7-be2b-edf7c9e29972">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="ec94c04c-1429-4e7c-a0eb-2418cf52dff6">
+    <name>СкладКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад компании</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Склад компанії</value>
+    </synonym>
+    <comment>Склад компании</comment>
+    <type>
+      <types>CatalogRef.СкладыКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a32a3695-7dba-4b3b-9eed-662fbd01d294">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <comment>Номенклатура</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="39c90abe-cd0a-4fec-ac6a-4f827a8c84d6">
+    <name>ХарактеристикаНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика номенклатуры</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Характеристика номенклатури</value>
+    </synonym>
+    <comment>Характеристика номенклатуры</comment>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

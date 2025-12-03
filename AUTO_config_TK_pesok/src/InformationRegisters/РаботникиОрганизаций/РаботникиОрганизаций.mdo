@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b8e0b899-c473-4eb1-be7e-b6489a98c796">
+  <producedTypes>
+    <selectionType typeId="d39a53c7-f652-48e8-bf88-b13bf49dae4b" valueTypeId="eda5264e-eda6-4d72-b75d-74e0d9bbf80f"/>
+    <listType typeId="80a6de78-5c57-4eb2-ba77-eb2356596069" valueTypeId="839d81e7-e7f1-458b-942f-2e71bafc5f1b"/>
+    <managerType typeId="67cfdc48-3172-4520-b293-aeedd8b5f92c" valueTypeId="025cf47c-f795-41a3-97af-27d62838cee4"/>
+    <recordSetType typeId="7246e8f2-b667-40b1-b451-a13f78d307d3" valueTypeId="4b2f824c-f987-45c9-bde9-3dda531c1449"/>
+    <recordKeyType typeId="ca0dca45-b314-4c32-a440-133f3338eb64" valueTypeId="534e0d12-d20e-42e2-9292-fe3d147b7f62"/>
+    <recordType typeId="33512da2-ae6a-4109-a056-c94e4bd5fcfd" valueTypeId="dddb19fa-4c4a-4492-849d-ed1bf392aaee"/>
+    <recordManagerType typeId="243d201f-e6bf-47fe-8122-c95636b20243" valueTypeId="d427a6a3-5418-4480-b1c4-b903364183c0"/>
+  </producedTypes>
+  <name>РаботникиОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Работники организаций</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="97f8c686-3ed8-47f9-a3f0-9091aeb2a4d9">
+    <name>Должность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должность</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Должности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e3d67c41-d402-43d6-baf1-68b0654be600">
+    <name>Работает</name>
+    <synonym>
+      <key>ru</key>
+      <value>Работает</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="e80151e7-c3dc-4b6e-b157-cd2d8e2ca6ed">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>75</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </dimensions>
+  <dimensions uuid="2071a661-9613-4272-aa9b-ec955f8f8703">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+  <dimensions uuid="e0209af5-51c6-4334-aa40-2009e9d7db88">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+  </dimensions>
+</mdclass:InformationRegister>

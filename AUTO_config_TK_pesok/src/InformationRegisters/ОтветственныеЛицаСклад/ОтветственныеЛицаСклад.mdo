@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="be392b54-0da2-49b3-81d6-6c9913279a87">
+  <producedTypes>
+    <selectionType typeId="f4e52d1a-441a-42ff-9fc4-efce8b2180fd" valueTypeId="c93aedc3-b288-4a13-b460-5a7a47070dbc"/>
+    <listType typeId="bcff1355-18fb-48d5-a898-b0058ba9fafd" valueTypeId="cd3a1711-a601-4d8f-b196-dc6a750726f3"/>
+    <managerType typeId="9a431fd5-3da6-41ac-944e-bba9473ab23a" valueTypeId="0bcf4677-ce2d-4933-b3f7-9dd5346aac84"/>
+    <recordSetType typeId="e1285df5-d3ed-4aee-bb30-da5937b3610d" valueTypeId="bf7ba209-a83d-4ed2-8c82-0fe6452ab691"/>
+    <recordKeyType typeId="358132fc-52ae-4876-b8a5-b65c14a066c8" valueTypeId="55d0fe8a-3014-4793-92c7-48bd3f4bae85"/>
+    <recordType typeId="95277add-0a95-4cdb-8c0f-ccfd5e5bb38d" valueTypeId="93ef0451-b64d-4952-bf9f-462f7d37d82f"/>
+    <recordManagerType typeId="139a7463-a67a-44e5-a247-7fe420d3a42a" valueTypeId="2c917e14-3da2-4315-995e-3b3405a995b0"/>
+  </producedTypes>
+  <name>ОтветственныеЛицаСклад</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ответственные лица склад</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ОтветственныеЛицаСклад.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ОтветственныеЛицаСклад.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="0b39893b-111c-42e6-b822-cf46950cce1f">
+    <name>ФизическоеЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физическое лицо</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f75044a7-fefc-4f0c-852c-bd6ac0c85479">
+    <name>Должность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должность</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Посада</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Должности</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Должность</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Посада</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="d4ee5966-1a3e-4973-9048-41dfa4781ad2">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СкладыКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1f22f299-17d0-4b59-a279-cc86c3b12c3d">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="507e0c93-0d9f-4ced-b828-e6d8a68b496c">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="dc84474b-bcbe-43b9-bacd-f29dd16b6b9f">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

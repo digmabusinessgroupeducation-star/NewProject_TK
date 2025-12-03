@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="644ea86f-cc2a-4ff7-99fb-9a85c992a909">
+  <producedTypes>
+    <selectionType typeId="004096f3-79db-41c2-b296-c36921f00ff1" valueTypeId="eaa6ccbe-0777-4c5d-b471-bfdc9ae0cee8"/>
+    <listType typeId="f870c73a-534d-4cb9-a660-a5bfc2cf914d" valueTypeId="ba4486db-91f0-4e4e-b1e1-e2b01b1a7621"/>
+    <managerType typeId="f4b5920c-af78-4d32-b5e4-39a1ae4275e8" valueTypeId="923bcbeb-418d-42f8-b65e-260715fa2e2b"/>
+    <recordSetType typeId="cf43fb8f-cfe2-40f7-8873-3ca8827a52d4" valueTypeId="e7de79e0-8b83-432b-83af-2bda669a05d2"/>
+    <recordKeyType typeId="90eda254-3f70-41dc-bc39-77bf3a6b452e" valueTypeId="f42e80bf-5b51-4d4c-bdf1-2d942980d0ed"/>
+    <recordType typeId="3de669a6-ca60-43cc-b058-c9197f90c149" valueTypeId="3b49d28b-2f79-4727-ad6f-b2057304b569"/>
+    <recordManagerType typeId="99afdfc1-4042-400f-86ab-8edaea88bb48" valueTypeId="8dd98188-84f5-4848-b052-c62caf435a67"/>
+  </producedTypes>
+  <name>Наценки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Наценки</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Націнки</value>
+  </synonym>
+  <comment>Наценки на товары</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="5f9f7bc0-18a2-4029-aa31-ee69712a7688">
+    <name>ПроцентНаценки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент наценки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відсоток націнки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="8f21ac57-e483-42a1-bc12-9994570f1c77">
+    <name>Отклонение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отклонение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відхилення</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="8acbee0a-7191-489c-9187-14e16b585ed0">
+    <name>ТипЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип цен</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Тип цін</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТипыЦен</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9bfdddd1-a141-4ae8-b8e1-63cc508a1a37">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Об'єкт</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+      <types>CatalogRef.ТипыНоменклатуры</types>
+      <types>CatalogRef.ГруппыЦенообразования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

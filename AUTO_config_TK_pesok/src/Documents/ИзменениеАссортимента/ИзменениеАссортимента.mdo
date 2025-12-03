@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2d71a31f-3669-4f09-9ade-8c89b0016ec4">
+  <producedTypes>
+    <objectType typeId="a3050e9c-f84c-4394-b530-eb168b2011e3" valueTypeId="6caa764a-e51a-42f5-b146-a3cf19a61e53"/>
+    <refType typeId="23dc1c66-0469-427a-9281-7c878c5c5ecd" valueTypeId="6b6e09b9-dca7-4c7d-bf70-e9d1a4e1f532"/>
+    <selectionType typeId="0eb0b164-7d99-44d2-a9e9-e9f397c896ee" valueTypeId="56346087-865d-4d7b-9191-b845ed3051a3"/>
+    <listType typeId="87e3a450-8acc-43be-a10d-b634cf8fd945" valueTypeId="4f04b589-bbca-4652-a9fa-70386eb05e05"/>
+    <managerType typeId="00d8945a-8748-4526-bac9-1d05befc8227" valueTypeId="42c4da88-862d-4e63-b329-b36a9bbabf83"/>
+  </producedTypes>
+  <name>ИзменениеАссортимента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Изменение ассортимента</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ИзменениеАссортимента.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dataHistory>Use</dataHistory>
+  <numberType>String</numberType>
+  <numberLength>12</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ИзменениеАссортимента.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ИзменениеАссортимента.Form.ФормаСписка</defaultListForm>
+  <registerRecords>InformationRegister.ОграничениеАссортимента</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="47e41cb8-d88f-4eaa-88bb-f8c6b341f588">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Автор</value>
+    </synonym>
+    <comment>Автор документа - пользователь, создавший документ.</comment>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="56080647-f051-4d1d-a5ba-295bd339a7c0">
+    <name>ПодразделениеКомпании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ</value>
+    </synonym>
+    <comment>Подразделение компании в котором был выписан документ</comment>
+    <type>
+      <types>CatalogRef.ПодразделенияКомпании</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1cbec380-8eb8-4e72-b07d-24fc903d1b66">
+    <name>ХозОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Операція</value>
+    </synonym>
+    <comment>Выполняемая документом операция</comment>
+    <type>
+      <types>CatalogRef.ХозОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7428d61f-d9f2-4509-a36c-00115ba0edfd">
+    <name>ДатаВводаВАссортимент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата ввода в ассортимент</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата введення в асортимент</value>
+    </synonym>
+    <comment>Дата ввода товар в ассортимент</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ba8ea24e-3ccf-4e08-8b96-c90356d5bf4d">
+    <name>ДокументОснование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ основание</value>
+    </synonym>
+    <comment>Документ, на основании которого введен данный</comment>
+    <type>
+      <types>DocumentRef.ИзменениеАссортимента</types>
+      <types>DocumentRef.АссортиментныйКомитет</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cf15c0ef-ce9b-40c4-82ad-5c7a619a46c5">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <comment>Произвольный комментарий к документу</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="e7ea1bb5-5059-48fd-9aed-a82abfb1555f">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e2955ed1-4c34-42ec-b4c9-4c5dce187f2c">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="72399e19-4fd5-431b-b8f2-c1947fbc0a2e">
+    <producedTypes>
+      <objectType typeId="72b33a27-c7e4-46d1-8bf9-4aa3372751f1" valueTypeId="917f12f3-c18b-4fb7-ac02-1d80eb78d404"/>
+      <rowType typeId="e720cf6e-c6fb-45b0-ab1c-ede0507e2e66" valueTypeId="b433c0bd-1b29-44cc-88b6-947ceb7ca965"/>
+    </producedTypes>
+    <name>Товары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товары</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <attributes uuid="76ceadd6-bc2f-4013-9a64-b6a7b2eaa1e4">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="407523fc-d400-4114-929c-cd4c99bf7e56">
+      <name>БазовыйАссортимент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Базовый ассортимент</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Базовий асортимент</value>
+      </synonym>
+      <comment>Товар вводится в базовый ассортимет</comment>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e9eafd33-ddca-4b35-a0dd-56fe2b2c8f01">
+      <name>ВидАссортимента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид ассортимента</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вид асортименту</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыАссортимента</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="8f9e2152-7b21-40cb-8e46-08f41fe4f8c5">
+    <producedTypes>
+      <objectType typeId="5ff9ff38-07c3-440b-8351-041ef80e5e99" valueTypeId="b6b48fb5-2ea2-47c1-9490-d84bdffe4929"/>
+      <rowType typeId="a1a4ee79-d057-4d0b-87a4-507cc1f842f7" valueTypeId="e99e3cc3-75fd-4977-817e-64fee577b5eb"/>
+    </producedTypes>
+    <name>ТорговыеПлощадки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговые площадки</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <attributes uuid="ffd0da90-23aa-4dd1-bd49-77346a89c18a">
+      <name>ТорговаяПлощадка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Торговая площадка</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Торговий майданчик</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ТорговыеПлощадки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="bc76b1cc-0a70-4b33-a0de-91a9decbd780">
+    <name>ПФ_MXL_ИзменениеАссортиментаСклады</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изменение ассортимента склады</value>
+    </synonym>
+    <comment>Изменение ассортимента склады</comment>
+  </templates>
+</mdclass:Document>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="db82c7f0-a67f-47ff-b3db-09d203759aff">
+  <name>ТК_ПриЗаписиДокументыСкубис</name>
+  <synonym>
+    <key>ru</key>
+    <value>При записи документы Скубис</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ЗаказПокупателя</types>
+    <types>DocumentObject.ИзменениеЦен</types>
+    <types>DocumentObject.РеализацияТоваров</types>
+    <types>DocumentObject.ПеремещениеТоваров</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ТК_ОбменСкубисСобытия.ТК_ПриЗаписиДокументыСкубисПриЗаписи</handler>
+</mdclass:EventSubscription>

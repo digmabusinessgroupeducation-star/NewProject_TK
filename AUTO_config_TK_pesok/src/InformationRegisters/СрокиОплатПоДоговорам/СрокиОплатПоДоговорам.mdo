@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4fcbe8c5-6e21-451e-bc97-ad78ef067f90">
+  <producedTypes>
+    <selectionType typeId="7a18fb79-7c8e-40e1-a414-d01d4d27e46a" valueTypeId="fa81784a-bafc-4045-a8b4-64c21310d3bb"/>
+    <listType typeId="38e1a9b8-bd83-4b6b-a494-f85d8123baf2" valueTypeId="e915314c-dd3a-45e8-b9e8-d2be299aa977"/>
+    <managerType typeId="c80da2de-d30f-4e61-9053-7dce4739097d" valueTypeId="5f0a1d13-a59a-4176-a097-6b8198eacd52"/>
+    <recordSetType typeId="98f52eee-e50f-42a7-bc71-113b3da70fff" valueTypeId="a3f57a14-8346-4959-8ff1-14c9062c4389"/>
+    <recordKeyType typeId="44ce9127-e326-4d2d-85d4-d46f748a60c8" valueTypeId="5424ba93-72be-4978-8cf5-0a30e133b5c1"/>
+    <recordType typeId="f8960db5-669c-47aa-afb8-4242ed7ba17d" valueTypeId="41e070d1-9fbe-42f8-8228-3f737cec84dc"/>
+    <recordManagerType typeId="0ca843d7-1ebe-45b2-91e0-320b0c6ec924" valueTypeId="b0cc97e4-b11c-4154-8b1d-0bbf6487617c"/>
+  </producedTypes>
+  <name>СрокиОплатПоДоговорам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сроки оплат по договорам</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="4715096a-56b8-410f-b48a-3e0bdf9cd313">
+    <name>ТипОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип оплаты</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Тип оплати</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыОплатыПоДоговору</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7def94d4-9a06-4403-a140-dfcf57cded5b">
+    <name>Дней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дней</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Днів</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="75c8dd4c-5126-4055-92c0-efd8fdf0562e">
+    <name>Дней2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дней2</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Днів</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="11d532f4-5c7f-472b-8d28-bc305fd56fce">
+    <name>ДоговорКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор контрагента</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Договір контрагента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="4d73c274-3acf-46c0-aee9-e3f8da88d04c">
+    <name>РедактированиеИстории</name>
+    <synonym>
+      <key>ru</key>
+      <value>Редактирование истории</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

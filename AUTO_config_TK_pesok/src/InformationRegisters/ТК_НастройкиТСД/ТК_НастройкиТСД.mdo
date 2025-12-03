@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="923edc8a-ad41-4faf-b4bf-1fdc867c612a">
+  <producedTypes>
+    <selectionType typeId="ec6886f3-f562-4800-9389-a678fa5d01c0" valueTypeId="4d4279f8-cc6e-4571-91cc-e67031b62c12"/>
+    <listType typeId="0fc92f00-554c-4a74-8580-4fb3ecae1ca7" valueTypeId="2ea2521f-8a38-4062-a8a4-63c902306462"/>
+    <managerType typeId="3927ce46-24d5-41ef-9fa2-a09e020486fb" valueTypeId="385763d8-65e6-4d8f-a8ef-77317a7ef9e1"/>
+    <recordSetType typeId="018554d7-949a-4ae4-8cea-15afb6f5f2a5" valueTypeId="e01ec808-0eea-462b-a257-60f073f68504"/>
+    <recordKeyType typeId="dd08f78a-4c98-4011-aa75-b33b347e41af" valueTypeId="4f6b4b70-6d0f-48c8-b549-6caa055f00a4"/>
+    <recordType typeId="9a186078-a4fd-48d2-a9b3-2962d37f58bc" valueTypeId="442e3e9f-bb56-45ca-9165-4223cae16915"/>
+    <recordManagerType typeId="4bc77bbc-9374-4ff0-b919-16ce7fd0da02" valueTypeId="62de5b89-2e14-4cd0-a261-8079c2003a80"/>
+  </producedTypes>
+  <name>ТК_НастройкиТСД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки ТСД</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ТК_НастройкиТСД.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ТК_НастройкиТСД.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Настройка ТСД</value>
+  </recordPresentation>
+  <resources uuid="a0a95029-9883-4e1c-b635-f59691482593">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Characteristic.НастройкиТСД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <linkByType>
+      <field>InformationRegister.ТК_НастройкиТСД.Dimension.Настройка</field>
+    </linkByType>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="6905ab4b-3c56-4227-ba16-8eb5bea5b056">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1fd8de37-7dae-48c1-ad79-29862b2e2d30">
+    <name>Настройка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка</value>
+    </synonym>
+    <type>
+      <types>ChartOfCharacteristicTypesRef.НастройкиТСД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="3384a05b-a408-48b7-a7cf-426e3bba21cf">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="15d91848-bf3d-43aa-870b-12460af1bf91">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e57fd821-f057-48cc-b3b0-37ae75071198">
+    <name>ФормаНастройкиТСД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настройки ТСД</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="27bc2203-53e1-486d-b793-267df43f1a4a">
+    <name>ОткрытьНастройкиТСД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки ТСД</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5e6f2c73-d9c4-4137-937b-1ab47733427d">
+  <producedTypes>
+    <refType typeId="bc53e197-5e33-4fdb-80e9-62f4bcd23cbc" valueTypeId="5d86c743-5aff-43c9-bfa4-e5ead1d27fc4"/>
+    <listType typeId="1390f657-74ea-4e5d-a925-47268959fba6" valueTypeId="78cebd39-ab61-45d1-8937-f2a0867752da"/>
+    <objectType typeId="394935c1-f2db-4b3e-bb1c-ff6e6ab0df2e" valueTypeId="477fb9d9-ae65-4141-956d-e6e6e5caee6d"/>
+    <managerType typeId="d7ec24ff-647b-40d9-b68e-53c103e8c6f2" valueTypeId="4bed240b-5f8f-413c-88d3-3ff2210ea752"/>
+    <recordManagerType typeId="e4545315-4c23-4507-aefb-0113aab7fbb4" valueTypeId="050b92a6-2cd0-4206-a0b6-dd6ae73cd3ab"/>
+    <recordSetType typeId="894132f8-5211-46ee-8022-39cf88eab357" valueTypeId="25a1fc1a-3114-4664-bd03-bfa53b629310"/>
+    <recordType typeId="a2fbebe4-3e19-4f23-98d1-dbea8a990537" valueTypeId="c7e3583a-cdc0-4c3d-a846-9c91c1193b2b"/>
+    <recordKeyType typeId="13893be8-b102-4b3c-b358-6bf607be4a78" valueTypeId="9a8e1d9c-d79e-4e14-8457-bac5b73b4787"/>
+  </producedTypes>
+  <name>dbo_cartitem</name>
+  <parentDataSource>ExternalDataSource.PlanoHeroAttika</parentDataSource>
+  <nameInDataSource>dbo.cartitem</nameInDataSource>
+  <keyFields>ExternalDataSource.PlanoHeroAttika.Table.dbo_cartitem.Field.id</keyFields>
+  <unfilledParentValue xsi:type="core:UndefinedValue"/>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ExternalDataSource.PlanoHeroAttika.Table.dbo_cartitem.Field.id</inputByString>
+  <editType>InDialog</editType>
+  <tableFields uuid="8f27fe41-0dc5-4f1d-b8f1-c71625e41716">
+    <name>id</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="a6eeb72e-2b56-48ef-99f6-5fcc9da60b01">
+    <name>receipt_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_receipt</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>receipt_id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="d04c3381-7669-437a-8de0-d21a4a2eb3e6">
+    <name>product_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_product</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>product_id</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="93de28ed-6387-42d9-ac25-c411ee51ab4d">
+    <name>scanned_at</name>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <nameInDataSource>scanned_at</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="736a3ba3-8c66-43e6-b126-be74c95510a7">
+    <name>receipt_closed_at</name>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <nameInDataSource>receipt_closed_at</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="663f5e56-1b67-485d-9637-14f7d50239a5">
+    <name>supplier_id</name>
+    <type>
+      <types>ExternalDataSourceTableRef.PlanoHeroAttika.dbo_supplier</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <nameInDataSource>supplier_id</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="400e993d-653e-44ed-ad68-0c2e4ef9d83e">
+    <name>price</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>price</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="53a9c0af-02bd-46b9-8d26-c0da538908b4">
+    <name>qty</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>qty</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="9c483abf-b12c-4790-9a71-9ef41bdd7389">
+    <name>total_price</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>total_price</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="a5a574ea-b3f7-423f-a131-7c42eb7b84f5">
+    <name>original_price</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>original_price</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="70f76703-8dcc-4b7b-822f-bf5837f9bcdc">
+    <name>margin_price_total</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>margin_price_total</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="7682404f-d62e-4907-8bb4-8c085af13278">
+    <name>discount</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>discount</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="9c47f8ca-c872-4554-a6e5-2185fcc3f340">
+    <name>total_vat</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>total_vat</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="86445d3b-6d08-4c40-844b-3a011baf64b2">
+    <name>total_excise</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>total_excise</nameInDataSource>
+  </tableFields>
+</mdclass:Table>

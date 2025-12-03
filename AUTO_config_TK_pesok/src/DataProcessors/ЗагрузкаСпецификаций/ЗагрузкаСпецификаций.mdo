@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="55717a5f-4483-46fb-a120-ba538281fcd8">
+  <producedTypes>
+    <objectType typeId="975a76df-51bc-456d-ad40-7584bfde032f" valueTypeId="5d992ef1-e79e-4a59-8d0f-dd810b85d24c"/>
+    <managerType typeId="7e9aa486-c0ef-48d1-bdaf-e122ce77ac56" valueTypeId="8b27ae5f-5761-47e9-9d1a-44d05d2e43b4"/>
+  </producedTypes>
+  <name>ЗагрузкаСпецификаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка спецификаций</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ЗагрузкаСпецификаций.Form.Форма</defaultForm>
+  <attributes uuid="041e2278-e611-4876-871a-c032d47f4394">
+    <name>НачалоПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало периода</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="ba4a5374-1406-44ce-b0b2-e0932a53074e">
+    <name>КонецПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конец периода</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ff66175b-3e70-474e-aeff-70506794e4ce">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="684082a8-bb4f-4928-a63c-3e5fabaeabe7">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Контрагент</name>
+      <field>DataProcessor.ЗагрузкаСпецификаций.Attribute.Контрагент</field>
+    </choiceParameterLinks>
+    <choiceForm>Catalog.ДоговорыКонтрагентов.Form.ФормаВыбораДоговора</choiceForm>
+  </attributes>
+  <attributes uuid="6856892a-3ef6-4bde-859f-021aecc044a6">
+    <name>ТипЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип цен</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТипыЦен</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="54548046-2dda-49ef-9bef-c329920d6839">
+    <name>СоздатьИзменениеЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создать изменение цен</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="78726b11-4cdb-497c-93c8-e5156c120768">
+    <name>ОкруглятьДо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Округлять до</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Округляти до</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>13</precision>
+        <scale>6</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="ad01b801-48cd-40f1-9aec-24ea2483f584">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="c69f06e9-f715-469f-ab9b-1e877ff08109">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

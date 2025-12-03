@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b6b04f05-9dcf-432f-b71f-7185e65225c7">
+  <name>ТК_ПроверитьИзменениеПередЗаписьюВладельцаEDI</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверить изменение перед записью владельца  EDI</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ПоступлениеТоваров</types>
+    <types>DocumentObject.РеализацияТоваров</types>
+    <types>DocumentObject.ВыпускПродукции</types>
+    <types>DocumentObject.РезервированиеЗаказовПокупателя</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ТК_ОбменEDI.ОбменEDIВладелецПередЗаписью</handler>
+</mdclass:EventSubscription>

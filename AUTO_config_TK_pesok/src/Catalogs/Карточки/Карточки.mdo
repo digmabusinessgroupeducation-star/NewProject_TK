@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="860ec0e3-fdc5-4c7b-a455-0eea28dbb8c5">
+  <producedTypes>
+    <objectType typeId="c4d79bae-d585-4f9c-9c88-ececd6a1062f" valueTypeId="43e21975-8731-4705-9ade-a59b58eb372b"/>
+    <refType typeId="d3148ba6-0431-45cd-9e7c-f552b51d4ada" valueTypeId="de9aa3e8-8f29-49b1-b2af-2a241cd04614"/>
+    <selectionType typeId="79cc2ac1-1c04-4a2c-bb75-ae249df51008" valueTypeId="2fe3d1c8-293b-4d09-bf1a-ad2c461124a8"/>
+    <listType typeId="e90910b1-0ea2-41d8-a902-cc2bf4124559" valueTypeId="9bd2a2b7-98dc-4ade-a85f-52f00e299162"/>
+    <managerType typeId="74d73636-cbe4-4e33-b173-a16145c619cb" valueTypeId="9b4e0ded-324b-42f6-80a0-82c687e9ef3d"/>
+  </producedTypes>
+  <name>Карточки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Карточки</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Картки</value>
+  </synonym>
+  <comment>Дисконтные, пользовательские, командные карты</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Карточки.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Карточки.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>13</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.Карточки.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.Карточки.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="ba36d8ce-e69b-49a1-b490-9091d02f3aec">
+    <name>ПредставлениеКарты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Представление карты</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Представлення</value>
+    </synonym>
+    <comment>Печатное наименование карточки</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <use>ForFolderAndItem</use>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f1960167-1481-40ff-8e4b-7dce9c5ceb25">
+    <name>ВладелецКарты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Власник</value>
+    </synonym>
+    <comment>(АСУ by 4ok)</comment>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e8940b7b-4be2-476d-8c4c-f7dfa69c84c7">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <comment>Произвольный комментарий по карточке</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <use>ForFolderAndItem</use>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b2b2a51f-0617-4e4a-b600-72a8206ac448">
+    <name>ДатаСоздания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата создания</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата створення</value>
+    </synonym>
+    <comment>Дата создания карточки</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="61755f48-b38b-4713-adeb-6c1bb8b9f005">
+    <name>ОкончаниеДействия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания действия</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата закінчення дії</value>
+    </synonym>
+    <comment>Дата окончания действия</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7b386073-1583-470e-941e-f6f5e38845df">
+    <name>ТипДисконтнойКарты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип дисконтной карты</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Тип дисконтної карти</value>
+    </synonym>
+    <comment>Тип дисконтной карты</comment>
+    <type>
+      <types>CatalogRef.ТипыДисконтныхКарт</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0fdece68-1bca-42f3-802d-e9ab9afbace9">
+    <name>Заблокирована</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заблокирована</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Заблокована</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="63031eb5-5929-4ba0-8199-6e460936cff8">
+    <name>Платежная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Платежная</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Платіжна</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e7433422-45a7-4580-b55f-097bddb747c7">
+    <name>ОбъектЗаполнения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект заполнения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Об'єкт заповнення</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="da5dbf70-de1a-43b0-bbac-8503c1a418b4">
+    <name>ФИО</name>
+    <synonym>
+      <key>ru</key>
+      <value>ФИО</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ПІБ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>190</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f6fa4f06-a9c2-4844-842d-a4b9ef82b741">
+    <name>Адрес</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Адреса</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>190</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d4bfff06-9df0-4f26-8082-7938e7d1ee6e">
+    <name>ДатаЗаполнения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата заполнения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата заповнення</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f8e88a12-9ddb-4c4e-8289-14e22846ac75">
+    <name>ШтрихКод</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрих-код</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Штрих-код</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <indexing>IndexWithAdditionalOrder</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fcdc9c65-f867-4b9e-ae66-ee77e58fe7e6">
+    <name>ЭлектронныйАдрес</name>
+    <synonym>
+      <key>ru</key>
+      <value>Электронный адрес</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Електронна адреса</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="8fa2486e-f12b-4694-9ace-f71ccc4dcf25">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1939dc39-5e8f-4cfa-8186-f67fa3947796">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="5b23dc00-0338-42ca-bc09-f8d72330e7bd">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+</mdclass:Catalog>

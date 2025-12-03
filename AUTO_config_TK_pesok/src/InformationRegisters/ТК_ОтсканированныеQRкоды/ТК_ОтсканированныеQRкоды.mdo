@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c3af5a84-885e-448b-81a2-91aaf90e7b6d">
+  <producedTypes>
+    <selectionType typeId="d4a10ee8-a193-4bad-a293-43ddb532a26c" valueTypeId="1cd5b51c-e5ae-47a6-a9e1-0df346cd0121"/>
+    <listType typeId="1c2034f0-9269-4a60-b799-16b8334c6168" valueTypeId="4f0855c2-b9a4-424f-8541-f5502980f03e"/>
+    <managerType typeId="77dadee0-e374-42ec-945a-f835cb6b1c19" valueTypeId="f09ef2dd-1a15-4e1a-b608-bb6003f82071"/>
+    <recordSetType typeId="72a7358a-29e6-46b0-b8b2-f97317600d00" valueTypeId="9dea46ee-8c5a-41f7-82b7-027580d3138e"/>
+    <recordKeyType typeId="608dbfb3-54eb-4325-bb24-cb7df2e39756" valueTypeId="f9e30124-138a-429e-bf0a-a70e4394e800"/>
+    <recordType typeId="1f702de8-aaef-4e7f-bf30-fcbebd0d1ecd" valueTypeId="9ed7e818-3ccb-4869-bdd9-5208e7269220"/>
+    <recordManagerType typeId="fc32adee-e016-4ca1-9f3c-cc1b66afafd2" valueTypeId="23fdea75-1f05-4113-8f37-f74fd112d2f0"/>
+  </producedTypes>
+  <name>ТК_ОтсканированныеQRкоды</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отсканированные QR-коды</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Відскановані QR-коди</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="38942201-9ef5-4348-9982-1053135b04ff">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="103417e4-9d05-4e88-99d8-9c9c8c00dd5c">
+    <name>НомерРезерва</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер резерва</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номер резерву</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>12</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="053ce140-656c-4c1c-82da-8cb607aa0ee0">
+    <name>ДанныеСканирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные сканирования</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дані сканування</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6d584893-0f40-4499-80fd-cd02d95cdf93">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Об'єкт</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <commands uuid="4c36829e-4886-439a-828e-3010bc34f815">
+    <name>ОтсканированныеQRкоды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отсканированные QR коды</value>
+    </synonym>
+    <group>ActionsPanelTools</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

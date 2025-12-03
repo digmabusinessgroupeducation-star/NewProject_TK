@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1dcaf000-a093-4c37-b72c-9f920d4a6790">
+  <producedTypes>
+    <objectType typeId="359c1363-1694-4621-9f40-9f23bf45359d" valueTypeId="ebc7e94e-a5c4-4369-94a8-291cf5ac91bc"/>
+    <refType typeId="4c0f705d-5114-4ba1-b097-d34cbddd2291" valueTypeId="586a3d71-d99c-4e18-8e02-1adfed6da689"/>
+    <selectionType typeId="5916e8fe-d57b-4756-8104-439bfd42126b" valueTypeId="8f343746-aba2-494b-b11b-63c3fa25dd8a"/>
+    <listType typeId="240bfbb1-8e6c-4313-86c3-1821d33991f8" valueTypeId="e7c00b83-f159-46f3-8de1-2f5a8e5ecb61"/>
+    <managerType typeId="c0cc164e-f3a1-47ef-a8b5-3d0c26395f5f" valueTypeId="0c927501-3e46-4545-894a-fa9318aaba77"/>
+  </producedTypes>
+  <name>ПрофилиКассиров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Профили кассиров</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Профілі касирів</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ПрофилиКассиров.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ПрофилиКассиров.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ПрофилиКассиров.Form.ФормаЭлемента</defaultObjectForm>
+  <tabularSections uuid="21560561-6ab7-4557-a794-e7cde12106a3">
+    <producedTypes>
+      <objectType typeId="084c4a71-e8f0-4b42-8727-a6289795243f" valueTypeId="d0fade98-2501-4d77-b990-3d6e4581e476"/>
+      <rowType typeId="06df1687-86c4-499b-a680-34fd6c12a417" valueTypeId="be7f83c2-a822-4ed2-9bd0-da89c990f4c3"/>
+    </producedTypes>
+    <name>НастройкаПравКассира</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка прав кассира</value>
+    </synonym>
+    <comment>Хранит данные о настройках прав кассира для различных POS терминалов, отличные от значений по умолчанию</comment>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="35a37abe-f140-42f2-b356-6346f90011c6">
+      <name>МодельPOS</name>
+      <synonym>
+        <key>ru</key>
+        <value>Модель POS</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Модель POS</value>
+      </synonym>
+      <comment>Модель POS</comment>
+      <type>
+        <types>EnumRef.МоделиСерверовPOSТерминалов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="c2aec038-f9ef-4a49-a8e0-0855ef5ff109">
+      <name>ИдентификаторПрава</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор права</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ідентифікатор права</value>
+      </synonym>
+      <comment>Идентификатор права</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="65168333-6c84-4dcf-bd30-237e20073d64">
+      <name>Разрешено</name>
+      <synonym>
+        <key>ru</key>
+        <value>Разрешено</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Дозволено</value>
+      </synonym>
+      <comment>Признак того, что право разрешено</comment>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+  </tabularSections>
+  <forms uuid="3d15f312-8709-4bb5-97fc-a39df827f2f5">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="f21fc4c6-c2b5-4a31-8f47-8ad09ae34292">
+    <name>ТД_MXL_КассовыйСерверОпенстор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет &quot;Кассовый сервер опенстор&quot;</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Макет &quot;Касовий сервер опенстор&quot;</value>
+    </synonym>
+  </templates>
+</mdclass:Catalog>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.edi.su" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.edi.su" elementFormDefault="qualified" xmlns:xsd="undefined">
+
+  <xs:complexType name="Document-Order">
+    <xs:sequence>
+      <xs:element name="Order-Header" type="tns:Order-Header"/>
+      <xs:element name="Order-Parties" type="tns:Order-Parties"/>
+      <xs:element name="Order-Lines" type="tns:Order-Lines"/>
+      <xs:element name="Order-Summary" type="tns:Order-Summary"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Order-Header">
+    <xs:sequence>
+      <xs:element name="OrderNumber" type="xs:string" />
+      <xs:element name="OrderDate" type="xs:date" />
+      <xs:element name="ExpectedDeliveryDate" type="xs:date" />
+      <xs:element name="ExpectedDeliveryTime" type="xs:string" />
+      <xs:element name="ContractNumber" type="xs:unsignedShort" />
+      <xs:element name="PromotionReference" type="xs:string" />
+      <xs:element name="Currency" type="xs:string" />
+      <xs:element name="DocumentFunctionCode" type="xs:string" />
+      <xs:element name="ContractType" type="xs:string" />
+      <xs:element name="Remarks" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="Order-Parties">
+    <xs:sequence>
+      <xs:element name="Buyer" type="tns:Buyer"/>
+      <xs:element name="Seller" type="tns:Seller"/>
+      <xs:element name="DeliveryPoint" type="tns:DeliveryPoint"/>
+      <xs:element name="Invoicee" type="tns:Invoicee"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Buyer">
+    <xs:sequence>
+      <xs:element name="ILN" type="xs:unsignedLong" />
+      <xs:element name="TaxID" type="xs:unsignedLong" />
+      <xs:element name="VatPayerCertificate" type="xs:unsignedInt" />
+      <xs:element name="CodeByBuyer" type="xs:string" />
+      <xs:element name="PurchasingContact" type="xs:string" />
+      <xs:element name="Department" type="xs:string" />
+      <xs:element name="InternalNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType  name="Seller">
+    <xs:sequence>
+      <xs:element name="ILN" type="xs:unsignedLong" />
+      <xs:element name="CodeByBuyer" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="DeliveryPoint">
+    <xs:sequence>
+      <xs:element name="ILN" type="xs:unsignedLong" />
+      <xs:element name="DeliveryPlace" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="Invoicee">
+    <xs:sequence>
+      <xs:element name="ILN" type="xs:unsignedLong" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Order-Lines">
+    <xs:sequence>
+      <xs:element name="Line" type="tns:Line" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Line">
+    <xs:sequence>
+      <xs:element name="Line-Item" type="tns:Line-Item"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType  name="Line-Item">
+    <xs:sequence>
+      <xs:element name="LineNumber" type="xs:string" />
+      <xs:element name="EAN" type="xs:unsignedLong" />
+      <xs:element name="BuyerItemCode" type="xs:unsignedInt" />
+      <xs:element name="SupplierItemCode" type="xs:unsignedInt" />
+      <xs:element name="PromotionNumber" type="xs:string" />
+      <xs:element name="ItemDescription" type="xs:string" />
+      <xs:element name="ItemType" type="xs:string" />
+      <xs:element name="OrderedQuantity" type="xs:decimal" />
+      <xs:element name="OrderedUnitPacksize" type="xs:unsignedByte" />
+      <xs:element name="UnitOfMeasure" type="xs:string" />
+      <xs:element name="OrderedUnitNetPrice" type="xs:decimal" />
+      <xs:element name="OrderedUnitGrossPrice" type="xs:decimal" />
+      <xs:element name="TaxRate" type="xs:unsignedByte" />
+      <xs:element name="TaxCategoryCode" type="xs:string" />
+      <xs:element name="GrossAmount" type="xs:decimal" />
+      <xs:element name="NetAmount" type="xs:decimal" />
+      <xs:element name="OrderedUnitListPrice" type="xs:decimal" />
+      <xs:element name="FlowType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+
+
+
+
+  <xs:complexType name="Order-Summary">
+    <xs:sequence>
+      <xs:element name="TotalLines" type="xs:string" />
+      <xs:element name="TotalOrderedAmount" type="xs:decimal" />
+      <xs:element name="TotalNetAmount" type="xs:decimal" />
+      <xs:element name="TotalGrossAmount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+</xs:schema>

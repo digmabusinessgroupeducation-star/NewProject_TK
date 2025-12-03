@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6363c463-728d-47f3-a006-d47165f0a895">
+  <producedTypes>
+    <selectionType typeId="866b65a7-dc86-494c-93aa-3818f2b19761" valueTypeId="52588e15-0961-4e46-b22c-675c5d47104b"/>
+    <listType typeId="ba60830b-1e1e-4888-a62f-e6cdda76f9a1" valueTypeId="51c4e8fc-7c9e-40d8-a48b-d5a5281da1fa"/>
+    <managerType typeId="3a54aef9-bd8b-4414-8d6a-973ce44bd2af" valueTypeId="67a69849-8e47-4500-819a-f93def9556fd"/>
+    <recordSetType typeId="8e8a033d-352d-4875-95fd-e66b98b717b3" valueTypeId="68fd1cb8-d8c2-47fc-a50c-39aeaeddfc9c"/>
+    <recordKeyType typeId="7da84701-2bcf-46b8-ae9f-2c9392b11304" valueTypeId="e12839a3-a137-41f6-af71-30ea0cdb53d2"/>
+    <recordType typeId="1582de75-b894-4c2a-8a29-ab953cdb035a" valueTypeId="cdb4ea1a-44ef-45fa-92a0-a1bedcae9adb"/>
+    <recordManagerType typeId="4d9cfbb9-e82d-4400-87cd-3cda776fe57f" valueTypeId="b15c69e3-ef12-4503-9b43-b078511e6577"/>
+  </producedTypes>
+  <name>ТК_ПараметрыОбменаEDI</name>
+  <synonym>
+    <key>ru</key>
+    <value>Параметры обмена EDI</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ТК_ПараметрыОбменаEDI.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ТК_ПараметрыОбменаEDI.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="c0a6f804-c01c-4318-9fc7-07c991a9272a">
+    <name>УчетнаяЗаписьEDI</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учетная запись EDI</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТК_УчетныеЗаписиEDI</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c7f22bd9-3835-456f-adc5-e2d0ec893a80">
+    <name>GLN</name>
+    <synonym>
+      <key>ru</key>
+      <value>GLN</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>80</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="5a5a1da4-b354-4b8c-b7eb-e096ddc9460d">
+    <name>ИсходящаяРеализация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исходящая реализация</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2ac4c5ed-9175-4ac0-9e41-f0898b848e44">
+    <name>ИсходящееПоступлениеТоваров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исходящее поступление товаров</value>
+    </synonym>
+    <comment>Отправка приходов (COMDOC)</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d97abbea-5234-4545-8ea3-4aa44334c17b">
+    <name>ФормироватьЗаказИзПрихода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формировать заказ из прихода</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="23227650-5709-4340-8d67-e12ae8c0a996">
+    <name>НеИспользоватьПротоколыЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не использовать протоколы цен</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="65fe134d-2849-43ad-a28d-026305a9310f">
+    <name>ИсходящееПодтверждениеЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исходящее подтверждение заказа</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ee4dbc11-8d0c-46c7-a900-8c07e53bf195">
+    <name>ОтчетПоИнвентаризации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет по инвентаризации</value>
+    </synonym>
+    <comment>INVRPT</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8d738b8e-603c-4109-99c7-5ee18fb18be4">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="38404b7f-ba28-4e34-9d80-571aa1d2d20b">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="3a0aa8cf-6362-4a7c-a3e4-18036d1c37b1">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a9b9e8cd-b4c6-4494-a489-70623fcb9d16">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

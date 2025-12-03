@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<ExternalDataSource uuid="92ec6951-5c1b-49c6-ae7a-5655464289ab">
+		<InternalInfo>
+			<xr:GeneratedType name="ExternalDataSourceManager.OpenStore_Tranzit" category="Manager">
+				<xr:TypeId>8d0935b1-0c62-4856-a5fd-6f85d0151f7e</xr:TypeId>
+				<xr:ValueId>ea79998d-fb51-4573-ae75-8c8fab3497b4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExternalDataSourceTablesManager.OpenStore_Tranzit" category="TablesManager">
+				<xr:TypeId>0c10ee0f-5086-4e35-aee5-3117c39d818f</xr:TypeId>
+				<xr:ValueId>6daad9d2-e0c8-4893-a416-300c3715e36f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExternalDataSourceCubesManager.OpenStore_Tranzit" category="CubesManager">
+				<xr:TypeId>b65b85e9-6374-43cc-9423-dff61cc51d96</xr:TypeId>
+				<xr:ValueId>fb27fc26-27dd-427b-b8fd-391cff9dbd37</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>OpenStore_Tranzit</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Open store tranzit</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DataLockControlMode>Automatic</DataLockControlMode>
+		</Properties>
+		<ChildObjects>
+			<Table>V_ЗагруженныеДокументы</Table>
+			<Table>V_ЗагруженныеДокументыТовары</Table>
+			<Function uuid="6e28b7ba-57dd-446b-a6c3-4aca591cb401">
+				<Properties>
+					<Name>dbo_UPSERT_GRP</Name>
+					<Synonym/>
+					<Comment>&amp;1 - Гуид группы; &amp;2 - Артикул группы; &amp;3 - Гуид родитель; &amp;4 - Артикул родитель; &amp;5 - </Comment>
+					<ReturnValue>false</ReturnValue>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+					<ExpressionInDataSource>dbo.UPSERT_GRP(&amp;1, &amp;2, &amp;3, &amp;4, &amp;5, &amp;6, &amp;7)</ExpressionInDataSource>
+				</Properties>
+			</Function>
+			<Function uuid="a868528a-e8cd-4810-b158-9549c1e09e0d">
+				<Properties>
+					<Name>dbo_UPSERT_TAXGRP</Name>
+					<Synonym/>
+					<Comment/>
+					<ReturnValue>false</ReturnValue>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<ExpressionInDataSource>dbo.UPSERT_TAXGRP(&amp;1, &amp;2, &amp;3, &amp;4, &amp;5)</ExpressionInDataSource>
+				</Properties>
+			</Function>
+			<Function uuid="21796ab9-ddf6-4e1c-ad95-b5f5b23854ee">
+				<Properties>
+					<Name>dbo_spTKS_SETLOADED</Name>
+					<Synonym/>
+					<Comment>SAREAID, SYSTEMID, SESSID, SRECNUM</Comment>
+					<ReturnValue>false</ReturnValue>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<ExpressionInDataSource>dbo.spTKS_SETLOADED(&amp;1, &amp;2, &amp;3, &amp;4)</ExpressionInDataSource>
+				</Properties>
+			</Function>
+			<Function uuid="bfb40286-8b19-452e-9d7e-3307c34e3459">
+				<Properties>
+					<Name>dbo_spTKSLINES</Name>
+					<Synonym/>
+					<Comment/>
+					<ReturnValue>false</ReturnValue>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<ExpressionInDataSource>dbo.spTKSLINES(&amp;1, &amp;2, &amp;3, &amp;4)</ExpressionInDataSource>
+				</Properties>
+			</Function>
+		</ChildObjects>
+	</ExternalDataSource>
+</MetaDataObject>

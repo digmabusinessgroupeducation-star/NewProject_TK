@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e811ea17-75a0-4858-a08f-19758c65ce5d">
+  <producedTypes>
+    <selectionType typeId="fe7243b9-fd3b-4d44-8df3-870c5a5d6a23" valueTypeId="5bf125eb-081b-47c1-8721-be328365c71a"/>
+    <listType typeId="e19eeef0-e45d-4ccb-afa6-beddc86af3e2" valueTypeId="e65851e5-0c5a-4178-ac79-cb4d4f86d55c"/>
+    <managerType typeId="5b40fb01-a25c-435e-ac83-fe1371cd4850" valueTypeId="d73a74f8-3760-45b3-8cb0-6456f276776b"/>
+    <recordSetType typeId="c0d1beef-01c2-4ac1-97cf-0cd12ba70f1a" valueTypeId="7e61b900-31fc-465a-b302-8ebfde06e131"/>
+    <recordKeyType typeId="aba070b2-33c1-4ce2-ad8f-356ebff070e4" valueTypeId="ce562ce9-b1b7-445d-aba8-4bf8f064b8c7"/>
+    <recordType typeId="14e717d1-d7ad-4c61-941d-be6cb528c8ac" valueTypeId="a16407f1-b1c9-4636-b050-ca921f2062ac"/>
+    <recordManagerType typeId="c0aa1e3a-0541-48dd-9bfa-c1e5880c9db8" valueTypeId="4078c449-cb16-464f-86bd-d7c0812b9748"/>
+  </producedTypes>
+  <name>ПараметрыСистемыЗаказов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Параметры системы заказов</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Параметри системи замовлень</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="885c779c-3e5f-49ff-b0a4-9106e891c515">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="b4af6ff0-67ac-48c1-b28b-f13e81edca0c">
+    <name>ПериодичностьЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Периодичность заказа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Періодичність замовлення</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыПериодичностиЗаказов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e4919ee0-cea2-45e1-b007-8a5c9d6292e9">
+    <name>ДниНедели</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дни недели</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дні тижня</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>7</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="33d515c5-5388-4fc1-a0cd-3dedefb1fe73">
+    <name>СрокПоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок поставки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Строк поставки</value>
+    </synonym>
+    <comment>Срок поставки (дней)</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c13fb3d2-7ef9-4052-be0b-cc5f80e5a897">
+    <name>СрокПоставкиПоДнямНедели</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок поставки по дням недели</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Періодичність по дням тижня</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>28</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="ccaf02ab-c396-48e6-bcaf-aa75374f41ba">
+    <name>ВариантОкругления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вариант округления</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВариантыОкругленияКоличества</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7956f280-327a-4bed-8ef4-290905734f2b">
+    <name>КвантПоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Квант поставки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Квант поставки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a507d61f-cbb4-4066-9bd2-a4beed9410b3">
+    <name>МодельРасчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Модель расчета</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Параметри кількості</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыКоличестваЗаказа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="6b6db18a-96b4-4c2d-8593-5f9afe83317f">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кількість</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="6d4e94aa-e954-4551-978c-52468b564ef4">
+    <name>МинимальныйОстаток</name>
+    <synonym>
+      <key>ru</key>
+      <value>Минимальный остаток</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Мінімальний залишок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="887162a9-82b7-4b85-833c-9ca86e15ad52">
+    <name>ОстатокВитрина</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остаток витрина</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Залишок вітрина</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1aae98d2-6b7b-47ac-9a0d-5333ddb18789">
+    <name>РегламентЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Регламент заказа</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="2a96e5e7-6af0-4a49-a555-c91271ff5196">
+    <name>ТочкаДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Точка доставки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ призначення</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТочкиДоставки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bc7a314d-08c0-48e1-9f33-26970f62b149">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <comment>Номенклатура для которой сохраняются цены</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

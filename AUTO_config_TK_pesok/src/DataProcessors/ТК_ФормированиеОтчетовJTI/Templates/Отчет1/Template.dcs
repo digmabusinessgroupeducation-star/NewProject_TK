@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СкладКомпании</dataPath>
+			<field>СкладКомпании</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеКомпании</dataPath>
+			<field>ПодразделениеКомпании</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТорговаяПлощадка</dataPath>
+			<field>ТорговаяПлощадка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Покупатель</dataPath>
+			<field>Покупатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>JTIBrandCode</dataPath>
+			<field>JTIBrandCode</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>JTIBrand code</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Sales</dataPath>
+			<field>Sales</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Sales</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧГ=</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>UM</dataPath>
+			<field>UM</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>UM</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CustomerTo</dataPath>
+			<field>CustomerTo</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Customer to</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>WHCode</dataPath>
+			<field>WHCode</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>WHCode</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Price</dataPath>
+			<field>Price</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Price</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Stock</dataPath>
+			<field>Stock</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Stock</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CustomerTo1</dataPath>
+			<field>CustomerTo1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Customer to1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>MRP</dataPath>
+			<field>MRP</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>MRP</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВЫБОР
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.РеализацияТоваров
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.РеализацияТоваров).ТочкаДоставки.Global_ID
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.ВозвратОтПокупателя
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.ВозвратОтПокупателя).ТочкаДоставки.Global_ID
+		ИНАЧЕ ""
+	КОНЕЦ КАК DistributorOutletCode,
+	ПродажиОбороты.Номенклатура КАК Номенклатура,
+	СУММА(ПродажиОбороты.КоличествоОборот) КАК КоличествоОборот,
+	ПродажиОбороты.ТорговаяПлощадка КАК Площадка,
+	ВЫБОР
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.РеализацияТоваров
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.РеализацияТоваров).ТочкаДоставки
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.ВозвратОтПокупателя
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.ВозвратОтПокупателя).ТочкаДоставки
+	КОНЕЦ КАК ТочкаДоставки,
+	ПродажиОбороты.ХарактеристикаНоменклатуры.ЗначениеМРЦ КАК МРЦ
+ПОМЕСТИТЬ втПродажи
+ИЗ
+	РегистрНакопления.Продажи.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, {(ПодразделениеКомпании).* КАК ПодразделениеКомпании, (СкладКомпании).* КАК СкладКомпании, (Номенклатура).* КАК Номенклатура, (Покупатель).* КАК Покупатель}) КАК ПродажиОбороты
+ГДЕ
+	(ПродажиОбороты.Регистратор ССЫЛКА Документ.РеализацияТоваров
+			ИЛИ ПродажиОбороты.Регистратор ССЫЛКА Документ.ВозвратОтПокупателя)
+
+СГРУППИРОВАТЬ ПО
+	ПродажиОбороты.Номенклатура,
+	ВЫБОР
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.РеализацияТоваров
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.РеализацияТоваров).ТочкаДоставки.Global_ID
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.ВозвратОтПокупателя
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.ВозвратОтПокупателя).ТочкаДоставки.Global_ID
+		ИНАЧЕ ""
+	КОНЕЦ,
+	ПродажиОбороты.ТорговаяПлощадка,
+	ВЫБОР
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.РеализацияТоваров
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.РеализацияТоваров).ТочкаДоставки
+		КОГДА ПродажиОбороты.Регистратор ССЫЛКА Документ.ВозвратОтПокупателя
+			ТОГДА ВЫРАЗИТЬ(ПродажиОбороты.Регистратор КАК Документ.ВозвратОтПокупателя).ТочкаДоставки
+	КОНЕЦ,
+	ПродажиОбороты.ХарактеристикаНоменклатуры.ЗначениеМРЦ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПеремещениеТоваровТовары.Ссылка.СкладКомпанииПолучатель.ТочкаДоставки.Global_ID,
+	ПеремещениеТоваровТовары.Номенклатура,
+	СУММА(ПеремещениеТоваровТовары.КоличествоБазовое),
+	ПеремещениеТоваровТовары.Ссылка.ТорговаяПлощадка,
+	ПеремещениеТоваровТовары.Ссылка.СкладКомпанииПолучатель.ТочкаДоставки,
+	ПеремещениеТоваровТовары.ХарактеристикаНоменклатуры.ЗначениеМРЦ
+ИЗ
+	Документ.ПеремещениеТоваров.Товары КАК ПеремещениеТоваровТовары
+ГДЕ
+	ПеремещениеТоваровТовары.Ссылка.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ПеремещениеТоваровТовары.Ссылка.Проведен
+	И ПеремещениеТоваровТовары.Ссылка.ХозОперация = ЗНАЧЕНИЕ(Справочник.ХозОперации.ПеремещениеТоваровВФилиал)
+{ГДЕ
+	ПеремещениеТоваровТовары.Ссылка.ПодразделениеКомпании.* КАК ПодразделениеКомпании,
+	ПеремещениеТоваровТовары.Ссылка.СкладКомпании.* КАК СкладКомпании,
+	ПеремещениеТоваровТовары.Номенклатура.*,
+	ПеремещениеТоваровТовары.Ссылка.СкладКомпанииПолучатель.ТочкаДоставки.Владелец.* КАК Покупатель,
+	ПеремещениеТоваровТовары.Ссылка.ТорговаяПлощадкаПолучатель.* КАК ТорговаяПлощадка}
+
+СГРУППИРОВАТЬ ПО
+	ПеремещениеТоваровТовары.Номенклатура,
+	ПеремещениеТоваровТовары.Ссылка.СкладКомпанииПолучатель.ТочкаДоставки.Global_ID,
+	ПеремещениеТоваровТовары.Ссылка.СкладКомпанииПолучатель.ТочкаДоставки,
+	ПеремещениеТоваровТовары.ХарактеристикаНоменклатуры.ЗначениеМРЦ,
+	ПеремещениеТоваровТовары.Ссылка.ТорговаяПлощадка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЕСТЬNULL(ДополнительныеСведенияТП.Значение, "") КАК WHCode,
+	втПродажи.DistributorOutletCode КАК CustomerTo1,
+	втПродажи.ТочкаДоставки.КодJTI КАК CustomerTo,
+	ЕСТЬNULL(ДополнительныеСведенияНоменклатуры.Значение, "") КАК JTIBrandCode,
+	СУММА(втПродажи.КоличествоОборот) КАК Sales,
+	"" КАК Price,
+	"" КАК Stock,
+	2 КАК UM,
+	втПродажи.МРЦ КАК MRP
+{ВЫБРАТЬ
+	WHCode.*,
+	CustomerTo1,
+	CustomerTo,
+	JTIBrandCode.*,
+	Sales,
+	UM,
+	Price,
+	Stock,
+	MRP}
+ИЗ
+	втПродажи КАК втПродажи
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДополнительныеСведения КАК ДополнительныеСведенияНоменклатуры
+		ПО втПродажи.Номенклатура = ДополнительныеСведенияНоменклатуры.Объект
+			И (ДополнительныеСведенияНоменклатуры.Объект ССЫЛКА Справочник.Номенклатура)
+			И (ДополнительныеСведенияНоменклатуры.Свойство.Имя = "BrandCodeJTI")
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДополнительныеСведения КАК ДополнительныеСведенияТП
+		ПО (ДополнительныеСведенияТП.Свойство.Имя = "КодФилиалаJTI")
+			И (ДополнительныеСведенияТП.Объект ССЫЛКА Справочник.ТорговыеПлощадки)
+			И втПродажи.Площадка = ДополнительныеСведенияТП.Объект
+ГДЕ
+	втПродажи.КоличествоОборот &lt;&gt; 0
+
+СГРУППИРОВАТЬ ПО
+	втПродажи.ТочкаДоставки.КодJTI,
+	ЕСТЬNULL(ДополнительныеСведенияНоменклатуры.Значение, ""),
+	ЕСТЬNULL(ДополнительныеСведенияТП.Значение, ""),
+	втПродажи.DistributorOutletCode,
+	втПродажи.МРЦ</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<totalField>
+		<dataPath>Sales</dataPath>
+		<expression>Сумма(Sales)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Sales</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СкладКомпании</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПодразделениеКомпании</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТорговаяПлощадка</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Покупатель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>WHCode</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>JTIBrandCode</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>CustomerTo</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Price</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Stock</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>UM</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>MRP</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

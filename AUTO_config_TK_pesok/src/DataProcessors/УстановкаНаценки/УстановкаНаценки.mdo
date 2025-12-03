@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9a09a5c3-8bd3-471f-bbda-e299f1113545">
+  <producedTypes>
+    <objectType typeId="f496c756-6262-4b33-900c-d050fbe074ec" valueTypeId="f6f9fdfb-ba59-4510-824e-118ea8fa81c0"/>
+    <managerType typeId="3cf6e1c3-e634-4a5c-96f3-2b0730f4fd1b" valueTypeId="dc40695d-2e00-40ac-bded-a5d6bb0f6d0a"/>
+  </producedTypes>
+  <name>УстановкаНаценки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Установка наценки</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.УстановкаНаценки.Form.Форма</defaultForm>
+  <attributes uuid="582f9afc-2d0e-4bf2-ad1c-520d23a50564">
+    <name>ТипЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип цен</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТипыЦен</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="d5b3bc9d-5089-4cc4-992e-9e1115c00da0">
+    <producedTypes>
+      <objectType typeId="b57bf4c8-e60b-4822-a2f2-18178393634a" valueTypeId="ffb3ccea-f597-4368-b6d9-7a5fd3f3fcce"/>
+      <rowType typeId="b4986986-8316-414f-a9a2-cafa51be42b1" valueTypeId="8a8344f4-07db-4f97-b2d6-7e2f0312d948"/>
+    </producedTypes>
+    <name>Загрузка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузка</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="4cd7175a-e539-4dc0-9c72-a5e0802bd0f5">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+        <types>CatalogRef.ТипыНоменклатуры</types>
+        <types>CatalogRef.ГруппыЦенообразования</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d56c7f66-e71e-4d1d-9c0b-25d02a19624b">
+      <name>ПроцентНаценки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Процент наценки</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>6</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="f405c037-6928-4efa-a025-6502ca8b229c">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

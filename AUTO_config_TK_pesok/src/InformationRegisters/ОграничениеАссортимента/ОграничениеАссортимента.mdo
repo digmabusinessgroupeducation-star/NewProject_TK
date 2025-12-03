@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="95ccbbe8-19c2-470f-b2b5-e1e984484c10">
+  <producedTypes>
+    <selectionType typeId="41fa854b-d1ab-4cbe-a1a4-449b0a07ba64" valueTypeId="3b5ad99e-1915-42ff-8686-628d0e2dfbeb"/>
+    <listType typeId="fa6006ad-0221-449f-a582-2966c0cf66e8" valueTypeId="8154fd00-e751-42a7-b0b7-2a78707e49b4"/>
+    <managerType typeId="a64def87-1a7d-4d20-89d4-d7e3fd8e5f75" valueTypeId="397dd354-3290-4de1-920d-7db71b7a9011"/>
+    <recordSetType typeId="c221b000-5c98-492b-b29a-0c26b709c23d" valueTypeId="9134d142-fda5-478f-b935-bd640349eea3"/>
+    <recordKeyType typeId="3ef1c756-da69-4768-bafd-a0269e35f7eb" valueTypeId="ee774879-4907-49e8-9fb5-e1a5d5183893"/>
+    <recordType typeId="64caae54-c1ec-4363-9f29-fa18fa023cc2" valueTypeId="1d90855b-7a21-48e0-a8e7-627f72a5afd4"/>
+    <recordManagerType typeId="365e3ee2-4af5-412e-9763-684251257d66" valueTypeId="1194b95b-ec6b-4608-b91f-e813939ea36f"/>
+  </producedTypes>
+  <name>ОграничениеАссортимента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ограничение ассортимента</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Обмеження асортименту</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="ae851472-9e23-4409-9f46-5165f689ab8a">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <comment>0-не введено, 1-введено, 2-РаспродажаСПоследующимВыводом</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b4f8a6cd-1a5b-4079-bfc2-ba2c4230c17a">
+    <name>БазовыйАссортимент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Базовый ассортимент</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="468aa14c-88e3-4bcd-ad7d-ffdedeb85bb0">
+    <name>ВидАссортимента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид ассортимента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыАссортимента</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="843bbc19-f3d4-4391-8994-6afd735edba8">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c27f0228-d30f-43c3-9fc8-97cb98519c2b">
+    <name>ТорговаяПлощадка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торговая площадка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговыеПлощадки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<UsualGroup name="ГруппаСотрудник" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сотрудник</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сотрудник</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСотрудникРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="Владелец" id="29">
+					<DataPath>Объект.Owner</DataPath>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="OnChange">ВладелецПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="ТипСотрудника" id="37">
+					<TextColor>style:ПросроченныеДанныеЦвет</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип сотрудника</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТипСотрудникаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ТипСотрудникаРасширеннаяПодсказка" id="39"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Точки" id="10">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Точки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТочкиКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ТочкиКоманднаяПанель" id="12">
+				<ChildItems>
+					<Button name="ТочкиЗаполнитьТерриторию" id="32">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьТерриторию</CommandName>
+						<ExtendedTooltip name="ТочкиЗаполнитьТерриториюРасширеннаяПодсказка" id="33"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТочкиРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ТочкиСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>Точки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТочкиСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ТочкиСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТочкиСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>Точки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТочкиСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ТочкиСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТочкиУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>Точки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТочкиУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ТочкиУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТочкиНомерСтроки" id="23">
+					<DataPath>Объект.Точки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТочкиНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ТочкиНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="ТочкиКод" id="34">
+					<DataPath>Объект.Точки.Точка.Code</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТочкиКодКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ТочкиКодРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="ТочкиТочка" id="26">
+					<DataPath>Объект.Точки.Точка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Точки.RowsCount</FooterDataPath>
+					<FooterTextColor>style:РольБезИсполнителей</FooterTextColor>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<ContextMenu name="ТочкиТочкаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТочкиТочкаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТерриторииИсполнителей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьТерриторию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить территорию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить территорию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьТерриторию</Action>
+		</Command>
+	</Commands>
+</Form>

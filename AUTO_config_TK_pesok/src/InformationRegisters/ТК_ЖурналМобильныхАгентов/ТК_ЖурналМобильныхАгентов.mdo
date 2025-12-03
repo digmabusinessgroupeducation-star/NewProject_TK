@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ab00723a-7726-462e-a223-6964bb7fb8e3">
+  <producedTypes>
+    <selectionType typeId="49a99b7b-fa80-4ed7-af1d-2638673def7a" valueTypeId="2cc1426b-e894-4d3b-9b50-f2605ad986d3"/>
+    <listType typeId="ad23f828-e405-4bef-8df0-86700cc31528" valueTypeId="9220825c-741b-45e9-859e-e9b818f5cc75"/>
+    <managerType typeId="31c8a026-dd2f-4ed9-baf8-251982c2b4d2" valueTypeId="33c4c177-ef71-4208-a30e-cc7c2a71d3d5"/>
+    <recordSetType typeId="033ce11a-2aed-460a-a837-2736a5beaf94" valueTypeId="dc1e091a-77fb-47e2-921a-db5ea0044912"/>
+    <recordKeyType typeId="81c08eed-27fb-45f3-8490-f32451318357" valueTypeId="aae39931-f861-4abb-900c-cb6a583a2770"/>
+    <recordType typeId="304657d8-a96f-4d16-8bc6-43123375024d" valueTypeId="673c0403-598e-46d8-9185-a75f23973988"/>
+    <recordManagerType typeId="c82261d5-a59f-4507-8ace-c00a5b0476b3" valueTypeId="a9e9d099-4ead-4f91-a0ba-a4c5509aad80"/>
+  </producedTypes>
+  <name>ТК_ЖурналМобильныхАгентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Журнал мобильных агентов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ТК_ЖурналМобильныхАгентов.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Запись журнала</value>
+  </recordPresentation>
+  <resources uuid="04ef6405-59e7-4d21-bd26-37bdc8384863">
+    <name>СтрокаJSON</name>
+    <synonym>
+      <key>ru</key>
+      <value>Строка JSON</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="5660b782-f5ea-4ce0-aaff-5549e0c0c5e5">
+    <name>Метод</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метод</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="a9091042-10ef-4993-ba55-88cee1ec4b68">
+    <name>Тип</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>5</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="b774abd4-fee0-4739-9399-4ae5cbbd4eb6">
+    <name>Агент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Агент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПортативныеУстройстваВвода</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4de2c5c6-8aee-44c9-b162-b0f80ac22845">
+    <name>ДатаВремя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получено</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ea1e7549-9957-4e8e-8f7a-a3832cf56694">
+    <name>УникальныйИдентификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Уникальный идентификатор</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="88a2a5ca-fa3a-48dc-bbdb-3a13db8a1848">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

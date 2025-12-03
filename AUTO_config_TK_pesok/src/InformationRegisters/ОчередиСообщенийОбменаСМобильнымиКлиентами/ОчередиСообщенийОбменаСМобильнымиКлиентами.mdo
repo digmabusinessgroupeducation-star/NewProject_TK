@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="aa7c472f-d2e8-4aa0-9ec2-b9b105de2de5">
+  <producedTypes>
+    <selectionType typeId="c4886f92-7bf4-45a7-82ad-8dc1eeef0088" valueTypeId="0af3676c-8e35-42b7-babf-ad79020defd7"/>
+    <listType typeId="85ebfc49-4c46-498a-b069-3d2e09e8395c" valueTypeId="b62fc7d3-2371-44f5-acd7-ba0274e872fb"/>
+    <managerType typeId="0cd57c88-68ff-492e-9b4f-e2d77ec5a130" valueTypeId="41025517-a620-4849-b725-212d3c40efbf"/>
+    <recordSetType typeId="e92e80f0-3f35-4642-b1c0-a1d98ac40f2b" valueTypeId="fb4615ec-fdbf-449b-9b96-fad32ab71c66"/>
+    <recordKeyType typeId="b3535789-9acf-44a9-8a38-5b1927fbbea2" valueTypeId="b66e9d84-b3b7-4ac8-9ce8-3623504ee316"/>
+    <recordType typeId="28301246-0dde-4092-a5dd-94ef8e5a5693" valueTypeId="9844410a-57a9-40c7-8a08-ce4aa20c9937"/>
+    <recordManagerType typeId="1564ef38-996f-4284-a336-d62a26ea2f52" valueTypeId="3beb76d5-86db-49cf-883f-a95ece9e9ee2"/>
+  </producedTypes>
+  <name>ОчередиСообщенийОбменаСМобильнымиКлиентами</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очереди сообщений обмена с мобильными клиентами</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Черги повідомлень обміну з мобільними клієнтами</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="8bf741c8-c8f3-4024-a4b7-abbbe8f63ae0">
+    <name>СообщениеОбмена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение обмена</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Повідомлення обміну</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="3c764763-827a-43bd-95c8-1d296351b199">
+    <name>МобильныйКлиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мобильный клиент</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Мобільний клієнт</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef.ОбменМобильноеПриложение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a3351124-feb3-4930-8739-a03c10942f68">
+    <name>НомерСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер сообщения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номер повідомлення</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

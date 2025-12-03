@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d1ff05c1-2f8e-4d7e-8ae8-6f19b474fe32">
+  <producedTypes>
+    <selectionType typeId="6255cfef-f5c0-45b4-8798-acc5c7cc9e92" valueTypeId="0ce7834b-7622-4411-800b-d1fac740d20f"/>
+    <listType typeId="3bcb657c-0fe4-4d44-ae7f-158c2aaf8e38" valueTypeId="023ed569-4af9-443f-99a6-4803593b9b2c"/>
+    <managerType typeId="8f2e8d18-e3d3-466e-9efb-521fbb501220" valueTypeId="2c98275a-19f2-40a8-9ff9-5575b8d236fd"/>
+    <recordSetType typeId="578de280-0ffb-4777-b259-ed2d8191efb7" valueTypeId="a2dd7ad4-d656-4052-a3a0-e10f3584ba80"/>
+    <recordKeyType typeId="4551b7e9-d7ba-43d3-a831-3ddefcb43d01" valueTypeId="dfbf10a0-f0e6-4a1d-abbc-8b5d72a0825e"/>
+    <recordType typeId="bea061de-9c16-41ed-b605-f2977e609df4" valueTypeId="6ca3cd1f-24b9-4f28-9014-0bcd408dd853"/>
+    <recordManagerType typeId="7ba3a677-c1e6-4b50-93eb-906112690f73" valueTypeId="f7d7532e-9911-467e-bf40-a0f3f3eb10cc"/>
+  </producedTypes>
+  <name>ЗакрытыеОрганизации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Закрытые организации</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ЗакрытыеОрганизации.Form.ФормаЗаписи</defaultRecordForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="fcbb3968-c720-4b85-8653-310d61a92f98">
+    <name>ДатаЗакрытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата закрытия</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a38fadde-1e57-4019-b56b-3b9a97caefb5">
+    <name>Закрыта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Закрыта</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="063b429e-383a-4eb5-ae24-27e0310870d2">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="9b5f1140-b23e-410f-ac01-ed21d89b2d45">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

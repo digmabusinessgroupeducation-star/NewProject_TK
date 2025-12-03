@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5ba1d83d-a168-40fd-897f-576d6626bfb6">
+  <producedTypes>
+    <selectionType typeId="03ff9341-530f-47c5-82c5-517db7143655" valueTypeId="5961ab9d-b3da-4fcb-a2d2-db455ee3325d"/>
+    <listType typeId="7676c254-a74d-4120-aa60-5260d9bac5b8" valueTypeId="14ab4d0d-9821-44d8-a45b-4ea8c1daa42d"/>
+    <managerType typeId="79986b76-949f-4c31-90d0-dd6150ea1d02" valueTypeId="b5485efd-f6d7-4f52-bec9-3586ab03cc40"/>
+    <recordSetType typeId="e2b00e11-7be1-480e-b73a-9c62ff88d621" valueTypeId="5df515d0-ffda-459d-8c1a-a573037793e9"/>
+    <recordKeyType typeId="298e12da-b4b7-4ac8-bac6-bebf27392baa" valueTypeId="5131c456-f91d-41bf-a0c0-32ec77b8fe88"/>
+    <recordType typeId="a77fa640-0a92-4efc-ada7-cf056a39d9c2" valueTypeId="17dee3ff-ba18-460d-b8c7-ea4df301b733"/>
+    <recordManagerType typeId="73769446-0a09-40ba-aaff-f4cb1442b755" valueTypeId="f2e94055-3e85-4ae1-b0fc-96fda47c635b"/>
+  </producedTypes>
+  <name>ТК_РазмещениеВМестахХранения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Размещение в местах хранения</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Розміщення у місцях зберігання</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ТК_РазмещениеВМестахХранения.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="4fdb0005-3b27-410a-9d0f-fa5b863a6a17">
+    <name>Порядок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порядок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="d213a6ab-b5e6-461e-8a67-9ec62ab89a2f">
+    <name>МестоХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Место хранения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Місце зберігання</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТК_МестаХранения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="5d90ca51-6e71-4fac-8e4a-46292b535356">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="43e4573e-a175-4cc7-9c63-9460ac15c5a0">
+    <name>ХарактеристикаНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика номенклатуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="2dc5f32d-85bd-4c42-b75d-d4e7b04d4a07">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

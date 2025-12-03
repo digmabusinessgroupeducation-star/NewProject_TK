@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="77feba2c-b3c0-4bde-9971-a3e28fccc1b5">
+  <producedTypes>
+    <objectType typeId="459ce7c3-984b-401a-b452-6d6517918bc3" valueTypeId="f47f23bd-934c-4231-abcf-4cb19265dda8"/>
+    <managerType typeId="4259b3d8-7d6e-4dc0-a813-e18638059927" valueTypeId="bf6cdb2a-04a3-4640-b182-4d9fbbfcc81e"/>
+  </producedTypes>
+  <name>ТК_ПечатьЭтикетокИЦенников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Печать этикеток и ценников</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Друк етикеток і цінників</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ТК_ПечатьЭтикетокИЦенников.Form.Форма</defaultForm>
+  <tabularSections uuid="6536e27d-3ca6-436c-b211-606d334804c8">
+    <producedTypes>
+      <objectType typeId="88a4085a-9209-4233-bf57-6492f60d609f" valueTypeId="ef5529cb-b91e-4f12-90c7-637a94802390"/>
+      <rowType typeId="681fa74d-dd8a-4f01-a262-2c043bcf851a" valueTypeId="5d51b698-833d-4449-868e-f45b82dfcf34"/>
+    </producedTypes>
+    <name>Товары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товары</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="dd18ad1a-b6cb-46b7-bbd5-479da9b290e7">
+      <name>Выбран</name>
+      <synonym>
+        <key>ru</key>
+        <value>Выбран</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Обраний</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d8c158cb-9a25-480a-8a14-075830286084">
+      <name>Артикул</name>
+      <synonym>
+        <key>ru</key>
+        <value>Артикул</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Артикул</value>
+      </synonym>
+      <comment>Код производителя</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>25</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="1d8bff40-a68b-4586-a11a-9a6e1c2b33c9">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <comment>Номенклатура (товар, услуга и т.п.)</comment>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0cd65b24-bc1f-4b43-9feb-965d463c48c5">
+      <name>Наименование2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Наименование2</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Найменування</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="4ac685ba-5059-4307-bf3e-6c1fad8a2182">
+      <name>ХарактеристикаНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Характеристика номенклатури</value>
+      </synonym>
+      <comment>Характеристика/серия номенклатуры</comment>
+      <type>
+        <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>DataProcessor.ТК_ПечатьЭтикетокИЦенников.TabularSection.Товары.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="dcfd2933-5964-4993-9f1e-b26c7eeab922">
+      <name>Цена</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ціна</value>
+      </synonym>
+      <comment>Цена номенклатурной позиции</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="83b0d016-7ab2-40d3-9dc8-3e4a8494579f">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Кількість</value>
+      </synonym>
+      <comment>Количество ценников</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="58609ff9-8e34-4442-88b6-6b742ad9685a">
+      <name>ШтрихКод</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрих-код</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Штрих-код</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>200</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="745af483-cf3a-4b36-a3b6-2da448380541">
+      <name>СкладКомпании</name>
+      <synonym>
+        <key>ru</key>
+        <value>Склад компании</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СкладыКомпании</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="3f797cb3-b9bf-411f-9392-7ff8826e8ed1">
+      <name>СтараяЦена</name>
+      <synonym>
+        <key>ru</key>
+        <value>Старая цена</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ціна</value>
+      </synonym>
+      <comment>Цена номенклатурной позиции</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="c80da0eb-c653-4d98-87bc-eeef63149a5f">
+      <name>НачалоДействия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Начало действия</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ebfd8ede-a23b-438c-8a39-3be34abf3416">
+      <name>КонецДействия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Конец действия</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6cc734da-89b6-4f31-ba21-34c5d05a95e9">
+      <name>Акция</name>
+      <synonym>
+        <key>ru</key>
+        <value>Акция</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b6a9c71b-2cd3-45f4-aad6-5ecf4d2ffa76">
+      <name>ЦенаОПТ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена ОПТ</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ціна</value>
+      </synonym>
+      <comment>Цена номенклатурной позиции</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="7ddb243f-d6c7-4dd8-be2b-eb1716384c0f">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="9a7d43e2-ea3d-486e-b009-c68b915c302b">
+    <name>ПоляШаблонаТовары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поля шаблона товары</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="c9e7b6d6-3cbe-4efb-90ca-e4360b4805ec">
+    <name>ЭталонРазмерыЯчеек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Эталон размеры ячеек</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Еталон розміри комірок</value>
+    </synonym>
+  </templates>
+  <templates uuid="d97a18ef-05d5-4273-a2eb-61d46050aae3">
+    <name>Эталон</name>
+    <synonym>
+      <key>ru</key>
+      <value>Эталон</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Еталон</value>
+    </synonym>
+  </templates>
+  <templates uuid="347adb6c-016a-4aa7-9594-44391180f6d3">
+    <name>ПФ_MXL_МакетЦенника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет ценника</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Макет цінника</value>
+    </synonym>
+  </templates>
+  <templates uuid="66860709-e27e-4c9b-b691-6d198815e7b3">
+    <name>ПФ_MXL_МакетЦенникаСклад</name>
+    <synonym>
+      <key>ru</key>
+      <value>макет ценника склад</value>
+    </synonym>
+  </templates>
+  <templates uuid="d9546b13-dfd5-40bd-ba89-a7b7aa6c5c80">
+    <name>ПФ_MXL_МакетЦенникаАттика</name>
+    <synonym>
+      <key>ru</key>
+      <value>П ф MXL макет ценника аттика</value>
+    </synonym>
+  </templates>
+  <templates uuid="98ea84ee-f0f6-417d-96ba-f72f28bfa566">
+    <name>ПФ_MXL_МакетЦенникДеметра</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ценник Деметра</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Цінник Деметра</value>
+    </synonym>
+  </templates>
+  <templates uuid="5a9590ce-23d0-42b5-8579-feb052e1fa35">
+    <name>ПФ_MXL_МакетЦенника35х30</name>
+    <synonym>
+      <key>ru</key>
+      <value>П ф MXL макет ценника 35х30</value>
+    </synonym>
+  </templates>
+  <templates uuid="418e6c97-0a71-4e6a-82e6-3827d44fe9d3">
+    <name>ПФ_MXL_МакетЦенникаБаффет60х38</name>
+    <synonym>
+      <key>ru</key>
+      <value>макет ценника баффет</value>
+    </synonym>
+  </templates>
+  <templates uuid="9fd12dd7-e66d-432c-9585-618a9fb8fd49">
+    <name>ПФ_MXL_МакетЦенника40х30</name>
+    <synonym>
+      <key>ru</key>
+      <value>П ф MXL макет ценника 40х30</value>
+    </synonym>
+  </templates>
+  <templates uuid="3f8492a9-9dc0-48f4-b40c-3881a1e8d133">
+    <name>ПФ_MXL_МакетЦенникаАкция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет ценника акция</value>
+    </synonym>
+  </templates>
+  <templates uuid="afc85b64-e2ec-4c42-b0dd-309c341dd664">
+    <name>ПФ_MXL_МакетЦенникаАкцияA4</name>
+    <synonym>
+      <key>ru</key>
+      <value>П ф MXL макет ценника акция a4</value>
+    </synonym>
+  </templates>
+  <templates uuid="93ab264c-6e22-4331-9b72-4e08854c803e">
+    <name>ПФ_MXL_МакетЦенника25х46</name>
+    <synonym>
+      <key>ru</key>
+      <value>П ф MXL макет ценника 46х46</value>
+    </synonym>
+  </templates>
+  <templates uuid="7e93d661-6027-4d75-8a85-9e37e5d53d7c">
+    <name>ПФ_MXL_МакетЦенникаАкцияБольшой</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет ценника акция</value>
+    </synonym>
+  </templates>
+  <templates uuid="4dccccc6-8a61-41fb-8cca-0c74b20f91ea">
+    <name>ПФ_MXL_МакетЦенникаАкцияБольшой1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет ценника акция</value>
+    </synonym>
+  </templates>
+  <templates uuid="dd801ca4-a8f9-470f-b332-e3907535bd35">
+    <name>ПФ_MXL_МакетЦенникаАкцияАттика60х38</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет ценника акция</value>
+    </synonym>
+  </templates>
+  <templates uuid="20b30ad2-7bed-48c2-8719-f99904c2ffb9">
+    <name>ПФ_MXL_МакетЦенникаЗа50г</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет ценника</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Макет цінника</value>
+    </synonym>
+  </templates>
+  <templates uuid="ab4390eb-31d6-4c09-bfa6-4d9b28ad482d">
+    <name>ПФ_MXL_МакетЦенникаАкцияБольшой2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет ценника акция</value>
+    </synonym>
+  </templates>
+  <templates uuid="93765765-e079-44a7-a3b6-ab17479c8a3d">
+    <name>ПФ_MXL_МакетЦенникаАттика50х38</name>
+    <synonym>
+      <key>ru</key>
+      <value>макет ценника Аттика 50х38</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>
